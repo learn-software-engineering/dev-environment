@@ -1,2 +1,3 @@
-# Website in Development Environment
-Site Published - Dev Environment
+# Learn Software Engineering website
+
+Site Published - Development Environment
