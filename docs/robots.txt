@@ -1,1 +1,1 @@
-Sitemap: https://learn-software.com/sitemap.xml
+Sitemap: https://learn-software.com/$TARGET_REPO_NAME/sitemap.xml
