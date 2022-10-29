@@ -11,7 +11,7 @@ var store = [{
         "url": "/dev-environment/blog/post-standard/",
         "teaser": null
       },{
-        "title": "test future post",
+        "title": "Post: future date",
         "excerpt":"Test future post in draft folder.  ","categories": ["Future","Draft"],
         "tags": ["future","draft","test"],
         "url": "/dev-environment/future/draft/future-post-template-for-new-posts/",
