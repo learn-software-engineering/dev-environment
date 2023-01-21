@@ -1,4 +1,359 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://learn-software.com/dev-environment/feed.xml" rel="self" type="application/atom+xml" /><link href="https://learn-software.com/dev-environment/" rel="alternate" type="text/html" /><updated>2023-01-21T12:39:48+00:00</updated><id>https://learn-software.com/dev-environment/feed.xml</id><title type="html">Learn Software Engineering</title><subtitle>&quot;A place to learn about Software Engineering.&quot;</subtitle><entry><title type="html">Post: future date</title><link href="https://learn-software.com/dev-environment/future/draft/future-post-template-for-new-posts/" rel="alternate" type="text/html" title="Post: future date" /><published>9999-12-31T00:00:00+00:00</published><updated>9999-12-31T00:00:00+00:00</updated><id>https://learn-software.com/dev-environment/future/draft/future-post-template-for-new-posts</id><content type="html" xml:base="https://learn-software.com/dev-environment/future/draft/future-post-template-for-new-posts/"><![CDATA[<p>Test future post in draft folder.</p>]]></content><author><name>Maria Florencia Caro</name><email>learn.software.eng+mfcaro@gmail.com</email></author><category term="Future" /><category term="Draft" /><category term="Future" /><category term="Draft" /><category term="Test" /><summary type="html"><![CDATA[Test future post in draft folder.]]></summary></entry><entry><title type="html">Revert a change in git</title><link href="https://learn-software.com/dev-environment/version%20control/git-revert/" rel="alternate" type="text/html" title="Revert a change in git" /><published>2023-01-18T00:00:00+00:00</published><updated>2023-01-18T00:00:00+00:00</updated><id>https://learn-software.com/dev-environment/version%20control/git-revert</id><content type="html" xml:base="https://learn-software.com/dev-environment/version%20control/git-revert/"><![CDATA[<h2 id="revert-a-local-commit">Revert a local commit</h2>
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Revert a change in git - Learn Software Engineering</title>
+<meta name="description" content="Revert a local commit">
+
+
+  <meta name="author" content="Julian Nonino">
+  
+  <meta property="article:author" content="Julian Nonino">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Learn Software Engineering">
+<meta property="og:title" content="Revert a change in git">
+<meta property="og:url" content="https://learn-software.com/dev-environment/version%20control/git-revert/">
+
+
+  <meta property="og:description" content="Revert a local commit">
+
+
+
+  <meta property="og:image" content="https://learn-software.com/dev-environment/assets/images/header/jared-brashier-6WPcf5D1XdA-unsplash.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-01-18T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://learn-software.com/dev-environment/version%20control/git-revert/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "LearnSoftware.com",
+      "url": "https://learn-software.com/dev-environment/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/dev-environment/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- Favicon generated with https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/dev-environment/"><img src="/dev-environment/assets/images/logo/logo-square.jpg" alt="Learn-Software.com"></a>
+        
+        <a class="site-title" href="/dev-environment/">
+          Learn-Software.com
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/dev-environment/posts/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/dev-environment/assets/images/header/jared-brashier-6WPcf5D1XdA-unsplash.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Revert a change in git
+
+        
+      </h1>
+      
+        <p class="page__lead"><h2 id="revert-a-local-commit">Revert a local commit</h2>
+</p>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-01-18T00:00:00+00:00">January 18, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 minute read
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo by <a href="https://unsplash.com/@jaredbrashier">Jared Brashier</a> on <a href="https://unsplash.com">Unsplash</a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/dev-environment/assets/images/bio-photo-julian-nonino.jpg" alt="Julian Nonino" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Julian Nonino</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">London, UK</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/jnonino" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jnonino/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://youtube.com/@juliannonino" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:learn.software.eng+jnonino@gmail.com">
+            <meta itemprop="email" content="learn.software.eng+jnonino@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Revert a change in git">
+    <meta itemprop="description" content="Revert a local commit">
+    <meta itemprop="datePublished" content="2023-01-18T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#revert-a-local-commit">Revert a local commit</a></li><li><a href="#revert-a-published-commit">Revert a published commit</a><ul><li><a href="#reverting-multiple-commits">Reverting multiple commits</a></li><li><a href="#reverting-a-merge-commit">Reverting a merge commit</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="revert-a-local-commit">Revert a local commit</h2>
 
 <p>When we have created a commit locally but have not published it to the remote yet, we can use <code class="language-plaintext highlighter-rouge">git reset</code> to undo the commit and, if we wish, discard the changes.
 Although there are several options for <code class="language-plaintext highlighter-rouge">git reset</code> the most used are:</p>
@@ -369,61 +724,302 @@ bash-3.2$  cat README.md
 # Index
 
 1
-</code></pre></div></div>]]></content><author><name>Julian Nonino</name><email>learn.software.eng+jnonino@gmail.com</email></author><category term="Version Control" /><category term="Git" /><category term="Version Control" /><summary type="html"><![CDATA[Revert a local commit]]></summary></entry><entry><title type="html">Post: Modified Date</title><link href="https://learn-software.com/dev-environment/drafts/post-modified/" rel="alternate" type="text/html" title="Post: Modified Date" /><published>2022-10-15T00:00:00+00:00</published><updated>2022-10-15T21:20:02+00:00</updated><id>https://learn-software.com/dev-environment/drafts/post-modified</id><content type="html" xml:base="https://learn-software.com/dev-environment/drafts/post-modified/"><![CDATA[<p>This post has been updated and should show a modified date if used in a layout.</p>
-
-<p>First paragraph to test.</p>
-
-<p>Second paragraph.</p>
-
-<p>Third paragraph.</p>
-
-<p>Fourth paragraph.</p>
-
-<p>Fifth paragraph.</p>]]></content><author><name>Maria Florencia Caro</name><email>learn.software.eng+mfcaro@gmail.com</email></author><category term="Drafts" /><category term="Draft" /><category term="Test" /><summary type="html"><![CDATA[This post has been updated and should show a modified date if used in a layout.]]></summary></entry><entry><title type="html">Post: Standard with long title to test overlay image</title><link href="https://learn-software.com/dev-environment/drafts/post-standard/" rel="alternate" type="text/html" title="Post: Standard with long title to test overlay image" /><published>2022-10-15T00:00:00+00:00</published><updated>2022-10-15T00:00:00+00:00</updated><id>https://learn-software.com/dev-environment/drafts/post-standard</id><content type="html" xml:base="https://learn-software.com/dev-environment/drafts/post-standard/"><![CDATA[<p>First paragraph to test.</p>
-
-<!--more-->
-
-<p>This post has a manual excerpt <code class="language-plaintext highlighter-rouge">&lt;!--more--&gt;</code> set after the second paragraph. The following YAML Front Matter has also be applied:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">excerpt_separator</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;!--more--&gt;"</span>
 </code></pre></div></div>
 
-<h2 id="section-1">Section 1</h2>
+        
+      </section>
 
-<p>Second paragraph.</p>
+      <footer class="page__meta">
+        
+        
+  
 
-<h3 id="section-11">Section 1.1</h3>
 
-<p>Third paragraph.</p>
+  
 
-<h4 id="section-111">Section 1.1.1</h4>
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/dev-environment/tags/#git" class="page__taxonomy-item" rel="tag">Git</a><span class="sep">, </span>
+    
+      <a href="/dev-environment/tags/#version-control" class="page__taxonomy-item" rel="tag">Version Control</a>
+    
+    </span>
+  </p>
 
-<p>Fourth paragraph.</p>
 
-<h4 id="section-112">Section 1.1.2</h4>
 
-<p>Fifth paragraph.</p>
 
-<h3 id="section-12">Section 1.2</h3>
+  
 
-<p>Sixth paragraph.</p>
 
-<h2 id="section-2">Section 2</h2>
+  
 
-<p>Seventh paragraph.</p>
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/dev-environment/categories/#version-control" class="page__taxonomy-item" rel="tag">Version Control</a>
+    
+    </span>
+  </p>
 
-<h3 id="section-21">Section 2.1</h3>
 
-<p>Eighth paragraph.</p>
+        
 
-<h3 id="section-22">Section 2.2</h3>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-01-18T00:00:00+00:00">January 18, 2023</time></p>
 
-<p>Ninth paragraph.</p>
 
-<h4 id="section-221">Section 2.2.1</h4>
+      </footer>
 
-<p>Tenth paragraph.</p>
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
 
-<h4 id="section-222">Section 2.2.2</h4>
+  <a href="https://twitter.com/intent/tweet?text=Revert+a+change+in+git%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-<p>Eleventh paragraph.</p>]]></content><author><name>Julian Nonino</name><email>learn.software.eng+jnonino@gmail.com</email></author><category term="Drafts" /><category term="Draft" /><category term="Test" /><summary type="html"><![CDATA[First paragraph to test.]]></summary></entry></feed>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/dev-environment/drafts/post-standard/" class="pagination--pager" title="Post: Standard with long title to test overlay image
+">Previous</a>
+    
+    
+      <a href="/dev-environment/future/draft/future-post-template-for-new-posts/" class="pagination--pager" title="Post: future date
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/future/draft/future-post-template-for-new-posts/" rel="permalink">Post: future date
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="9999-12-31T00:00:00+00:00">December 31, 9999</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Test future post in draft folder.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/drafts/post-standard/" rel="permalink">Post: Standard with long title to test overlay image
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-15T00:00:00+00:00">October 15, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">First paragraph to test.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/drafts/post-modified/" rel="permalink">Post: Modified Date
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-15T00:00:00+00:00">October 15, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post has been updated and should show a modified date if used in a layout.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 LearnSoftware.com. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/dev-environment/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/dev-environment/assets/js/lunr/lunr.min.js"></script>
+<script src="/dev-environment/assets/js/lunr/lunr-store.js"></script>
+<script src="/dev-environment/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=8178366378871940";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+
+
+
+
+
+  </body>
+</html>
