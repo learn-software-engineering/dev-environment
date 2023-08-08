@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Revert a change in git - Learn Software Engineering</title>
-<meta name="description" content="Revert a local commit">
+<!-- begin _includes/seo.html --><title>Revert a pushed change in Git - Learn Software Engineering</title>
+<meta name="description" content="When we realized that the last commit was a mistake but we already published it, the command to use is git revert &lt;COMMIT_HASH&gt;.">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Revert a change in git">
-<meta property="og:url" content="https://learn-software.com/dev-environment/version%20control/git-revert/">
+<meta property="og:title" content="Revert a pushed change in Git">
+<meta property="og:url" content="https://learn-software.com/dev-environment/version%20control/git-revert-pushed/">
 
 
-  <meta property="og:description" content="Revert a local commit">
+  <meta property="og:description" content="When we realized that the last commit was a mistake but we already published it, the command to use is git revert &lt;COMMIT_HASH&gt;.">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/version%20control/git-revert/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/version%20control/git-revert-pushed/">
 
 
 
@@ -167,12 +167,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Revert a change in git
+          Revert a pushed change in Git
 
         
       </h1>
       
-        <p class="page__lead"><h2 id="revert-a-local-commit">Revert a local commit</h2>
+        <p class="page__lead">When we realized that the last commit was a mistake but we already published it, the command to use is <code class="language-plaintext highlighter-rouge">git revert &lt;COMMIT_HASH&gt;</code>.
 </p>
       
       
@@ -196,7 +196,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          8 minute read
+          5 minute read
         
       </span>
     
@@ -337,8 +337,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Revert a change in git">
-    <meta itemprop="description" content="Revert a local commit">
+    <meta itemprop="headline" content="Revert a pushed change in Git">
+    <meta itemprop="description" content="When we realized that the last commit was a mistake but we already published it, the command to use is git revert &lt;COMMIT_HASH&gt;.">
     <meta itemprop="datePublished" content="2023-01-18T00:00:00+00:00">
     
 
@@ -350,140 +350,12 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#revert-a-local-commit">Revert a local commit</a></li><li><a href="#revert-a-published-commit">Revert a published commit</a><ul><li><a href="#reverting-multiple-commits">Reverting multiple commits</a></li><li><a href="#reverting-a-merge-commit">Reverting a merge commit</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#reverting-multiple-commits">Reverting multiple commits</a></li><li><a href="#reverting-a-merge-commit">Reverting a merge commit</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="revert-a-local-commit">Revert a local commit</h2>
-
-<p>When we have created a commit locally but have not published it to the remote yet, we can use <code class="language-plaintext highlighter-rouge">git reset</code> to undo the commit and, if we wish, discard the changes.
-Although there are several options for <code class="language-plaintext highlighter-rouge">git reset</code> the most used are:</p>
-
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">--soft</code>: Does not touch the index file or the working tree at all (but resets the head to <COMMIT>, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it.</COMMIT></li>
-    <li><code class="language-plaintext highlighter-rouge">--hard</code>: Resets the index and working tree. Any changes to tracked files in the working tree since <COMMIT> are discarded. Any untracked files or directories in the way of writing any tracked files are simply deleted.</COMMIT></li>
-  </ul>
-
-  <p style="text-align: right;"><a href="https://git-scm.com/docs/git-reset">Git reset documentation</a></p>
-</blockquote>
-
-<p>Here there is an example about using <code class="language-plaintext highlighter-rouge">git reset</code>. We start by changing a file and creating a commit with the change.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash-3.2$  cat README.md
-# Index
-
-1
-bash-3.2$
-bash-3.2$  cat README.md
-# Index
-
-1
-2
-bash-3.2$
-bash-3.2$  git add README.md
-bash-3.2$
-bash-3.2$  git commit -m "Add number 2 in README.md"
-[main 3734fd5] Add number 2 in README.md
- 1 file changed, 1 insertion(+)
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">git status</code> shows there is one commit pending to be published.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash-3.2$  git status
-On branch main
-Your branch is ahead of 'origin/main' by 1 commit.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-</code></pre></div></div>
-
-<p>Using <code class="language-plaintext highlighter-rouge">git reflog</code> to see the history.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3734fd5 (HEAD -&gt; main) HEAD@{0}: commit: Add number 2 in README.md
-866bfa8 (origin/main) HEAD@{1}: revert: Revert "Merge branch 'feature-1'"
-e2f6d08 HEAD@{2}: merge feature-1: Merge made by the 'ort' strategy.
-23644da HEAD@{3}: checkout: moving from feature-1 to main
-</code></pre></div></div>
-
-<p>Now we can use <code class="language-plaintext highlighter-rouge">git reset --soft &lt;COMMIT_ID&gt;</code> to undo the commit but keep the changes.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash-3.2$  git reset --soft 866bfa8
-bash-3.2$
-bash-3.2$  git status
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged &lt;file&gt;..." to unstage)
-        modified:   README.md
-
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">git log</code> after using <code class="language-plaintext highlighter-rouge">git reset</code></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit 866bfa8a952d11240707ebfc87f3266034d42443 (HEAD -&gt; main, origin/main)
-Author: Julian Nonino &lt;learn.software.eng+jnonino@gmail.com&gt;
-Date:   Wed Jan 18 20:06:40 2023 -0300
-
-    Revert "Merge branch 'feature-1'"
-
-    This reverts commit e2f6d08d3b38a02a1c026cfb879f3131536757ac, reversing
-    changes made to 23644dab9fc5828ecdd358c6d3acb4196ed23546.
-</code></pre></div></div>
-
-<p>We create a new commit so we can test the <code class="language-plaintext highlighter-rouge">git reset --hard</code> command.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash-3.2$  git status
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged &lt;file&gt;..." to unstage)
-        modified:   README.md
-
-bash-3.2$  git commit -m "Add number 2 in README.md - NEW COMMIT"
-[main 2e7193d] Add number 2 in README.md - NEW COMMIT
- 1 file changed, 1 insertion(+)
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">git log</code> now shows the new commit.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit 2e7193db650b9ba0762fe73525df599a08f8577d (HEAD -&gt; main)
-Author: Julian Nonino &lt;learn.software.eng+jnonino@gmail.com&gt;
-Date:   Thu Jan 19 08:32:57 2023 -0300
-
-    Add number 2 in README.md - NEW COMMIT
-
-commit 866bfa8a952d11240707ebfc87f3266034d42443 (origin/main)
-Author: Julian Nonino &lt;learn.software.eng+jnonino@gmail.com&gt;
-Date:   Wed Jan 18 20:06:40 2023 -0300
-
-    Revert "Merge branch 'feature-1'"
-
-    This reverts commit e2f6d08d3b38a02a1c026cfb879f3131536757ac, reversing
-    changes made to 23644dab9fc5828ecdd358c6d3acb4196ed23546.
-</code></pre></div></div>
-
-<p>Now we can use <code class="language-plaintext highlighter-rouge">git reset --hard &lt;COMMIT_ID&gt;</code> to undo the commit and discard all the changes.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash-3.2$  git reset --hard 866bfa8
-HEAD is now at 866bfa8 Revert "Merge branch 'feature-1'"
-bash-3.2$
-bash-3.2$  git status
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">git log</code> remains as it nothing had happened.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit 866bfa8a952d11240707ebfc87f3266034d42443 (HEAD -&gt; main, origin/main)
-Author: Julian Nonino &lt;learn.software.eng+jnonino@gmail.com&gt;
-Date:   Wed Jan 18 20:06:40 2023 -0300
-
-    Revert "Merge branch 'feature-1'"
-
-    This reverts commit e2f6d08d3b38a02a1c026cfb879f3131536757ac, reversing
-    changes made to 23644dab9fc5828ecdd358c6d3acb4196ed23546.
-</code></pre></div></div>
-
-<h2 id="revert-a-published-commit">Revert a published commit</h2>
-
-<p>When we realized that the last commit was a mistake but we already published it, the command to use is <code class="language-plaintext highlighter-rouge">git revert &lt;COMMIT_HASH&gt;</code>.</p>
+        <p>When we realized that the last commit was a mistake but we already published it, the command to use is <code class="language-plaintext highlighter-rouge">git revert &lt;COMMIT_HASH&gt;</code>.</p>
 
 <ul>
   <li>First we need to locate the ID of the commit we want to revert, it can be done with <code class="language-plaintext highlighter-rouge">git log</code> or <code class="language-plaintext highlighter-rouge">git reflog</code> commands.</li>
@@ -491,7 +363,7 @@ Date:   Wed Jan 18 20:06:40 2023 -0300
   <li>Push our changes so the revert is available for everyone in our group.</li>
 </ul>
 
-<h3 id="reverting-multiple-commits">Reverting multiple commits</h3>
+<h2 id="reverting-multiple-commits">Reverting multiple commits</h2>
 
 <p>If we need to revert multiple commits we can revert them one by one using the <code class="language-plaintext highlighter-rouge">--no-commit</code> option in order to create a single revert commit at the end.</p>
 
@@ -509,7 +381,7 @@ bash-3.2$  git commit -m "Revert to version in COMMIT-3"
 bash-3.2$  git push
 </code></pre></div></div>
 
-<h3 id="reverting-a-merge-commit">Reverting a merge commit</h3>
+<h2 id="reverting-a-merge-commit">Reverting a merge commit</h2>
 
 <blockquote>
   <p>-m parent-number, –mainline parent-number</p>
@@ -780,18 +652,18 @@ bash-3.2$  cat README.md
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Revert+a+change+in+git%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Revert+a+pushed+change+in+Git%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert-pushed%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert-pushed%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fversion%2520control%2Fgit-revert-pushed%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/dev-environment/drafts/post-standard/" class="pagination--pager" title="Post: Standard with long title to test overlay image
+      <a href="/dev-environment/version%20control/git-revert-local/" class="pagination--pager" title="Revert a local change in Git
 ">Previous</a>
     
     
@@ -854,6 +726,52 @@ bash-3.2$  cat README.md
 
     <p class="archive__item-excerpt" itemprop="description">Test future post in draft folder.
 </p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/version%20control/git-revert-local/" rel="permalink">Revert a local change in Git
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-01-18T00:00:00+00:00">January 18, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When we have created a commit locally but have not published it to the remote yet, we can use git reset to undo the commit and, if we wish, discard the chang...</p>
   </article>
 </div>
 
