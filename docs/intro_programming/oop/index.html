@@ -1,0 +1,858 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Object-Oriented Programming - Learn Software Engineering</title>
+<meta name="description" content="“A place to learn about Software Engineering.”">
+
+
+  <meta name="author" content="Julian Nonino">
+  
+  <meta property="article:author" content="Julian Nonino">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Learn Software Engineering">
+<meta property="og:title" content="Object-Oriented Programming">
+<meta property="og:url" content="https://learn-software.com/dev-environment/intro_programming/oop/">
+
+
+  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+
+
+
+  <meta property="og:image" content="https://learn-software.com/dev-environment/assets/images/header/jared-brashier-6WPcf5D1XdA-unsplash.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-08-08T15:56:24+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://learn-software.com/dev-environment/intro_programming/oop/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "LearnSoftware.com",
+      "url": "https://learn-software.com/dev-environment/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/dev-environment/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- Favicon generated with https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/dev-environment/"><img src="/dev-environment/assets/images/logo/logo-square.jpg" alt="Learn-Software.com"></a>
+        
+        <a class="site-title" href="/dev-environment/">
+          Learn-Software.com
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/dev-environment/posts/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/dev-environment/assets/images/header/jared-brashier-6WPcf5D1XdA-unsplash.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Object-Oriented Programming
+
+        
+      </h1>
+      
+        <p class="page__lead">
+</p>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-08-08T15:56:24+00:00">August 8, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo by <a href="https://unsplash.com/@jaredbrashier">Jared Brashier</a> on <a href="https://unsplash.com">Unsplash</a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction to Programming</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev-environment/intro_programming/intro/">Introduction to Programming</a></li>
+          
+            <li><a href="/dev-environment/intro_programming/vars-data-types/">Variables and Data Types</a></li>
+          
+            <li><a href="/dev-environment/intro_programming/control-flow/">Control Flow</a></li>
+          
+            <li><a href="/dev-environment/intro_programming/functions/">Functions</a></li>
+          
+            <li><a href="/dev-environment/intro_programming/algorithms/">Algorithms</a></li>
+          
+            <li><a href="/dev-environment/intro_programming/oop/" class="active">Object-Oriented Programming</a></li>
+          
+            <li><a href="/dev-environment/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
+          
+            <li><a href="/dev-environment/intro_programming/testing/">Testing</a></li>
+          
+            <li><a href="/dev-environment/intro_programming/design-patterns/">Design Patterns</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Object-Oriented Programming">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2023-08-08T15:56:24+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#classes-and-objects">Classes and objects</a></li><li><a href="#core-concepts-of-oop">Core Concepts of OOP</a><ul><li><a href="#1-encapsulation">1. Encapsulation</a></li><li><a href="#2-inheritance">2. Inheritance</a></li><li><a href="#3-polymorphism">3. Polymorphism</a></li><li><a href="#4-abstraction">4. Abstraction</a><ul><li><a href="#how-abstraction-differs-from-polymorphism">How Abstraction differs from Polymorphism</a></li></ul></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to structure code in a way that models real-world entities and their relationships. OOP enables programmers to write reusable, maintainable, and organized code. In this article, we’ll explore the core concepts of OOP using Python, though these principles are applicable across various programming languages.</p>
+
+<h2 id="classes-and-objects">Classes and objects</h2>
+
+<p>A class is a blueprint for creating objects. It defines the attributes and behaviors common to all instances of a particular kind. A class encapsulates the data (attributes) and the operations (methods) that work on the data into a single entity. In essence, a class bundles the state and the procedures to manipulate that state.</p>
+
+<p>Let’s take a closer look at the definition of a class for a car:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">make</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+
+    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">year</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">make</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p><strong>Class Declaration</strong>: The <code class="language-plaintext highlighter-rouge">class</code> keyword followed by the class name <code class="language-plaintext highlighter-rouge">Car</code> begins the definition of the class.</p>
+  </li>
+  <li>
+    <p><strong>Constructor (<code class="language-plaintext highlighter-rouge">__init__</code> method)</strong>: This method initializes the object when it’s created, setting the attributes <code class="language-plaintext highlighter-rouge">make</code>, <code class="language-plaintext highlighter-rouge">model</code>, and <code class="language-plaintext highlighter-rouge">year</code>. The <code class="language-plaintext highlighter-rouge">self</code> parameter refers to the instance of the class itself and is used to access or define attributes of that instance.</p>
+  </li>
+  <li>
+    <p><strong>Attributes</strong>: These are variables that hold data specific to an instance of the class. In this example, <code class="language-plaintext highlighter-rouge">make</code>, <code class="language-plaintext highlighter-rouge">model</code>, and <code class="language-plaintext highlighter-rouge">year</code> are attributes that describe characteristics of the car.</p>
+  </li>
+  <li>
+    <p><strong>Methods</strong>: Methods are functions defined inside the class, representing the behaviors associated with the class objects. In this example, the <code class="language-plaintext highlighter-rouge">display_info</code> method prints the information about the car.</p>
+  </li>
+</ol>
+
+<p>In OOP, an object is an instance of a class. Objects encapsulate data (attributes) and behaviors (methods) that operate on the data. Think of an object as a blueprint for creating instances that represent real-world entities. Here’s how you might create an object (instance) of the <code class="language-plaintext highlighter-rouge">Car</code> class and call its method:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s">"Toyota"</span><span class="p">,</span> <span class="s">"Camry"</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)</span>
+<span class="n">my_car</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: 2021 Toyota Camry
+</span></code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">Car</code> class serves as a blueprint for creating car objects, encapsulating the details of what a car is and what it can do. It enables you to create multiple instances of cars, each with its attributes and methods, without having to repeat the code for each car.</p>
+
+<p>Classes are central to OOP, providing a way to structure code by grouping related data and behavior, making it easier to understand, maintain, and reuse.</p>
+
+<h2 id="core-concepts-of-oop">Core Concepts of OOP</h2>
+
+<h3 id="1-encapsulation">1. Encapsulation</h3>
+
+<p>Encapsulation is one of the fundamental principles of OOP that restricts direct access to some of an object’s components. This means that the internal representation of an object is hidden from the outside. Encapsulation helps in preventing accidental modification of the data and ensures that the object’s state is controlled only through its methods.</p>
+
+<p>Encapsulation can be achieved through access modifiers (such as private, protected, etc.), though Python relies more on convention over enforced encapsulation.</p>
+
+<p>Consider a class representing a bank account:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Account</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">balance</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_balance</span> <span class="o">=</span> <span class="n">balance</span>
+
+    <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">_balance</span>
+
+    <span class="k">def</span> <span class="nf">set_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">balance</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">balance</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">_balance</span> <span class="o">=</span> <span class="n">balance</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p><strong>Attribute with Underscore Prefix</strong>: In Python, prefixing an attribute with a single underscore (e.g., <code class="language-plaintext highlighter-rouge">_balance</code>) is a convention that indicates it should not be accessed directly from outside the class. Though not enforced by the language, it’s a signal to the programmer that it’s a “protected” attribute.</p>
+  </li>
+  <li>
+    <p><strong>Getter Method (<code class="language-plaintext highlighter-rouge">get_balance</code>)</strong>: This method allows controlled access to the <code class="language-plaintext highlighter-rouge">_balance</code> attribute. Clients of the class can retrieve the balance without directly accessing the attribute itself.</p>
+  </li>
+  <li>
+    <p><strong>Setter Method (<code class="language-plaintext highlighter-rouge">set_balance</code>)</strong>: This method controls how the <code class="language-plaintext highlighter-rouge">_balance</code> attribute can be modified. In this example, it ensures that the balance cannot be set to a negative value. By using this method to update the balance, the class can enforce rules and validations on the data.</p>
+  </li>
+</ol>
+
+<p>Here’s how you might use the <code class="language-plaintext highlighter-rouge">Account</code> class:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_account</span><span class="p">.</span><span class="n">get_balance</span><span class="p">())</span>  <span class="c1"># Output: 100
+</span><span class="n">my_account</span><span class="p">.</span><span class="n">set_balance</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_account</span><span class="p">.</span><span class="n">get_balance</span><span class="p">())</span>  <span class="c1"># Output: 50
+</span></code></pre></div></div>
+
+<p>Notice that the balance is accessed and modified through the <code class="language-plaintext highlighter-rouge">get_balance</code> and <code class="language-plaintext highlighter-rouge">set_balance</code> methods, not directly.</p>
+
+<p>Encapsulation promotes a robust design by localizing the dependencies on the internal structure of the class and providing controlled access to its data. It helps in maintaining integrity and consistency of the object’s state and makes the code more maintainable and flexible.</p>
+
+<h3 id="2-inheritance">2. Inheritance</h3>
+
+<p>Inheritance is a mechanism in OOP that allows a class (called the subclass) to inherit attributes and methods from another class (called the superclass). This creates a hierarchical relationship between the classes and promotes code reusability and organization. The subclass can also override or extend the functionalities of the superclass.</p>
+
+<p>Inheritance represents an “is-a” relationship between the subclass and the superclass. For example, if we have a superclass <code class="language-plaintext highlighter-rouge">Person</code> and a subclass <code class="language-plaintext highlighter-rouge">Worker</code>, the relationship would be read as “Worker is a Person.”</p>
+
+<p>Let’s define a general <code class="language-plaintext highlighter-rouge">Person</code> class and a more specific <code class="language-plaintext highlighter-rouge">Worker</code> class that inherits from <code class="language-plaintext highlighter-rouge">Person</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Name: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">, Age: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">age</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Worker</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">job_title</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">job_title</span> <span class="o">=</span> <span class="n">job_title</span>
+
+    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">().</span><span class="n">display_info</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Job Title: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">job_title</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">work</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s"> is working as a </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">job_title</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p><strong>Superclass (<code class="language-plaintext highlighter-rouge">Person</code>)</strong>: This class defines common attributes and methods for a person, such as <code class="language-plaintext highlighter-rouge">name</code> and <code class="language-plaintext highlighter-rouge">age</code>.</p>
+  </li>
+  <li>
+    <p><strong>Subclass (<code class="language-plaintext highlighter-rouge">Worker</code>)</strong>: The <code class="language-plaintext highlighter-rouge">Worker</code> class inherits from <code class="language-plaintext highlighter-rouge">Person</code>, meaning it has access to <code class="language-plaintext highlighter-rouge">Person</code>’s attributes and methods. It also adds a specific attribute, <code class="language-plaintext highlighter-rouge">job_title</code>, and a specific method, <code class="language-plaintext highlighter-rouge">work</code>.</p>
+  </li>
+  <li>
+    <p><strong>Calling the Superclass Constructor (<code class="language-plaintext highlighter-rouge">super().__init__</code>)</strong>: The <code class="language-plaintext highlighter-rouge">super()</code> function allows the <code class="language-plaintext highlighter-rouge">Worker</code> class to call the constructor of the <code class="language-plaintext highlighter-rouge">Person</code> class, ensuring that the <code class="language-plaintext highlighter-rouge">name</code> and <code class="language-plaintext highlighter-rouge">age</code> attributes are initialized.</p>
+  </li>
+  <li>
+    <p><strong>Method Overriding (<code class="language-plaintext highlighter-rouge">display_info</code>)</strong>: The <code class="language-plaintext highlighter-rouge">Worker</code> class overrides the <code class="language-plaintext highlighter-rouge">display_info</code> method of the <code class="language-plaintext highlighter-rouge">Person</code> class, extending its functionality to include the job title. It uses <code class="language-plaintext highlighter-rouge">super().display_info()</code> to call the original method in <code class="language-plaintext highlighter-rouge">Person</code>.</p>
+  </li>
+</ol>
+
+<p>Here’s how you might use the <code class="language-plaintext highlighter-rouge">Person</code> and <code class="language-plaintext highlighter-rouge">Worker</code> classes:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">person</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: Name: Alice, Age: 30
+</span>
+<span class="n">worker</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="s">"Engineer"</span><span class="p">)</span>
+<span class="n">worker</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: Name: Bob, Age: 40, Job Title: Engineer
+</span><span class="n">worker</span><span class="p">.</span><span class="n">work</span><span class="p">()</span>          <span class="c1"># Output: Bob is working as an Engineer
+</span></code></pre></div></div>
+
+<p>Inheritance enables the creation of a hierarchy of classes, where common functionalities are defined in the superclass, and specific functionalities are defined in the subclass. This leads to cleaner, more maintainable code by reducing redundancy and promoting logical organization.</p>
+
+<h3 id="3-polymorphism">3. Polymorphism</h3>
+
+<p>Polymorphism is a concept in OOP that allows objects of different classes to be treated as objects of a common superclass. The word “polymorphism” comes from Greek and means “many shapes.” In programming, it refers to the ability of different objects to respond to the same method call in a way that is specific to their individual types.</p>
+
+<p>Polymorphism promotes flexibility and extensibility, making it easier to add new classes without modifying existing code.</p>
+
+<p>To illustrate polymorphism, we’ll use the <code class="language-plaintext highlighter-rouge">Person</code> and <code class="language-plaintext highlighter-rouge">Worker</code> classes from the previous section on inheritance:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Name: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">, Age: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">age</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Worker</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Name: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">, Age: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">age</span><span class="si">}</span><span class="s">, Job Title: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">job_title</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="c1"># ...
+</span>
+<span class="k">def</span> <span class="nf">print_info</span><span class="p">(</span><span class="n">person</span><span class="p">):</span>
+    <span class="n">person</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">print_info</code> function takes an argument of type <code class="language-plaintext highlighter-rouge">Person</code> but can also accept objects of the <code class="language-plaintext highlighter-rouge">Worker</code> class or any other class that has a <code class="language-plaintext highlighter-rouge">display_info</code> method.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">worker</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="s">"Engineer"</span><span class="p">)</span>
+
+<span class="n">print_info</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>  <span class="c1"># Output: Name: Alice, Age: 30
+</span><span class="n">print_info</span><span class="p">(</span><span class="n">worker</span><span class="p">)</span>  <span class="c1"># Output: Name: Bob, Age: 40, Job Title: Engineer
+</span></code></pre></div></div>
+
+<ol>
+  <li>
+    <p><strong>Common Method Signature</strong>: Both <code class="language-plaintext highlighter-rouge">Person</code> and <code class="language-plaintext highlighter-rouge">Worker</code> classes define a method called <code class="language-plaintext highlighter-rouge">display_info</code>, but the implementation in <code class="language-plaintext highlighter-rouge">Worker</code> includes additional information about the job title.</p>
+  </li>
+  <li>
+    <p><strong>Polymorphic Function (<code class="language-plaintext highlighter-rouge">print_info</code>)</strong>: The <code class="language-plaintext highlighter-rouge">print_info</code> function accepts any object that has a <code class="language-plaintext highlighter-rouge">display_info</code> method. It can work with both <code class="language-plaintext highlighter-rouge">Person</code> and <code class="language-plaintext highlighter-rouge">Worker</code> objects (or any other class with a compatible method), even though their implementations of <code class="language-plaintext highlighter-rouge">display_info</code> are different.</p>
+  </li>
+  <li>
+    <p><strong>Program Output</strong>: When the <code class="language-plaintext highlighter-rouge">print_info</code> function is called with a <code class="language-plaintext highlighter-rouge">Person</code> object, it prints the name and age. When called with a <code class="language-plaintext highlighter-rouge">Worker</code> object, it also prints the job title.</p>
+  </li>
+</ol>
+
+<p>Polymorphism fosters code reusability and can simplify code structure. It enables a level of abstraction where functions can operate on data of multiple types, as long as they adhere to a specific interface or method signature, making the code more flexible and extensible.</p>
+
+<h3 id="4-abstraction">4. Abstraction</h3>
+
+<p>Abstraction is the process of hiding the complex reality of an object while exposing only the essential parts. In programming, it means defining the essential characteristics of an object, such as its attributes and methods, without including the internal details of how those characteristics are implemented.</p>
+
+<p>In OOP, you can achieve abstraction using abstract classes and methods. An abstract class serves as a blueprint for other classes and cannot be instantiated on its own. Abstract methods are declared in the abstract class but are not implemented, meaning that the derived classes must provide their own implementation of these methods.</p>
+
+<p>Let’s define an abstract class <code class="language-plaintext highlighter-rouge">Vehicle</code> with an abstract method <code class="language-plaintext highlighter-rouge">move</code>, and two concrete classes <code class="language-plaintext highlighter-rouge">Car</code> and <code class="language-plaintext highlighter-rouge">Boat</code> that inherit from <code class="language-plaintext highlighter-rouge">Vehicle</code> and provide their own implementation of the <code class="language-plaintext highlighter-rouge">move</code> method:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="k">class</span> <span class="nc">Vehicle</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="o">@</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="n">Vehicle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"The car is driving on the road."</span>
+
+<span class="k">class</span> <span class="nc">Boat</span><span class="p">(</span><span class="n">Vehicle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"The boat is sailing on the water."</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="n">move</span><span class="p">())</span>  <span class="c1"># Output: The car is driving on the road.
+</span>
+<span class="n">boat</span> <span class="o">=</span> <span class="n">Boat</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">boat</span><span class="p">.</span><span class="n">move</span><span class="p">())</span>  <span class="c1"># Output: The boat is sailing on the water.
+</span></code></pre></div></div>
+
+<ol>
+  <li>
+    <p><strong>Abstract Class (<code class="language-plaintext highlighter-rouge">Vehicle</code>)</strong>: This class serves as a blueprint for other classes and cannot be instantiated itself. It declares an abstract method <code class="language-plaintext highlighter-rouge">move</code>.</p>
+  </li>
+  <li>
+    <p><strong>Concrete Classes (<code class="language-plaintext highlighter-rouge">Car</code> and <code class="language-plaintext highlighter-rouge">Boat</code>)</strong>: These classes provide their own implementation of the <code class="language-plaintext highlighter-rouge">move</code> method, fulfilling the contract established by the abstract class.</p>
+  </li>
+  <li>
+    <p><strong>Program Output</strong>: The output reflects the specific implementation of the <code class="language-plaintext highlighter-rouge">move</code> method for each class.</p>
+  </li>
+</ol>
+
+<h4 id="how-abstraction-differs-from-polymorphism">How Abstraction differs from Polymorphism</h4>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong> focuses on hiding the internal details of an object while exposing only the necessary parts. It defines what an object can do, without specifying how it does it. Abstract classes and methods enforce a contract that derived classes must fulfill.</p>
+  </li>
+  <li>
+    <p><strong>Polymorphism</strong> allows objects of different types to be treated as objects of a common type. It emphasizes the ability of different objects to respond to the same method call in a way that’s specific to their individual types. While abstraction defines a contract, polymorphism allows for flexibility in fulfilling that contract through various implementations.</p>
+  </li>
+</ul>
+
+<p>In a sense, abstraction sets the rules, and polymorphism allows different objects to follow those rules in their unique ways. Together, they contribute to a code structure that is more organized, flexible, and maintainable.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Object-Oriented Programming is a powerful paradigm that enables developers to model real-world entities as objects and interact with them in a way that is intuitive and organized. The core concepts of OOP—encapsulation, inheritance, polymorphism, and abstraction—provide a robust framework for writing code that is reusable, maintainable, and extensible.</p>
+
+<p>Understanding OOP is essential for any programmer, and while the examples in this article are in Python, the principles can be applied to many modern programming languages. Mastery of OOP will provide a strong foundation for building complex software systems and applications.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-08-08T15:56:24+00:00">August 8, 2023</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Object-Oriented+Programming%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Foop%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Foop%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Foop%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/dev-environment/intro_programming/algorithms/" class="pagination--pager" title="Algorithms
+">Previous</a>
+    
+    
+      <a href="/dev-environment/intro_programming/error-handling-debugging/" class="pagination--pager" title="Error Handling and Debugging
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/future/draft/future-post-template-for-new-posts/" rel="permalink">Post: future date
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="9999-12-31T00:00:00+00:00">December 31, 9999</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Test future post in draft folder.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/version%20control/git-revert-pushed/" rel="permalink">Revert a pushed change in Git
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-01-18T00:00:00+00:00">January 18, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When we realized that the last commit was a mistake but we already published it, the command to use is git revert &lt;COMMIT_HASH&gt;.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/version%20control/git-revert-local/" rel="permalink">Revert a local change in Git
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-01-18T00:00:00+00:00">January 18, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When we have created a commit locally but have not published it to the remote yet, we can use git reset to undo the commit and, if we wish, discard the chang...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/drafts/post-standard/" rel="permalink">Post: Standard with long title to test overlay image
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-15T00:00:00+00:00">October 15, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">First paragraph to test.
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 LearnSoftware.com. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/dev-environment/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/dev-environment/assets/js/lunr/lunr.min.js"></script>
+<script src="/dev-environment/assets/js/lunr/lunr-store.js"></script>
+<script src="/dev-environment/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=8178366378871940";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+
+
+
+
+
+  </body>
+</html>
