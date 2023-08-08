@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Installing Python - Learn Software Engineering</title>
+<!-- begin _includes/seo.html --><title>Abstraction - Learn Software Engineering</title>
 <meta name="description" content="“A place to learn about Software Engineering.”">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Installing Python">
-<meta property="og:url" content="https://learn-software.com/dev-environment/intro_programming/install-python/">
+<meta property="og:title" content="Abstraction">
+<meta property="og:url" content="https://learn-software.com/dev-environment/oop/abstraction/">
 
 
   <meta property="og:description" content="“A place to learn about Software Engineering.”">
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/intro_programming/install-python/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/oop/abstraction/">
 
 
 
@@ -165,7 +165,7 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Installing Python
+          Abstraction
 
         
       </h1>
@@ -194,7 +194,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          4 minute read
         
       </span>
     
@@ -347,29 +347,27 @@
     
       <li>
         
-          <span class="nav__sub-title">Introduction to Programming</span>
+          <span class="nav__sub-title">Object-Oriented Programming</span>
         
 
         
         <ul>
           
-            <li><a href="/dev-environment/intro_programming/intro/">Introduction to Programming</a></li>
+            <li><a href="/dev-environment/oop/intro/">Introduction to OOP</a></li>
           
-            <li><a href="/dev-environment/intro_programming/vars-data-types/">Variables and Data Types</a></li>
+            <li><a href="/dev-environment/oop/classes-objects/">Classes and objects</a></li>
           
-            <li><a href="/dev-environment/intro_programming/control-flow/">Control Flow</a></li>
+            <li><a href="/dev-environment/oop/encapsulation/">Encapsulation</a></li>
           
-            <li><a href="/dev-environment/intro_programming/functions/">Functions</a></li>
+            <li><a href="/dev-environment/oop/inheritance/">Inheritance</a></li>
           
-            <li><a href="/dev-environment/intro_programming/algorithms/">Algorithms</a></li>
+            <li><a href="/dev-environment/oop/polymorphism/">Polymorphism</a></li>
           
-            <li><a href="/dev-environment/intro_programming/oop/">Object-Oriented Programming</a></li>
+            <li><a href="/dev-environment/oop/abstraction/" class="active">Abstraction</a></li>
           
-            <li><a href="/dev-environment/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
+            <li><a href="/dev-environment/oop/associations/">Associations, aggregations, and compositions</a></li>
           
-            <li><a href="/dev-environment/intro_programming/testing/">Testing</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/design-patterns/">Design Patterns</a></li>
+            <li><a href="/dev-environment/oop/advanced-concepts/">Advanced concepts</a></li>
           
         </ul>
         
@@ -385,7 +383,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Installing Python">
+    <meta itemprop="headline" content="Abstraction">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2023-08-08T17:53:10+00:00">
     
@@ -398,71 +396,127 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#how-to-install-python-on-linux-mac-and-windows">How to install Python on Linux, Mac, and Windows</a><ul><li><a href="#1-linux">1. Linux</a></li><li><a href="#2-mac">2. Mac</a></li><li><a href="#3-windows">3. Windows</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#abstract-classes-and-interfaces">Abstract classes and interfaces</a></li><li><a href="#implementing-abstraction-in-python">Implementing abstraction in Python</a></li><li><a href="#implementing-abstraction-in-java">Implementing abstraction in Java</a><ul><li><a href="#using-abstract-classes">Using abstract classes</a></li><li><a href="#using-interfaces">Using interfaces</a></li><li><a href="#when-to-use-abstract-classes-and-interfaces-in-java">When to use abstract classes and interfaces in Java</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Since Python is often pre-installed on many Linux and Mac systems, this guide also covers checking your existing version and upgrading if necessary.</p>
+        <p>Abstraction is one of the key principles in Object-Oriented Programming (OOP). It plays a vital role in managing complexity by hiding unnecessary details and exposing only what’s essential. This article, will explore the concept of abstraction, its purpose, abstract classes, interfaces, and implementation in Python.</p>
 
-<h3 id="how-to-install-python-on-linux-mac-and-windows">How to install Python on Linux, Mac, and Windows</h3>
+<p>Abstraction refers to the practice of hiding the complex reality while exposing only the essential parts. It’s like viewing something at a high level without delving into the details.</p>
 
-<p>Python is a widely-used programming language for web development, data analysis, scientific computing, and much more. In this article, we’ll guide you through the installation process of Python on three major operating systems: Linux, Mac, and Windows.</p>
+<p>The main purposes of abstraction are:</p>
 
-<h4 id="1-linux">1. Linux</h4>
+<ul>
+  <li><strong>Simplifying Complexity</strong>: By hiding unnecessary details, abstraction makes the code more manageable.</li>
+  <li><strong>Increasing Reusability</strong>: Encapsulating complexity leads to more reusable code.</li>
+  <li><strong>Enhancing Security</strong>: By exposing only what’s needed, abstraction protects the internal workings of a class or module.</li>
+</ul>
 
-<p><strong>Check Existing Version:</strong>
-Many Linux distributions come with Python pre-installed. To check the existing version, open the terminal and run:</p>
+<h2 id="abstract-classes-and-interfaces">Abstract classes and interfaces</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
+<ul>
+  <li><strong>Abstract classes</strong>: is a class that cannot be instantiated on its own and must be subclassed by another class. It may contain abstract methods, which have no implementation in the abstract class and must be implemented by any non-abstract subclass.</li>
+  <li><strong>Interfaces</strong>: defines a contract for what methods a class must implement but doesn’t provide implementations for those methods. In some languages, interfaces are explicitly defined, but in Python, this concept is handled using abstract classes with only abstract methods.</li>
+</ul>
+
+<h2 id="implementing-abstraction-in-python">Implementing abstraction in Python</h2>
+
+<p>In Python, abstraction can be implemented using the <code class="language-plaintext highlighter-rouge">abc</code> module. Here’s how you can create an abstract class:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="o">@</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Circle</span><span class="p">(</span><span class="n">Shape</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">radius</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># Implementing the abstract method
+</span>        <span class="k">return</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="bp">self</span><span class="p">.</span><span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">shape</span> <span class="o">=</span> <span class="n">Shape</span><span class="p">()</span> <span class="c1"># TypeError: Can't instantiate abstract class Shape with abstract methods area
+</span><span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">circle</span><span class="p">.</span><span class="n">area</span><span class="p">())</span> <span class="c1"># Output: 78.5
+</span></code></pre></div></div>
+
+<p>In this example, <code class="language-plaintext highlighter-rouge">Shape</code> is an abstract class with an abstract method <code class="language-plaintext highlighter-rouge">area</code>. Any subclass of <code class="language-plaintext highlighter-rouge">Shape</code> must provide an implementation of this method.</p>
+
+<h2 id="implementing-abstraction-in-java">Implementing abstraction in Java</h2>
+
+<h3 id="using-abstract-classes">Using abstract classes</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Shape</span> <span class="o">{</span>
+    <span class="kd">abstract</span> <span class="kt">double</span> <span class="nf">area</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Circle</span> <span class="kd">extends</span> <span class="nc">Shape</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">radius</span><span class="o">;</span>
+
+    <span class="nc">Circle</span><span class="o">(</span><span class="kt">double</span> <span class="n">radius</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">radius</span> <span class="o">=</span> <span class="n">radius</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kt">double</span> <span class="nf">area</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
-<p>or</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">--version</span>
+
+<p>In Java, you define an abstract class using the <code class="language-plaintext highlighter-rouge">abstract</code> keyword, and any method without a body must also be marked as <code class="language-plaintext highlighter-rouge">abstract</code>.</p>
+
+<h3 id="using-interfaces">Using interfaces</h3>
+
+<p>In Java, an interface can be used to define a contract that classes must adhere to. Here’s an example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Shape</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="nf">area</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Circle</span> <span class="kd">implements</span> <span class="nc">Shape</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">radius</span><span class="o">;</span>
+
+    <span class="nc">Circle</span><span class="o">(</span><span class="kt">double</span> <span class="n">radius</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">radius</span> <span class="o">=</span> <span class="n">radius</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">area</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
-<p><strong>Installing Python 3 on Ubuntu:</strong>
-If Python 3 is not installed, you can run the following commands:</p>
+<p>In this example, the <code class="language-plaintext highlighter-rouge">Shape</code> interface defines an <code class="language-plaintext highlighter-rouge">area</code> method that must be implemented by any class that implements the interface. The <code class="language-plaintext highlighter-rouge">Circle</code> class implements the <code class="language-plaintext highlighter-rouge">Shape</code> interface and provides an implementation for the <code class="language-plaintext highlighter-rouge">area</code> method.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install </span>python3
-</code></pre></div></div>
+<h3 id="when-to-use-abstract-classes-and-interfaces-in-java">When to use abstract classes and interfaces in Java</h3>
 
-<p><strong>Installing on Other Linux Distributions:</strong>
-For other distributions, you can refer to the package manager specific to your distribution, such as <code class="language-plaintext highlighter-rouge">yum</code> for CentOS or <code class="language-plaintext highlighter-rouge">zypper</code> for openSUSE.</p>
+<p>When designing a system in Java, choosing between abstract classes and interfaces depends on various factors. Here’s a guide to help you decide:</p>
 
-<h4 id="2-mac">2. Mac</h4>
-
-<p><strong>Check Existing Version:</strong>
-MacOS usually comes with Python 2.7. To check the version, open Terminal and run:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
-</code></pre></div></div>
-
-<p><strong>Installing Python 3 with Homebrew:</strong>
-You can install Python 3 using Homebrew by running:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>python3
-</code></pre></div></div>
-
-<p><strong>Downloading from the Official Website:</strong>
-You can also download Python from the <a href="https://www.python.org/downloads/mac-osx/">official Python website</a>, then follow the instructions to install it.</p>
-
-<h4 id="3-windows">3. Windows</h4>
-
-<p><strong>Downloading from the Official Website:</strong></p>
+<p><strong>Use Abstract Classes when</strong>:</p>
 <ol>
-  <li>Visit the <a href="https://www.python.org/downloads/windows/">Python download page</a>.</li>
-  <li>Download the latest version for Windows.</li>
-  <li>Run the installer.</li>
-  <li>Make sure to check the box next to “Add Python to PATH” during the installation process.</li>
-  <li>Follow the instructions to complete the installation.</li>
+  <li><em>You want to share code among several closely related classes</em>: Abstract classes allow you to define some default behavior (concrete methods) and force subclasses to provide specific implementations for other parts (abstract methods).</li>
+  <li><em>You want to control the inheritance hierarchy</em>: Abstract classes can have constructors and can also have access modifiers (public, protected, private) applied to their methods. This provides more control over how a class is inherited.</li>
+  <li><em>You need to maintain state</em>: If you want to have common state and behavior among several classes, then using an abstract class is appropriate.</li>
+  <li><em>You want to allow only a single inheritance</em>: Java doesn’t support multiple inheritances for classes, so if a class is already extending another class, it can’t extend another abstract class.</li>
 </ol>
 
-<p><strong>Verify Installation:</strong>
-Open the Command Prompt and run:</p>
+<p><strong>Use Interfaces when</strong>:</p>
+<ol>
+  <li>*You want to define a contract for several unrelated classes**: Interfaces allow unrelated classes to implement the same set of methods, thus ensuring that the classes adhere to certain behavior. This helps in achieving a clean architecture where you can easily swap one implementation with another.</li>
+  <li><strong>You need to support multiple inheritance</strong>: A class can implement multiple interfaces in Java, so if you want a class to adhere to multiple contracts, you would use interfaces.</li>
+  <li><strong>You want to separate the method declaration from implementation completely</strong>: Interfaces in Java (prior to Java 8) allow only abstract method declarations. Starting from Java 8, you can have default methods with implementation in interfaces, but the primary purpose remains defining a contract.</li>
+  <li><strong>You want strong encapsulation</strong>: Interfaces enable you to hide the implementation details of the classes completely, exposing only the methods that should be accessible. This is aligned with the principle of strong encapsulation.</li>
+  <li><strong>You need to implement a standard API across different objects</strong>: If you want various objects to expose the same method signatures, thus allowing them to be used interchangeably, interfaces provide a clear way to enforce this.</li>
+</ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
-</code></pre></div></div>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Abstraction is a powerful concept that enables developers to hide complexity and provide a cleaner, higher-level interface to users of the code. By understanding and applying abstract classes and interfaces, you can write code that is easier to maintain, understand, and extend.</p>
+
+<p>As you continue to explore OOP, leveraging abstraction will become an essential tool in your toolkit, allowing you to design more efficient and effective software systems. Whether you’re working in Python or another OOP language, the principle of abstraction transcends specific technologies, making it a foundational concept in modern software development.</p>
 
         
       </section>
@@ -484,22 +538,22 @@ Open the Command Prompt and run:</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Installing+Python%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Abstraction%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fabstraction%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fabstraction%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fabstraction%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/dev-environment/intro_programming/intro/" class="pagination--pager" title="Introduction to Programming
+      <a href="/dev-environment/oop/polymorphism/" class="pagination--pager" title="Polymorphism
 ">Previous</a>
     
     
-      <a href="/dev-environment/intro_programming/vars-data-types/" class="pagination--pager" title="Variables and Data Types
+      <a href="/dev-environment/oop/associations/" class="pagination--pager" title="Associations, aggregations, and compositions
 ">Next</a>
     
   </nav>

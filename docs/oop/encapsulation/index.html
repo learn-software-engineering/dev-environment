@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Installing Python - Learn Software Engineering</title>
+<!-- begin _includes/seo.html --><title>Encapsulation - Learn Software Engineering</title>
 <meta name="description" content="“A place to learn about Software Engineering.”">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Installing Python">
-<meta property="og:url" content="https://learn-software.com/dev-environment/intro_programming/install-python/">
+<meta property="og:title" content="Encapsulation">
+<meta property="og:url" content="https://learn-software.com/dev-environment/oop/encapsulation/">
 
 
   <meta property="og:description" content="“A place to learn about Software Engineering.”">
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/intro_programming/install-python/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/oop/encapsulation/">
 
 
 
@@ -165,7 +165,7 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Installing Python
+          Encapsulation
 
         
       </h1>
@@ -194,7 +194,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -347,29 +347,27 @@
     
       <li>
         
-          <span class="nav__sub-title">Introduction to Programming</span>
+          <span class="nav__sub-title">Object-Oriented Programming</span>
         
 
         
         <ul>
           
-            <li><a href="/dev-environment/intro_programming/intro/">Introduction to Programming</a></li>
+            <li><a href="/dev-environment/oop/intro/">Introduction to OOP</a></li>
           
-            <li><a href="/dev-environment/intro_programming/vars-data-types/">Variables and Data Types</a></li>
+            <li><a href="/dev-environment/oop/classes-objects/">Classes and objects</a></li>
           
-            <li><a href="/dev-environment/intro_programming/control-flow/">Control Flow</a></li>
+            <li><a href="/dev-environment/oop/encapsulation/" class="active">Encapsulation</a></li>
           
-            <li><a href="/dev-environment/intro_programming/functions/">Functions</a></li>
+            <li><a href="/dev-environment/oop/inheritance/">Inheritance</a></li>
           
-            <li><a href="/dev-environment/intro_programming/algorithms/">Algorithms</a></li>
+            <li><a href="/dev-environment/oop/polymorphism/">Polymorphism</a></li>
           
-            <li><a href="/dev-environment/intro_programming/oop/">Object-Oriented Programming</a></li>
+            <li><a href="/dev-environment/oop/abstraction/">Abstraction</a></li>
           
-            <li><a href="/dev-environment/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
+            <li><a href="/dev-environment/oop/associations/">Associations, aggregations, and compositions</a></li>
           
-            <li><a href="/dev-environment/intro_programming/testing/">Testing</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/design-patterns/">Design Patterns</a></li>
+            <li><a href="/dev-environment/oop/advanced-concepts/">Advanced concepts</a></li>
           
         </ul>
         
@@ -385,7 +383,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Installing Python">
+    <meta itemprop="headline" content="Encapsulation">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2023-08-08T17:53:10+00:00">
     
@@ -398,71 +396,99 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#how-to-install-python-on-linux-mac-and-windows">How to install Python on Linux, Mac, and Windows</a><ul><li><a href="#1-linux">1. Linux</a></li><li><a href="#2-mac">2. Mac</a></li><li><a href="#3-windows">3. Windows</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#public-private-and-protected-modifiers">Public, Private, and Protected Modifiers</a></li><li><a href="#getters-and-setters">Getters and Setters</a></li><li><a href="#example">Example</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Since Python is often pre-installed on many Linux and Mac systems, this guide also covers checking your existing version and upgrading if necessary.</p>
+        <p>Encapsulation is one of the four foundational principles of Object-Oriented Programming (OOP). It plays a crucial role in protecting the integrity of an object by controlling how its data can be accessed and modified. This article, will explore the concept of encapsulation, explain modifiers, and demonstrate how to use getters and setters in Python.</p>
 
-<h3 id="how-to-install-python-on-linux-mac-and-windows">How to install Python on Linux, Mac, and Windows</h3>
+<p>Encapsulation refers to the bundling of data (attributes) and the methods (functions) that operate on the data into a single unit, restricting direct access to some of an object’s components. It acts like a protective barrier that prevents the code outside the class from accidentally modifying the internal state of an object.</p>
 
-<p>Python is a widely-used programming language for web development, data analysis, scientific computing, and much more. In this article, we’ll guide you through the installation process of Python on three major operating systems: Linux, Mac, and Windows.</p>
+<p>The primary purposes of encapsulation are:</p>
 
-<h4 id="1-linux">1. Linux</h4>
+<ul>
+  <li><strong>Maintaining Integrity</strong>: By controlling access, encapsulation ensures that the object’s state cannot be changed arbitrarily.</li>
+  <li><strong>Enhancing Security</strong>: It hides the implementation details, exposing only what is necessary.</li>
+  <li><strong>Improving Maintainability</strong>: Encapsulation makes code more modular and easier to modify without affecting other parts of the program.</li>
+</ul>
 
-<p><strong>Check Existing Version:</strong>
-Many Linux distributions come with Python pre-installed. To check the existing version, open the terminal and run:</p>
+<h2 id="public-private-and-protected-modifiers">Public, Private, and Protected Modifiers</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
-</code></pre></div></div>
-<p>or</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">--version</span>
-</code></pre></div></div>
+<p>In Python, you can define attributes and methods as public, private, or protected using the following conventions:</p>
 
-<p><strong>Installing Python 3 on Ubuntu:</strong>
-If Python 3 is not installed, you can run the following commands:</p>
+<ul>
+  <li><strong>Public</strong>: Accessible from anywhere. No specific notation is required.</li>
+  <li><strong>Private</strong>: Denoted by a double underscore prefix (e.g., <code class="language-plaintext highlighter-rouge">__attribute</code>). Only accessible within the class.</li>
+  <li><strong>Protected</strong>: Denoted by a single underscore prefix (e.g., <code class="language-plaintext highlighter-rouge">_attribute</code>). It’s a convention that these attributes shouldn’t be accessed outside the class, but they are still technically accessible.</li>
+</ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install </span>python3
-</code></pre></div></div>
-
-<p><strong>Installing on Other Linux Distributions:</strong>
-For other distributions, you can refer to the package manager specific to your distribution, such as <code class="language-plaintext highlighter-rouge">yum</code> for CentOS or <code class="language-plaintext highlighter-rouge">zypper</code> for openSUSE.</p>
-
-<h4 id="2-mac">2. Mac</h4>
-
-<p><strong>Check Existing Version:</strong>
-MacOS usually comes with Python 2.7. To check the version, open Terminal and run:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Account</span><span class="p">:</span>
+    <span class="n">public_data</span> <span class="o">=</span> <span class="s">"Public"</span>
+    <span class="n">_protected_data</span> <span class="o">=</span> <span class="s">"Protected"</span>
+    <span class="n">__private_data</span> <span class="o">=</span> <span class="s">"Private"</span>
 </code></pre></div></div>
 
-<p><strong>Installing Python 3 with Homebrew:</strong>
-You can install Python 3 using Homebrew by running:</p>
+<h2 id="getters-and-setters">Getters and Setters</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>python3
+<p>In encapsulation, getters and setters are used to access and modify private attributes.</p>
+
+<ul>
+  <li>Getters are methods used to retrieve the value of private attributes.</li>
+  <li>Setters are methods used to set or modify the value of private attributes.</li>
+</ul>
+
+<p>Here’s how you can define getters and setters in Python:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">__age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="c1"># Getter for name
+</span>    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">__name</span>
+
+    <span class="c1"># Setter for name
+</span>    <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span>
 </code></pre></div></div>
 
-<p><strong>Downloading from the Official Website:</strong>
-You can also download Python from the <a href="https://www.python.org/downloads/mac-osx/">official Python website</a>, then follow the instructions to install it.</p>
+<h2 id="example">Example</h2>
 
-<h4 id="3-windows">3. Windows</h4>
+<p>Let’s take a look at a complete example that demonstrates encapsulation:</p>
 
-<p><strong>Downloading from the Official Website:</strong></p>
-<ol>
-  <li>Visit the <a href="https://www.python.org/downloads/windows/">Python download page</a>.</li>
-  <li>Download the latest version for Windows.</li>
-  <li>Run the installer.</li>
-  <li>Make sure to check the box next to “Add Python to PATH” during the installation process.</li>
-  <li>Follow the instructions to complete the installation.</li>
-</ol>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">grade</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">__grade</span> <span class="o">=</span> <span class="n">grade</span>
 
-<p><strong>Verify Installation:</strong>
-Open the Command Prompt and run:</p>
+    <span class="c1"># Getter for name
+</span>    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">__name</span>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
-</code></pre></div></div>
+    <span class="c1"># Setter for grade
+</span>    <span class="k">def</span> <span class="nf">set_grade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grade</span><span class="p">):</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">grade</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">__grade</span> <span class="o">=</span> <span class="n">grade</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Grade must be between 0 and 100."</span><span class="p">)</span>
+
+    <span class="c1"># Method to display student information
+</span>    <span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">__name</span><span class="si">}</span><span class="s"> has a grade of </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">__grade</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
+
+<span class="n">student</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">student</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: Alice has a grade of 90.
+</span><span class="n">student</span><span class="p">.</span><span class="n">set_grade</span><span class="p">(</span><span class="mi">95</span><span class="p">)</span>
+<span class="n">student</span><span class="p">.</span><span class="n">display_info</span><span class="p">()</span>  <span class="c1"># Output: Alice has a grade of 95.
+</span></code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Encapsulation is a powerful concept in OOP that promotes code integrity, security, and maintainability. By understanding and implementing public, private, and protected modifiers along with getters and setters, you can write more robust and well-organized code.</p>
+
+<p>As you continue your journey into OOP, the knowledge of encapsulation will serve as a strong foundation for exploring more advanced topics and best practices.</p>
 
         
       </section>
@@ -484,22 +510,22 @@ Open the Command Prompt and run:</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Installing+Python%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Encapsulation%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fencapsulation%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fencapsulation%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fencapsulation%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/dev-environment/intro_programming/intro/" class="pagination--pager" title="Introduction to Programming
+      <a href="/dev-environment/oop/classes-objects/" class="pagination--pager" title="Classes and objects
 ">Previous</a>
     
     
-      <a href="/dev-environment/intro_programming/vars-data-types/" class="pagination--pager" title="Variables and Data Types
+      <a href="/dev-environment/oop/inheritance/" class="pagination--pager" title="Inheritance
 ">Next</a>
     
   </nav>

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Installing Python - Learn Software Engineering</title>
+<!-- begin _includes/seo.html --><title>Associations, aggregations, and compositions - Learn Software Engineering</title>
 <meta name="description" content="“A place to learn about Software Engineering.”">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Installing Python">
-<meta property="og:url" content="https://learn-software.com/dev-environment/intro_programming/install-python/">
+<meta property="og:title" content="Associations, aggregations, and compositions">
+<meta property="og:url" content="https://learn-software.com/dev-environment/oop/associations/">
 
 
   <meta property="og:description" content="“A place to learn about Software Engineering.”">
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/intro_programming/install-python/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/oop/associations/">
 
 
 
@@ -165,7 +165,7 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Installing Python
+          Associations, aggregations, and compositions
 
         
       </h1>
@@ -194,7 +194,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -347,29 +347,27 @@
     
       <li>
         
-          <span class="nav__sub-title">Introduction to Programming</span>
+          <span class="nav__sub-title">Object-Oriented Programming</span>
         
 
         
         <ul>
           
-            <li><a href="/dev-environment/intro_programming/intro/">Introduction to Programming</a></li>
+            <li><a href="/dev-environment/oop/intro/">Introduction to OOP</a></li>
           
-            <li><a href="/dev-environment/intro_programming/vars-data-types/">Variables and Data Types</a></li>
+            <li><a href="/dev-environment/oop/classes-objects/">Classes and objects</a></li>
           
-            <li><a href="/dev-environment/intro_programming/control-flow/">Control Flow</a></li>
+            <li><a href="/dev-environment/oop/encapsulation/">Encapsulation</a></li>
           
-            <li><a href="/dev-environment/intro_programming/functions/">Functions</a></li>
+            <li><a href="/dev-environment/oop/inheritance/">Inheritance</a></li>
           
-            <li><a href="/dev-environment/intro_programming/algorithms/">Algorithms</a></li>
+            <li><a href="/dev-environment/oop/polymorphism/">Polymorphism</a></li>
           
-            <li><a href="/dev-environment/intro_programming/oop/">Object-Oriented Programming</a></li>
+            <li><a href="/dev-environment/oop/abstraction/">Abstraction</a></li>
           
-            <li><a href="/dev-environment/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
+            <li><a href="/dev-environment/oop/associations/" class="active">Associations, aggregations, and compositions</a></li>
           
-            <li><a href="/dev-environment/intro_programming/testing/">Testing</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/design-patterns/">Design Patterns</a></li>
+            <li><a href="/dev-environment/oop/advanced-concepts/">Advanced concepts</a></li>
           
         </ul>
         
@@ -385,7 +383,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Installing Python">
+    <meta itemprop="headline" content="Associations, aggregations, and compositions">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2023-08-08T17:53:10+00:00">
     
@@ -398,71 +396,97 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#how-to-install-python-on-linux-mac-and-windows">How to install Python on Linux, Mac, and Windows</a><ul><li><a href="#1-linux">1. Linux</a></li><li><a href="#2-mac">2. Mac</a></li><li><a href="#3-windows">3. Windows</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#definitions">Definitions</a><ul><li><a href="#association">Association</a></li><li><a href="#aggregation">Aggregation</a></li><li><a href="#composition">Composition</a></li></ul></li><li><a href="#has-a-relationship">“has-a” Relationship</a></li><li><a href="#uml-diagrams">UML Diagrams</a></li><li><a href="#real-world-examples-and-python-code">Real-world Examples and Python Code</a><ul><li><a href="#association-1">Association</a></li><li><a href="#aggregation-1">Aggregation</a></li><li><a href="#composition-1">Composition</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Since Python is often pre-installed on many Linux and Mac systems, this guide also covers checking your existing version and upgrading if necessary.</p>
+        <p>Understanding relationships between classes is vital for designing robust and maintainable systems. This article, will explore three types of relationships: Associations, Aggregations, and Compositions. We’ll look into their definitions, differences, and applications, providing examples in Python and using UML diagrams.</p>
 
-<h3 id="how-to-install-python-on-linux-mac-and-windows">How to install Python on Linux, Mac, and Windows</h3>
+<h2 id="definitions">Definitions</h2>
 
-<p>Python is a widely-used programming language for web development, data analysis, scientific computing, and much more. In this article, we’ll guide you through the installation process of Python on three major operating systems: Linux, Mac, and Windows.</p>
+<h3 id="association">Association</h3>
 
-<h4 id="1-linux">1. Linux</h4>
+<p>An association represents a “using” relationship between two or more objects. It indicates that objects of one class are somehow connected or utilize objects of another class.</p>
 
-<p><strong>Check Existing Version:</strong>
-Many Linux distributions come with Python pre-installed. To check the existing version, open the terminal and run:</p>
+<h3 id="aggregation">Aggregation</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
+<p>Aggregation is a specialized form of association where one class is a part of another class but both exist independently. It represents a “whole-part” relationship, but the lifetime of the part does not depend on the whole.</p>
+
+<h3 id="composition">Composition</h3>
+
+<p>Composition is a more restrictive form of aggregation where the part’s life cycle is closely tied to the whole’s life cycle. If the whole is destroyed, the part will also be destroyed. It represents a stronger “whole-part” relationship.</p>
+
+<h2 id="has-a-relationship">“has-a” Relationship</h2>
+
+<p>Both aggregation and composition represent a <strong><em>“has-a”</em></strong> relationship. For example, a <code class="language-plaintext highlighter-rouge">Car</code> class has an <code class="language-plaintext highlighter-rouge">Engine</code> class, but the connection between them could be either aggregation or composition depending on how tightly they are linked.</p>
+
+<h2 id="uml-diagrams">UML Diagrams</h2>
+
+<p>Unified Modeling Language (UML) diagrams can represent these relationships visually:</p>
+
+<ul>
+  <li><strong>Association</strong>: A simple line between classes.</li>
+  <li><strong>Aggregation</strong>: A line with a hollow diamond on the whole side.</li>
+  <li><strong>Composition</strong>: A line with a filled diamond on the whole side.</li>
+</ul>
+
+<h2 id="real-world-examples-and-python-code">Real-world Examples and Python Code</h2>
+
+<h3 id="association-1">Association</h3>
+
+<p>A <code class="language-plaintext highlighter-rouge">Driver</code> class that operates a <code class="language-plaintext highlighter-rouge">Car</code> class.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Driver</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">drive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">car</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Driving the car"</span><span class="p">)</span>
+
+<span class="n">car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">Driver</span><span class="p">()</span>
+<span class="n">driver</span><span class="p">.</span><span class="n">drive</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>  <span class="c1"># Output: Driving the car
+</span></code></pre></div></div>
+
+<h3 id="aggregation-1">Aggregation</h3>
+
+<p>A <code class="language-plaintext highlighter-rouge">Library</code> class containing a collection of <code class="language-plaintext highlighter-rouge">Book</code> objects.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Book</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Library</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">books</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">add_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">book</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">books</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+
+<span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="p">()</span>
+<span class="n">library</span> <span class="o">=</span> <span class="n">Library</span><span class="p">()</span>
+<span class="n">library</span><span class="p">.</span><span class="n">add_book</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
 </code></pre></div></div>
-<p>or</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">--version</span>
+
+<h3 id="composition-1">Composition</h3>
+
+<p>A <code class="language-plaintext highlighter-rouge">Computer</code> class containing a <code class="language-plaintext highlighter-rouge">CPU</code> class, where the CPU cannot exist without the Computer.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CPU</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">Computer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">cpu</span> <span class="o">=</span> <span class="n">CPU</span><span class="p">()</span> <span class="c1"># CPU is created when the Computer is created
+</span>
+<span class="n">computer</span> <span class="o">=</span> <span class="n">Computer</span><span class="p">()</span>
 </code></pre></div></div>
 
-<p><strong>Installing Python 3 on Ubuntu:</strong>
-If Python 3 is not installed, you can run the following commands:</p>
+<h2 id="conclusion">Conclusion</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install </span>python3
-</code></pre></div></div>
+<p>Associations, aggregations, and compositions are foundational concepts that describe different types of relationships between classes in OOP. Understanding these relationships helps in modeling and building real-world systems. While the examples in this article are implemented in Python, these concepts apply across various OOP languages.</p>
 
-<p><strong>Installing on Other Linux Distributions:</strong>
-For other distributions, you can refer to the package manager specific to your distribution, such as <code class="language-plaintext highlighter-rouge">yum</code> for CentOS or <code class="language-plaintext highlighter-rouge">zypper</code> for openSUSE.</p>
-
-<h4 id="2-mac">2. Mac</h4>
-
-<p><strong>Check Existing Version:</strong>
-MacOS usually comes with Python 2.7. To check the version, open Terminal and run:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
-</code></pre></div></div>
-
-<p><strong>Installing Python 3 with Homebrew:</strong>
-You can install Python 3 using Homebrew by running:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>python3
-</code></pre></div></div>
-
-<p><strong>Downloading from the Official Website:</strong>
-You can also download Python from the <a href="https://www.python.org/downloads/mac-osx/">official Python website</a>, then follow the instructions to install it.</p>
-
-<h4 id="3-windows">3. Windows</h4>
-
-<p><strong>Downloading from the Official Website:</strong></p>
-<ol>
-  <li>Visit the <a href="https://www.python.org/downloads/windows/">Python download page</a>.</li>
-  <li>Download the latest version for Windows.</li>
-  <li>Run the installer.</li>
-  <li>Make sure to check the box next to “Add Python to PATH” during the installation process.</li>
-  <li>Follow the instructions to complete the installation.</li>
-</ol>
-
-<p><strong>Verify Installation:</strong>
-Open the Command Prompt and run:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">--version</span>
-</code></pre></div></div>
+<p>By grasping these relationships and knowing when to use them, you’ll be better equipped to design and implement effective and efficient systems. They allow you to create code that accurately represents the real world, fostering clearer thinking and stronger design skills.</p>
 
         
       </section>
@@ -484,22 +508,22 @@ Open the Command Prompt and run:</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Installing+Python%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Associations%2C+aggregations%2C+and+compositions%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fassociations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fassociations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Finstall-python%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Foop%2Fassociations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/dev-environment/intro_programming/intro/" class="pagination--pager" title="Introduction to Programming
+      <a href="/dev-environment/oop/abstraction/" class="pagination--pager" title="Abstraction
 ">Previous</a>
     
     
-      <a href="/dev-environment/intro_programming/vars-data-types/" class="pagination--pager" title="Variables and Data Types
+      <a href="/dev-environment/oop/advanced-concepts/" class="pagination--pager" title="Advanced concepts
 ">Next</a>
     
   </nav>
