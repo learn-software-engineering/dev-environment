@@ -1,0 +1,1049 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Requirements Engineering - Learn Software Engineering</title>
+<meta name="description" content="The blueprint of software development">
+
+
+  <meta name="author" content="Julian Nonino">
+  
+  <meta property="article:author" content="Julian Nonino">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Learn Software Engineering">
+<meta property="og:title" content="Requirements Engineering">
+<meta property="og:url" content="https://learn-software.com/dev-environment/software_engineering/requirements-engineering/">
+
+
+  <meta property="og:description" content="The blueprint of software development">
+
+
+
+  <meta property="og:image" content="https://learn-software.com/dev-environment/assets/images/header/jared-brashier-6WPcf5D1XdA-unsplash.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-08-18T10:56:31+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://learn-software.com/dev-environment/software_engineering/requirements-engineering/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "LearnSoftware.com",
+      "url": "https://learn-software.com/dev-environment/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/dev-environment/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- Favicon generated with https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Clarity tracking code for https://learn-software.com/ -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "icjcrbx0hn");
+</script>
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/dev-environment/"><img src="/dev-environment/assets/images/logo/logo-square.jpg" alt="Learn-Software.com"></a>
+        
+        <a class="site-title" href="/dev-environment/">
+          Learn-Software.com
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/dev-environment/collections/">Collections</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/posts/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev-environment/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/dev-environment/assets/images/header/jared-brashier-6WPcf5D1XdA-unsplash.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Requirements Engineering
+
+        
+      </h1>
+      
+        <p class="page__lead">The blueprint of software development
+</p>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-08-18T10:56:31+00:00">August 18, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          10 minute read
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo by <a href="https://unsplash.com/@jaredbrashier">Jared Brashier</a> on <a href="https://unsplash.com">Unsplash</a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/dev-environment/assets/images/bio-photo-julian-nonino.jpg" alt="Julian Nonino" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Julian Nonino</h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">London, UK</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/jnonino/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/jnonino" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://youtube.com/@learn-software" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">@learn-software</span></a></li>
+          
+        
+          
+            <li><a href="https://youtube.com/@aprende-software" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">@aprende-software</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:learn.software.eng+jnonino@gmail.com">
+            <meta itemprop="email" content="learn.software.eng+jnonino@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Software Engineering</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev-environment/software_engineering/intro/">Introduction to Software Engineering</a></li>
+          
+            <li><a href="/dev-environment/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
+          
+            <li><a href="/dev-environment/software_engineering/sdlc-planning/">SDLC: The Planning phase</a></li>
+          
+            <li><a href="/dev-environment/software_engineering/sdlc-system-design/">SDLC: The System Design phase</a></li>
+          
+            <li><a href="/dev-environment/software_engineering/sdlc-implementation/">SDLC: The Implementation phase</a></li>
+          
+            <li><a href="/dev-environment/software_engineering/sdlc-testing/">SDLC: The Testing phase</a></li>
+          
+            <li><a href="/dev-environment/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
+          
+            <li><a href="/dev-environment/software_engineering/sdlc-maintenance/">SDLC: The Maintenance phase</a></li>
+          
+            <li><a href="/dev-environment/software_engineering/requirements-engineering/" class="active">Requirements Engineering</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Requirements Engineering">
+    <meta itemprop="description" content="The blueprint of software development">
+    <meta itemprop="datePublished" content="2023-08-18T10:56:31+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#what-should-requirements-define">What should requirements define?</a></li><li><a href="#properties-of-good-requirements">Properties of good requirements</a></li><li><a href="#levels-of-requirements">Levels of requirements</a><ul><li><a href="#business-requirements">Business requirements</a></li><li><a href="#user-requirements">User requirements</a></li><li><a href="#system-requirements">System requirements</a></li></ul></li><li><a href="#types-of-requirements">Types of requirements</a><ul><li><a href="#functional-requirements">Functional requirements</a></li><li><a href="#non-functional-requirements">Non-functional requirements</a><ul><li><a href="#product-requirements">Product Requirements</a></li><li><a href="#organizational-requirements">Organizational Requirements</a></li><li><a href="#external-requirements">External Requirements</a></li></ul></li></ul></li><li><a href="#software-requirements-specification-srs">Software Requirements Specification (SRS)</a></li><li><a href="#notations-for-documenting-requirements">Notations for documenting requirements</a></li><li><a href="#eliciting-and-analyzing-requirements">Eliciting and analyzing requirements</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#emerging-trends">Emerging Trends</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>Requirements engineering is the process of defining, documenting and maintaining requirements for a software system. It is the first and foundational stage in the software development lifecycle. Requirements express the needs and constraints that the software must satisfy in order to solve problems and provide value to users and the business.
+Let’s get started understanding the basics of requirements in software projects.</p>
+
+<p>According to Sommerville and Sawyer, a requirement is a statement about an intended product that specifies what it should do or how it should perform[^1].</p>
+
+<p>Requirements identify the goals, needs and constraints that the software must address in order to deliver value. They are a form of specification that serve as the foundation for all subsequent software engineering activities.</p>
+
+<p>Some key definitions of requirements are:</p>
+
+<ul>
+  <li>Description of how the system should behave.</li>
+  <li>Features that the software needs to deliver.</li>
+  <li>Functionalities that users expect from the software.</li>
+  <li>Statements of business rules that software must comply with.</li>
+  <li>Constraints on development of the software.</li>
+</ul>
+
+<p>Requirements convey the intended purpose, context and environment in which the software will operate. They express the underlying motivations for why the software needs to be built by identifying problems faced by users or organization.</p>
+
+<p>As Wiegers puts it, <em>requirements describe the inner and outer capabilities, characteristics, and qualities that the product must have or perform well to satisfy all aspects of the product vision</em>[^2].</p>
+
+<h2 id="what-should-requirements-define">What should requirements define?</h2>
+
+<p>Good requirements provide a complete description of <strong>what</strong> the software will do, without dealing with <strong>how</strong> it will be implemented.</p>
+
+<p>Some key aspects that requirements should define are:</p>
+<ul>
+  <li><strong>User capabilities</strong>: what can users do with the system? e.g. login, search, make payment etc.</li>
+  <li><strong>Operational workflows</strong>: how does system interact with users and external systems? e.g. order processing workflow.</li>
+  <li><strong>Business rules</strong>: what policies and rules does system need to comply with? e.g. credit limits.</li>
+  <li><strong>Integration touch points</strong>: how does system integrate with other systems? e.g. payment gateway APIs.</li>
+  <li><strong>Quality attributes</strong>: what non-functional qualities are important? e.g. security, availability.</li>
+  <li><strong>External interfaces</strong>: how does system interact with external actors? e.g. device interfaces.</li>
+  <li><strong>Environment conditions</strong>: what environmental constraints are present? e.g. operating system.</li>
+  <li><strong>Design/architectural constraints</strong>: are there constraints on design choices? e.g. use cloud infrastructure.</li>
+</ul>
+
+<p>Documenting these aspects ensures requirements provide a good view into the problem space and what the software solution needs to achieve.</p>
+
+<h2 id="properties-of-good-requirements">Properties of good requirements</h2>
+
+<p>High quality requirements exhibit certain desired characteristics:</p>
+
+<ul>
+  <li><strong>Complete</strong>: requirements capture the full capabilities needed without any gaps.</li>
+  <li><strong>Correct</strong>: requirements precisely represent genuine user needs.</li>
+  <li><strong>Feasible</strong>: requirements can be reasonably implemented within constraints.</li>
+  <li><strong>Unambiguous</strong>: requirements have clear meaning that is open to only one interpretation.</li>
+  <li><strong>Consistent</strong>: there are no conflicts or contradictions between requirements.</li>
+  <li><strong>Prioritized</strong>: importance and urgency is indicated to guide implementation.</li>
+  <li><strong>Verifiable</strong>: requirements can be validated via concrete acceptance criteria.</li>
+  <li><strong>Traceable</strong>: origin of each requirement is clear for analysis.</li>
+  <li><strong>Atomic</strong>: requirements define one need instead of multiple combined needs.</li>
+  <li><strong>Implementation free</strong>: requirements avoid implementation choices or design details.</li>
+</ul>
+
+<p>Adhering to these qualities results in a strong set of requirements that serve as a solid foundation for the software design and development.</p>
+
+<hr />
+
+<h2 id="levels-of-requirements">Levels of requirements</h2>
+
+<p>Requirements are defined at different levels of abstraction and detail. Requirements evolve from high-level needs to detailed specifications through this hierarchical breakdown.</p>
+
+<h3 id="business-requirements">Business requirements</h3>
+
+<p>These capture high-level needs related to business objectives, problems and outcomes the software should achieve. They are written using terminology familiar to business users. Examples include:</p>
+
+<ul>
+  <li>Improve customer retention by 10%.</li>
+  <li>Reduce operational costs by optimizing order processing.</li>
+  <li>Enable omni-channel order fulfillment.</li>
+</ul>
+
+<h3 id="user-requirements">User requirements</h3>
+
+<p>These describe the needs and wishes of end-users related to functionality and quality. They capture who, what, where, when and why of user interactions. Examples:</p>
+
+<ul>
+  <li>User shall be able to place orders 24/7 via website.</li>
+  <li>System shall provide real-time order status tracking.</li>
+  <li>User shall be able to save payment information securely.</li>
+</ul>
+
+<h3 id="system-requirements">System requirements</h3>
+
+<p>These describe the detailed behaviors, operations, capabilities and business rules the system needs to implement. Or, impose quality constraints, performance needs and other attributes on the system. Examples:</p>
+
+<ul>
+  <li>System shall verify customer identity before accepting order.</li>
+  <li>User shall be able to filter orders by date, status, amount, etc.</li>
+  <li>System shall interface with the inventory system to validate product availability.</li>
+  <li>System must have a uptime of 99.95%.</li>
+  <li>Page response time must be under 100 ms for 90% of requests.</li>
+  <li>System must store customer data encrypted at rest.</li>
+</ul>
+
+<hr />
+
+<h2 id="types-of-requirements">Types of requirements</h2>
+
+<p>There are two main types of requirements:</p>
+
+<h3 id="functional-requirements">Functional requirements</h3>
+
+<p>These describe the specific behaviors and operations that the system needs to perform in order to accomplish the intended purpose. Functional requirements depend heavily on the type of software being developed. Some examples of functional requirements are:</p>
+
+<ul>
+  <li>The system shall allow users to sign in using their email address and password.</li>
+  <li>The system shall allow admins to add new user accounts.</li>
+  <li>The system shall allow managers to generate sales reports by region.</li>
+  <li>The system shall integrate with PayPal to accept payments.</li>
+</ul>
+
+<h3 id="non-functional-requirements">Non-functional requirements</h3>
+
+<p>Non-functional requirements specify quality attributes and constraints that software must meet. They impose restrictions on <strong>how</strong> the system performs its functions. Examples of non-functional requirements:</p>
+
+<ul>
+  <li>The system shall have an uptime of 99.95%.</li>
+  <li>The system shall support up to 100 concurrent active users.</li>
+  <li>User passwords must be stored in encrypted format.</li>
+  <li>The website shall work on mobile and desktop browsers.</li>
+</ul>
+
+<p>In turn, non-functional requirements can be divided into the following categories. Covering relevant categories of non-functional needs results in a comprehensive set of quality requirements.</p>
+
+<h4 id="product-requirements">Product Requirements</h4>
+
+<p>These relate to quality characteristics of the software itself. Types include:</p>
+
+<ul>
+  <li><strong>Usability</strong>: how easy is it for users to learn and operate the system?</li>
+  <li><strong>Performance</strong>: response times, throughput, resource usage, scalability targets, etc.</li>
+  <li><strong>Security</strong>: access control, encryption, vulnerability prevention, etc.</li>
+  <li><strong>Availability</strong>: uptime, reliability, disaster recovery needs, etc.</li>
+  <li><strong>Maintainability</strong>: ability to make changes, add new features, repair defects, etc.</li>
+  <li><strong>Portability</strong>: ability to work across different environments and platforms.</li>
+</ul>
+
+<h4 id="organizational-requirements">Organizational Requirements</h4>
+
+<p>These relate to business, process and compliance needs of the organization. Types include:</p>
+
+<ul>
+  <li><strong>Delivery</strong>: schedule, release planning, milestones to be met.</li>
+  <li><strong>Legal</strong>: regulations, policies, standards that must be complied with.</li>
+  <li><strong>Data</strong>: data formats, retention periods, reporting needs, etc.</li>
+  <li><strong>Process</strong>: integration with organizational workflows, change management, etc.</li>
+  <li><strong>Operational</strong>: server environments, infrastructure standards, monitoring needs, etc.</li>
+</ul>
+
+<h4 id="external-requirements">External Requirements</h4>
+
+<p>These relate to integration with external systems and end user environments. Types include:</p>
+
+<ul>
+  <li><strong>Interfaces</strong>: protocols, APIs, formats for exchanging data.</li>
+  <li><strong>Interoperability</strong>: ability to integrate with other systems as needed.</li>
+  <li><strong>Hardware</strong>: support for client hardware like scanners, handhelds, etc.</li>
+  <li><strong>Platform</strong>: compatibility with end user operating systems.</li>
+</ul>
+
+<hr />
+
+<h2 id="software-requirements-specification-srs">Software Requirements Specification (SRS)</h2>
+
+<p>The Software Requirements Specification (SRS) is the official document that captures the complete set of requirements for the system in detail. It is treated as the contract between customers and developers.</p>
+
+<p>According to IEEE, the SRS can be defined as <em>a document that describes all data, functional and behavioral requirements; analyzes, specifies, and validates the system requirements</em>[^3].</p>
+
+<p>Some key purposes that the SRS serves are:</p>
+
+<ul>
+  <li>Formally documents the requirements agreed upon by stakeholders.</li>
+  <li>Serves as reference for planning, estimating and tracking the project.</li>
+  <li>Reduces ambiguity by recording details about requirements.</li>
+  <li>Serves as basis for design, development and testing activities.</li>
+  <li>Facilitates communication and consensus between teams.</li>
+  <li>Becomes basis for verification and validation.</li>
+  <li>Evolves into system tests, user manuals, etc.</li>
+</ul>
+
+<p>The main users of the SRS document are:</p>
+
+<ul>
+  <li><strong>Customers</strong>: clarify needs, review and approve requirements.</li>
+  <li><strong>Managers</strong>: estimate effort, plan activities, track progress.</li>
+  <li><strong>Architects</strong>: analyze requirements to design solutions.</li>
+  <li><strong>Developers</strong>: understand detailed needs to implement.</li>
+  <li><strong>Testers</strong>: derive test conditions and test cases.</li>
+  <li><strong>Technical Writers</strong>: use it as foundation for user manuals.</li>
+</ul>
+
+<p>A typical SRS is organized into the following sections:</p>
+
+<ol>
+  <li><strong>Introduction</strong>: purpose, scope, definitions, acronyms, references.</li>
+  <li><strong>User Requirements</strong>: capabilities, user characteristics, constraints.</li>
+  <li><strong>Functional Requirements</strong>: functionalities, operations, business rules.</li>
+  <li><strong>Non-functional Requirements</strong>: qualities, performance, attributes.</li>
+  <li><strong>External Interface Requirements</strong>: interactions with other systems, devices, etc.</li>
+  <li><strong>Other Requirements</strong>: licensing, compliance, platform, deliverables.</li>
+  <li><strong>Appendix</strong>: diagrams, analysis models, schema definitions.</li>
+</ol>
+
+<p>The SRS maintains traceability between stakeholder needs, requirements specification and system design. This enables tracking of requirements throughout the product lifecycle.</p>
+
+<hr />
+
+<h2 id="notations-for-documenting-requirements">Notations for documenting requirements</h2>
+
+<p>Textual description is the most common way of documenting requirements in the SRS. However, visual models and formal notations can also be used to express specific aspects precisely. Here there are different ways of expressing software requirements.</p>
+
+<ul>
+  <li><strong>User stories</strong>: used in agile methods to capture user requirements. Written as *“As a <user role="">, I want <capability> so that <value>"*.</value></capability></user></li>
+  <li><strong>Use cases</strong>: describe interactions between users and the system to achieve a goal.</li>
+  <li><strong>Data models</strong>: express structure of data as entities, attributes, relationships etc. e.g. ER diagrams.</li>
+  <li><strong>Behavior models</strong>: represent dynamic behavior and workflows e.g. state machine diagrams, activity diagrams.</li>
+  <li><strong>Interface models</strong>: specify external interfaces using API blueprints, protocol specs, etc.</li>
+  <li><strong>Supplementary specifications</strong>: detailed non-functional specs e.g. security standards, compliance rules.</li>
+</ul>
+
+<p>Choosing appropriate techniques allows capturing complete details in an unambiguous manner. The textual SRS can reference these as needed.</p>
+
+<hr />
+
+<h2 id="eliciting-and-analyzing-requirements">Eliciting and analyzing requirements</h2>
+
+<p>Requirements come from analyzing the needs of various stakeholders. Typical steps are:</p>
+
+<ol>
+  <li><strong>Stakeholder identification</strong>: identify various stakeholders - end users, business managers, operations team, etc.</li>
+  <li><strong>Requirements gathering</strong>: gather needs via interviews, observation, focus groups, workshops, surveys, etc. Requirements gathering relies heavily on techniques like prototyping, scenario analysis, domain modeling and qualitative user research.</li>
+  <li><strong>Requirements analysis</strong>: analyze requirements for clarity, conflicts and prioritization.</li>
+  <li><strong>Requirements documentation</strong>: document requirements, review with stakeholders and baseline.</li>
+  <li><strong>Requirements validation</strong>: validate requirements to ensure consistency, completeness, technical feasibility, etc.</li>
+  <li><strong>Requirements management</strong>: manage changes through proper change control processes. According to Davis, requirements management is critical for aligning software capabilities with business objectives throughout the product lifecycle[^4].</li>
+</ol>
+
+<hr />
+
+<h2 id="challenges">Challenges</h2>
+
+<p>Some key challenges faced in requirements engineering are:</p>
+
+<ul>
+  <li>Incomplete, unclear and ambiguous requirements.</li>
+  <li>Infeasible requirements beyond project constraints.</li>
+  <li>Conflicting stakeholder needs and priorities.</li>
+  <li>Frequent requirement changes leading to scope creep.</li>
+  <li>Missing key details and assumptions.</li>
+  <li>Lack of customer availability and engagement.</li>
+  <li>Users not knowing what they need.</li>
+  <li>Weak change management discipline.</li>
+  <li>Communication gaps across customer and development teams.</li>
+</ul>
+
+<p>According to Christel and Kang, requirements elicitation is a complex activity due to factors like vague customer needs, lack of user involvement and staggered feedback[^5]. Using proven elicitation techniques, sound documentation practices, rigorous analysis and reviews, and disciplined change management helps tackle these challenges.</p>
+
+<hr />
+
+<h2 id="emerging-trends">Emerging Trends</h2>
+
+<p>Some key trends shaping the future of requirements engineering:</p>
+
+<ul>
+  <li>Increased end user involvement through prototyping and crowdsourcing.</li>
+  <li>Growing use of iterative approaches to allow for emergent requirements.</li>
+  <li>Greater reliance on product managers as customer proxies.</li>
+  <li>Increased adoption of agile user stories over traditional SRS docs.</li>
+  <li>Enhanced traceability through modeling and automation.</li>
+  <li>Integration with design models and testing to realize “single source of truth”.</li>
+  <li>Introducing requirements management tools for collaboration.</li>
+  <li>Leveraging AI techniques for analyzing and deriving complex requirements.</li>
+  <li>Focus on continuously capturing and refining requirements throughout product lifecycle.</li>
+</ul>
+
+<p>According to Nuseibeh and Easterbrook, requirements engineering will need to adapt to factors like faster delivery cycles, evolving design approaches and increased automation[^6].</p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Defining complete, correct requirements that accurately capture end user and business needs is essential to delivering effective software solutions. Requirements engineering done right lays the foundation for developing a product that delivers maximum value. Applying sound specification techniques, following collaborative elicitation processes, documenting requirements clearly, and managing changing needs systematically are key disciplines that lead to high quality software products that meet customer expectations.</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<p>[^1] Sommerville, Ian, and Pete Sawyer. Requirements engineering: a good practice guide. John Wiley &amp; Sons, Inc., 1997.
+[^2] Karl E. Wiegers, and Joy Beatty. Software requirements. Pearson Education, 2013.
+[^3] IEEE. IEEE Guide for Developing System Requirements Specifications. IEEE Std 1233, 1998 edition.
+[^4] A. M. Davis. Just enough requirements management: where software development meets marketing. Dorset House Publishing Co., Inc., 2005.
+[^5] Christel, Michael G., and Kyo C. Kang. Issues in requirements elicitation. Carnegie Mellon University, 1992.
+[^6] Nuseibeh, Bashar, and Steve Easterbrook. “Requirements engineering: a roadmap.” Proceedings of the Conference on the Future of Software Engineering. 2000.
+[^7] Young, Ralph R. Effective requirements practices. Addison-Wesley Professional, 2001.
+[^8] Hull, Elizabeth, et al. Requirements engineering. Springer London, 2011.
+[^9] Laplante, Phillip A. Requirements engineering for software and systems. CRC Press, 2017.
+[^10] Wiegers, Karl, and Joy Beatty. Software Requirements, Third Edition. Microsoft Press, 2013.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-08-18T10:56:31+00:00">August 18, 2023</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Requirements+Engineering%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Frequirements-engineering%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Frequirements-engineering%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Frequirements-engineering%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/dev-environment/software_engineering/sdlc-maintenance/" class="pagination--pager" title="SDLC: The Maintenance phase
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/future/draft/future-post-template-for-new-posts/" rel="permalink">Post: future date
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="9999-12-31T00:00:00+00:00">December 31, 9999</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Test future post in draft folder.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/version%20control/git-revert-pushed/" rel="permalink">Revert a pushed change in Git
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-01-18T00:00:00+00:00">January 18, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When we realized that the last commit was a mistake but we already published it, the command to use is git revert &lt;COMMIT_HASH&gt;.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/version%20control/git-revert-local/" rel="permalink">Revert a local change in Git
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-01-18T00:00:00+00:00">January 18, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When we have created a commit locally but have not published it to the remote yet, we can use git reset to undo the commit and, if we wish, discard the chang...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-environment/drafts/post-standard/" rel="permalink">Post: Standard with long title to test overlay image
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-15T00:00:00+00:00">October 15, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">First paragraph to test.
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:learn.software.eng@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://youtube.com/@learn-software" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> @learn-software</a></li>
+        
+      
+        
+          <li><a href="https://youtube.com/@aprende-software" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> @aprende-software</a></li>
+        
+      
+        
+          <li><a href="https://github.com/learn-software-engineering" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 LearnSoftware.com. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/dev-environment/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/dev-environment/assets/js/lunr/lunr.min.js"></script>
+<script src="/dev-environment/assets/js/lunr/lunr-store.js"></script>
+<script src="/dev-environment/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=8178366378871940";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+
+
+
+
+
+  </body>
+</html>

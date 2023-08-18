@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Algorithms - Learn Software Engineering</title>
-<meta name="description" content="“A place to learn about Software Engineering.”">
+<!-- begin _includes/seo.html --><title>SDLC: The Implementation phase - Learn Software Engineering</title>
+<meta name="description" content="Code in action: bringing designs to digital life">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Algorithms">
-<meta property="og:url" content="https://learn-software.com/dev-environment/intro_programming/algorithms/">
+<meta property="og:title" content="SDLC: The Implementation phase">
+<meta property="og:url" content="https://learn-software.com/dev-environment/software_engineering/sdlc-implementation/">
 
 
-  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+  <meta property="og:description" content="Code in action: bringing designs to digital life">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/intro_programming/algorithms/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/software_engineering/sdlc-implementation/">
 
 
 
@@ -176,12 +176,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Algorithms
+          SDLC: The Implementation phase
 
         
       </h1>
       
-        <p class="page__lead">
+        <p class="page__lead">Code in action: bringing designs to digital life
 </p>
       
       
@@ -205,7 +205,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          6 minute read
         
       </span>
     
@@ -362,33 +362,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Programming: Basics</span>
+          <span class="nav__sub-title">Software Engineering</span>
         
 
         
         <ul>
           
-            <li><a href="/dev-environment/intro_programming/intro/">Introduction to Programming</a></li>
+            <li><a href="/dev-environment/software_engineering/intro/">Introduction to Software Engineering</a></li>
           
-            <li><a href="/dev-environment/intro_programming/install-python/">Installing Python</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
           
-            <li><a href="/dev-environment/intro_programming/numerical-systems-boolean-logic/">Numerical systems and Boolean logic</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-planning/">SDLC: The Planning phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/vars-data-types/">Variables and Data Types</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-system-design/">SDLC: The System Design phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/control-flow/">Control Flow</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-implementation/" class="active">SDLC: The Implementation phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/functions/">Functions</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-testing/">SDLC: The Testing phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/algorithms/" class="active">Algorithms</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/oop/">Object-Oriented Programming</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-maintenance/">SDLC: The Maintenance phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/testing/">Testing</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/design-patterns/">Design Patterns</a></li>
+            <li><a href="/dev-environment/software_engineering/requirements-engineering/">Requirements Engineering</a></li>
           
         </ul>
         
@@ -404,8 +400,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Algorithms">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="SDLC: The Implementation phase">
+    <meta itemprop="description" content="Code in action: bringing designs to digital life">
     <meta itemprop="datePublished" content="2023-08-18T10:56:31+00:00">
     
 
@@ -417,115 +413,99 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#what-is-an-algorithm">What is an algorithm?</a></li><li><a href="#types-of-algorithms">Types of algorithms</a><ul><li><a href="#sorting-algorithms">Sorting algorithms</a></li><li><a href="#search-algorithms">Search algorithms</a></li></ul></li><li><a href="#algorithm-complexity">Algorithm complexity</a><ul><li><a href="#time-complexity">Time complexity</a></li><li><a href="#space-complexity">Space complexity</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#key-components">Key components</a><ul><li><a href="#choosing-the-right-programming-language">Choosing the right programming language</a></li><li><a href="#coding-standards-and-best-practices">Coding standards and best practices</a></li><li><a href="#version-control">Version control</a></li><li><a href="#continuous-integration-ci-and-continuous-deployment-cd">Continuous Integration (CI) and Continuous Deployment (CD)</a></li></ul></li><li><a href="#challenges-and-solutions">Challenges and solutions</a></li><li><a href="#importance-of-testing-in-the-implementation-stage">Importance of testing in the implementation stage</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Algorithms are a set of step-by-step procedures or rules performed in a specific order to achieve a particular goal or solve a specific problem. In programming, algorithms form the backbone of effective problem-solving and efficient code execution. In this article, we will explore different aspects of algorithms, using examples in Python, while keeping the explanations as generic as possible.</p>
+        <p>The Software Development Life Cycle (SDLC) guides software engineers through the steps of creating quality software. Among these phases, the implementation stage holds special significance as it transitions the project from concept to reality[^1]. In this stage, abstract designs materialize into tangible lines of code, giving birth to the software’s functional attributes.</p>
 
-<h2 id="what-is-an-algorithm">What is an algorithm?</h2>
+<p>At its core, the implementation stage involves the actual coding of the software. After meticulous planning and thorough design, this phase breathes life into the application, constructing the features and functionalities the end-users will eventually interact with[^2].</p>
 
-<p>An algorithm is a precise sequence of instructions for processes that can be implemented in a programming language and executed by a computer. Algorithms are used for calculation, data processing, and automated reasoning tasks.</p>
+<hr />
 
-<p>Here’s a simple example of an algorithm to find the largest number in a list.</p>
+<h2 id="key-components">Key components</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_largest</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="n">largest</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="n">largest</span><span class="p">:</span>
-            <span class="n">largest</span> <span class="o">=</span> <span class="n">number</span>
-    <span class="k">return</span> <span class="n">largest</span>
+<p>The implementation phase is an intricate mesh of various components, each playing a pivotal role in ensuring the resulting software is robust, efficient, and meets user requirements.</p>
 
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">find_largest</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>  <span class="c1"># Output: 89
-</span></code></pre></div></div>
+<h3 id="choosing-the-right-programming-language">Choosing the right programming language</h3>
 
-<h2 id="types-of-algorithms">Types of algorithms</h2>
+<p>The choice of programming language sets the tone for the entire implementation. The decision should account for the software’s requirements, scalability needs, and the development team’s expertise. Whether it’s the versatility of Python, the robustness of Java, or the web-centric attributes of JavaScript, the language forms the backbone of the software[^3].</p>
 
-<p>Algorithms can be classified into various types, based on their structure, complexity, and purpose. Two of the most common types are <code class="language-plaintext highlighter-rouge">sort</code> and <code class="language-plaintext highlighter-rouge">search</code>.</p>
+<p>The selection of a programming language isn’t merely a developer’s whim; it’s a decisive factor that influences the software’s architecture, performance, and scalability[^3]. Some languages are better suited for data-intensive tasks, others shine in GUI development, and some are ideal for web-based applications.</p>
 
-<h3 id="sorting-algorithms">Sorting algorithms</h3>
+<p>The nature of the project is paramount. For instance, a real-time system might benefit from a language known for speed, such as C or C++. On the other hand, web applications might lean towards JavaScript, Python, or Ruby. The chosen language should complement the software’s objectives, ensuring seamless integration, robust performance, and future scalability.</p>
 
-<p>Sorting algorithms arrange elements in a particular order, typically numerical or lexicographical. There are various sorting algorithms, each with its characteristics and use cases. Here, we’ll look at one popular example: Bubble Sort.</p>
+<p>Beyond the software’s requirements, the development team’s familiarity with a language plays a role. A language that the team is adept in will likely result in quicker development, fewer bugs, and a more optimized codebase.</p>
 
-<p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until no swaps are needed, indicating that the list is sorted.</p>
+<p>Often, the availability of robust libraries and frameworks can tip the scales in favor of a language. These tools can drastically speed up development by providing pre-built modules and functions, reducing the need to “reinvent the wheel.”</p>
 
-<p>Here’s a Python code snippet for Bubble Sort:</p>
+<h3 id="coding-standards-and-best-practices">Coding standards and best practices</h3>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># Last i elements are already sorted
-</span>            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># If the element is greater than the next element
-</span>                <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># Swap the elements
-</span>
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
-<span class="n">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Sorted array:"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: Sorted array: [12, 22, 25, 34, 64]
-</span></code></pre></div></div>
+<p>A codebase should be readable, maintainable, and scalable[^4]. Adhering to coding standards ensures a uniform coding style, making it easier for team members to understand, modify, and enhance the code. Proper documentation, meaningful variable names, and a modular approach are some practices that maintain code quality.</p>
 
-<p>In the code above, the outer loop runs <code class="language-plaintext highlighter-rouge">n</code> times, where <code class="language-plaintext highlighter-rouge">n</code> is the length of the array. The inner loop compares adjacent elements and swaps them if they are out of order. After each iteration of the outer loop, the largest unsorted element bubbles up to its correct position, hence the name “Bubble Sort.”</p>
+<p>Code is more than just instructions for a computer; it’s a medium of communication among developers[^4]. In a collaborative environment, code readability is essential. Consistent coding standards ensure that every team member, present or future, can understand, modify, and extend the code with relative ease.</p>
 
-<p>It’s essential to note that there are many other sorting algorithms, such as Quick Sort, Merge Sort, Insertion Sort, etc., each having different performance characteristics and use cases. Understanding various sorting algorithms and their trade-offs is a vital part of computer science and software development.</p>
+<p>Adopting best practices isn’t about being pedantic; it’s about ensuring the software’s longevity. Practices like modular programming, where code is divided into reusable chunks (or modules), make it easier to maintain and upgrade the software in the future.</p>
 
-<h3 id="search-algorithms">Search algorithms</h3>
+<p>While often overlooked, proper documentation serves as a roadmap for anyone revisiting the code. It offers insights into why certain decisions were made, clarifies complex code segments, and provides a high-level overview, making the onboarding process for new developers much smoother.</p>
 
-<p>Search algorithms find the location of a specific value within a data structure. There are various search algorithms, and one widely used example is Binary Search.</p>
+<p>As software evolves, initial code implementations might become obsolete or inefficient. Regularly revisiting and refining code (a process known as refactoring) ensures the software remains optimized and up-to-date with current best practices.</p>
 
-<p>Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.</p>
+<h3 id="version-control">Version control</h3>
 
-<p>Here’s a Python code snippet for Binary Search:</p>
+<p>Version control systems like Git ensure that multiple developers can collaborate without overriding each other’s work[^5]. They provide a history of code changes, allowing developers to revert to previous versions if necessary. Features like branching offer isolated environments for feature development and testing.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span>
-        <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">mid</span>
-        <span class="k">elif</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
-            <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-</code></pre></div></div>
+<p>As software projects grow in scale, collaboration becomes a challenge[^5]. Multiple developers working simultaneously can lead to code conflicts. Version Control Systems (VCS) like Git act as a safety net, allowing seamless collaboration while preserving the integrity of the codebase.</p>
 
-<p>In the code above:</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">left</code> and <code class="language-plaintext highlighter-rouge">right</code> define the current interval being searched.</li>
-  <li><code class="language-plaintext highlighter-rouge">mid</code> is the middle index of the interval.</li>
-  <li>The while loop continues until <code class="language-plaintext highlighter-rouge">left</code> is greater than <code class="language-plaintext highlighter-rouge">right</code>, meaning the interval is empty.</li>
-  <li>If the middle element is equal to <code class="language-plaintext highlighter-rouge">x</code>, the index is returned.</li>
-  <li>If <code class="language-plaintext highlighter-rouge">x</code> is less than the middle element, the search continues in the lower half of the interval (by setting <code class="language-plaintext highlighter-rouge">right</code> to <code class="language-plaintext highlighter-rouge">mid - 1</code>).</li>
-  <li>If <code class="language-plaintext highlighter-rouge">x</code> is greater than the middle element, the search continues in the upper half (by setting <code class="language-plaintext highlighter-rouge">left</code> to <code class="language-plaintext highlighter-rouge">mid + 1</code>).</li>
-</ul>
+<p>One of the key features of modern VCS is branching. Developers can create branches to work on new features or fixes without disturbing the main codebase. Once complete, these branches can be merged back, ensuring a systematic and conflict-free integration of new code.</p>
 
-<p>Binary Search is efficient, with a time complexity of <code class="language-plaintext highlighter-rouge">O(log n)</code>, but it requires that the input be sorted.</p>
+<p>Version control also acts as a historical record. Every change, big or small, is logged. This allows developers to track when a change was made, by whom, and why. In cases of unintended consequences, having this ability to revert to a previous “known-good” state can be a lifesaver.</p>
 
-<p>It’s worth mentioning that there are many other search algorithms, such as Linear Search, Interpolation Search, Exponential Search, etc., with different complexities and requirements. Understanding various search algorithms is essential for effective problem-solving in programming.</p>
+<p>Platforms like GitHub, GitLab or Bitbucket leverage VCS to facilitate <em>pull requests (PRs)</em>. PRs act as a code review mechanism, where peers can review, comment on, and suggest changes before the new code is merged. This collaborative review ensures higher code quality and fewer bugs.</p>
 
-<h2 id="algorithm-complexity">Algorithm complexity</h2>
+<h3 id="continuous-integration-ci-and-continuous-deployment-cd">Continuous Integration (CI) and Continuous Deployment (CD)</h3>
 
-<p>The efficiency of an algorithm is often measured in terms of its time complexity and space complexity, representing the amount of time and memory space required.</p>
+<p>CI/CD pipelines automate the process of code integration, testing, and deployment[^6]. This ensures quicker delivery of features and fixes, with the software always in a deployable state. Automation reduces human errors, boosts development speed, and enhances code quality.</p>
 
-<h3 id="time-complexity">Time complexity</h3>
+<p>In the modern agile world, speed and efficiency are of the essence[^6]. CI/CD pipelines automate code integration and deployment, reducing manual intervention, speeding up the release process, and ensuring that the software is always in a deployable state.</p>
 
-<p>Time complexity is the measure of the amount of time an algorithm takes in terms of the length of the input.</p>
+<p>CI emphasizes the continuous merging of code changes into a central repository. After integration, automated tests are run to ensure the new changes haven’t introduced bugs. This ensures consistent code quality and timely detection of issues.</p>
 
-<ul>
-  <li><strong>O(1):</strong> Constant time</li>
-  <li><strong>O(log n):</strong> Logarithmic time</li>
-  <li><strong>O(n):</strong> Linear time</li>
-  <li><strong>O(n^2):</strong> Quadratic time</li>
-</ul>
+<p>On the other side of the spectrum, CD focuses on ensuring that code changes are automatically deployed to the production environment (or a staging environment first, if preferred). This ensures that new features, fixes, and updates reach end-users swiftly.</p>
 
-<h3 id="space-complexity">Space complexity</h3>
+<p>One of the less-talked-about benefits of CI/CD is the feedback loop it offers. Developers receive immediate feedback on their changes, allowing for quicker iterations and ensuring that bugs or issues are addressed as they arise, rather than piling up.</p>
 
-<p>Space complexity measures the amount of memory space an algorithm uses relative to the input size.</p>
+<hr />
+
+<h2 id="challenges-and-solutions">Challenges and solutions</h2>
+
+<p>Software development is rarely without challenges. However, understanding potential roadblocks and knowing how to navigate them can make the process smoother.</p>
+
+<p><strong>Technical debt</strong>: In a bid to speed up development, teams might resort to quick fixes or bypass standard coding practices[^7]. While this might seem beneficial short-term, it accrues <em>technical debt</em>. Over time, this can make the software difficult to maintain and scale. Regular code reviews and refactoring can help manage and reduce this debt.</p>
+
+<p><strong>Inefficient code</strong>: Performance bottlenecks can emerge if code isn’t optimized. Resource-hungry functions or redundant operations can slow down the software. Profiling tools can help pinpoint these inefficiencies, enabling developers to refactor problematic areas[^8].</p>
+
+<p><strong>Security vulnerabilities</strong>: With increasing cyber threats, secure coding is paramount[^9]. Implementation should consider potential security vulnerabilities, ensuring the software is robust against attacks. Regular security audits and adhering to security best practices can help safeguard the application.</p>
+
+<hr />
+
+<h2 id="importance-of-testing-in-the-implementation-stage">Importance of testing in the implementation stage</h2>
+
+<p>The implementation phase goes hand-in-hand with testing. As features are developed, unit tests ensure individual modules work as intended[^10]. Integration tests confirm that different software components interact seamlessly. Regular testing catches issues early, ensuring a stable and reliable software build.</p>
+
+<hr />
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Algorithms are essential to programming, providing systematic methods for solving problems, organizing data, and performing tasks. From sorting and searching to more complex operations on graphs and networks, algorithms enable computers to process information intelligently and efficiently. Understanding algorithms is fundamental to becoming a proficient programmer, and while this article uses Python examples, the principles can be applied across various programming languages.</p>
+<p>The implementation phase is, without a doubt, the heartbeat of the SDLC. It’s where abstract ideas take concrete form, and user needs are addressed through functional code. By understanding and meticulously executing each component of this stage, software engineers can craft applications that not only work but thrive in the real world.</p>
+
+<p>From the choice of a programming language to the intricate dance of CI/CD, the implementation stage is a blend of art and science. With a profound understanding of its components, software engineers stand better equipped to navigate the complexities and ensure the delivery of exceptional software products.</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
 
         
       </section>
@@ -547,22 +527,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Algorithms%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=SDLC%3A+The+Implementation+phase%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-implementation%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-implementation%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-implementation%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/dev-environment/intro_programming/functions/" class="pagination--pager" title="Functions
+      <a href="/dev-environment/software_engineering/sdlc-system-design/" class="pagination--pager" title="SDLC: The System Design phase
 ">Previous</a>
     
     
-      <a href="/dev-environment/intro_programming/oop/" class="pagination--pager" title="Object-Oriented Programming
+      <a href="/dev-environment/software_engineering/sdlc-testing/" class="pagination--pager" title="SDLC: The Testing phase
 ">Next</a>
     
   </nav>

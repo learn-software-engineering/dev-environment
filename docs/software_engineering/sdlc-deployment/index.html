@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Introduction to Software Engineering - Learn Software Engineering</title>
-<meta name="description" content="“A place to learn about Software Engineering.”">
+<!-- begin _includes/seo.html --><title>SDLC: The Deployment phase - Learn Software Engineering</title>
+<meta name="description" content="Launch time: propelling software from development to users">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Introduction to Software Engineering">
-<meta property="og:url" content="https://learn-software.com/dev-environment/software_engineering/intro/">
+<meta property="og:title" content="SDLC: The Deployment phase">
+<meta property="og:url" content="https://learn-software.com/dev-environment/software_engineering/sdlc-deployment/">
 
 
-  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+  <meta property="og:description" content="Launch time: propelling software from development to users">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/software_engineering/intro/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/software_engineering/sdlc-deployment/">
 
 
 
@@ -176,12 +176,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Introduction to Software Engineering
+          SDLC: The Deployment phase
 
         
       </h1>
       
-        <p class="page__lead">
+        <p class="page__lead">Launch time: propelling software from development to users
 </p>
       
       
@@ -205,7 +205,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          8 minute read
         
       </span>
     
@@ -368,7 +368,7 @@
         
         <ul>
           
-            <li><a href="/dev-environment/software_engineering/intro/" class="active">Introduction to Software Engineering</a></li>
+            <li><a href="/dev-environment/software_engineering/intro/">Introduction to Software Engineering</a></li>
           
             <li><a href="/dev-environment/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
           
@@ -380,7 +380,7 @@
           
             <li><a href="/dev-environment/software_engineering/sdlc-testing/">SDLC: The Testing phase</a></li>
           
-            <li><a href="/dev-environment/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-deployment/" class="active">SDLC: The Deployment phase</a></li>
           
             <li><a href="/dev-environment/software_engineering/sdlc-maintenance/">SDLC: The Maintenance phase</a></li>
           
@@ -400,8 +400,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Introduction to Software Engineering">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="SDLC: The Deployment phase">
+    <meta itemprop="description" content="Launch time: propelling software from development to users">
     <meta itemprop="datePublished" content="2023-08-18T10:56:31+00:00">
     
 
@@ -413,118 +413,166 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#what-is-software">What is Software?</a></li><li><a href="#what-is-software-engineering">What is Software Engineering?</a></li><li><a href="#why-it-is-important-to-develop-quality-software">Why it is important to develop quality software</a></li><li><a href="#references">References</a></li></ul>
+              <ul class="toc__menu"><li><a href="#challenges">Challenges</a></li><li><a href="#best-practices">Best practices</a></li><li><a href="#key-steps-in-the-deployment-process">Key steps in the deployment process</a></li><li><a href="#deployment-methods">Deployment methods</a></li><li><a href="#tools-for-deployment-automation">Tools for deployment automation</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>In today’s digital age, it’s impossible to imagine a world without software. From the apps we use daily to sophisticated systems that run entire cities, software is an intricate part of our lives. If you’re at the beginning of your journey into the world of software, this article will provide a foundational understanding of what software is, what software engineering entails, and the paramount significance of both in today’s world.</p>
+        <p>The deployment stage involves releasing the software into production and making it available for end users. The main goals of the deployment stage are:</p>
 
-<hr />
-
-<h2 id="what-is-software">What is Software?</h2>
-
-<p>Several thought leaders in the world of computing have defined software in various ways:</p>
-
-<p><strong>Ian Sommerville</strong><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>:
-<em>Computer programs and associated documentation.</em></p>
-
-<p><strong>Roger S. Pressman</strong><sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>:
-<em>A collection of computer programs, procedures, rules, and associated documentation and data.</em></p>
-
-<p><strong>Andrew S. Tanenbaum</strong><sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>:
-<em>A series of instructions that tells a computer what to do.</em></p>
-
-<p><strong>Grady Booch</strong><sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>:
-<em>Set of items or objects that form a configuration that includes programs, documents, and data.</em></p>
-
-<p><strong>Peter Denning</strong><sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>:
-<em>Map of a machine, detailing its possible states, transitions, and the actions for these transitions.</em></p>
-
-<p>Analyzing these definitions, common themes emerge: software encompasses instructions, data, associated documentation, and serves as a guiding structure for computer operations. So we can conclude:</p>
-
-<blockquote>
-  <p><strong>Software is a meticulously structured collection of programs, data, and documentation that serves as a guiding blueprint, directing a computer’s operations and interactions with users and other systems.</strong></p>
-</blockquote>
-
-<p>Although we can classify software in many different types, each with its specific function, we can define three primary categories:</p>
 <ul>
-  <li><strong>System Software</strong>: This forms the core of a computer’s operation. It includes operating systems like Windows, Linux, and macOS, which manage hardware resources and provide services for application software.</li>
-  <li><strong>Application Software</strong>: Tailored for end-users to perform specific tasks, this category ranges from word processors (like Microsoft Word) to graphic design tools (like Adobe Photoshop) and games.</li>
-  <li><strong>Embedded Software</strong>: Found within hardware devices such as washing machines, traffic lights, or digital watches, embedded software operates specific functions of these devices. Unlike general-purpose software, it’s dedicated to specific tasks or functions.</li>
+  <li>Install and configure the software on production infrastructure.</li>
+  <li>Migrate data from old systems if needed.</li>
+  <li>Run integration, performance, and security tests.</li>
+  <li>Release the software for use by end users.</li>
 </ul>
 
-<hr />
+<p>Proper deployment is critical for delivering high quality software that meets customer needs. This article provides a comprehensive overview of the deployment stage, best practices, challenges, and key steps involved.</p>
 
-<h2 id="what-is-software-engineering">What is Software Engineering?</h2>
+<p>The deployment environment is usually separate from the development environment and mirrors the actual production infrastructure as closely as possible. Thorough testing in this stage helps minimize issues when releasing to production.</p>
 
-<p>Several prominent figures have also provided their perspectives on Software Engineering:</p>
+<p>As Jez Humble and David Farley explain in their book Continuous Delivery, <em>the goal of the deployment pipeline is to make the transition from development into production as fast, smooth, and automated as possible</em> [^1].</p>
 
-<p><strong>Ian Sommerville</strong><sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>:
-<em>A discipline concerned with all aspects of software production.</em></p>
+<p>The deployment stage is considered one of the most critical stages of the SDLC. High quality deployment is important for several reasons:</p>
 
-<p><strong>Roger S. Pressman</strong><sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>:
-<em>Establishment and use of sound engineering principles to obtain economically software that is reliable and works efficiently on real machines.</em></p>
+<ul>
+  <li>Ensures software works correctly before release. Thorough testing during deployment can detect bugs and issues missed during development.</li>
+  <li>Reduces risk of failure or downtime in production. Rigorous testing in a production-like environment minimizes surprises post-release.</li>
+  <li>Improves user experience. Smooth deployments prevent disruptions to business operations and end user workflows.</li>
+  <li>Builds confidence in the software. Quality deployments instill trust that the software is reliable and ready for use.</li>
+  <li>Minimizes cost of fixes post-release. It’s exponentially cheaper to detect and fix issues during deployment than after production release.</li>
+  <li>Enables quicker time to market. Automated deployments allow new features to be released to customers faster.</li>
+  <li>Facilitates continuous delivery. Automated deployment capabilities allow for frequent releases of incremental updates.</li>
+</ul>
 
-<p><strong>Frederick P. Brooks</strong><sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>:
-<em>The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software.</em></p>
+<p>As Liraz Siri notes, <em>The cost of fixing bugs dramatically rises the closer you get to production. By investing energy in deploying safely, you save time and money down the road</em> [^2].</p>
 
-<p><strong>Barry W. Boehm</strong><sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>:
-<em>Aims to produce quality software, software that is delivered on time, within budget, and that satisfies its requirements.</em></p>
-
-<p><strong>Fritz Bauer</strong><sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup>:
-<em>The establishment and use of sound engineering principles to economically obtain software that is reliable and works on real machines.</em></p>
-
-<p>From these definitions, we can discern that software engineering integrates principles of engineering, emphasizes systematic methods, seeks reliability and efficiency, and aims for the production of high-quality software that meets its specified requirements. Concluding that</p>
-
-<blockquote>
-  <p><strong>Software Engineering is the disciplined application of engineering principles and systematic methods to design, develop, and maintain reliable and efficient software that economically meets specified requirements and user needs.</strong></p>
-</blockquote>
-
-<p><em>Software Engineering</em> should not be confused with <em>Computer Science</em>. While the latter is a discipline that dives deep into the theoretical and mathematical aspects of computing, studying algorithms, computational theory, and more, the first one primarily focuses on designing and building large software systems. It emphasizes practical techniques and methodologies that ensure the production of high-quality, maintainable software.</p>
+<p>Overall, proper execution of the deployment stage results in software that meets business and user needs, prevents disruptions, and enables faster delivery of value.</p>
 
 <hr />
 
-<h2 id="why-it-is-important-to-develop-quality-software">Why it is important to develop quality software</h2>
+<h2 id="challenges">Challenges</h2>
 
-<p>Today, we’re surrounded by a digital ecosystem. Software runs our phones, cars, banks, hospitals, and even our homes. This ubiquity underscores its significance. That means that software flaws can have catastrophic outcomes. From banking systems to healthcare applications, the demand for faultless, efficient software is sky-high.</p>
+<p>While critical, the deployment stage also poses some unique challenges:</p>
 
-<p><em>Software Engineering</em>, ensures this vast amount of software is reliable, efficient, and meets user needs. As technology advances at breakneck speed, the role of software engineers becomes even more pivotal, making sure innovations are safe and effective.</p>
+<ul>
+  <li><strong>Environment differences</strong>: Differences between test and production environments can cause unexpected issues. Missing dependencies, incorrect configurations, and environment consistency issues are common pitfalls.</li>
+  <li><strong>Testing complexities</strong>: Testing an integrated system and large datasets requires significant effort and expertise. Corner cases and errors can easily be missed.</li>
+  <li><strong>Release coordination</strong>: Release timing and coordination across teams can be complex, especially for large rollouts spanning multiple applications, databases, servers etc.</li>
+  <li><strong>Downtime management</strong>: Planned downtime needs to be carefully scheduled to minimize business impact. Rollback strategies also need to be in place.</li>
+  <li><strong>Training and support</strong>: Admins and support staff need proper training to be equipped to run the software post deployment. Lack of knowledge transfer can cause issues.</li>
+  <li><strong>Unanticipated factors</strong>: Real world variables like unreliable networks, component failures, or human errors can derail otherwise smooth deployments.</li>
+  <li><strong>Configuration sprawl</strong>: A proliferation of configuration files, scripts, and variables across environments makes deployments brittle and error-prone.</li>
+  <li><strong>Manual processes</strong>: Reliance on manual deployments and testing increases effort and risk of human error.</li>
+</ul>
 
-<p>Whether you’re using a social media app, making a bank transaction, or checking health diagnostics, remember there’s a meticulously engineered software system running behind the scenes, making it all possible.</p>
+<p>As Gene Kim et al. highlight, <em>the deployment pipeline is one of the highest leverage points in modern software delivery… it is fraught with risk if not done properly</em> [^3]. Adopting best practices around planning, automation, testing rigor, and collaboration helps mitigate these deployment risks.</p>
+
+<hr />
+
+<h2 id="best-practices">Best practices</h2>
+
+<p>Here are some proven best practices for improving deployment processes:</p>
+
+<ul>
+  <li><strong>Automate deployments</strong>: Automated scripts or tools should be used to install, configure, and release software predictably and reliably.</li>
+  <li><strong>Infrastructure as code</strong>: Manage infrastructure configurations, environments, and dependencies as versioned code for consistency.</li>
+  <li><strong>Continuous testing</strong>: Testing should be integrated at every stage rather than just during deployment. Unit, integration, and end-to-end testing ensures code quality.</li>
+  <li><strong>Zero downtime releases</strong>: Use release techniques like blue-green, canary, and rolling deployments to minimize downtime.</li>
+  <li><strong>Communication</strong>: Collaboration between developers, operations, QA, and business teams ensures smooth deployments.</li>
+  <li><strong>Monitoring and logging</strong>: Extensive logging and monitoring provides visibility into application performance and rapidly detects problems.</li>
+  <li><strong>Rollback planning</strong>: Automated rollback capabilities quickly revert failed changes and restore working versions.</li>
+  <li><strong>Defense in depth</strong>: Use multiple defensive strategies like input validation, threat modeling, and redundancy to minimize risk.</li>
+  <li><strong>Frequent smaller releases</strong>: Incremental releases reduce change scope and roll back complexity.</li>
+</ul>
+
+<p>As Jez Humble recommends, <em>the key to managing change is incrementality,  both in terms of what you deliver, and how you deliver it… With small, frequent changes, managing change becomes routine rather than traumatic</em> [^4].</p>
+
+<p>Adopting these practices requires upfront investment but pays long term dividends in the form of faster, robust, and resilient deployment capabilities.</p>
+
+<hr />
+
+<h2 id="key-steps-in-the-deployment-process">Key steps in the deployment process</h2>
+
+<p>While each organization follows a slightly different deployment process, these are the typical key steps:</p>
+
+<ol>
+  <li>Provision infrastructure: the necessary servers, databases, storage, networking, security layers, and other infrastructure components are provisioned and configured to install and run the software.</li>
+  <li>Create environments: separate environments are created for deployment testing and production implementation. These environments closely resemble the actual production environment.</li>
+  <li>Migrate code: the latest version of the software code is migrated from the source code repository or build server into the deployment environment.</li>
+  <li>Migrate data: any required data is migrated from legacy systems to the new databases. Data integrity checks are performed.</li>
+  <li>Configure environments: software and infrastructure configurations like database connections, file directories, web server settings are appropriately set in the deployment environment.</li>
+  <li>Install software: the code packages or executables are installed and registered within servers, databases, application servers, and other technology layers.</li>
+  <li>Integrate components: individual software components are integrated with each other and checked for interoperability. End-to-end integration tests are executed.</li>
+  <li>Performance and load testing: the system is load tested with production-level concurrent users and data to gauge performance and stability.</li>
+  <li>Security testing: in-depth security reviews, vulnerability scanning, and penetration testing are performed to identify and resolve security holes.</li>
+  <li>Train support staff: IT operations and support staff are trained on administering, monitoring, troubleshooting and supporting the software post deployment.</li>
+  <li>Release software: following approval after testing, the software is deployed into production and made available for use by end users.</li>
+  <li>Monitor operations: logs and operations are closely monitored post-release to detect and fix any issues quickly. Software runs are continually optimized.</li>
+</ol>
+
+<p>Following these systematic steps minimizes risk and enables smooth transition of software from development into live production use.</p>
+
+<p>As Erik Boersma states, <em>the road to production sets the tone for the level of agility, reliability, and security your company can expect from its software</em> [^5].</p>
+
+<hr />
+
+<h2 id="deployment-methods">Deployment methods</h2>
+
+<p>There are several strategies that can be used for deploying software. Choosing the right strategy depends on multiple factors like type of application, risks involved, frequency of releases etc. Here are some popular deployment methods:</p>
+
+<ul>
+  <li><strong>Big Bang deployment</strong>: all components of the software are deployed together in one go. This is suitable for smaller software with less complexity. The advantage is simplicity but has high risk and downtime.</li>
+  <li><strong>Phased deployment</strong>: the application is broken down into logical phases which get deployed one by one sequentially. This reduces risk and makes rollbacks easier if issues arise.</li>
+  <li><strong>Incremental deployment</strong>: small enhancements and fixes get deployed frequently in stages. After testing each increment thoroughly in staging, it gets deployed to production. This minimizes risk and downtime.</li>
+  <li><strong>Blue-Green deployment</strong>: two identical production environments are maintained, Blue and Green. Green is the active environment while Blue contains the new release. After final testing, user traffic is routed from Green to Blue. Rollback just requires switching routes back.</li>
+  <li><strong>Canary deployment</strong>: the new version is deployed to a small subset of users first. After testing and validation, it is progressively rolled out to more users. Helps reduce risk for large user base applications.</li>
+  <li><strong>Dark launch</strong>: involves deploying the application but keeping it invisible to users until ready for launch. This verifies proper working before publicly launching it.</li>
+</ul>
+
+<p>Choosing the right strategy suitable to the system, risk appetite and business needs is key to smooth trouble-free deployments.</p>
+
+<hr />
+
+<h2 id="tools-for-deployment-automation">Tools for deployment automation</h2>
+
+<p>Automating deployments is essential for reducing errors and speeding up release cycles. Here are some popular open source and commercial tools:</p>
+
+<ul>
+  <li><strong>Ansible</strong>: Ansible is an open source automation platform that covers configuration management, application deployment, and orchestration capabilities.</li>
+  <li><strong>Puppet</strong>: Puppet automates infrastructure provisioning and configuration management using a custom declarative language.</li>
+  <li><strong>Chef</strong>: Chef uses the Ruby language to automate infrastructure provisioning and deployment.</li>
+  <li><strong>Terraform</strong>: Terraform provides infrastructure as code capabilities to provision cloud and data center resources.</li>
+  <li><strong>Jenkins</strong>: Jenkins is a continuous integration server that facilitates automated builds and deployments.</li>
+  <li><strong>CircleCI</strong>: CircleCI provides hosted automation capabilities for builds, testing and deployments via integration with GitHub etc.</li>
+  <li><strong>Kubernetes</strong>: Kubernetes enables declarative infrastructure automation and deployment of containerized applications.</li>
+  <li><strong>Docker</strong>: Docker packages software into standardized containers that can run reliably across environments.</li>
+</ul>
+
+<p>As Kim et al. explain, <em>automation is key to performing deployments repeatedly and reliably. The deployment pipeline codifies these steps into an automated process</em> [^3].</p>
+
+<p>These tools help implement deployment best practices like continuous delivery, infrastructure as code, and reduced reliance on manual processes. Combining multiple solutions can provide comprehensive deployment automation capabilities.</p>
+
+<p>High performing organizations use significantly more automation, with elite performers automating significantly more of their deployment processes [^6].</p>
+
+<p>While deployment will grow more complex due to factors like cloud and containers, automation and new architectures will pave the way for rapid and reliable deployments.</p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The deployment stage is complex but critical to delivering customer value reliably and rapidly. Using proven strategies around automation, testing rigor, collaboration, and incremental delivery enables high quality deployments. Leveraging deployment tools and evolving DevOps practices will be key for accelerating deployments. With robust deployment capabilities in place, organizations can focus on faster innovation and take software from ideation to customer use efficiently.</p>
 
 <hr />
 
 <h2 id="references">References</h2>
 
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>Sommerville, I., 2010. Software Engineering. 9th ed. Pearson. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
-    </li>
-    <li id="fn:2" role="doc-endnote">
-      <p>Pressman, R.S., 2010. Software Engineering: A Practitioner’s Approach. 7th ed. McGraw-Hill. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
-    </li>
-    <li id="fn:3" role="doc-endnote">
-      <p>Tanenbaum, A.S., 2012. Structured Computer Organization. 6th ed. Pearson. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:4" role="doc-endnote">
-      <p>Booch, G., 2007. Object-Oriented Analysis and Design with Applications. 3rd ed. Addison-Wesley. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:5" role="doc-endnote">
-      <p>Denning, P.J., 2009. The Profession of IT, Beyond Computational Thinking. Communications of the ACM, 52(6). <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:6" role="doc-endnote">
-      <p>Brooks, F.P., 1995. The Mythical Man-Month: Essays on Software Engineering. Addison-Wesley. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:7" role="doc-endnote">
-      <p>Boehm, B.W., 1988. A Spiral Model of Software Development and Enhancement. Computer, 21(5). <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:8" role="doc-endnote">
-      <p>Bauer, F.L., 1972. Software Engineering. Information Processing, 71. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
+<p>[^1] Humble, Jez, and David Farley. Continuous delivery: reliable software releases through build, test, and deployment automation. Pearson Education, 2010.
+[^2] Siri, Liraz. Deploy to Production: A Practical Guide to Automation in Web Development. Leanpub, 2021.
+[^3] Kim, Gene, et al. The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations. IT Revolution Press, 2016.
+[^4] Humble, Jez. The Deployment Age. IT Revolution Press, 2021.
+[^5] Boersma, Erik. The Road to Production: Standard Practices for Simpler Software Delivery. O’Reilly Media, 2021.
+[^6] Forsgren, Nicole, et al. Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations. IT Revolution Press, 2018.</p>
 
         
       </section>
@@ -546,21 +594,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Introduction+to+Software+Engineering%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fintro%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=SDLC%3A+The+Deployment+phase%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-deployment%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fintro%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-deployment%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fintro%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-deployment%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
+      <a href="/dev-environment/software_engineering/sdlc-testing/" class="pagination--pager" title="SDLC: The Testing phase
+">Previous</a>
     
     
-      <a href="/dev-environment/software_engineering/sdlc/" class="pagination--pager" title="Software Development Life Cycle (SDLC)
+      <a href="/dev-environment/software_engineering/sdlc-maintenance/" class="pagination--pager" title="SDLC: The Maintenance phase
 ">Next</a>
     
   </nav>

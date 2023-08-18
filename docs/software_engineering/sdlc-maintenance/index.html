@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Algorithms - Learn Software Engineering</title>
-<meta name="description" content="“A place to learn about Software Engineering.”">
+<!-- begin _includes/seo.html --><title>SDLC: The Maintenance phase - Learn Software Engineering</title>
+<meta name="description" content="Evolving and enhancing: keeping software relevant and robust">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Algorithms">
-<meta property="og:url" content="https://learn-software.com/dev-environment/intro_programming/algorithms/">
+<meta property="og:title" content="SDLC: The Maintenance phase">
+<meta property="og:url" content="https://learn-software.com/dev-environment/software_engineering/sdlc-maintenance/">
 
 
-  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+  <meta property="og:description" content="Evolving and enhancing: keeping software relevant and robust">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/intro_programming/algorithms/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/software_engineering/sdlc-maintenance/">
 
 
 
@@ -176,12 +176,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Algorithms
+          SDLC: The Maintenance phase
 
         
       </h1>
       
-        <p class="page__lead">
+        <p class="page__lead">Evolving and enhancing: keeping software relevant and robust
 </p>
       
       
@@ -205,7 +205,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          3 minute read
         
       </span>
     
@@ -362,33 +362,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Programming: Basics</span>
+          <span class="nav__sub-title">Software Engineering</span>
         
 
         
         <ul>
           
-            <li><a href="/dev-environment/intro_programming/intro/">Introduction to Programming</a></li>
+            <li><a href="/dev-environment/software_engineering/intro/">Introduction to Software Engineering</a></li>
           
-            <li><a href="/dev-environment/intro_programming/install-python/">Installing Python</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
           
-            <li><a href="/dev-environment/intro_programming/numerical-systems-boolean-logic/">Numerical systems and Boolean logic</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-planning/">SDLC: The Planning phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/vars-data-types/">Variables and Data Types</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-system-design/">SDLC: The System Design phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/control-flow/">Control Flow</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-implementation/">SDLC: The Implementation phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/functions/">Functions</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-testing/">SDLC: The Testing phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/algorithms/" class="active">Algorithms</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/oop/">Object-Oriented Programming</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-maintenance/" class="active">SDLC: The Maintenance phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/testing/">Testing</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/design-patterns/">Design Patterns</a></li>
+            <li><a href="/dev-environment/software_engineering/requirements-engineering/">Requirements Engineering</a></li>
           
         </ul>
         
@@ -404,8 +400,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Algorithms">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="SDLC: The Maintenance phase">
+    <meta itemprop="description" content="Evolving and enhancing: keeping software relevant and robust">
     <meta itemprop="datePublished" content="2023-08-18T10:56:31+00:00">
     
 
@@ -417,115 +413,97 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#what-is-an-algorithm">What is an algorithm?</a></li><li><a href="#types-of-algorithms">Types of algorithms</a><ul><li><a href="#sorting-algorithms">Sorting algorithms</a></li><li><a href="#search-algorithms">Search algorithms</a></li></ul></li><li><a href="#algorithm-complexity">Algorithm complexity</a><ul><li><a href="#time-complexity">Time complexity</a></li><li><a href="#space-complexity">Space complexity</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#types-of-software-maintenance">Types of software maintenance</a></li><li><a href="#the-process-of-maintenance">The Process of maintenance</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#the-economic-aspects">The economic aspects</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Algorithms are a set of step-by-step procedures or rules performed in a specific order to achieve a particular goal or solve a specific problem. In programming, algorithms form the backbone of effective problem-solving and efficient code execution. In this article, we will explore different aspects of algorithms, using examples in Python, while keeping the explanations as generic as possible.</p>
+        <p>Once a software application is deployed and begins its life in the hands of users, its journey is far from over. The maintenance stage, often overlooked by novices, plays a pivotal role in the Software Development Life Cycle (SDLC). This phase ensures that software remains robust, relevant, and valuable throughout its lifecycle<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
-<h2 id="what-is-an-algorithm">What is an algorithm?</h2>
+<p>Software maintenance encompasses all activities post-deployment that are not categorized as software evolution<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>. It’s about refining, enhancing, and optimizing software, as well as fixing errors that surface over time.</p>
 
-<p>An algorithm is a precise sequence of instructions for processes that can be implemented in a programming language and executed by a computer. Algorithms are used for calculation, data processing, and automated reasoning tasks.</p>
+<p>While creating software is challenging, maintaining it is often even more demanding. With changing user needs, technology advancements, and the inevitable emergence of bugs, ongoing maintenance is essential for software’s continued relevance and efficiency<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
-<p>Here’s a simple example of an algorithm to find the largest number in a list.</p>
+<hr />
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_largest</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="n">largest</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="n">largest</span><span class="p">:</span>
-            <span class="n">largest</span> <span class="o">=</span> <span class="n">number</span>
-    <span class="k">return</span> <span class="n">largest</span>
-
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">find_largest</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>  <span class="c1"># Output: 89
-</span></code></pre></div></div>
-
-<h2 id="types-of-algorithms">Types of algorithms</h2>
-
-<p>Algorithms can be classified into various types, based on their structure, complexity, and purpose. Two of the most common types are <code class="language-plaintext highlighter-rouge">sort</code> and <code class="language-plaintext highlighter-rouge">search</code>.</p>
-
-<h3 id="sorting-algorithms">Sorting algorithms</h3>
-
-<p>Sorting algorithms arrange elements in a particular order, typically numerical or lexicographical. There are various sorting algorithms, each with its characteristics and use cases. Here, we’ll look at one popular example: Bubble Sort.</p>
-
-<p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until no swaps are needed, indicating that the list is sorted.</p>
-
-<p>Here’s a Python code snippet for Bubble Sort:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># Last i elements are already sorted
-</span>            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># If the element is greater than the next element
-</span>                <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># Swap the elements
-</span>
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
-<span class="n">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Sorted array:"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: Sorted array: [12, 22, 25, 34, 64]
-</span></code></pre></div></div>
-
-<p>In the code above, the outer loop runs <code class="language-plaintext highlighter-rouge">n</code> times, where <code class="language-plaintext highlighter-rouge">n</code> is the length of the array. The inner loop compares adjacent elements and swaps them if they are out of order. After each iteration of the outer loop, the largest unsorted element bubbles up to its correct position, hence the name “Bubble Sort.”</p>
-
-<p>It’s essential to note that there are many other sorting algorithms, such as Quick Sort, Merge Sort, Insertion Sort, etc., each having different performance characteristics and use cases. Understanding various sorting algorithms and their trade-offs is a vital part of computer science and software development.</p>
-
-<h3 id="search-algorithms">Search algorithms</h3>
-
-<p>Search algorithms find the location of a specific value within a data structure. There are various search algorithms, and one widely used example is Binary Search.</p>
-
-<p>Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.</p>
-
-<p>Here’s a Python code snippet for Binary Search:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span>
-        <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">mid</span>
-        <span class="k">elif</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
-            <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-</code></pre></div></div>
-
-<p>In the code above:</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">left</code> and <code class="language-plaintext highlighter-rouge">right</code> define the current interval being searched.</li>
-  <li><code class="language-plaintext highlighter-rouge">mid</code> is the middle index of the interval.</li>
-  <li>The while loop continues until <code class="language-plaintext highlighter-rouge">left</code> is greater than <code class="language-plaintext highlighter-rouge">right</code>, meaning the interval is empty.</li>
-  <li>If the middle element is equal to <code class="language-plaintext highlighter-rouge">x</code>, the index is returned.</li>
-  <li>If <code class="language-plaintext highlighter-rouge">x</code> is less than the middle element, the search continues in the lower half of the interval (by setting <code class="language-plaintext highlighter-rouge">right</code> to <code class="language-plaintext highlighter-rouge">mid - 1</code>).</li>
-  <li>If <code class="language-plaintext highlighter-rouge">x</code> is greater than the middle element, the search continues in the upper half (by setting <code class="language-plaintext highlighter-rouge">left</code> to <code class="language-plaintext highlighter-rouge">mid + 1</code>).</li>
-</ul>
-
-<p>Binary Search is efficient, with a time complexity of <code class="language-plaintext highlighter-rouge">O(log n)</code>, but it requires that the input be sorted.</p>
-
-<p>It’s worth mentioning that there are many other search algorithms, such as Linear Search, Interpolation Search, Exponential Search, etc., with different complexities and requirements. Understanding various search algorithms is essential for effective problem-solving in programming.</p>
-
-<h2 id="algorithm-complexity">Algorithm complexity</h2>
-
-<p>The efficiency of an algorithm is often measured in terms of its time complexity and space complexity, representing the amount of time and memory space required.</p>
-
-<h3 id="time-complexity">Time complexity</h3>
-
-<p>Time complexity is the measure of the amount of time an algorithm takes in terms of the length of the input.</p>
+<h2 id="types-of-software-maintenance">Types of software maintenance</h2>
 
 <ul>
-  <li><strong>O(1):</strong> Constant time</li>
-  <li><strong>O(log n):</strong> Logarithmic time</li>
-  <li><strong>O(n):</strong> Linear time</li>
-  <li><strong>O(n^2):</strong> Quadratic time</li>
+  <li><strong>Corrective maintenance</strong>: This involves identifying and fixing bugs or defects in the software. It’s a reactive approach, often prompted by user feedback or system monitoring<sup id="fnref:1:2" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+  <li><strong>Adaptive maintenance</strong>: As external factors like OS updates, hardware changes, or new regulations come into play, software needs to adapt. This type of maintenance ensures the software remains compatible with its changing environment<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>.</li>
+  <li><strong>Perfective maintenance</strong>: Driven by the need to enhance software functionality or performance, this is about adding new features or improving existing ones based on user feedback and evolving market needs<sup id="fnref:1:3" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+  <li><strong>Preventive maintenance</strong>: Proactively looking into the future, this type of maintenance is focused on foreseeing and preventing future issues, often by restructuring or optimizing the code<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>.</li>
 </ul>
 
-<h3 id="space-complexity">Space complexity</h3>
+<hr />
 
-<p>Space complexity measures the amount of memory space an algorithm uses relative to the input size.</p>
+<h2 id="the-process-of-maintenance">The Process of maintenance</h2>
+
+<ol>
+  <li><strong>Request initiation</strong>: it starts with recognizing the need for maintenance. This can come from user feedback, system alerts, or regular system checks<sup id="fnref:1:4" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+  <li><strong>Impact analysis</strong>: before making any changes, it’s essential to assess the potential impact of the modification on the entire system<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>.</li>
+  <li><strong>Design and implementation</strong>: with a clear understanding of the task at hand, developers design the solution and implement the necessary changes<sup id="fnref:1:5" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+  <li><strong>System testing</strong>: post-implementation, rigorous testing is essential to ensure that the changes work as intended and haven’t inadvertently introduced new issues<sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</li>
+  <li><strong>Release</strong>: once satisfied, the updated software is released to users, either as patches, updates, or new versions<sup id="fnref:1:6" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+</ol>
+
+<hr />
+
+<h2 id="challenges">Challenges</h2>
+
+<ul>
+  <li><strong>Understanding legacy code</strong>: as software evolves, understanding older parts of the codebase, especially if original developers have moved on, can be challenging<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>.</li>
+  <li><strong>Maintaining documentation</strong>: over time, ensuring that documentation stays up-to-date and accurately reflects the software’s current state is a continuous challenge<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>.</li>
+  <li><strong>Balancing new development with maintenance</strong>: allocating resources between developing new features and maintaining existing ones is a tightrope walk many teams grapple with<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup>.</li>
+</ul>
+
+<hr />
+
+<h2 id="the-economic-aspects">The economic aspects</h2>
+
+<p>It’s often quoted in software engineering literature that maintenance costs can account for over 60% of all SDLC costs<sup id="fnref:11" role="doc-noteref"><a href="#fn:11" class="footnote" rel="footnote">9</a></sup>. Hence, budgeting, resource allocation, and cost optimization become integral parts of the maintenance stage.</p>
+
+<hr />
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Algorithms are essential to programming, providing systematic methods for solving problems, organizing data, and performing tasks. From sorting and searching to more complex operations on graphs and networks, algorithms enable computers to process information intelligently and efficiently. Understanding algorithms is fundamental to becoming a proficient programmer, and while this article uses Python examples, the principles can be applied across various programming languages.</p>
+<p>Maintenance is not merely an afterthought; it’s the pulse that keeps software alive and relevant in an ever-changing digital landscape. By understanding and embracing the nuances of this SDLC stage, software engineers can ensure the longevity and success of their creations<sup id="fnref:1:7" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Sommerville, I., 2010. Software Engineering. 9th ed. Pearson. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:1:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a> <a href="#fnref:1:3" class="reversefootnote" role="doc-backlink">&#8617;<sup>4</sup></a> <a href="#fnref:1:4" class="reversefootnote" role="doc-backlink">&#8617;<sup>5</sup></a> <a href="#fnref:1:5" class="reversefootnote" role="doc-backlink">&#8617;<sup>6</sup></a> <a href="#fnref:1:6" class="reversefootnote" role="doc-backlink">&#8617;<sup>7</sup></a> <a href="#fnref:1:7" class="reversefootnote" role="doc-backlink">&#8617;<sup>8</sup></a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Pressman, R.S., 2010. Software Engineering: A Practitioner’s Approach. 7th ed. McGraw-Hill. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Tanenbaum, A.S., 2014. Modern Operating Systems. 4th ed. Prentice Hall. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Parnas, D.L., 1994. Software Aging. <em>Proceedings of the 16th international conference on Software engineering</em>. IEEE. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Lehman, M.M., 1980. Programs, life cycles, and laws of software evolution. <em>Proceedings of the IEEE</em>, 68(9), pp.1060-1076. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Bowman, I.T., Holt, R.C., and Brewster, N.V., 1999. Linux as a case study: Its extracted software architecture. <em>Proceedings of the 21st international conference on Software engineering</em>. ACM. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Lethbridge, T.C., Singer, J., and Forward, A., 2003. How software engineers use documentation: The state of the practice. <em>IEEE Software</em>, 20(6), pp.35-39. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>Boehm, B.W., and Basili, V.R., 2001. Software defect reduction top 10 list. <em>Computer</em>, 34(1), pp.135-137. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:11" role="doc-endnote">
+      <p>Erlikh, L., 2000. Leveraging legacy system dollars for e-business. <em>IT professional</em>, 2(3), pp.17-23. <a href="#fnref:11" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
       </section>
@@ -547,22 +525,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Algorithms%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=SDLC%3A+The+Maintenance+phase%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-maintenance%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-maintenance%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-maintenance%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/dev-environment/intro_programming/functions/" class="pagination--pager" title="Functions
+      <a href="/dev-environment/software_engineering/sdlc-deployment/" class="pagination--pager" title="SDLC: The Deployment phase
 ">Previous</a>
     
     
-      <a href="/dev-environment/intro_programming/oop/" class="pagination--pager" title="Object-Oriented Programming
+      <a href="/dev-environment/software_engineering/requirements-engineering/" class="pagination--pager" title="Requirements Engineering
 ">Next</a>
     
   </nav>

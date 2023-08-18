@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Algorithms - Learn Software Engineering</title>
-<meta name="description" content="“A place to learn about Software Engineering.”">
+<!-- begin _includes/seo.html --><title>SDLC: The Planning phase - Learn Software Engineering</title>
+<meta name="description" content="Blueprinting the future: laying down a project’s foundation">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Algorithms">
-<meta property="og:url" content="https://learn-software.com/dev-environment/intro_programming/algorithms/">
+<meta property="og:title" content="SDLC: The Planning phase">
+<meta property="og:url" content="https://learn-software.com/dev-environment/software_engineering/sdlc-planning/">
 
 
-  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+  <meta property="og:description" content="Blueprinting the future: laying down a project’s foundation">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/intro_programming/algorithms/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/software_engineering/sdlc-planning/">
 
 
 
@@ -176,12 +176,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Algorithms
+          SDLC: The Planning phase
 
         
       </h1>
       
-        <p class="page__lead">
+        <p class="page__lead">Blueprinting the future: laying down a project’s foundation
 </p>
       
       
@@ -362,33 +362,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Programming: Basics</span>
+          <span class="nav__sub-title">Software Engineering</span>
         
 
         
         <ul>
           
-            <li><a href="/dev-environment/intro_programming/intro/">Introduction to Programming</a></li>
+            <li><a href="/dev-environment/software_engineering/intro/">Introduction to Software Engineering</a></li>
           
-            <li><a href="/dev-environment/intro_programming/install-python/">Installing Python</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
           
-            <li><a href="/dev-environment/intro_programming/numerical-systems-boolean-logic/">Numerical systems and Boolean logic</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-planning/" class="active">SDLC: The Planning phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/vars-data-types/">Variables and Data Types</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-system-design/">SDLC: The System Design phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/control-flow/">Control Flow</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-implementation/">SDLC: The Implementation phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/functions/">Functions</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-testing/">SDLC: The Testing phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/algorithms/" class="active">Algorithms</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/oop/">Object-Oriented Programming</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-maintenance/">SDLC: The Maintenance phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/testing/">Testing</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/design-patterns/">Design Patterns</a></li>
+            <li><a href="/dev-environment/software_engineering/requirements-engineering/">Requirements Engineering</a></li>
           
         </ul>
         
@@ -404,8 +400,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Algorithms">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="SDLC: The Planning phase">
+    <meta itemprop="description" content="Blueprinting the future: laying down a project’s foundation">
     <meta itemprop="datePublished" content="2023-08-18T10:56:31+00:00">
     
 
@@ -417,115 +413,121 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#what-is-an-algorithm">What is an algorithm?</a></li><li><a href="#types-of-algorithms">Types of algorithms</a><ul><li><a href="#sorting-algorithms">Sorting algorithms</a></li><li><a href="#search-algorithms">Search algorithms</a></li></ul></li><li><a href="#algorithm-complexity">Algorithm complexity</a><ul><li><a href="#time-complexity">Time complexity</a></li><li><a href="#space-complexity">Space complexity</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#key-components">Key components</a><ul><li><a href="#requirement-gathering-and-analysis">Requirement gathering and analysis</a></li><li><a href="#feasibility-study">Feasibility study</a></li><li><a href="#project-scheduling">Project scheduling</a></li><li><a href="#resource-allocation">Resource allocation</a></li><li><a href="#risk-assessment">Risk assessment</a></li></ul></li><li><a href="#why-planning-matters">Why planning matters</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Algorithms are a set of step-by-step procedures or rules performed in a specific order to achieve a particular goal or solve a specific problem. In programming, algorithms form the backbone of effective problem-solving and efficient code execution. In this article, we will explore different aspects of algorithms, using examples in Python, while keeping the explanations as generic as possible.</p>
+        <p>Stepping into the vast world of software development, one quickly realizes that building successful software isn’t just about writing code. It requires foresight, strategy, and, above all, meticulous planning. The planning phase of the SDLC serves as the foundation upon which all subsequent stages are built. Here, we’ll unpack this critical phase, understanding its nuances and appreciating its central role in software engineering.</p>
 
-<h2 id="what-is-an-algorithm">What is an algorithm?</h2>
+<p>At its core, planning in software development is about establishing a clear vision for the software project, determining what you want to achieve, and figuring out how best to achieve it<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. It’s akin to mapping out a journey before embarking on it, ensuring you have all the necessary tools and knowledge to navigate through the challenges ahead.</p>
 
-<p>An algorithm is a precise sequence of instructions for processes that can be implemented in a programming language and executed by a computer. Algorithms are used for calculation, data processing, and automated reasoning tasks.</p>
+<hr />
 
-<p>Here’s a simple example of an algorithm to find the largest number in a list.</p>
+<h2 id="key-components">Key components</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_largest</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="n">largest</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="n">largest</span><span class="p">:</span>
-            <span class="n">largest</span> <span class="o">=</span> <span class="n">number</span>
-    <span class="k">return</span> <span class="n">largest</span>
+<h3 id="requirement-gathering-and-analysis">Requirement gathering and analysis</h3>
 
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">find_largest</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>  <span class="c1"># Output: 89
-</span></code></pre></div></div>
+<p>When we talk about requirements, we’re essentially discussing the needs, desires, and constraints of the software project<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. Requirement gathering is the act of deeply engaging with stakeholders, from potential users to business experts, to compile a comprehensive list of what the software must accomplish. This dialogue can take various forms: interviews, surveys, user workshops, or even observation.</p>
 
-<h2 id="types-of-algorithms">Types of algorithms</h2>
+<p>The subsequent step, requirement analysis, involves sifting through this amassed data to create a structured and prioritized list. The primary aim here is to delineate functional requirements (what the software should do) from non-functional requirements (how the software should behave, e.g., performance, security, usability standards)<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>. At the heart of this component is the creation of a clear, concise, and comprehensive requirements document. This document becomes the blueprint for the entire project, guiding subsequent phases of the SDLC.</p>
 
-<p>Algorithms can be classified into various types, based on their structure, complexity, and purpose. Two of the most common types are <code class="language-plaintext highlighter-rouge">sort</code> and <code class="language-plaintext highlighter-rouge">search</code>.</p>
+<p>This topic will be studied in detail later. Please check the article <a href="/software_engineering/requirements-engineering/">Requirements Engineering</a> on this blog.</p>
 
-<h3 id="sorting-algorithms">Sorting algorithms</h3>
+<h3 id="feasibility-study">Feasibility study</h3>
 
-<p>Sorting algorithms arrange elements in a particular order, typically numerical or lexicographical. There are various sorting algorithms, each with its characteristics and use cases. Here, we’ll look at one popular example: Bubble Sort.</p>
-
-<p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until no swaps are needed, indicating that the list is sorted.</p>
-
-<p>Here’s a Python code snippet for Bubble Sort:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># Last i elements are already sorted
-</span>            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># If the element is greater than the next element
-</span>                <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># Swap the elements
-</span>
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
-<span class="n">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Sorted array:"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: Sorted array: [12, 22, 25, 34, 64]
-</span></code></pre></div></div>
-
-<p>In the code above, the outer loop runs <code class="language-plaintext highlighter-rouge">n</code> times, where <code class="language-plaintext highlighter-rouge">n</code> is the length of the array. The inner loop compares adjacent elements and swaps them if they are out of order. After each iteration of the outer loop, the largest unsorted element bubbles up to its correct position, hence the name “Bubble Sort.”</p>
-
-<p>It’s essential to note that there are many other sorting algorithms, such as Quick Sort, Merge Sort, Insertion Sort, etc., each having different performance characteristics and use cases. Understanding various sorting algorithms and their trade-offs is a vital part of computer science and software development.</p>
-
-<h3 id="search-algorithms">Search algorithms</h3>
-
-<p>Search algorithms find the location of a specific value within a data structure. There are various search algorithms, and one widely used example is Binary Search.</p>
-
-<p>Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.</p>
-
-<p>Here’s a Python code snippet for Binary Search:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span>
-        <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">mid</span>
-        <span class="k">elif</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
-            <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-</code></pre></div></div>
-
-<p>In the code above:</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">left</code> and <code class="language-plaintext highlighter-rouge">right</code> define the current interval being searched.</li>
-  <li><code class="language-plaintext highlighter-rouge">mid</code> is the middle index of the interval.</li>
-  <li>The while loop continues until <code class="language-plaintext highlighter-rouge">left</code> is greater than <code class="language-plaintext highlighter-rouge">right</code>, meaning the interval is empty.</li>
-  <li>If the middle element is equal to <code class="language-plaintext highlighter-rouge">x</code>, the index is returned.</li>
-  <li>If <code class="language-plaintext highlighter-rouge">x</code> is less than the middle element, the search continues in the lower half of the interval (by setting <code class="language-plaintext highlighter-rouge">right</code> to <code class="language-plaintext highlighter-rouge">mid - 1</code>).</li>
-  <li>If <code class="language-plaintext highlighter-rouge">x</code> is greater than the middle element, the search continues in the upper half (by setting <code class="language-plaintext highlighter-rouge">left</code> to <code class="language-plaintext highlighter-rouge">mid + 1</code>).</li>
-</ul>
-
-<p>Binary Search is efficient, with a time complexity of <code class="language-plaintext highlighter-rouge">O(log n)</code>, but it requires that the input be sorted.</p>
-
-<p>It’s worth mentioning that there are many other search algorithms, such as Linear Search, Interpolation Search, Exponential Search, etc., with different complexities and requirements. Understanding various search algorithms is essential for effective problem-solving in programming.</p>
-
-<h2 id="algorithm-complexity">Algorithm complexity</h2>
-
-<p>The efficiency of an algorithm is often measured in terms of its time complexity and space complexity, representing the amount of time and memory space required.</p>
-
-<h3 id="time-complexity">Time complexity</h3>
-
-<p>Time complexity is the measure of the amount of time an algorithm takes in terms of the length of the input.</p>
+<p>Imagine embarking on a grand venture without checking if it’s achievable. A feasibility study plays this crucial role in the planning phase<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. It’s a rigorous analysis to ascertain if the project is viable in various aspects:</p>
 
 <ul>
-  <li><strong>O(1):</strong> Constant time</li>
-  <li><strong>O(log n):</strong> Logarithmic time</li>
-  <li><strong>O(n):</strong> Linear time</li>
-  <li><strong>O(n^2):</strong> Quadratic time</li>
+  <li><strong>Technical feasibility</strong>: can we build it with our current tech stack and expertise?</li>
+  <li><strong>Economic feasibility</strong>: does it make financial sense to undertake this project?</li>
+  <li><strong>Operational feasibility</strong>: once developed, will the software integrate seamlessly into its intended environment?</li>
+  <li><strong>Legal feasibility</strong>: are there any regulatory or compliance factors we need to consider?</li>
 </ul>
 
-<h3 id="space-complexity">Space complexity</h3>
+<p>This systematic study not only ensures that the project is grounded in reality but also preemptively identifies potential pitfalls, enabling the team to either address them or reconsider the project’s scope.</p>
 
-<p>Space complexity measures the amount of memory space an algorithm uses relative to the input size.</p>
+<h3 id="project-scheduling">Project scheduling</h3>
+
+<p>Time, as they say, waits for no one. Especially in software development, where delays can mean cost overruns or missed market opportunities<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>. Project scheduling is the act of plotting out the journey ahead. It’s not just about setting a launch date; it’s about understanding and allocating time for each intricate step of the SDLC.</p>
+
+<p>Key tools, like Gantt charts, offer visual representations of project timelines, mapping out tasks against time. Critical Path Method (CPM) can help identify the most important sequence of tasks, ensuring focus is placed where it’s most crucial<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>. This meticulous breakdown of timelines helps teams remain synchronized and stakeholders aligned, offering a clear picture of expected progress.</p>
+
+<h3 id="resource-allocation">Resource allocation</h3>
+
+<p>Every craftsperson needs their tools, and in software development, these tools range from the tangible to the intangible<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>. Resource allocation is about identifying and procuring these necessary tools. This component deals with:</p>
+
+<ul>
+  <li><strong>Human resources</strong>: which skills do we need, and do we have them in-house or need to hire?</li>
+  <li><strong>Technological resources</strong>: what software, hardware, and platforms are essential for development?</li>
+  <li><strong>Financial resources</strong>: budgeting for the project, ensuring that funds are available and wisely distributed.</li>
+</ul>
+
+<p>Effective resource allocation ensures that the development team isn’t hamstrung by lack of tools or personnel, promoting a smoother flow through subsequent SDLC stages.</p>
+
+<h3 id="risk-assessment">Risk assessment</h3>
+
+<p>In any venture, risks lurk. But in software development, with its myriad components and dependencies, risks are especially abundant<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>. Risk assessment is the act of identifying, analyzing, and planning for these potential pitfalls.</p>
+
+<p>By identifying risks early, from shifting user requirements to technological challenges, teams can develop strategies to either mitigate or avoid them. Tools like SWOT analysis (evaluating Strengths, Weaknesses, Opportunities, Threats) can offer structured frameworks for this process. As a core part of the planning phase, risk assessment ensures that the team isn’t blindsided, but rather, is always a step ahead of potential challenges.</p>
+
+<hr />
+
+<h2 id="why-planning-matters">Why planning matters</h2>
+
+<p><strong>Vision alignment</strong></p>
+
+<p>The planning phase ensures that all stakeholders share a unified vision of the project’s objectives and outcomes<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup>.</p>
+
+<p><strong>Cost and time efficiency</strong></p>
+
+<p>A well-laid plan can help prevent costly overruns and delays, ensuring the project remains within budget and on schedule.</p>
+
+<p><strong>Foundation for subsequent phases</strong></p>
+
+<p>Think of planning as laying the groundwork. A solid plan paves the way for smoother design, development, testing, and deployment phases<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">9</a></sup>.</p>
+
+<hr />
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Algorithms are essential to programming, providing systematic methods for solving problems, organizing data, and performing tasks. From sorting and searching to more complex operations on graphs and networks, algorithms enable computers to process information intelligently and efficiently. Understanding algorithms is fundamental to becoming a proficient programmer, and while this article uses Python examples, the principles can be applied across various programming languages.</p>
+<p>Embarking on a software project without comprehensive planning is like setting sail on turbulent seas without a compass. As you journey deeper into the realm of software development, always remember the sage words of Benjamin Franklin: “By failing to prepare, you are preparing to fail.”</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Sommerville, I., 2010. Software Engineering. 9th ed. Pearson. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Pressman, R.S., 2010. Software Engineering: A Practitioner’s Approach. 7th ed. McGraw-Hill. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Boehm, B.W., 1988. A Spiral Model of Software Development and Enhancement. Computer, 21(5). <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Kerzner, H., 2009. Project Management: A Systems Approach to Planning, Scheduling, and Controlling. 10th ed. Wiley. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Lewis, J.P., 2007. Fundamentals of Project Management. 3rd ed. AMACOM. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Pfleeger, S.L., 2009. Software Engineering: Theory and Practice. 4th ed. Pearson. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Charette, R.N., 1989. Software Engineering Risk Analysis and Management. McGraw-Hill. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>Brooks, F.P., 1995. The Mythical Man-Month: Essays on Software Engineering. Addison-Wesley. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p>Jalote, P., 2005. An Integrated Approach to Software Engineering. 3rd ed. Springer. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
       </section>
@@ -547,22 +549,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Algorithms%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=SDLC%3A+The+Planning+phase%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-planning%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-planning%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-planning%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/dev-environment/intro_programming/functions/" class="pagination--pager" title="Functions
+      <a href="/dev-environment/software_engineering/sdlc/" class="pagination--pager" title="Software Development Life Cycle (SDLC)
 ">Previous</a>
     
     
-      <a href="/dev-environment/intro_programming/oop/" class="pagination--pager" title="Object-Oriented Programming
+      <a href="/dev-environment/software_engineering/sdlc-system-design/" class="pagination--pager" title="SDLC: The System Design phase
 ">Next</a>
     
   </nav>

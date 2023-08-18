@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Algorithms - Learn Software Engineering</title>
-<meta name="description" content="“A place to learn about Software Engineering.”">
+<!-- begin _includes/seo.html --><title>SDLC: The Testing phase - Learn Software Engineering</title>
+<meta name="description" content="Battling bugs and bolstering quality: ensuring software excellence">
 
 
   <meta name="author" content="Julian Nonino">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Learn Software Engineering">
-<meta property="og:title" content="Algorithms">
-<meta property="og:url" content="https://learn-software.com/dev-environment/intro_programming/algorithms/">
+<meta property="og:title" content="SDLC: The Testing phase">
+<meta property="og:url" content="https://learn-software.com/dev-environment/software_engineering/sdlc-testing/">
 
 
-  <meta property="og:description" content="“A place to learn about Software Engineering.”">
+  <meta property="og:description" content="Battling bugs and bolstering quality: ensuring software excellence">
 
 
 
@@ -43,7 +43,7 @@
 
 
 
-<link rel="canonical" href="https://learn-software.com/dev-environment/intro_programming/algorithms/">
+<link rel="canonical" href="https://learn-software.com/dev-environment/software_engineering/sdlc-testing/">
 
 
 
@@ -176,12 +176,12 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Algorithms
+          SDLC: The Testing phase
 
         
       </h1>
       
-        <p class="page__lead">
+        <p class="page__lead">Battling bugs and bolstering quality: ensuring software excellence
 </p>
       
       
@@ -362,33 +362,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Programming: Basics</span>
+          <span class="nav__sub-title">Software Engineering</span>
         
 
         
         <ul>
           
-            <li><a href="/dev-environment/intro_programming/intro/">Introduction to Programming</a></li>
+            <li><a href="/dev-environment/software_engineering/intro/">Introduction to Software Engineering</a></li>
           
-            <li><a href="/dev-environment/intro_programming/install-python/">Installing Python</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc/">Software Development Life Cycle (SDLC)</a></li>
           
-            <li><a href="/dev-environment/intro_programming/numerical-systems-boolean-logic/">Numerical systems and Boolean logic</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-planning/">SDLC: The Planning phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/vars-data-types/">Variables and Data Types</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-system-design/">SDLC: The System Design phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/control-flow/">Control Flow</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-implementation/">SDLC: The Implementation phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/functions/">Functions</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-testing/" class="active">SDLC: The Testing phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/algorithms/" class="active">Algorithms</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-deployment/">SDLC: The Deployment phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/oop/">Object-Oriented Programming</a></li>
+            <li><a href="/dev-environment/software_engineering/sdlc-maintenance/">SDLC: The Maintenance phase</a></li>
           
-            <li><a href="/dev-environment/intro_programming/error-handling-debugging/">Error Handling and Debugging</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/testing/">Testing</a></li>
-          
-            <li><a href="/dev-environment/intro_programming/design-patterns/">Design Patterns</a></li>
+            <li><a href="/dev-environment/software_engineering/requirements-engineering/">Requirements Engineering</a></li>
           
         </ul>
         
@@ -404,8 +400,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Algorithms">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="SDLC: The Testing phase">
+    <meta itemprop="description" content="Battling bugs and bolstering quality: ensuring software excellence">
     <meta itemprop="datePublished" content="2023-08-18T10:56:31+00:00">
     
 
@@ -417,115 +413,165 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#what-is-an-algorithm">What is an algorithm?</a></li><li><a href="#types-of-algorithms">Types of algorithms</a><ul><li><a href="#sorting-algorithms">Sorting algorithms</a></li><li><a href="#search-algorithms">Search algorithms</a></li></ul></li><li><a href="#algorithm-complexity">Algorithm complexity</a><ul><li><a href="#time-complexity">Time complexity</a></li><li><a href="#space-complexity">Space complexity</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#levels-of-testing">Levels of Testing</a></li><li><a href="#key-components">Key components</a></li><li><a href="#testing-types">Testing types</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#references">References</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Algorithms are a set of step-by-step procedures or rules performed in a specific order to achieve a particular goal or solve a specific problem. In programming, algorithms form the backbone of effective problem-solving and efficient code execution. In this article, we will explore different aspects of algorithms, using examples in Python, while keeping the explanations as generic as possible.</p>
+        <p>In the rapidly-evolving domain of software development, delivering a product isn’t the endpoint, it’s a milestone. However, before that milestone can be reached, a rigorous evaluation must ensure the software is robust, user-friendly, and aligns with specified requirements. The torchbearer of this assessment? The testing stage of the Software Development Life Cycle (SDLC). Dive with me into this crucial phase and fathom its depth and expanse.</p>
 
-<h2 id="what-is-an-algorithm">What is an algorithm?</h2>
+<p>Software testing, at its core, is an activity where software undergoes various forms of evaluation. It’s conducted to ensure that the software adheres to specified requirements and doesn’t demonstrate unwanted behaviors<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. It is a meticulous blend of logic and creativity: logic to methodically navigate predefined paths and creativity to anticipate unexpected scenarios and user behaviors.</p>
 
-<p>An algorithm is a precise sequence of instructions for processes that can be implemented in a programming language and executed by a computer. Algorithms are used for calculation, data processing, and automated reasoning tasks.</p>
-
-<p>Here’s a simple example of an algorithm to find the largest number in a list.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_largest</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="n">largest</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="n">largest</span><span class="p">:</span>
-            <span class="n">largest</span> <span class="o">=</span> <span class="n">number</span>
-    <span class="k">return</span> <span class="n">largest</span>
-
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">find_largest</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>  <span class="c1"># Output: 89
-</span></code></pre></div></div>
-
-<h2 id="types-of-algorithms">Types of algorithms</h2>
-
-<p>Algorithms can be classified into various types, based on their structure, complexity, and purpose. Two of the most common types are <code class="language-plaintext highlighter-rouge">sort</code> and <code class="language-plaintext highlighter-rouge">search</code>.</p>
-
-<h3 id="sorting-algorithms">Sorting algorithms</h3>
-
-<p>Sorting algorithms arrange elements in a particular order, typically numerical or lexicographical. There are various sorting algorithms, each with its characteristics and use cases. Here, we’ll look at one popular example: Bubble Sort.</p>
-
-<p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until no swaps are needed, indicating that the list is sorted.</p>
-
-<p>Here’s a Python code snippet for Bubble Sort:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span> <span class="c1"># Last i elements are already sorted
-</span>            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># If the element is greater than the next element
-</span>                <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># Swap the elements
-</span>
-<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
-<span class="n">bubble_sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Sorted array:"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: Sorted array: [12, 22, 25, 34, 64]
-</span></code></pre></div></div>
-
-<p>In the code above, the outer loop runs <code class="language-plaintext highlighter-rouge">n</code> times, where <code class="language-plaintext highlighter-rouge">n</code> is the length of the array. The inner loop compares adjacent elements and swaps them if they are out of order. After each iteration of the outer loop, the largest unsorted element bubbles up to its correct position, hence the name “Bubble Sort.”</p>
-
-<p>It’s essential to note that there are many other sorting algorithms, such as Quick Sort, Merge Sort, Insertion Sort, etc., each having different performance characteristics and use cases. Understanding various sorting algorithms and their trade-offs is a vital part of computer science and software development.</p>
-
-<h3 id="search-algorithms">Search algorithms</h3>
-
-<p>Search algorithms find the location of a specific value within a data structure. There are various search algorithms, and one widely used example is Binary Search.</p>
-
-<p>Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.</p>
-
-<p>Here’s a Python code snippet for Binary Search:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span>
-        <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">mid</span>
-        <span class="k">elif</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
-            <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-</code></pre></div></div>
-
-<p>In the code above:</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">left</code> and <code class="language-plaintext highlighter-rouge">right</code> define the current interval being searched.</li>
-  <li><code class="language-plaintext highlighter-rouge">mid</code> is the middle index of the interval.</li>
-  <li>The while loop continues until <code class="language-plaintext highlighter-rouge">left</code> is greater than <code class="language-plaintext highlighter-rouge">right</code>, meaning the interval is empty.</li>
-  <li>If the middle element is equal to <code class="language-plaintext highlighter-rouge">x</code>, the index is returned.</li>
-  <li>If <code class="language-plaintext highlighter-rouge">x</code> is less than the middle element, the search continues in the lower half of the interval (by setting <code class="language-plaintext highlighter-rouge">right</code> to <code class="language-plaintext highlighter-rouge">mid - 1</code>).</li>
-  <li>If <code class="language-plaintext highlighter-rouge">x</code> is greater than the middle element, the search continues in the upper half (by setting <code class="language-plaintext highlighter-rouge">left</code> to <code class="language-plaintext highlighter-rouge">mid + 1</code>).</li>
-</ul>
-
-<p>Binary Search is efficient, with a time complexity of <code class="language-plaintext highlighter-rouge">O(log n)</code>, but it requires that the input be sorted.</p>
-
-<p>It’s worth mentioning that there are many other search algorithms, such as Linear Search, Interpolation Search, Exponential Search, etc., with different complexities and requirements. Understanding various search algorithms is essential for effective problem-solving in programming.</p>
-
-<h2 id="algorithm-complexity">Algorithm complexity</h2>
-
-<p>The efficiency of an algorithm is often measured in terms of its time complexity and space complexity, representing the amount of time and memory space required.</p>
-
-<h3 id="time-complexity">Time complexity</h3>
-
-<p>Time complexity is the measure of the amount of time an algorithm takes in terms of the length of the input.</p>
+<p>Before diving into its components, let’s recognize the non-negotiable importance of testing in the SDLC.</p>
 
 <ul>
-  <li><strong>O(1):</strong> Constant time</li>
-  <li><strong>O(log n):</strong> Logarithmic time</li>
-  <li><strong>O(n):</strong> Linear time</li>
-  <li><strong>O(n^2):</strong> Quadratic time</li>
+  <li><strong>Risk mitigation:</strong> Flawless software is a myth. Testing identifies defects, ensuring they are addressed before they become critical vulnerabilities.</li>
+  <li><strong>User trust and satisfaction:</strong> Users demand perfection. Rigorous testing ensures that their interactions with the software are seamless, building trust and guaranteeing satisfaction<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</li>
+  <li><strong>Cost efficiency:</strong> Unearthing defects early is cost-effective. Addressing them post-deployment can be exponentially more expensive.</li>
+  <li><strong>Regulatory adherence:</strong> In many sectors, comprehensive software testing is not a choice but a mandatory requirement, ensuring safety, security, and compliance.</li>
 </ul>
 
-<h3 id="space-complexity">Space complexity</h3>
+<hr />
 
-<p>Space complexity measures the amount of memory space an algorithm uses relative to the input size.</p>
+<h2 id="levels-of-testing">Levels of Testing</h2>
+
+<p>Delving deeper into the software testing landscape, there are multiple layers or levels, each serving a unique purpose:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Level</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Unit testing</td>
+      <td style="text-align: left">Focusing on the smallest testable parts of the software, unit testing evaluates individual units or components in isolation. It’s the foundational level of testing, ensuring that each building block performs as intended<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Integration testing</td>
+      <td style="text-align: left">Once individual units pass their tests, integration testing takes over. Here, multiple units are combined and tested as a group. The primary aim is to detect interface defects between integrated components<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">System testing</td>
+      <td style="text-align: left">This is a holistic testing phase where the entire software is evaluated. System testing verifies that the finished product meets the specified requirements and functions correctly in environments that mirror real-world conditions<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="key-components">Key components</h2>
+
+<p><strong>Test planning</strong></p>
+
+<ul>
+  <li><em>Strategic vision:</em> Testing, like every pivotal activity in software development, mandates planning. Test planning chalks out the scope, approach, resources, and schedule of testing activities<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>.</li>
+  <li><em>Resource allocation:</em> Relevant tools, team members, and infrastructure for testing are identified and readied.</li>
+  <li><em>Risk analysis:</em> Anticipating potential hurdles, and charting out mitigation plans is vital to navigate any unforeseen challenges.</li>
+</ul>
+
+<p><strong>Test design</strong></p>
+
+<ul>
+  <li><em>Test conditions to test cases:</em> Requirements are translated into tangible test conditions and expected results. This stage turns abstract needs into specific, testable items<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>.</li>
+  <li><em>Data creation and scripting:</em> Appropriate test data and automated test scripts are crafted, simulating real-world scenarios and automating repetitive tasks.</li>
+</ul>
+
+<p><strong>Test execution</strong></p>
+
+<p>Executing the planned tests, outcomes are gauged against expected results. Discrepancies, or defects, are logged for rectification. This stage may employ manual or automated testing techniques, depending on the nature of the test cases<sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup>.</p>
+
+<p><strong>Defect reporting and tracking</strong></p>
+
+<p>Each defect is meticulously documented, detailing its nature, steps to reproduce, and potential impact. Testers collaborate with developers to address these defects, ensuring every discrepancy is resolved before software deployment<sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">9</a></sup>.</p>
+
+<p><strong>Regression testing</strong></p>
+
+<p>As defects are rectified and the software undergoes modifications, regression testing ensures that new changes haven’t adversely affected existing functionalities<sup id="fnref:10" role="doc-noteref"><a href="#fn:10" class="footnote" rel="footnote">10</a></sup>.</p>
+
+<hr />
+
+<h2 id="testing-types">Testing types</h2>
+
+<p>While the aforementioned levels offer a vertical depth, various testing types provide a horizontal expanse, ensuring every facet of software quality is evaluated:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Functional testing</td>
+      <td style="text-align: left">Verifying if the software performs its intended functions.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Performance testing</td>
+      <td style="text-align: left">Gauging software behavior under different conditions, including stress, load, and scalability scenarios.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Usability testing</td>
+      <td style="text-align: left">Assessing the software’s user-friendliness and intuitiveness.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Security testing</td>
+      <td style="text-align: left">Ensuring resilience against malicious threats and breaches.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Compatibility testing</td>
+      <td style="text-align: left">Confirming software compatibility across devices, OSs, and browsers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Algorithms are essential to programming, providing systematic methods for solving problems, organizing data, and performing tasks. From sorting and searching to more complex operations on graphs and networks, algorithms enable computers to process information intelligently and efficiently. Understanding algorithms is fundamental to becoming a proficient programmer, and while this article uses Python examples, the principles can be applied across various programming languages.</p>
+<p>Perceiving the testing stage as merely a filter for defects is an oversimplified perspective. In essence, testing is a robust pillar in the SDLC, ensuring that the end product is not just functional, but optimal. For budding software engineers and developers, understanding the intricacies of this phase is non-negotiable, given its pivotal role in dictating software quality and user satisfaction.</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Myers, G. J., Sandler, C., &amp; Badgett, T., 2011. The Art of Software Testing. 3rd ed. Wiley. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Dustin, E., Rashka, J., &amp; Paul, J., 1999. Automated Software Testing: Introduction, Management, and Performance. Addison-Wesley Professional. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Graham, D., &amp; Fewster, M., 2008. Experiences of Test Automation: Case Studies of Software Test Automation. Addison-Wesley. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Kaner, C., Falk, J., &amp; Nguyen, H. Q., 1999. Testing Computer Software. 2nd ed. Wiley. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Kit, E., 1995. Software Testing in the Real World: Improving the Process. Addison-Wesley. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Black, R., 2001. Critical Testing Processes: Plan, Prepare, Perform, Perfect. Addison-Wesley. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Craig, R. D., &amp; Jaskiel, S. P., 2002. Systematic Software Testing. Artech House. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>Perry, W. E., 2006. Effective Methods for Software Testing. 3rd ed. Wiley. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p>Jorgensen, P.C., 2002. Software Testing: A Craftsman’s Approach. CRC Press. <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:10" role="doc-endnote">
+      <p>Patton, R., 2005. Software Testing. 2nd ed. Sams Publishing. <a href="#fnref:10" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
       </section>
@@ -547,22 +593,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Algorithms%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=SDLC%3A+The+Testing+phase%20https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-testing%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-testing%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fintro_programming%2Falgorithms%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flearn-software.com%2Fdev-environment%2Fsoftware_engineering%2Fsdlc-testing%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/dev-environment/intro_programming/functions/" class="pagination--pager" title="Functions
+      <a href="/dev-environment/software_engineering/sdlc-implementation/" class="pagination--pager" title="SDLC: The Implementation phase
 ">Previous</a>
     
     
-      <a href="/dev-environment/intro_programming/oop/" class="pagination--pager" title="Object-Oriented Programming
+      <a href="/dev-environment/software_engineering/sdlc-deployment/" class="pagination--pager" title="SDLC: The Deployment phase
 ">Next</a>
     
   </nav>
