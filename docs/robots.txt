@@ -1,1 +1,0 @@
-Sitemap: https://learn-software.com/dev-environment/sitemap.xml
