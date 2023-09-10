@@ -11250,3 +11250,5 @@ a img {
   display: flex; }
 
 /*! purgecss end ignore */
+.home-title {
+  color: rgba(var(--hb-emphasis-color-rgb), 1); }
