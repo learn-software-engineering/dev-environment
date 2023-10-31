@@ -25,9 +25,9 @@
     mod
   ));
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/krisk/!fuse@v6.6.2+incompatible/dist/fuse.js
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/krisk/!fuse@v7.0.0+incompatible/dist/fuse.js
   var require_fuse = __commonJS({
-    "ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/krisk/!fuse@v6.6.2+incompatible/dist/fuse.js"(exports, module) {
+    "ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/krisk/!fuse@v7.0.0+incompatible/dist/fuse.js"(exports, module) {
       (function(global, factory) {
         typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory() : typeof define === "function" && define.amd ? define(factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, global.Fuse = factory());
       })(exports, function() {
@@ -73,7 +73,7 @@
             descriptor.configurable = true;
             if ("value" in descriptor)
               descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
+            Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
           }
         }
         function _createClass(Constructor, protoProps, staticProps) {
@@ -87,6 +87,7 @@
           return Constructor;
         }
         function _defineProperty(obj, key, value) {
+          key = _toPropertyKey(key);
           if (key in obj) {
             Object.defineProperty(obj, key, {
               value,
@@ -103,27 +104,27 @@
           if (typeof superClass !== "function" && superClass !== null) {
             throw new TypeError("Super expression must either be null or a function");
           }
+          subClass.prototype = Object.create(superClass && superClass.prototype, {
+            constructor: {
+              value: subClass,
+              writable: true,
+              configurable: true
+            }
+          });
           Object.defineProperty(subClass, "prototype", {
-            value: Object.create(superClass && superClass.prototype, {
-              constructor: {
-                value: subClass,
-                writable: true,
-                configurable: true
-              }
-            }),
             writable: false
           });
           if (superClass)
             _setPrototypeOf(subClass, superClass);
         }
         function _getPrototypeOf(o) {
-          _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf2(o2) {
+          _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf2(o2) {
             return o2.__proto__ || Object.getPrototypeOf(o2);
           };
           return _getPrototypeOf(o);
         }
         function _setPrototypeOf(o, p) {
-          _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf2(o2, p2) {
+          _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf2(o2, p2) {
             o2.__proto__ = p2;
             return o2;
           };
@@ -205,6 +206,22 @@
         function _nonIterableSpread() {
           throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
         }
+        function _toPrimitive(input, hint) {
+          if (typeof input !== "object" || input === null)
+            return input;
+          var prim = input[Symbol.toPrimitive];
+          if (prim !== void 0) {
+            var res = prim.call(input, hint || "default");
+            if (typeof res !== "object")
+              return res;
+            throw new TypeError("@@toPrimitive must return a primitive value.");
+          }
+          return (hint === "string" ? String : Number)(input);
+        }
+        function _toPropertyKey(arg) {
+          var key = _toPrimitive(arg, "string");
+          return typeof key === "symbol" ? key : String(key);
+        }
         function isArray(value) {
           return !Array.isArray ? getTag(value) === "[object Array]" : Array.isArray(value);
         }
@@ -267,7 +284,6 @@
             var totalWeight = 0;
             keys.forEach(function(key) {
               var obj = createKey(key);
-              totalWeight += obj.weight;
               _this._keys.push(obj);
               _this._keyMap[obj.id] = obj;
               totalWeight += obj.weight;
@@ -551,42 +567,40 @@
                   return;
                 }
                 if (isArray(value)) {
-                  (function() {
-                    var subRecords = [];
-                    var stack = [{
-                      nestedArrIndex: -1,
-                      value
-                    }];
-                    while (stack.length) {
-                      var _stack$pop = stack.pop(), nestedArrIndex = _stack$pop.nestedArrIndex, _value = _stack$pop.value;
-                      if (!isDefined(_value)) {
-                        continue;
-                      }
-                      if (isString(_value) && !isBlank(_value)) {
-                        var subRecord2 = {
-                          v: _value,
-                          i: nestedArrIndex,
-                          n: _this3.norm.get(_value)
-                        };
-                        subRecords.push(subRecord2);
-                      } else if (isArray(_value)) {
-                        _value.forEach(function(item, k) {
-                          stack.push({
-                            nestedArrIndex: k,
-                            value: item
-                          });
-                        });
-                      } else
-                        ;
+                  var subRecords = [];
+                  var stack = [{
+                    nestedArrIndex: -1,
+                    value
+                  }];
+                  while (stack.length) {
+                    var _stack$pop = stack.pop(), nestedArrIndex = _stack$pop.nestedArrIndex, _value = _stack$pop.value;
+                    if (!isDefined(_value)) {
+                      continue;
                     }
-                    record.$[keyIndex] = subRecords;
-                  })();
+                    if (isString(_value) && !isBlank(_value)) {
+                      var subRecord = {
+                        v: _value,
+                        i: nestedArrIndex,
+                        n: _this3.norm.get(_value)
+                      };
+                      subRecords.push(subRecord);
+                    } else if (isArray(_value)) {
+                      _value.forEach(function(item, k) {
+                        stack.push({
+                          nestedArrIndex: k,
+                          value: item
+                        });
+                      });
+                    } else
+                      ;
+                  }
+                  record.$[keyIndex] = subRecords;
                 } else if (isString(value) && !isBlank(value)) {
-                  var subRecord = {
+                  var _subRecord = {
                     v: value,
                     n: _this3.norm.get(value)
                   };
-                  record.$[keyIndex] = subRecord;
+                  record.$[keyIndex] = _subRecord;
                 }
               });
               this.records.push(record);
@@ -700,14 +714,14 @@
             var binMin = 0;
             var binMid = binMax;
             while (binMin < binMid) {
-              var _score2 = computeScore$1(pattern, {
+              var _score = computeScore$1(pattern, {
                 errors: _i,
                 currentLocation: expectedLocation + binMid,
                 expectedLocation,
                 distance,
                 ignoreLocation
               });
-              if (_score2 <= currentThreshold) {
+              if (_score <= currentThreshold) {
                 binMin = binMid;
               } else {
                 binMax = binMid;
@@ -747,14 +761,14 @@
                 }
               }
             }
-            var _score = computeScore$1(pattern, {
+            var _score2 = computeScore$1(pattern, {
               errors: _i + 1,
               currentLocation: expectedLocation,
               expectedLocation,
               distance,
               ignoreLocation
             });
-            if (_score > currentThreshold) {
+            if (_score2 > currentThreshold) {
               break;
             }
             lastBitArr = bitArr;
@@ -1703,7 +1717,7 @@
           }]);
           return Fuse3;
         }();
-        Fuse$1.version = "6.6.2";
+        Fuse$1.version = "7.0.0";
         Fuse$1.createIndex = createIndex;
         Fuse$1.parseIndex = parseIndex;
         Fuse$1.config = Config;
@@ -1719,7 +1733,7 @@
     }
   });
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/dropdown.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/dropdown.ts
   (() => {
     const hide = (dropdown) => {
       dropdown.classList.remove("show");
@@ -1789,7 +1803,7 @@
     });
   })();
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/keyboard.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/keyboard.ts
   var Keyboard = class {
     keys = {};
     events = [];
@@ -1835,7 +1849,7 @@
     });
   })();
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/navigator.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/navigator.ts
   var Navigator = class {
     modal() {
       return document.querySelector(".search-modal-container.active");
@@ -1926,11 +1940,11 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/i18n.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/i18n.ts
   var i18n = new Translator(params_default.i18n, params_default.defaultLang);
   var i18n_default = i18n;
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/engine.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/engine.ts
   var import_fuse = __toESM(require_fuse());
   var Engine = class {
     index;
@@ -2105,7 +2119,7 @@
   var engine = new Engine();
   var engine_default = engine;
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/form.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/form.ts
   var Form = class {
     constructor(spinner, renderer) {
       this.spinner = spinner;
@@ -2367,7 +2381,7 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/spinner.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/spinner.ts
   var Spinner = class {
     constructor(ele) {
       this.ele = ele;
@@ -2397,7 +2411,7 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/renderer.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/renderer.ts
   var Renderer = class {
     constructor(container, statistics, spinner) {
       this.container = container;
@@ -2656,7 +2670,7 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/shortcuts.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/shortcuts.ts
   var Navigate = {
     kbds: ["\u2191", "\u2193"],
     action: i18n_default.translate("to_navigate")
@@ -2694,7 +2708,7 @@ ${this.renderKbds(shortcut.kbds)}
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/modal.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/modal.ts
   var searchShortcut = {
     kbds: [params_default.shortcut_search],
     action: i18n_default.translate("to_search")
@@ -2790,7 +2804,7 @@ ${this.renderKbds(shortcut.kbds)}
     });
   })();
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.4.5/assets/search/js/search.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.5.0/assets/search/js/search.ts
   var Search = class {
     container;
     form;
