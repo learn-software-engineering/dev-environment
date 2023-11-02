@@ -7263,11 +7263,11 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/code-block-panel@v0.3.0/assets/mods/code-block-panel/js/i18n.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/code-block-panel@v0.4.0/assets/mods/code-block-panel/js/i18n.ts
   var i18n = new Translator(params_default.i18n, params_default.defaultLang);
   var i18n_default = i18n;
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/code-block-panel@v0.3.0/assets/mods/code-block-panel/js/panel.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/code-block-panel@v0.4.0/assets/mods/code-block-panel/js/panel.ts
   var Panel = class {
     constructor(code) {
       this.code = code;
