@@ -9499,6 +9499,7 @@ textarea.form-control-lg {
     -webkit-clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 50%, calc(100% - 1rem) 100%, 0 100%, 1rem 50%);
             clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 50%, calc(100% - 1rem) 100%, 0 100%, 1rem 50%);
     margin-right: -0.875rem;
+    min-width: 48px;
     max-width: 360px;
     overflow: hidden;
     padding: 0.5rem 0;
