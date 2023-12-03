@@ -10139,6 +10139,9 @@ body {
 .hb-blog-post-content .h6 {
   margin-top: 0.5rem; }
 
+.hb-blog-post-content :last-child {
+  margin-bottom: 0; }
+
 .hb-blog-home-sidebar {
   top: 84px; }
 
