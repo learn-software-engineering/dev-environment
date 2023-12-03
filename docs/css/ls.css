@@ -10020,8 +10020,10 @@ pre {
   pre code {
     background: inherit; }
 
-.highlight pre code {
-  padding: 0; }
+.highlight {
+  margin-bottom: .5rem; }
+  .highlight pre code {
+    padding: 0; }
 
 .hb-error-action {
   margin: 0 0.125rem; }
