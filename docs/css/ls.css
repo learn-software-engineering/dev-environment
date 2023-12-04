@@ -10444,11 +10444,9 @@ body {
 
 /*! purgecss end ignore */
 .hb-footer a {
-  color: var(--hb-body-color);
-  text-decoration: none; }
+  color: var(--hb-body-color); }
   .hb-footer a:hover, .hb-footer a:focus {
-    color: var(--hb-link-hover-color);
-    text-decoration: underline; }
+    color: var(--hb-link-hover-color); }
 
 :root {
   --hb-header-navbar-active-color: var(--hb-primary); }
