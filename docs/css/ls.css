@@ -9474,6 +9474,9 @@ textarea.form-control-lg {
 .theme-toggle-menu {
   --hb-dropdown-min-width: 4rem; }
 
+body {
+  transition: background .5s, color .5s; }
+
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px; }
