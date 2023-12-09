@@ -10299,7 +10299,7 @@ body {
 .hb-docs-doc-content .h6 {
   margin-top: 0.5rem; }
 
-.hb-docs-doc-content :last-child {
+.hb-docs-doc-content > :last-child {
   margin-bottom: 0; }
 
 .hb-docs-doc-intro {
