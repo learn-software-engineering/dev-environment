@@ -9397,6 +9397,25 @@ textarea.form-control-lg {
 .hb-blog-sidebar-posts .hb-blog-post-card-img-none {
   height: 120px; }
 
+.hb-blog-sidebar-posts-vertical .card-img-top {
+  margin-top: 0 !important;
+  display: block;
+  width: 100px;
+  height: 78px; }
+
+.hb-blog-sidebar-posts-vertical .hb-blog-post-card-img-none {
+  font-size: .8rem; }
+
+.hb-blog-sidebar-posts-vertical .hb-blog-post-card-img,
+.hb-blog-sidebar-posts-vertical .hb-blog-post-card-img-none {
+  width: 100px;
+  height: 100%; }
+
+.hb-blog-sidebar-posts-vertical .hb-blog-sidebar-post-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
+
 /*! purgecss start ignore */
 .hb-header-banner-video video {
   height: 100%;
