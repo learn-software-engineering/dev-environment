@@ -9903,9 +9903,6 @@ body {
 .hb-docs-doc-intro {
   grid-area: intro; }
 
-.hb-main {
-  max-width: 100% !important; }
-
 @media (min-width: 992px) {
   .hb-docs {
     display: grid;
