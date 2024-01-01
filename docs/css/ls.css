@@ -9493,9 +9493,6 @@ textarea.form-control-lg {
 .theme-toggle-menu {
   --hb-dropdown-min-width: 4rem; }
 
-body {
-  transition: background .5s, color .5s; }
-
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px; }
@@ -10071,9 +10068,6 @@ html {
     @media (max-width: 991.98px) {
       .hb-header .dropdown-item-desc {
         max-width: 280px; } }
-.hb-header-nav {
-  transition: .5s; }
-
 .hb-header-menus {
   margin-right: auto; }
   .hb-header-menus .nav-link-icon {
