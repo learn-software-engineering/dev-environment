@@ -10883,6 +10883,8 @@ a img {
 
 .hb-back-to-top-icon {
   display: flex; }
+  .hb-back-to-top-icon rect:nth-of-type(2) {
+    fill: var(--hb-primary); }
 
 /*! purgecss end ignore */
 .home-title {
