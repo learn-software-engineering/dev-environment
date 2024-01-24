@@ -10070,7 +10070,8 @@ html {
     word-break: keep-all; }
     @media (max-width: 991.98px) {
       .hb-header .dropdown-item-desc {
-        max-width: 280px; } }
+        max-width: 280px;
+        width: auto; } }
 .hb-header-menus {
   margin-right: auto; }
   .hb-header-menus .nav-link-icon {
