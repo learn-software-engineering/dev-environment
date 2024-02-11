@@ -1733,7 +1733,7 @@
     }
   });
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/dropdown.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/dropdown.ts
   (() => {
     const hide = (dropdown) => {
       dropdown.classList.remove("show");
@@ -1803,7 +1803,7 @@
     });
   })();
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/keyboard.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/keyboard.ts
   var Keyboard = class {
     keys = {};
     events = [];
@@ -1849,7 +1849,7 @@
     });
   })();
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/navigator.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/navigator.ts
   var Navigator = class {
     modal() {
       return document.querySelector(".search-modal-container.active");
@@ -1942,11 +1942,11 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/i18n.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/i18n.ts
   var i18n = new Translator(params_default.i18n, params_default.defaultLang);
   var i18n_default = i18n;
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/engine.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/engine.ts
   var import_fuse = __toESM(require_fuse());
   var Engine = class {
     index;
@@ -2121,7 +2121,7 @@
   var engine = new Engine();
   var engine_default = engine;
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/form.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/form.ts
   var Form = class {
     constructor(spinner, renderer) {
       this.spinner = spinner;
@@ -2383,7 +2383,7 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/spinner.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/spinner.ts
   var Spinner = class {
     constructor(ele) {
       this.ele = ele;
@@ -2413,7 +2413,7 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/renderer.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/renderer.ts
   var Renderer = class {
     constructor(container, statistics, spinner) {
       this.container = container;
@@ -2672,7 +2672,7 @@
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/shortcuts.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/shortcuts.ts
   var Navigate = {
     kbds: ["\u2191", "\u2193"],
     action: i18n_default.translate("to_navigate")
@@ -2710,7 +2710,7 @@ ${this.renderKbds(shortcut.kbds)}
     }
   };
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/modal.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/modal.ts
   var searchShortcut = {
     kbds: [params_default.shortcut_search],
     action: i18n_default.translate("to_search")
@@ -2806,7 +2806,7 @@ ${this.renderKbds(shortcut.kbds)}
     });
   })();
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.6/assets/search/js/search.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/search@v0.8.7/assets/search/js/search.ts
   var Search = class {
     container;
     form;
