@@ -9749,15 +9749,17 @@ body {
 .hb-blog-post {
   display: grid;
   grid-gap: 1rem;
-  grid-template-areas: "intro" "toc" "main";
-  grid-template-rows: auto auto 1fr; }
-  @media (min-width: 992px) {
-    .hb-blog-post {
-      grid-template-areas: "intro toc" "main toc";
-      /* stylelint-disable declaration-block-no-redundant-longhand-properties */
-      grid-template-rows: auto 1fr;
-      grid-template-columns: 4fr 1fr;
-      /* stylelint-enable declaration-block-no-redundant-longhand-properties */ } }
+  grid-template-areas: "intro" "main"; }
+  .hb-blog-post.toc {
+    grid-template-areas: "intro" "toc" "main";
+    grid-template-rows: auto auto 1fr; }
+    @media (min-width: 992px) {
+      .hb-blog-post.toc {
+        grid-template-areas: "intro toc" "main toc";
+        /* stylelint-disable declaration-block-no-redundant-longhand-properties */
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 4fr 1fr;
+        /* stylelint-enable declaration-block-no-redundant-longhand-properties */ } }
 .hb-blog-post-main {
   grid-area: main;
   min-width: 1px; }
