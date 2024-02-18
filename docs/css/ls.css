@@ -9812,7 +9812,10 @@ body {
   @media (min-width: 992px) {
     .hb-blog-post-toc {
       height: calc(100vh - var(--hb-top-offset));
-      top: var(--hb-top-offset); } }
+      top: var(--hb-top-offset);
+      scrollbar-width: thin; }
+      .hb-blog-post-toc:hover {
+        scrollbar-color: var(--hb-primary) transparent; } }
 @media (min-width: 768px) {
   .hb-blog-post-toc-collapse {
     display: block !important; } }
@@ -9837,15 +9840,16 @@ body {
 
 .hb-blog-sidebar {
   grid-area: sidebar; }
-  .hb-blog-sidebar::-webkit-scrollbar {
-    width: 2px; }
   @media (min-width: 992px) {
     .hb-blog-sidebar {
       overflow: auto;
       height: calc(100vh - var(--hb-top-offset));
       overflow: auto;
       position: sticky;
-      top: var(--hb-top-offset); } }
+      top: var(--hb-top-offset);
+      scrollbar-width: thin; }
+      .hb-blog-sidebar:hover {
+        scrollbar-color: var(--hb-primary) transparent; } }
   .hb-blog-sidebar .hb-module:last-child {
     margin-bottom: 0 !important; }
 
