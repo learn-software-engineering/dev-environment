@@ -9935,9 +9935,6 @@ body {
   grid-area: main;
   min-width: 1px; }
 
-.hb-docs-nav::-webkit-scrollbar {
-  width: 2px; }
-
 .hb-docs-nav-heading a {
   color: inherit;
   text-decoration: none; }
@@ -9972,8 +9969,12 @@ body {
     .hb-docs-doc-toc {
       height: calc(100vh - var(--hb-top-offset));
       overflow-y: auto;
+      scrollbar-width: thin;
       position: sticky;
-      top: var(--hb-top-offset); } }
+      top: var(--hb-top-offset); }
+      .hb-docs-nav:hover,
+      .hb-docs-doc-toc:hover {
+        scrollbar-color: var(--hb-primary) transparent; } }
 @media (max-width: 991.98px) {
   .hb-docs-doc-toc {
     color: var(--hb-body-color) !important;
