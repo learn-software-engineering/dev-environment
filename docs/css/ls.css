@@ -10869,6 +10869,11 @@ a img {
   .code-block-action svg {
     vertical-align: -0.125rem; }
 
+.highlight pre {
+  scrollbar-width: thin; }
+  .highlight pre:hover {
+    scrollbar-color: var(--hb-primary) transparent; }
+
 /*! purgecss end ignore */
 /*! purgecss start ignore */
 .hb-back-to-top {
