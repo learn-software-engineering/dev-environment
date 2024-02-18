@@ -9637,7 +9637,8 @@ pre {
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  overflow-wrap: break-word; }
 
 .hb-module {
   margin-bottom: 1.5rem; }
