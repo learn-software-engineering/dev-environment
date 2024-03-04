@@ -10140,8 +10140,12 @@ pre {
   flex-direction: column;
   margin-bottom: 2rem;
   overflow-wrap: break-word; }
-  .hb-main[data-layout="landing"] {
-    padding: 0; }
+
+body[data-layout="landing"] .hb-header {
+  margin-bottom: calc(var(--hb-top-offset) - 24px); }
+
+body[data-layout="landing"] .hb-main {
+  padding: 0; }
 
 .hb-module {
   margin-bottom: 1.5rem; }
