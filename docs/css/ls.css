@@ -10041,6 +10041,11 @@ a img {
 .hb-blog-post-taxonomy-tag::before {
   content: "#"; }
 
+.hb-blog-main .hb-module:last-of-type,
+.hb-blog-post-main .hb-module:last-of-type,
+.hb-blog-post-toc .hb-module:last-of-type {
+  margin-bottom: 0 !important; }
+
 @media (min-width: 992px) {
   .hb-blog-main-container {
     display: grid;
