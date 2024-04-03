@@ -9855,11 +9855,12 @@ a img {
 .hb-docs-nav-toggle[aria-expanded="true"] .hb-docs-nav-toggle-icon {
   transform: rotate(90deg); }
 
-.hb-docs-main .hb-module:last-of-type,
-.hb-docs-doc-main .hb-module:last-of-type,
-.hb-docs-doc-toc .hb-module:last-of-type,
-.hb-docs-nav .hb-module:last-of-type {
-  margin-bottom: 0 !important; }
+@media (min-width: 992px) {
+  .hb-docs-main .hb-module:last-of-type,
+  .hb-docs-doc-main .hb-module:last-of-type,
+  .hb-docs-doc-toc .hb-module:last-of-type,
+  .hb-docs-nav .hb-module:last-of-type {
+    margin-bottom: 0 !important; } }
 
 .hb-docs-sidebar {
   grid-area: sidebar; }
