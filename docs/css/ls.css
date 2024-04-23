@@ -7206,7 +7206,7 @@ textarea.form-control-lg {
 .rounded {
   border-radius: var(--hb-border-radius) !important; }
 
-.rounded-0 {
+.rounded-0, .hb-blog-post-card-wrapper .hb-blog-post-card-img {
   border-radius: 0 !important; }
 
 .rounded-1 {
@@ -9945,6 +9945,27 @@ a img {
   font-size: 1.5rem;
   text-transform: uppercase;
   width: 100%; }
+
+.hb-blog-post-card-wrapper .card-img-top {
+  border: 0 !important;
+  display: block;
+  height: 100%;
+  margin-top: 0 !important; }
+
+@media (max-width: 575.98px) {
+  .hb-blog-post-card-wrapper .card-img-top {
+    margin-bottom: .25rem; } }
+
+@media (min-width: 768px) {
+  .hb-blog-post-card-wrapper .card-img-top {
+    border-radius: 0 !important; }
+  .hb-blog-post-card-wrapper .hb-blog-post-card-img {
+    height: 100%;
+    width: 180px; } }
+
+@media (min-width: 992px) {
+  .hb-blog-post-card-wrapper .hb-blog-post-card-img {
+    width: 240px; } }
 
 .hb-blog-post-content h2:not(:first-child), .hb-blog-post-content .h2:not(:first-child) {
   margin-top: 3rem; }
