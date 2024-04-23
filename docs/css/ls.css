@@ -10616,7 +10616,8 @@ h6:hover .anchor,
   flex-wrap: nowrap;
   overflow: hidden;
   width: 100%;
-  margin: 0; }
+  margin: 0;
+  scroll-behavior: smooth; }
 
 .slide-control-left {
   left: 0; }
