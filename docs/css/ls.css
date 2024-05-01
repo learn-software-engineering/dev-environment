@@ -6523,7 +6523,7 @@ textarea.form-control-lg {
 .mb-1 {
   margin-bottom: 0.25rem !important; }
 
-.mb-2 {
+.mb-2, .table-responsive {
   margin-bottom: 0.5rem !important; }
 
 .mb-3 {
@@ -10194,6 +10194,9 @@ body {
 
 .footnote-backref {
   text-decoration: none; }
+
+.table-responsive {
+  scrollbar-width: thin; }
 
 /* stylelint-disable selector-id-pattern */
 #TableOfContents {
