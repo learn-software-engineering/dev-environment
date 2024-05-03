@@ -10696,6 +10696,12 @@ h6:hover .anchor,
   border-bottom: unset; }
 
 /*! purgecss end ignore */
+.collapse-wrapper .highlight {
+  margin-bottom: .25rem; }
+
+.collapse-wrapper pre {
+  margin-bottom: 0; }
+
 .hb-footer .hb-social {
   color: var(--hb-body-color); }
   .hb-footer .hb-social:hover {
