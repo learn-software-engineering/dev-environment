@@ -10670,10 +10670,9 @@ h6:hover .anchor,
 
 /*! purgecss end ignore */
 .mermaid {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  overflow: auto;
+  text-align: center; }
   .mermaid:not([data-processed="true"]) {
     height: 120px;
     color: var(--hb-secondary); }
