@@ -10087,17 +10087,18 @@ a img {
     display: grid;
     grid-gap: 1rem;
     grid-template-areas: "sidebar main";
-    grid-template-columns: 1.75fr minmax(0, 5fr); } }
+    grid-template-columns: auto minmax(0, 5fr); } }
 
 @media (min-width: 1200px) {
   .hb-blog-main-container {
-    grid-template-columns: 2.45fr minmax(0, 7fr); } }
+    grid-template-columns: auto minmax(0, 7fr); } }
 
 .hb-blog-sidebar {
   grid-area: sidebar; }
   @media (min-width: 992px) {
     .hb-blog-sidebar {
       overflow: auto;
+      max-width: 320px;
       height: calc(100vh - var(--hb-top-offset));
       overflow: auto;
       position: sticky;
