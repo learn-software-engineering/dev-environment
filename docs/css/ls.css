@@ -10556,16 +10556,16 @@ html {
   --hb-breadcrumb-margin-bottom: 0;
   --hb-breadcrumb-divider: "";
   --hb-link-color-rgb: var(--hb-body-secondary);
-  flex-wrap: nowrap;
   overflow: hidden;
+  flex-wrap: nowrap;
   white-space: nowrap; }
   .hb-breadcrumb .breadcrumb-item {
     background: var(--hb-secondary-bg);
     -webkit-clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 50%, calc(100% - 1rem) 100%, 0 100%, 1rem 50%);
             clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 50%, calc(100% - 1rem) 100%, 0 100%, 1rem 50%);
     margin-right: -0.875rem;
-    min-width: 48px;
-    max-width: 360px;
+    max-width: 240px;
+    flex-shrink: 0;
     overflow: hidden;
     padding: 0.5rem 0;
     text-overflow: ellipsis; }
@@ -10578,25 +10578,16 @@ html {
       .hb-breadcrumb .breadcrumb-item a:hover {
         color: inherit; }
     .hb-breadcrumb .breadcrumb-item:last-child {
-      max-width: 100%; }
-  .hb-breadcrumb .breadcrumb-item:first-child {
-    -webkit-clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 50%, calc(100% - 1rem) 100%, 0 100%);
-            clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 50%, calc(100% - 1rem) 100%, 0 100%); }
-    .hb-breadcrumb .breadcrumb-item:first-child a {
-      padding-left: 0.75rem; }
-  @media (max-width: 767.98px) {
-    .hb-breadcrumb .breadcrumb-item {
-      max-width: 240px; }
-      .hb-breadcrumb .breadcrumb-item:not(:first-child):not(:last-child) {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        width: 2.75rem; }
-        .hb-breadcrumb .breadcrumb-item:not(:first-child):not(:last-child) a {
-          display: none; }
-        .hb-breadcrumb .breadcrumb-item:not(:first-child):not(:last-child)::after {
-          content: "...";
-          margin-top: -0.5rem; } }
+      max-width: 320px; }
+      @media (min-width: 1200px) {
+        .hb-breadcrumb .breadcrumb-item:last-child {
+          max-width: 480px; } }
+      @media (min-width: 1400px) {
+        .hb-breadcrumb .breadcrumb-item:last-child {
+          max-width: 640px; } }
+      @media (max-width: 575.98px) {
+        .hb-breadcrumb .breadcrumb-item:last-child {
+          display: none; } }
 .hb-docs-doc-featured-img {
   -o-object-fit: cover;
      object-fit: cover;
