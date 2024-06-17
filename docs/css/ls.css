@@ -10577,6 +10577,8 @@ html {
       text-decoration: none; }
       .hb-breadcrumb .breadcrumb-item a:hover {
         color: inherit; }
+    .hb-breadcrumb .breadcrumb-item:first-child {
+      padding-right: .5rem; }
     .hb-breadcrumb .breadcrumb-item:last-child {
       max-width: 320px; }
       @media (min-width: 1200px) {
