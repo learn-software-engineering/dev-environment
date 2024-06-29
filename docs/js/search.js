@@ -71,16 +71,13 @@
             var descriptor = props[i];
             descriptor.enumerable = descriptor.enumerable || false;
             descriptor.configurable = true;
-            if ("value" in descriptor)
-              descriptor.writable = true;
+            if ("value" in descriptor) descriptor.writable = true;
             Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
           }
         }
         function _createClass(Constructor, protoProps, staticProps) {
-          if (protoProps)
-            _defineProperties(Constructor.prototype, protoProps);
-          if (staticProps)
-            _defineProperties(Constructor, staticProps);
+          if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+          if (staticProps) _defineProperties(Constructor, staticProps);
           Object.defineProperty(Constructor, "prototype", {
             writable: false
           });
@@ -114,8 +111,7 @@
           Object.defineProperty(subClass, "prototype", {
             writable: false
           });
-          if (superClass)
-            _setPrototypeOf(subClass, superClass);
+          if (superClass) _setPrototypeOf(subClass, superClass);
         }
         function _getPrototypeOf(o) {
           _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf2(o2) {
@@ -131,12 +127,9 @@
           return _setPrototypeOf(o, p);
         }
         function _isNativeReflectConstruct() {
-          if (typeof Reflect === "undefined" || !Reflect.construct)
-            return false;
-          if (Reflect.construct.sham)
-            return false;
-          if (typeof Proxy === "function")
-            return true;
+          if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+          if (Reflect.construct.sham) return false;
+          if (typeof Proxy === "function") return true;
           try {
             Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {
             }));
@@ -176,44 +169,33 @@
           return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
         }
         function _arrayWithoutHoles(arr) {
-          if (Array.isArray(arr))
-            return _arrayLikeToArray(arr);
+          if (Array.isArray(arr)) return _arrayLikeToArray(arr);
         }
         function _iterableToArray(iter) {
-          if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null)
-            return Array.from(iter);
+          if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
         }
         function _unsupportedIterableToArray(o, minLen) {
-          if (!o)
-            return;
-          if (typeof o === "string")
-            return _arrayLikeToArray(o, minLen);
+          if (!o) return;
+          if (typeof o === "string") return _arrayLikeToArray(o, minLen);
           var n = Object.prototype.toString.call(o).slice(8, -1);
-          if (n === "Object" && o.constructor)
-            n = o.constructor.name;
-          if (n === "Map" || n === "Set")
-            return Array.from(o);
-          if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
-            return _arrayLikeToArray(o, minLen);
+          if (n === "Object" && o.constructor) n = o.constructor.name;
+          if (n === "Map" || n === "Set") return Array.from(o);
+          if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
         }
         function _arrayLikeToArray(arr, len) {
-          if (len == null || len > arr.length)
-            len = arr.length;
-          for (var i = 0, arr2 = new Array(len); i < len; i++)
-            arr2[i] = arr[i];
+          if (len == null || len > arr.length) len = arr.length;
+          for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
           return arr2;
         }
         function _nonIterableSpread() {
           throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
         }
         function _toPrimitive(input, hint) {
-          if (typeof input !== "object" || input === null)
-            return input;
+          if (typeof input !== "object" || input === null) return input;
           var prim = input[Symbol.toPrimitive];
           if (prim !== void 0) {
             var res = prim.call(input, hint || "default");
-            if (typeof res !== "object")
-              return res;
+            if (typeof res !== "object") return res;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return (hint === "string" ? String : Number)(input);
@@ -591,8 +573,7 @@
                           value: item
                         });
                       });
-                    } else
-                      ;
+                    } else ;
                   }
                   record.$[keyIndex] = subRecords;
                 } else if (isString(value) && !isBlank(value)) {
@@ -1456,10 +1437,8 @@
         function format(results, docs) {
           var _ref = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {}, _ref$includeMatches = _ref.includeMatches, includeMatches = _ref$includeMatches === void 0 ? Config.includeMatches : _ref$includeMatches, _ref$includeScore = _ref.includeScore, includeScore = _ref$includeScore === void 0 ? Config.includeScore : _ref$includeScore;
           var transformers = [];
-          if (includeMatches)
-            transformers.push(transformMatches);
-          if (includeScore)
-            transformers.push(transformScore);
+          if (includeMatches) transformers.push(transformMatches);
+          if (includeScore) transformers.push(transformScore);
           return results.map(function(result) {
             var idx = result.idx;
             var data = {
