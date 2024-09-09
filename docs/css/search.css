@@ -161,7 +161,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 0.5rem; }
+  padding: 0 0.5rem;
+  z-index: 1; }
   .search-input-icon.disabled,
   .search-spinner.disabled,
   .search-reset-button.disabled {
@@ -203,6 +204,8 @@ button {
   outline: none;
   background: var(--search-bg);
   color: var(--search-color); }
+  .search-form-control:disabled {
+    filter: brightness(0.95); }
 
 .search-form-meta {
   width: 100%;
