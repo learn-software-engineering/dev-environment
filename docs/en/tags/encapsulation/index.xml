@@ -4,4 +4,7 @@
  &lt;blockquote
  
  class="blockquote border-start ps-3 py-1 border-primary border-4">
- &lt;p>&amp;ldquo;Encapsulation refers to bundling data and functions that manipulate these data into a single entity or software module.&amp;rdquo;&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p></description></item></channel></rss>
+ &lt;p>&amp;ldquo;Encapsulation refers to bundling data and functions that manipulate these data into a single entity or software module.&amp;rdquo;&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+
+ &lt;/blockquote>
+&lt;p>That is, keeping related data and behaviours together in order to restrict direct access to that data from other parts of the programme, interacting only through a controlled interface (public API).&lt;/p></description></item></channel></rss>
