@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cd on Learn-Software.com</title><link>/en/tags/cd/</link><description>Recent content in Cd on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 22 Sep 2024 22:53:50 +0100</lastBuildDate><atom:link href="/en/tags/cd/index.xml" rel="self" type="application/rss+xml"/><item><title>Continuous Delivery</title><link>/en/blog/2023-09-02-continuous-delivery/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>/en/blog/2023-09-02-continuous-delivery/</guid><description>&lt;p>Continuous Delivery (CD) is deeply rooted in the first principle of the Agile Manifesto posted in 2001&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>:&lt;/p>
+&lt;blockquote>
+&lt;p>Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.&lt;/p>
+&lt;/blockquote>
+&lt;p>According to Martin Fowler&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>, a project is truly embracing Continuous Delivery when:&lt;/p>
+&lt;ul>
+&lt;li>The software can be deployed at any stage of its lifecycle.&lt;/li>
+&lt;li>The team values keeping the software deployment-ready over adding new features.&lt;/li>
+&lt;li>Any software version can be deployed to any environment on-demand.&lt;/li>
+&lt;/ul>
+&lt;p>In many ways, Continuous Delivery is the next step from &lt;a href="../../../en/blog/2023-08-08-continuous-integration/">Continuous Integration&lt;/a>, seamlessly automating processes all the way to the software&amp;rsquo;s end user.&lt;/p></description></item></channel></rss>
