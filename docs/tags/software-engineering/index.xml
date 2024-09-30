@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software-Engineering on Learn-Software.com</title><link>/tags/software-engineering/</link><description>Recent content in Software-Engineering on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 30 Sep 2024 16:21:01 +0100</lastBuildDate><atom:link href="/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction</title><link>/software-engineering/0100-intro/01-intro/</link><pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate><guid>/software-engineering/0100-intro/01-intro/</guid><description>&lt;h2 id="what-is-software">What is Software?&lt;/h2>
+&lt;p>Several thought leaders in the world of computing have defined software in various ways:&lt;/p>
+&lt;p>&lt;strong>Ian Sommerville&lt;/strong>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>:
+&lt;em>Computer programs and associated documentation.&lt;/em>&lt;/p>
+&lt;p>&lt;strong>Roger S. Pressman&lt;/strong>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>:
+&lt;em>A collection of computer programs, procedures, rules, and associated documentation and data.&lt;/em>&lt;/p>
+&lt;p>&lt;strong>Andrew S. Tanenbaum&lt;/strong>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>:
+&lt;em>A series of instructions that tells a computer what to do.&lt;/em>&lt;/p>
+&lt;p>&lt;strong>Grady Booch&lt;/strong>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>:
+&lt;em>Set of items or objects that form a configuration that includes programs, documents, and data.&lt;/em>&lt;/p></description></item><item><title>Requirements Engineering</title><link>/software-engineering/0300-requirements-engineering/01-requirements-engineering/</link><pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate><guid>/software-engineering/0300-requirements-engineering/01-requirements-engineering/</guid><description>&lt;p>According to Sommerville and Sawyer, a requirement is a statement about an intended product that specifies what it should do or how it should perform&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Requirements identify the goals, needs and constraints that the software must address in order to deliver value. They are a form of specification that serve as the foundation for all subsequent software engineering activities.&lt;/p>
+&lt;p>Some key definitions of requirements are:&lt;/p>
+&lt;ul>
+&lt;li>Description of how the system should behave.&lt;/li>
+&lt;li>Features that the software needs to deliver.&lt;/li>
+&lt;li>Functionalities that users expect from the software.&lt;/li>
+&lt;li>Statements of business rules that software must comply with.&lt;/li>
+&lt;li>Constraints on development of the software.&lt;/li>
+&lt;/ul>
+&lt;p>Requirements convey the intended purpose, context and environment in which the software will operate. They express the underlying motivations for why the software needs to be built by identifying problems faced by users or organization.&lt;/p></description></item></channel></rss>
