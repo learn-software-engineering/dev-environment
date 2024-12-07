@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Abstracción on Learn-Software.com</title><link>/es/tags/abstracci%C3%B3n/</link><description>Recent content in Abstracción on Learn-Software.com</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sat, 07 Dec 2024 23:40:41 +0000</lastBuildDate><atom:link href="/es/tags/abstracci%C3%B3n/index.xml" rel="self" type="application/rss+xml"/><item><title>Abstracción</title><link>/es/programming/poo/los-cuatro-pilares/abstraccion/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/es/programming/poo/los-cuatro-pilares/abstraccion/</guid><description>&lt;p>Los aspectos clave de la abstracción incluyen:&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>Simplificación&lt;/strong>: La abstracción reduce la complejidad ocultando detalles innecesarios.&lt;/li>
-&lt;li>&lt;strong>Enfoque en características esenciales&lt;/strong>: Enfatiza lo que hace un objeto en lugar de cómo lo hace.&lt;/li>
-&lt;li>&lt;strong>Separación de preocupaciones&lt;/strong>: Permite separar la interfaz de una clase de su implementación.&lt;/li>
-&lt;li>&lt;strong>Modularidad&lt;/strong>: La abstracción promueve el diseño modular al definir límites claros entre componentes.&lt;/li>
-&lt;/ol>
-&lt;h3 id="clases-abstractas-e-interfaces">Clases abstractas e interfaces&lt;/h3>
-&lt;p>En muchos lenguajes orientados a objetos, la abstracción se implementa a través de clases abstractas e interfaces. Aunque Python no tiene un concepto integrado de interfaz, podemos lograr una funcionalidad similar usando clases base abstractas. El módulo &lt;code>abc&lt;/code> de Python proporciona infraestructura para definir clases base abstractas:&lt;/p></description></item></channel></rss>
