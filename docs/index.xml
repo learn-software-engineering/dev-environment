@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com</title><link>/</link><description>Recent content on Learn-Software.com</description><generator>Hugo</generator><language>en</language><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>The Computer</title><link>/programming/0100-intro/0101-computers/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0100-intro/0101-computers/</guid><description>&lt;p>To the uninitiated, a computer might seem like a mere box—perhaps sometimes sleek and shiny—but a box nonetheless. Yet, within this &amp;ldquo;&lt;em>box&lt;/em>&amp;rdquo; lies a universe of complexity and coordination.&lt;/p>
-&lt;p>&lt;em>&lt;strong>Hardware&lt;/strong>&lt;/em> represents the physical components of a computer: the Central Processing Unit (CPU) which is often likened to the brain of the system, the Random Access Memory (RAM) acting as a temporary storage while tasks are underway, storage devices that retain data, and peripherals like keyboards, mice, and monitors&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p></description></item><item><title>Introduction</title><link>/software-engineering/0100-intro/01-intro/</link><pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate><guid>/software-engineering/0100-intro/01-intro/</guid><description>&lt;h2 id="what-is-software">What is Software?&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com</title><link>/</link><description>Recent content on Learn-Software.com</description><generator>Hugo</generator><language>en</language><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>The Computer</title><link>/programming/intro/computers/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/intro/computers/</guid><description>&lt;p>To the uninitiated, a computer might seem like a mere box—perhaps sometimes sleek and shiny—but a box nonetheless. Yet, within this &amp;ldquo;&lt;em>box&lt;/em>&amp;rdquo; lies a universe of complexity and coordination.&lt;/p>
+&lt;p>&lt;em>&lt;strong>Hardware&lt;/strong>&lt;/em> represents the physical components of a computer: the Central Processing Unit (CPU) which is often likened to the brain of the system, the Random Access Memory (RAM) acting as a temporary storage while tasks are underway, storage devices that retain data, and peripherals like keyboards, mice, and monitors.&lt;/p></description></item><item><title>Introduction</title><link>/software-engineering/0100-intro/01-intro/</link><pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate><guid>/software-engineering/0100-intro/01-intro/</guid><description>&lt;h2 id="what-is-software">What is Software?&lt;/h2>
 &lt;p>Several thought leaders in the world of computing have defined software in various ways:&lt;/p>
 &lt;p>&lt;strong>Ian Sommerville&lt;/strong>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>:
 &lt;em>Computer programs and associated documentation.&lt;/em>&lt;/p>
@@ -8,10 +8,11 @@
 &lt;p>&lt;strong>Andrew S. Tanenbaum&lt;/strong>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>:
 &lt;em>A series of instructions that tells a computer what to do.&lt;/em>&lt;/p>
 &lt;p>&lt;strong>Grady Booch&lt;/strong>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>:
-&lt;em>Set of items or objects that form a configuration that includes programs, documents, and data.&lt;/em>&lt;/p></description></item><item><title>Numerical Systems</title><link>/programming/0100-intro/0102-numerical-systems/</link><pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0100-intro/0102-numerical-systems/</guid><description>&lt;h2 id="the-decimal-system-the-bedrock-of-our-daily-life">The decimal system: the bedrock of our daily life&lt;/h2>
-&lt;p>From a tender age, we&amp;rsquo;re taught to count using ten digits: 0 through 9. This system, known as the decimal system, underpins almost all our mathematical and financial activities, from basic arithmetic to calculating bank interests&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Its roots trace back to our anatomy: the ten fingers on our hands, making it the most intuitive and natural system for us. Yet, its true charm emanates from its positional nature.&lt;/p></description></item><item><title>Boolean Logic</title><link>/programming/0100-intro/0103-boolean-logic/</link><pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0100-intro/0103-boolean-logic/</guid><description>&lt;p>Named in honour of &lt;a href="https://en.wikipedia.org/wiki/George_Boole">George Boole&lt;/a>, a 19th-century English mathematician, Boolean logic is a mathematical system that deals with operations resulting in one of two possible outcomes: true or false, typically represented as 1 and 0, respectively&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. In his groundbreaking work, &amp;ldquo;An Investigation of the Laws of Thought,&amp;rdquo; Boole laid the foundations for this logic, introducing an algebraic system that could be employed to depict logical structures.&lt;/p>
+&lt;em>Set of items or objects that form a configuration that includes programs, documents, and data.&lt;/em>&lt;/p></description></item><item><title>Numerical Systems</title><link>/programming/intro/numerical-systems/</link><pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/intro/numerical-systems/</guid><description>&lt;h2 id="the-decimal-system-the-bedrock-of-our-daily-life">The decimal system: the bedrock of our daily life&lt;/h2>
+&lt;p>From a tender age, we&amp;rsquo;re taught to count using ten digits: 0 through 9. This system, known as the decimal system, underpins almost all our mathematical and financial activities, from basic arithmetic to calculating bank interests. Its roots trace back to our anatomy: the ten fingers on our hands, making it the most intuitive and natural system for us. Yet, its true charm emanates from its positional nature.&lt;/p></description></item><item><title>Boolean Logic</title><link>/programming/intro/boolean-logic/</link><pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/intro/boolean-logic/</guid><description>&lt;p>Named in honour of &lt;a href="https://en.wikipedia.org/wiki/George_Boole">George Boole&lt;/a>, a 19th-century English mathematician, Boolean logic is a mathematical system that deals with operations resulting in one of two possible outcomes: true or false, typically represented as 1 and 0, respectively. In his groundbreaking work, &amp;ldquo;An Investigation of the Laws of Thought,&amp;rdquo; Boole laid the foundations for this logic, introducing an algebraic system that could be employed to depict logical structures.&lt;/p>
+&lt;hr>
 &lt;h2 id="boolean-operations">Boolean operations&lt;/h2>
-&lt;p>Within Boolean logic, several fundamental operations allow for the manipulation and combination of these binary expressions:&lt;/p></description></item><item><title>Set Up your Development Environment</title><link>/programming/0100-intro/0104-setup-dev-environment/</link><pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0100-intro/0104-setup-dev-environment/</guid><description>&lt;h2 id="choosing-a-programming-language">Choosing a programming language&lt;/h2>
+&lt;p>Within Boolean logic, several fundamental operations allow for the manipulation and combination of these binary expressions:&lt;/p></description></item><item><title>Set Up your Development Environment</title><link>/programming/intro/setup-dev-environment/</link><pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/intro/setup-dev-environment/</guid><description>&lt;h2 id="choosing-a-programming-language">Choosing a programming language&lt;/h2>
 &lt;p>Choosing a programming language is the first and perhaps the most crucial step in the learning process. Several factors to consider when selecting a language include:&lt;/p>
 &lt;ol>
 &lt;li>&lt;strong>Purpose&lt;/strong>: What do you want to code for? If it&amp;rsquo;s web development, JavaScript or PHP might be good options. If you&amp;rsquo;re into data science, R or Python might be more appropriate.&lt;/li>
@@ -19,35 +20,27 @@
 &lt;li>&lt;strong>Learning curve&lt;/strong>: Some languages are easier to pick up than others. It&amp;rsquo;s essential to pick one that matches your experience level and patience.&lt;/li>
 &lt;li>&lt;strong>Job opportunities&lt;/strong>: If you&amp;rsquo;re eyeing a career in programming, researching the job market demand for various languages can be insightful.&lt;/li>
 &lt;/ol>
-&lt;p>While there are many valuable and potent languages, for the purpose of this course, we&amp;rsquo;ve chosen &lt;a href="https://www.python.org/">&lt;strong>Python&lt;/strong>&lt;/a>. This language is renowned for its simplicity and readability, making it ideal for those just starting out. Moreover, Python boasts an active community and a wide range of applications, from web development to artificial intelligence&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p></description></item><item><title>Variables and Data Types</title><link>/programming/0200-starting-concepts/0201-variables-data-types/</link><pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0200-starting-concepts/0201-variables-data-types/</guid><description>&lt;h2 id="variables">Variables&lt;/h2>
+&lt;p>While there are many valuable and potent languages, for the purpose of this course, we&amp;rsquo;ve chosen &lt;a href="https://www.python.org/">&lt;strong>Python&lt;/strong>&lt;/a>. This language is renowned for its simplicity and readability, making it ideal for those just starting out. Moreover, Python boasts an active community and a wide range of applications, from web development to artificial intelligence.&lt;/p></description></item><item><title>Variables and Data Types</title><link>/programming/starting-concepts/variables-data-types/</link><pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/starting-concepts/variables-data-types/</guid><description>&lt;h2 id="variables">Variables&lt;/h2>
 &lt;p>A variable is a container to store data in the computer&amp;rsquo;s memory. We can think of it as a box with a label. The label is the variable name and inside the box its value is stored.&lt;/p>
 &lt;p>To declare a variable in Python we just write the name and assign a value:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>age &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">28&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>price &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">19.95&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>student &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">True&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Variable names must start with letters or underscore, and can only contain letters, numbers and underscores. It is recommended to use meaningful names that represent the purpose of the variable.&lt;/p></description></item><item><title>Input and output operations</title><link>/programming/0200-starting-concepts/0202-io-operations/</link><pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0200-starting-concepts/0202-io-operations/</guid><description>&lt;h2 id="screen-output">Screen output&lt;/h2>
-&lt;p>Python also provides functions to send program output to &amp;ldquo;standard output&amp;rdquo;, usually the screen or terminal&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Variable names must start with letters or underscore, and can only contain letters, numbers and underscores. It is recommended to use meaningful names that represent the purpose of the variable.&lt;/p></description></item><item><title>Input and output operations</title><link>/programming/starting-concepts/io-operations/</link><pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/starting-concepts/io-operations/</guid><description>&lt;h2 id="screen-output">Screen output&lt;/h2>
+&lt;p>Python also provides functions to send program output to &amp;ldquo;standard output&amp;rdquo;, usually the screen or terminal.&lt;/p>
 &lt;p>The &lt;code>print()&lt;/code> function displays the value passed as a parameter:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>name &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Eric&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(name) &lt;span style="color:#75715e"># displays &amp;#34;Eric&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We can print multiple values separated by commas&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>:&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We can print multiple values separated by commas:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>print(&lt;span style="color:#e6db74">&amp;#34;Hello&amp;#34;&lt;/span>, name, &lt;span style="color:#e6db74">&amp;#34;!&amp;#34;&lt;/span>) &lt;span style="color:#75715e"># displays &amp;#34;Hello Eric!&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We can also use literal values without assigning to variables&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>:&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We can also use literal values without assigning to variables:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>print(&lt;span style="color:#e6db74">&amp;#34;2 + 3 =&amp;#34;&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span> &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">3&lt;/span>) &lt;span style="color:#75715e"># displays &amp;#34;2 + 3 = 5&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="output-formatting">Output formatting&lt;/h3>
-&lt;p>Python provides various ways to format output&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>:&lt;/p></description></item><item><title>Flow Control</title><link>/programming/0200-starting-concepts/0203-flow-control-structures/</link><pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0200-starting-concepts/0203-flow-control-structures/</guid><description>&lt;h2 id="conditions-making-decisions-in-code">Conditions: making decisions in code&lt;/h2>
-&lt;p>Life is full of decisions: &amp;ldquo;If it rains, I&amp;rsquo;ll take an umbrella. Otherwise, I&amp;rsquo;ll wear sunglasses.&amp;rdquo; These decisions are also present in the world of programming. Conditions are like questions the computer asks itself. They allow us to make decisions and execute specific code based on a condition&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. They can be as simple as &amp;ldquo;Is it raining?&amp;rdquo; or as complex as &amp;ldquo;Is it the weekend and do I have less than $100 in my bank account?&amp;rdquo;.&lt;/p></description></item><item><title>Functions</title><link>/programming/0200-starting-concepts/0204-functions/</link><pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0200-starting-concepts/0204-functions/</guid><description>&lt;h2 id="what-are-functions">What are functions?&lt;/h2>
-&lt;p>A function, in simple terms, is a block of code that executes only when called. You can think of it as a small program within your main program, designed to perform a specific task&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. A function can also be seen as a black box: we pass an input (parameters), some internal processing occurs, and it produces an output (return value).&lt;/p>
-&lt;p>Functions allow us to segment our code into logical parts where each part performs a single action. This provides several benefits&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>:&lt;/p></description></item><item><title>Recursive Functions</title><link>/programming/0200-starting-concepts/0205-recursive-functions/</link><pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/0200-starting-concepts/0205-recursive-functions/</guid><description>&lt;h2 id="recursion-the-art-of-calling-yourself">Recursion: the art of calling yourself&lt;/h2>
-&lt;p>Imagine a box of mirrors where each mirror reflects what it sees in the next, creating an infinite series of reflections. Recursion in programming is something similar. It is a technique where a function calls itself directly or indirectly&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. This creates a cycle where the function solves a problem by dividing it into smaller instances of the same problem, until reaching a simple base case that can be solved directly.&lt;/p></description></item><item><title>Classes and objects</title><link>/programming/0300-oop/0301-classes-objects/</link><pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate><guid>/programming/0300-oop/0301-classes-objects/</guid><description>&lt;h2 id="anatomy-of-a-class">Anatomy of a class&lt;/h2>
-&lt;p>A class acts as a &lt;strong>blueprint or mould&lt;/strong> to construct similar objects, defining their common characteristics and functionalities. It is similar to the blueprint used to construct houses in the same neighbourhood: they all share certain key attributes.&lt;/p>
-&lt;p>The typical components of a class are:&lt;/p>
-&lt;p>&lt;strong>Attributes (properties)&lt;/strong>: Variables that characterise the object. For example, for a &lt;code>Person&lt;/code> class, attributes like &lt;code>name&lt;/code>, &lt;code>age&lt;/code>, &lt;code>ID&lt;/code>, etc.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Person&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> id &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> age &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Methods&lt;/strong>: Functions that define behaviours. For example, a &lt;code>Person&lt;/code> can &lt;code>walk()&lt;/code>, &lt;code>talk()&lt;/code>, &lt;code>eat()&lt;/code>, etc. They access the attributes to implement said functionality.&lt;/p></description></item><item><title>Requirements Engineering</title><link>/software-engineering/0300-requirements-engineering/01-requirements-engineering/</link><pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate><guid>/software-engineering/0300-requirements-engineering/01-requirements-engineering/</guid><description>&lt;p>According to Sommerville and Sawyer, a requirement is a statement about an intended product that specifies what it should do or how it should perform&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Python provides various ways to format output:&lt;/p></description></item><item><title>Flow Control</title><link>/programming/starting-concepts/flow-control-structures/</link><pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/starting-concepts/flow-control-structures/</guid><description>&lt;h2 id="conditions-making-decisions-in-code">Conditions: making decisions in code&lt;/h2>
+&lt;p>Life is full of decisions: &amp;ldquo;If it rains, I&amp;rsquo;ll take an umbrella. Otherwise, I&amp;rsquo;ll wear sunglasses.&amp;rdquo; These decisions are also present in the world of programming. Conditions are like questions the computer asks itself. They allow us to make decisions and execute specific code based on a condition. They can be as simple as &amp;ldquo;Is it raining?&amp;rdquo; or as complex as &amp;ldquo;Is it the weekend and do I have less than $100 in my bank account?&amp;rdquo;.&lt;/p></description></item><item><title>Functions</title><link>/programming/starting-concepts/functions/</link><pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/starting-concepts/functions/</guid><description>&lt;h2 id="what-are-functions">What are functions?&lt;/h2>
+&lt;p>A function, in simple terms, is a block of code that executes only when called. You can think of it as a small program within your main program, designed to perform a specific task. A function can also be seen as a black box: we pass an input (parameters), some internal processing occurs, and it produces an output (return value).&lt;/p>
+&lt;p>Functions allow us to segment our code into logical parts where each part performs a single action. This provides several benefits:&lt;/p></description></item><item><title>Recursive Functions</title><link>/programming/starting-concepts/recursive-functions/</link><pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate><guid>/programming/starting-concepts/recursive-functions/</guid><description>&lt;h2 id="recursion-the-art-of-calling-yourself">Recursion: the art of calling yourself&lt;/h2>
+&lt;p>Imagine a box of mirrors where each mirror reflects what it sees in the next, creating an infinite series of reflections. Recursion in programming is something similar. It is a technique where a function calls itself directly or indirectly. This creates a cycle where the function solves a problem by dividing it into smaller instances of the same problem, until reaching a simple base case that can be solved directly.&lt;/p></description></item><item><title>Requirements Engineering</title><link>/software-engineering/0300-requirements-engineering/01-requirements-engineering/</link><pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate><guid>/software-engineering/0300-requirements-engineering/01-requirements-engineering/</guid><description>&lt;p>According to Sommerville and Sawyer, a requirement is a statement about an intended product that specifies what it should do or how it should perform&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
 &lt;p>Requirements identify the goals, needs and constraints that the software must address in order to deliver value. They are a form of specification that serve as the foundation for all subsequent software engineering activities.&lt;/p>
 &lt;p>Some key definitions of requirements are:&lt;/p>
 &lt;ul>
@@ -57,12 +50,266 @@
 &lt;li>Statements of business rules that software must comply with.&lt;/li>
 &lt;li>Constraints on development of the software.&lt;/li>
 &lt;/ul>
-&lt;p>Requirements convey the intended purpose, context and environment in which the software will operate. They express the underlying motivations for why the software needs to be built by identifying problems faced by users or organization.&lt;/p></description></item><item><title>Encapsulation</title><link>/programming/0300-oop/0302-encapsulation/</link><pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate><guid>/programming/0300-oop/0302-encapsulation/</guid><description>&lt;p>The Oxford Dictionary defines encapsulation as &lt;em>&amp;ldquo;enclosed or contained as if in a capsule&amp;rdquo;&lt;/em>. This is precisely what we seek to achieve - &lt;em>&amp;ldquo;packaging&amp;rdquo;&lt;/em> data and code within a single capsule (the class) to hide its internal complexity.&lt;/p>
-&lt;p>The formal definition would be:&lt;/p>
-&lt;blockquote>
-&lt;p>&amp;ldquo;Encapsulation refers to bundling data and functions that manipulate these data into a single entity or software module.&amp;rdquo;&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
-&lt;/blockquote>
-&lt;p>That is, keeping related data and behaviours together in order to restrict direct access to that data from other parts of the programme, interacting only through a controlled interface (public API).&lt;/p></description></item><item><title>Continuous Delivery</title><link>/blog/2023-09-02-continuous-delivery/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>/blog/2023-09-02-continuous-delivery/</guid><description>&lt;p>Continuous Delivery (CD) is deeply rooted in the first principle of the Agile Manifesto posted in 2001&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>:&lt;/p>
+&lt;p>Requirements convey the intended purpose, context and environment in which the software will operate. They express the underlying motivations for why the software needs to be built by identifying problems faced by users or organization.&lt;/p></description></item><item><title>Classes and objects</title><link>/programming/oop/classes-objects/</link><pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate><guid>/programming/oop/classes-objects/</guid><description>&lt;h2 id="anatomy-of-a-class">Anatomy of a class&lt;/h2>
+&lt;p>A class acts as a &lt;strong>blueprint or mould&lt;/strong> to construct similar objects, defining their common characteristics and functionalities. It is similar to the blueprint used to construct houses in the same neighbourhood: they all share certain key attributes.&lt;/p>
+&lt;p>The typical components of a class are:&lt;/p>
+&lt;p>&lt;strong>Attributes (properties)&lt;/strong>: Variables that characterise the object. For example, for a &lt;code>Person&lt;/code> class, attributes like &lt;code>name&lt;/code>, &lt;code>age&lt;/code>, &lt;code>ID&lt;/code>, etc.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Person&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> id &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> age &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Methods&lt;/strong>: Functions that define behaviours. For example, a &lt;code>Person&lt;/code> can &lt;code>walk()&lt;/code>, &lt;code>talk()&lt;/code>, &lt;code>eat()&lt;/code>, etc. They access the attributes to implement said functionality.&lt;/p></description></item><item><title>Association</title><link>/programming/oop/class-relations/association/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/association/</guid><description>&lt;p>Key characteristics of association:&lt;/p>
+&lt;ul>
+&lt;li>It represents a loose coupling between classes.&lt;/li>
+&lt;li>The associated classes can exist independently of each other.&lt;/li>
+&lt;li>The lifetime of one class is not tied to the lifetime of the other.&lt;/li>
+&lt;li>It can be unidirectional or bidirectional.&lt;/li>
+&lt;/ul>
+&lt;p>There are two main types of association:&lt;/p>
+&lt;ol>
+&lt;li>Unidirectional Association&lt;/li>
+&lt;li>Bidirectional Association&lt;/li>
+&lt;/ol>
+&lt;p>Let&amp;rsquo;s explore each of these in more detail.&lt;/p>
+&lt;h3 id="unidirectional-association">Unidirectional association&lt;/h3>
+&lt;p>In a unidirectional association, one class knows about and can interact with another class, but not vice versa. This is a one-way relationship.&lt;/p></description></item><item><title>Aggregation</title><link>/programming/oop/class-relations/aggregation/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/aggregation/</guid><description>&lt;p>Key characteristics of aggregation:&lt;/p>
+&lt;ul>
+&lt;li>It&amp;rsquo;s a stronger relationship than a simple association, but weaker than composition.&lt;/li>
+&lt;li>The &amp;ldquo;part&amp;rdquo; object can exist independently of the &amp;ldquo;whole&amp;rdquo; object.&lt;/li>
+&lt;li>Multiple &amp;ldquo;whole&amp;rdquo; objects can share the same &amp;ldquo;part&amp;rdquo; object.&lt;/li>
+&lt;li>If the &amp;ldquo;whole&amp;rdquo; object is destroyed, the &amp;ldquo;part&amp;rdquo; object continues to exist.&lt;/li>
+&lt;/ul>
+&lt;p>Let&amp;rsquo;s look at an example to illustrate aggregation:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Department&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __init__(self, name):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>name &lt;span style="color:#f92672">=&lt;/span> name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>employees &lt;span style="color:#f92672">=&lt;/span> []
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">add_employee&lt;/span>(self, employee):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>employees&lt;span style="color:#f92672">.&lt;/span>append(employee)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">remove_employee&lt;/span>(self, employee):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>employees&lt;span style="color:#f92672">.&lt;/span>remove(employee)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">list_employees&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Department &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>name&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> has employees: &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>&lt;span style="color:#e6db74">&amp;#39;, &amp;#39;&lt;/span>&lt;span style="color:#f92672">.&lt;/span>join(emp&lt;span style="color:#f92672">.&lt;/span>name &lt;span style="color:#66d9ef">for&lt;/span> emp &lt;span style="color:#f92672">in&lt;/span> self&lt;span style="color:#f92672">.&lt;/span>employees)&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Employee&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __init__(self, name, id):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>name &lt;span style="color:#f92672">=&lt;/span> name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>id &lt;span style="color:#f92672">=&lt;/span> id
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __str__(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Employee(name=&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>name&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">, id=&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>id&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Creating instances&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hr_dept &lt;span style="color:#f92672">=&lt;/span> Department(&lt;span style="color:#e6db74">&amp;#34;Human Resources&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>it_dept &lt;span style="color:#f92672">=&lt;/span> Department(&lt;span style="color:#e6db74">&amp;#34;Information Technology&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>emp1 &lt;span style="color:#f92672">=&lt;/span> Employee(&lt;span style="color:#e6db74">&amp;#34;Alice&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;E001&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>emp2 &lt;span style="color:#f92672">=&lt;/span> Employee(&lt;span style="color:#e6db74">&amp;#34;Bob&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;E002&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>emp3 &lt;span style="color:#f92672">=&lt;/span> Employee(&lt;span style="color:#e6db74">&amp;#34;Charlie&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;E003&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Adding employees to departments&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hr_dept&lt;span style="color:#f92672">.&lt;/span>add_employee(emp1)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hr_dept&lt;span style="color:#f92672">.&lt;/span>add_employee(emp2)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>it_dept&lt;span style="color:#f92672">.&lt;/span>add_employee(emp2) &lt;span style="color:#75715e"># Note: Bob works in both HR and IT&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>it_dept&lt;span style="color:#f92672">.&lt;/span>add_employee(emp3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(hr_dept&lt;span style="color:#f92672">.&lt;/span>list_employees())
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(it_dept&lt;span style="color:#f92672">.&lt;/span>list_employees())
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># If we remove the HR department, the employees still exist&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">del&lt;/span> hr_dept
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(emp1) &lt;span style="color:#75715e"># Employee still exists&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, we have an aggregation relationship between &lt;code>Department&lt;/code> and &lt;code>Employee&lt;/code>. A &lt;code>Department&lt;/code> has &lt;code>Employee&lt;/code>s, but &lt;code>Employee&lt;/code>s can exist independently of any particular &lt;code>Department&lt;/code>. Also, an &lt;code>Employee&lt;/code> can belong to multiple &lt;code>Department&lt;/code>s (as we see with Bob).&lt;/p></description></item><item><title>Composition</title><link>/programming/oop/class-relations/composition/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/composition/</guid><description>&lt;p>Key characteristics of composition:&lt;/p>
+&lt;ul>
+&lt;li>It represents a strong &amp;ldquo;has-a&amp;rdquo; relationship.&lt;/li>
+&lt;li>The &amp;ldquo;part&amp;rdquo; object cannot exist independently of the &amp;ldquo;whole&amp;rdquo; object.&lt;/li>
+&lt;li>When the &amp;ldquo;whole&amp;rdquo; object is destroyed, all its &amp;ldquo;part&amp;rdquo; objects are also destroyed.&lt;/li>
+&lt;li>A &amp;ldquo;part&amp;rdquo; object belongs to only one &amp;ldquo;whole&amp;rdquo; object at a time.&lt;/li>
+&lt;/ul>
+&lt;p>Let&amp;rsquo;s look at an example to illustrate composition:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Engine&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __init__(self, horsepower):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>horsepower &lt;span style="color:#f92672">=&lt;/span> horsepower
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">start&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Engine started&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Car&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __init__(self, make, model, horsepower):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>make &lt;span style="color:#f92672">=&lt;/span> make
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>model &lt;span style="color:#f92672">=&lt;/span> model
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>engine &lt;span style="color:#f92672">=&lt;/span> Engine(horsepower) &lt;span style="color:#75715e"># Composition: Car creates its own Engine&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">start_car&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>make&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>model&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">: &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>engine&lt;span style="color:#f92672">.&lt;/span>start()&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __del__(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>make&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>model&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> is being destroyed, and so is its engine.&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Creating a Car instance&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>my_car &lt;span style="color:#f92672">=&lt;/span> Car(&lt;span style="color:#e6db74">&amp;#34;Toyota&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Corolla&amp;#34;&lt;/span>, &lt;span style="color:#ae81ff">150&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(my_car&lt;span style="color:#f92672">.&lt;/span>start_car()) &lt;span style="color:#75715e"># Output: Toyota Corolla: Engine started&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># When we delete the Car, its Engine is also deleted&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">del&lt;/span> my_car &lt;span style="color:#75715e"># This will print: Toyota Corolla is being destroyed, and so is its engine.&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, we have a composition relationship between &lt;code>Car&lt;/code> and &lt;code>Engine&lt;/code>. A &lt;code>Car&lt;/code> has an &lt;code>Engine&lt;/code>, and the &lt;code>Engine&lt;/code> cannot exist independently of the &lt;code>Car&lt;/code>. When a &lt;code>Car&lt;/code> object is created, it creates its own &lt;code>Engine&lt;/code>. When the &lt;code>Car&lt;/code> object is destroyed, its &lt;code>Engine&lt;/code> is also destroyed.&lt;/p></description></item><item><title>Inheritance</title><link>/programming/oop/class-relations/inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/inheritance/</guid><description>&lt;p>Key characteristics of inheritance:&lt;/p>
+&lt;ul>
+&lt;li>It promotes code reuse and establishes a hierarchy between classes.&lt;/li>
+&lt;li>The subclass inherits all public and protected members from the superclass.&lt;/li>
+&lt;li>The subclass can add its own members and override inherited members.&lt;/li>
+&lt;li>It supports the concept of polymorphism.&lt;/li>
+&lt;/ul>
+&lt;p>Let&amp;rsquo;s look at an example to illustrate inheritance:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Animal&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __init__(self, name):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>name &lt;span style="color:#f92672">=&lt;/span> name
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">speak&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">pass&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Dog&lt;/span>(Animal):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">speak&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>name&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> says Woof!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Cat&lt;/span>(Animal):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">speak&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>name&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> says Meow!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Creating instances&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dog &lt;span style="color:#f92672">=&lt;/span> Dog(&lt;span style="color:#e6db74">&amp;#34;Buddy&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cat &lt;span style="color:#f92672">=&lt;/span> Cat(&lt;span style="color:#e6db74">&amp;#34;Whiskers&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(dog&lt;span style="color:#f92672">.&lt;/span>speak()) &lt;span style="color:#75715e"># Output: Buddy says Woof!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(cat&lt;span style="color:#f92672">.&lt;/span>speak()) &lt;span style="color:#75715e"># Output: Whiskers says Meow!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Demonstrating polymorphism&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">animal_sound&lt;/span>(animal):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(animal&lt;span style="color:#f92672">.&lt;/span>speak())
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>animal_sound(dog) &lt;span style="color:#75715e"># Output: Buddy says Woof!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>animal_sound(cat) &lt;span style="color:#75715e"># Output: Whiskers says Meow!&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, we have a base class &lt;code>Animal&lt;/code> and two derived classes &lt;code>Dog&lt;/code> and &lt;code>Cat&lt;/code>. Both &lt;code>Dog&lt;/code> and &lt;code>Cat&lt;/code> inherit from &lt;code>Animal&lt;/code> and override the &lt;code>speak&lt;/code> method.&lt;/p></description></item><item><title>Realisation (Implementation)</title><link>/programming/oop/class-relations/realisation/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/realisation/</guid><description>&lt;p>Key characteristics of realisation:&lt;/p>
+&lt;ul>
+&lt;li>It represents a contract that the implementing class must fulfil.&lt;/li>
+&lt;li>The class must provide implementations for all methods declared in the interface.&lt;/li>
+&lt;li>It allows for polymorphism through interfaces.&lt;/li>
+&lt;/ul>
+&lt;p>Python doesn&amp;rsquo;t have a built-in interface concept like some other languages (e.g., Java), but we can simulate interfaces using abstract base classes. Here&amp;rsquo;s an example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> abc &lt;span style="color:#f92672">import&lt;/span> ABC, abstractmethod
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Drawable&lt;/span>(ABC):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">@abstractmethod&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">draw&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">pass&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Circle&lt;/span>(Drawable):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">draw&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Drawing a circle&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Square&lt;/span>(Drawable):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">draw&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Drawing a square&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">draw_shape&lt;/span>(shape: Drawable):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(shape&lt;span style="color:#f92672">.&lt;/span>draw())
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Creating instances&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>circle &lt;span style="color:#f92672">=&lt;/span> Circle()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>square &lt;span style="color:#f92672">=&lt;/span> Square()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Using polymorphism through the interface&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>draw_shape(circle) &lt;span style="color:#75715e"># Output: Drawing a circle&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>draw_shape(square) &lt;span style="color:#75715e"># Output: Drawing a square&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, &lt;code>Drawable&lt;/code> is an abstract base class that acts like an interface. Both &lt;code>Circle&lt;/code> and &lt;code>Square&lt;/code> implement the &lt;code>Drawable&lt;/code> interface by providing their own implementation of the &lt;code>draw&lt;/code> method.&lt;/p></description></item><item><title>Dependency</title><link>/programming/oop/class-relations/dependency/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/dependency/</guid><description>&lt;p>Key characteristics of dependency:&lt;/p>
+&lt;ul>
+&lt;li>It represents a &amp;ldquo;uses&amp;rdquo; relationship between classes.&lt;/li>
+&lt;li>It&amp;rsquo;s a weaker relationship compared to association, aggregation, or composition.&lt;/li>
+&lt;li>Changes in the used class may affect the using class.&lt;/li>
+&lt;/ul>
+&lt;p>Here&amp;rsquo;s an example to illustrate dependency:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Printer&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">print_document&lt;/span>(self, document):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Printing: &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>document&lt;span style="color:#f92672">.&lt;/span>get_content()&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">PDFDocument&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">get_content&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;PDF content&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">WordDocument&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">get_content&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Word document content&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Using the Printer&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>printer &lt;span style="color:#f92672">=&lt;/span> Printer()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pdf &lt;span style="color:#f92672">=&lt;/span> PDFDocument()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>word &lt;span style="color:#f92672">=&lt;/span> WordDocument()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(printer&lt;span style="color:#f92672">.&lt;/span>print_document(pdf)) &lt;span style="color:#75715e"># Output: Printing: PDF content&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(printer&lt;span style="color:#f92672">.&lt;/span>print_document(word)) &lt;span style="color:#75715e"># Output: Printing: Word document content&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, the &lt;code>Printer&lt;/code> class has a dependency on both &lt;code>PDFDocument&lt;/code> and &lt;code>WordDocument&lt;/code> classes. The &lt;code>Printer&lt;/code> uses these classes in its &lt;code>print_document&lt;/code> method, but it doesn&amp;rsquo;t maintain a long-term relationship with them.&lt;/p></description></item><item><title>Dependency</title><link>/programming/oop/class-relations/conclusion/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/conclusion/</guid><description>&lt;h2 id="comparing-and-contrasting-relations">Comparing and contrasting relations&lt;/h2>
+&lt;p>Now that we&amp;rsquo;ve explored the various types of class relations, let&amp;rsquo;s compare and contrast them to better understand when to use each:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Association vs Aggregation vs Composition&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Association is the most general relationship, representing any connection between classes.&lt;/li>
+&lt;li>Aggregation is a specialised association representing a whole-part relationship where the part can exist independently.&lt;/li>
+&lt;li>Composition is the strongest whole-part relationship where the part cannot exist independently of the whole.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Inheritance vs Composition&lt;/strong>&lt;/p></description></item><item><title>Encapsulation</title><link>/programming/oop/the-four-pillars/encapsulation/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/encapsulation/</guid><description>&lt;p>The importance of encapsulation lies in several key aspects:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Data protection&lt;/strong>: By controlling access to object data through methods, we can ensure that the data remains consistent and valid.&lt;/li>
+&lt;li>&lt;strong>Modularity&lt;/strong>: Encapsulation allows objects to be self-contained, making it easier to understand and maintain code.&lt;/li>
+&lt;li>&lt;strong>Flexibility&lt;/strong>: The internal implementation can be changed without affecting other parts of the code that use the object.&lt;/li>
+&lt;li>&lt;strong>Reduced complexity&lt;/strong>: By hiding the details of internal workings, encapsulation reduces the complexity of the overall system from an external perspective.&lt;/li>
+&lt;/ol>
+&lt;h3 id="implementation-in-python">Implementation in Python&lt;/h3>
+&lt;p>Python provides several mechanisms to implement encapsulation. Let&amp;rsquo;s explore these with examples:&lt;/p></description></item><item><title>Inheritance</title><link>/programming/oop/the-four-pillars/inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/inheritance/</guid><description>&lt;p>Key aspects of inheritance include:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Code reusability&lt;/strong>: Inheritance allows us to reuse code from existing classes, reducing redundancy and promoting efficient development.&lt;/li>
+&lt;li>&lt;strong>Hierarchical classification&lt;/strong>: It enables the creation of class hierarchies, representing relationships and commonalities among objects.&lt;/li>
+&lt;li>&lt;strong>Extensibility&lt;/strong>: New functionality can be added to existing classes without modifying them, following the open-closed principle.&lt;/li>
+&lt;li>&lt;strong>Polymorphism&lt;/strong>: Inheritance is a prerequisite for runtime polymorphism (which we&amp;rsquo;ll discuss in detail later).&lt;/li>
+&lt;/ol>
+&lt;h3 id="types-of-inheritance">Types of inheritance&lt;/h3>
+&lt;p>There are several types of inheritance, though not all programming languages support all types. The main types are:&lt;/p></description></item><item><title>Polymorphism</title><link>/programming/oop/the-four-pillars/polymorphism/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/polymorphism/</guid><description>&lt;p>Polymorphism enables writing flexible and reusable code by allowing us to work with objects at a more abstract level, without needing to know their specific types.&lt;/p>
+&lt;p>There are two main types of polymorphism in object-oriented programming:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Compile-time polymorphism (Static polymorphism)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Achieved through method &lt;em>overloading&lt;/em>.&lt;/li>
+&lt;li>Resolved at compile time.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Runtime polymorphism (Dynamic polymorphism)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Achieved through method &lt;em>overriding&lt;/em>.&lt;/li>
+&lt;li>Resolved at runtime.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>Python primarily supports runtime polymorphism, as it is a dynamically typed language. However, we can demonstrate concepts similar to compile-time polymorphism as well.&lt;/p></description></item><item><title>Abstraction</title><link>/programming/oop/the-four-pillars/abstraction/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/abstraction/</guid><description>&lt;p>Key aspects of abstraction include:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Simplification&lt;/strong>: Abstraction reduces complexity by hiding unnecessary details.&lt;/li>
+&lt;li>&lt;strong>Focusing on essential features&lt;/strong>: It emphasises what an object does rather than how it does it.&lt;/li>
+&lt;li>&lt;strong>Separation of concerns&lt;/strong>: It allows separating the interface of a class from its implementation.&lt;/li>
+&lt;li>&lt;strong>Modularity&lt;/strong>: Abstraction promotes modular design by defining clear boundaries between components.&lt;/li>
+&lt;/ol>
+&lt;h3 id="abstract-classes-and-interfaces">Abstract classes and interfaces&lt;/h3>
+&lt;p>In many object-oriented languages, abstraction is implemented through abstract classes and interfaces. While Python doesn&amp;rsquo;t have a built-in interface concept, we can achieve similar functionality using abstract base classes. Python&amp;rsquo;s &lt;code>abc&lt;/code> module provides infrastructure for defining abstract base classes:&lt;/p></description></item><item><title>Conclusion</title><link>/programming/oop/the-four-pillars/conclusion/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/conclusion/</guid><description>&lt;ul>
+&lt;li>&lt;strong>Encapsulation&lt;/strong> allows us to bundle data and methods together, hiding internal details and protecting data integrity.&lt;/li>
+&lt;li>&lt;strong>Inheritance&lt;/strong> enables code reuse and the creation of hierarchical relationships between classes.&lt;/li>
+&lt;li>&lt;strong>Polymorphism&lt;/strong> provides a way to use objects of different types through a common interface, enhancing flexibility and extensibility.&lt;/li>
+&lt;li>&lt;strong>Abstraction&lt;/strong> allows us to create simplified models of complex systems, focusing on essential features and hiding unnecessary details.&lt;/li>
+&lt;/ul>
+&lt;p>As you continue your journey in software development, you&amp;rsquo;ll find that mastering these concepts opens up new ways of thinking about and solving problems. Remember that OOP is not just about syntax or language features - it&amp;rsquo;s a mindset for modeling complex systems and managing complexity in software.&lt;/p></description></item><item><title>Continuous Delivery</title><link>/blog/2023-09-02-continuous-delivery/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>/blog/2023-09-02-continuous-delivery/</guid><description>&lt;p>Continuous Delivery (CD) is deeply rooted in the first principle of the Agile Manifesto posted in 2001&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>:&lt;/p>
 &lt;blockquote>
 &lt;p>Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.&lt;/p>
 &lt;/blockquote>

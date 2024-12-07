@@ -1,6 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Encapsulation on Learn-Software.com</title><link>/tags/encapsulation/</link><description>Recent content in Encapsulation on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 01 Dec 2024 23:10:57 +0000</lastBuildDate><atom:link href="/tags/encapsulation/index.xml" rel="self" type="application/rss+xml"/><item><title>Encapsulation</title><link>/programming/0300-oop/0302-encapsulation/</link><pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate><guid>/programming/0300-oop/0302-encapsulation/</guid><description>&lt;p>The Oxford Dictionary defines encapsulation as &lt;em>&amp;ldquo;enclosed or contained as if in a capsule&amp;rdquo;&lt;/em>. This is precisely what we seek to achieve - &lt;em>&amp;ldquo;packaging&amp;rdquo;&lt;/em> data and code within a single capsule (the class) to hide its internal complexity.&lt;/p>
-&lt;p>The formal definition would be:&lt;/p>
-&lt;blockquote>
-&lt;p>&amp;ldquo;Encapsulation refers to bundling data and functions that manipulate these data into a single entity or software module.&amp;rdquo;&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
-&lt;/blockquote>
-&lt;p>That is, keeping related data and behaviours together in order to restrict direct access to that data from other parts of the programme, interacting only through a controlled interface (public API).&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Encapsulation on Learn-Software.com</title><link>/tags/encapsulation/</link><description>Recent content in Encapsulation on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 07 Dec 2024 23:40:41 +0000</lastBuildDate><atom:link href="/tags/encapsulation/index.xml" rel="self" type="application/rss+xml"/><item><title>Encapsulation</title><link>/programming/oop/the-four-pillars/encapsulation/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/encapsulation/</guid><description>&lt;p>The importance of encapsulation lies in several key aspects:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Data protection&lt;/strong>: By controlling access to object data through methods, we can ensure that the data remains consistent and valid.&lt;/li>
+&lt;li>&lt;strong>Modularity&lt;/strong>: Encapsulation allows objects to be self-contained, making it easier to understand and maintain code.&lt;/li>
+&lt;li>&lt;strong>Flexibility&lt;/strong>: The internal implementation can be changed without affecting other parts of the code that use the object.&lt;/li>
+&lt;li>&lt;strong>Reduced complexity&lt;/strong>: By hiding the details of internal workings, encapsulation reduces the complexity of the overall system from an external perspective.&lt;/li>
+&lt;/ol>
+&lt;h3 id="implementation-in-python">Implementation in Python&lt;/h3>
+&lt;p>Python provides several mechanisms to implement encapsulation. Let&amp;rsquo;s explore these with examples:&lt;/p></description></item><item><title>Abstraction</title><link>/programming/oop/the-four-pillars/abstraction/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/abstraction/</guid><description>&lt;p>Key aspects of abstraction include:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Simplification&lt;/strong>: Abstraction reduces complexity by hiding unnecessary details.&lt;/li>
+&lt;li>&lt;strong>Focusing on essential features&lt;/strong>: It emphasises what an object does rather than how it does it.&lt;/li>
+&lt;li>&lt;strong>Separation of concerns&lt;/strong>: It allows separating the interface of a class from its implementation.&lt;/li>
+&lt;li>&lt;strong>Modularity&lt;/strong>: Abstraction promotes modular design by defining clear boundaries between components.&lt;/li>
+&lt;/ol>
+&lt;h3 id="abstract-classes-and-interfaces">Abstract classes and interfaces&lt;/h3>
+&lt;p>In many object-oriented languages, abstraction is implemented through abstract classes and interfaces. While Python doesn&amp;rsquo;t have a built-in interface concept, we can achieve similar functionality using abstract base classes. Python&amp;rsquo;s &lt;code>abc&lt;/code> module provides infrastructure for defining abstract base classes:&lt;/p></description></item></channel></rss>

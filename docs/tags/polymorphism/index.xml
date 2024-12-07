@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Polymorphism on Learn-Software.com</title><link>/tags/polymorphism/</link><description>Recent content in Polymorphism on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 07 Dec 2024 23:40:41 +0000</lastBuildDate><atom:link href="/tags/polymorphism/index.xml" rel="self" type="application/rss+xml"/><item><title>Polymorphism</title><link>/programming/oop/the-four-pillars/polymorphism/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/polymorphism/</guid><description>&lt;p>Polymorphism enables writing flexible and reusable code by allowing us to work with objects at a more abstract level, without needing to know their specific types.&lt;/p>
+&lt;p>There are two main types of polymorphism in object-oriented programming:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Compile-time polymorphism (Static polymorphism)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Achieved through method &lt;em>overloading&lt;/em>.&lt;/li>
+&lt;li>Resolved at compile time.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Runtime polymorphism (Dynamic polymorphism)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Achieved through method &lt;em>overriding&lt;/em>.&lt;/li>
+&lt;li>Resolved at runtime.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>Python primarily supports runtime polymorphism, as it is a dynamically typed language. However, we can demonstrate concepts similar to compile-time polymorphism as well.&lt;/p></description></item></channel></rss>
