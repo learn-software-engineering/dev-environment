@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Queues on Learn-Software.com</title><link>/tags/queues/</link><description>Recent content in Queues on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 08 Dec 2024 00:37:56 +0000</lastBuildDate><atom:link href="/tags/queues/index.xml" rel="self" type="application/rss+xml"/><item><title>Queues</title><link>/programming/data-structures/queues/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate><guid>/programming/data-structures/queues/</guid><description>&lt;p>The FIFO (first in, first out) nature of queues is because only the initial element can be accessed and manipulated. When an element is added to the queue it is known as &lt;em>&amp;ldquo;enqueue&amp;rdquo;&lt;/em>, while removing an element is called &lt;em>&amp;ldquo;dequeue&amp;rdquo;&lt;/em>.&lt;/p>
+&lt;p>This causes the first element to be added to the queue to also be the first to be removed, hence its FIFO behaviour.&lt;/p>
+&lt;p>&lt;img alt="Diagram of a queue" src="/images/content/programming/data-structures/diagram-queue.jpg">&lt;/p>
+&lt;hr>
+&lt;h2 id="main-operations">Main operations&lt;/h2>
+&lt;p>The basic queue operations are:&lt;/p></description></item></channel></rss>

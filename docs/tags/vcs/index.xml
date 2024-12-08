@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VCS on Learn-Software.com</title><link>/tags/vcs/</link><description>Recent content in VCS on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 08 Dec 2024 00:37:56 +0000</lastBuildDate><atom:link href="/tags/vcs/index.xml" rel="self" type="application/rss+xml"/><item><title>Revert a local change in Git</title><link>/blog/2023-01-28-git-revert-local/</link><pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023-01-28-git-revert-local/</guid><description>&lt;p>When we have created a commit locally but have not published it to the remote yet, we can use &lt;code>git reset&lt;/code> to undo the commit and, if we wish, discard the changes.
+Although there are several options for &lt;code>git reset&lt;/code> the most used are:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;code>--soft&lt;/code>: Does not touch the index file or the working tree at all (but resets the head to &lt;COMMIT>, just like all modes do). This leaves all your changed files &amp;ldquo;Changes to be committed&amp;rdquo;, as git status would put it.&lt;/li>
+&lt;li>&lt;code>--hard&lt;/code>: Resets the index and working tree. Any changes to tracked files in the working tree since &lt;COMMIT> are discarded. Any untracked files or directories in the way of writing any tracked files are simply deleted.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://git-scm.com/docs/git-reset">Git reset documentation&lt;/a>
+{: style=&amp;ldquo;text-align: right;&amp;rdquo;}&lt;/p></description></item><item><title>Revert a pushed change in Git</title><link>/blog/2023-01-18-git-revert-pushed/</link><pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate><guid>/blog/2023-01-18-git-revert-pushed/</guid><description>&lt;p>When we realized that the last commit was a mistake but we already published it, the command to use is &lt;code>git revert &amp;lt;COMMIT_HASH&amp;gt;&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>First we need to locate the ID of the commit we want to revert, it can be done with &lt;code>git log&lt;/code> or &lt;code>git reflog&lt;/code> commands.&lt;/li>
+&lt;li>Then, run the &lt;code>git revert &amp;lt;COMMIT_HASH&amp;gt;&lt;/code> command using the ID obtained in the previous step. Use the options &lt;code>-e&lt;/code> or &lt;code>--edit&lt;/code> to edit the commit message if we like.&lt;/li>
+&lt;li>Push our changes so the revert is available for everyone in our group.&lt;/li>
+&lt;/ul>
+&lt;h2 id="reverting-multiple-commits">Reverting multiple commits&lt;/h2>
+&lt;p>If we need to revert multiple commits we can revert them one by one using the &lt;code>--no-commit&lt;/code> option in order to create a single revert commit at the end.&lt;/p></description></item></channel></rss>

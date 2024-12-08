@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dependency on Learn-Software.com</title><link>/tags/dependency/</link><description>Recent content in Dependency on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 08 Dec 2024 00:37:56 +0000</lastBuildDate><atom:link href="/tags/dependency/index.xml" rel="self" type="application/rss+xml"/><item><title>Dependency</title><link>/programming/oop/class-relations/dependency/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/dependency/</guid><description>&lt;p>Key characteristics of dependency:&lt;/p>
+&lt;ul>
+&lt;li>It represents a &amp;ldquo;uses&amp;rdquo; relationship between classes.&lt;/li>
+&lt;li>It&amp;rsquo;s a weaker relationship compared to association, aggregation, or composition.&lt;/li>
+&lt;li>Changes in the used class may affect the using class.&lt;/li>
+&lt;/ul>
+&lt;p>Here&amp;rsquo;s an example to illustrate dependency:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Printer&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">print_document&lt;/span>(self, document):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Printing: &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>document&lt;span style="color:#f92672">.&lt;/span>get_content()&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">PDFDocument&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">get_content&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;PDF content&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">WordDocument&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">get_content&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Word document content&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Using the Printer&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>printer &lt;span style="color:#f92672">=&lt;/span> Printer()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pdf &lt;span style="color:#f92672">=&lt;/span> PDFDocument()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>word &lt;span style="color:#f92672">=&lt;/span> WordDocument()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(printer&lt;span style="color:#f92672">.&lt;/span>print_document(pdf)) &lt;span style="color:#75715e"># Output: Printing: PDF content&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(printer&lt;span style="color:#f92672">.&lt;/span>print_document(word)) &lt;span style="color:#75715e"># Output: Printing: Word document content&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, the &lt;code>Printer&lt;/code> class has a dependency on both &lt;code>PDFDocument&lt;/code> and &lt;code>WordDocument&lt;/code> classes. The &lt;code>Printer&lt;/code> uses these classes in its &lt;code>print_document&lt;/code> method, but it doesn&amp;rsquo;t maintain a long-term relationship with them.&lt;/p></description></item></channel></rss>
