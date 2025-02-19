@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Herencia on Learn-Software.com</title><link>/es/tags/herencia/</link><description>Recent content in Herencia on Learn-Software.com</description><generator>Hugo</generator><language>es</language><lastBuildDate>Sun, 08 Dec 2024 00:37:56 +0000</lastBuildDate><atom:link href="/es/tags/herencia/index.xml" rel="self" type="application/rss+xml"/><item><title>Herencia</title><link>/es/programming/poo/los-cuatro-pilares/herencia/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/es/programming/poo/los-cuatro-pilares/herencia/</guid><description>&lt;p>Los aspectos clave de la herencia incluyen:&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>Reutilización de código&lt;/strong>: La herencia permite reutilizar código de clases existentes, reduciendo la redundancia y promoviendo un desarrollo eficiente.&lt;/li>
-&lt;li>&lt;strong>Clasificación jerárquica&lt;/strong>: Permite la creación de jerarquías de clases, representando relaciones y características comunes entre objetos.&lt;/li>
-&lt;li>&lt;strong>Extensibilidad&lt;/strong>: Se puede agregar nueva funcionalidad a las clases existentes sin modificarlas, siguiendo el principio abierto-cerrado.&lt;/li>
-&lt;li>&lt;strong>Polimorfismo&lt;/strong>: La herencia es un prerrequisito para el polimorfismo en tiempo de ejecución (que discutiremos en detalle más adelante).&lt;/li>
-&lt;/ol>
-&lt;h3 id="tipos-de-herencia">Tipos de herencia&lt;/h3>
-&lt;p>Existen varios tipos de herencia, aunque no todos los lenguajes de programación admiten todos los tipos. Los principales tipos son:&lt;/p></description></item></channel></rss>
