@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Composition on Learn-Software.com</title><link>/tags/composition/</link><description>Recent content in Composition on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 07 Mar 2025 15:26:52 -0300</lastBuildDate><atom:link href="/tags/composition/index.xml" rel="self" type="application/rss+xml"/><item><title>Composition</title><link>/programming/oop/class-relations/composition/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/composition/</guid><description>&lt;p>Key characteristics of composition:&lt;/p>
+&lt;ul>
+&lt;li>It represents a strong &amp;ldquo;has-a&amp;rdquo; relationship.&lt;/li>
+&lt;li>The &amp;ldquo;part&amp;rdquo; object cannot exist independently of the &amp;ldquo;whole&amp;rdquo; object.&lt;/li>
+&lt;li>When the &amp;ldquo;whole&amp;rdquo; object is destroyed, all its &amp;ldquo;part&amp;rdquo; objects are also destroyed.&lt;/li>
+&lt;li>A &amp;ldquo;part&amp;rdquo; object belongs to only one &amp;ldquo;whole&amp;rdquo; object at a time.&lt;/li>
+&lt;/ul>
+&lt;p>Let&amp;rsquo;s look at an example to illustrate composition:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Engine&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __init__(self, horsepower):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>horsepower &lt;span style="color:#f92672">=&lt;/span> horsepower
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">start&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Engine started&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Car&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __init__(self, make, model, horsepower):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>make &lt;span style="color:#f92672">=&lt;/span> make
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>model &lt;span style="color:#f92672">=&lt;/span> model
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>engine &lt;span style="color:#f92672">=&lt;/span> Engine(horsepower) &lt;span style="color:#75715e"># Composition: Car creates its own Engine&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">start_car&lt;/span>(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>make&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>model&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">: &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>engine&lt;span style="color:#f92672">.&lt;/span>start()&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __del__(self):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>make&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>self&lt;span style="color:#f92672">.&lt;/span>model&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> is being destroyed, and so is its engine.&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Creating a Car instance&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>my_car &lt;span style="color:#f92672">=&lt;/span> Car(&lt;span style="color:#e6db74">&amp;#34;Toyota&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Corolla&amp;#34;&lt;/span>, &lt;span style="color:#ae81ff">150&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(my_car&lt;span style="color:#f92672">.&lt;/span>start_car()) &lt;span style="color:#75715e"># Output: Toyota Corolla: Engine started&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># When we delete the Car, its Engine is also deleted&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">del&lt;/span> my_car &lt;span style="color:#75715e"># This will print: Toyota Corolla is being destroyed, and so is its engine.&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, we have a composition relationship between &lt;code>Car&lt;/code> and &lt;code>Engine&lt;/code>. A &lt;code>Car&lt;/code> has an &lt;code>Engine&lt;/code>, and the &lt;code>Engine&lt;/code> cannot exist independently of the &lt;code>Car&lt;/code>. When a &lt;code>Car&lt;/code> object is created, it creates its own &lt;code>Engine&lt;/code>. When the &lt;code>Car&lt;/code> object is destroyed, its &lt;code>Engine&lt;/code> is also destroyed.&lt;/p></description></item></channel></rss>
