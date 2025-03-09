@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Estructuras de Datos on Learn-Software.com</title><link>/es/programacion/estructuras-de-datos/</link><description>Recent content in Estructuras de Datos on Learn-Software.com</description><generator>Hugo</generator><language>es</language><atom:link href="/es/programacion/estructuras-de-datos/index.xml" rel="self" type="application/rss+xml"/><item><title>Arreglos</title><link>/es/programacion/estructuras-de-datos/0401-arrays/</link><pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate><guid>/es/programacion/estructuras-de-datos/0401-arrays/</guid><description>&lt;p>Un array es una estructura de datos que representa un conjunto de elementos, los cuales se acceden a través de índices numéricos contiguos que van desde 0 hasta el tamaño del array menos 1. Los arrays proveen acceso rápido y directo a los elementos en base a su posición.&lt;/p>
+&lt;p>En lenguajes como Python y Ruby, los arrays se conocen como &amp;rsquo;listas&amp;rsquo; (lists). En Javascript se les conoce como &amp;lsquo;arreglos&amp;rsquo; (arrays).&lt;/p></description></item><item><title>Mapas (Diccionarios)</title><link>/es/programacion/estructuras-de-datos/0402-maps/</link><pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate><guid>/es/programacion/estructuras-de-datos/0402-maps/</guid><description>&lt;p>Un diccionario, o mapa, consiste en una colección de pares clave-valor. La clave se utiliza para acceder al valor asociado. Las claves deben ser únicas dentro de un diccionario. Los valores pueden repetirse.&lt;/p>
+&lt;p>&lt;img src="../../../images/content/programming/0400-data-structures-1/diagram-maps.jpg" alt="Diagrama de un diccionario">&lt;/p>
+&lt;hr>
+&lt;h2 id="operaciones-principales">Operaciones principales&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Añadir/actualizar:&lt;/strong> Inserta un par clave-valor. Si la clave existía, su valor es reemplazado.
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>diccionario[&lt;span style="color:#e6db74">&amp;#39;clave&amp;#39;&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39;valor&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>&lt;strong>Obtener valor:&lt;/strong> Acceder al valor dada una clave.
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>valor &lt;span style="color:#f92672">=&lt;/span> diccionario[&lt;span style="color:#e6db74">&amp;#39;clave&amp;#39;&lt;/span>]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>&lt;strong>Eliminar:&lt;/strong> Remueve un par clave-valor del diccionario.
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">del&lt;/span> diccionario[&lt;span style="color:#e6db74">&amp;#39;clave&amp;#39;&lt;/span>]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>&lt;strong>Recorrer:&lt;/strong> Iterar sobre las claves, valores o pares del diccionario.
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> clave &lt;span style="color:#f92672">in&lt;/span> diccionario:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(clave, diccionario[clave]) &lt;span style="color:#75715e"># clave, valor&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="creación-de-un-diccionario-o-mapa">Creación de un diccionario o mapa&lt;/h2>
+&lt;p>La sintaxis para crear mapas o diccionarios en Python es la siguiente:&lt;/p></description></item><item><title>Listas enlazadas</title><link>/es/programacion/estructuras-de-datos/0403-linked-lists/</link><pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate><guid>/es/programacion/estructuras-de-datos/0403-linked-lists/</guid><description>&lt;p>Una lista enlazada se compone de &lt;code>nodos&lt;/code> donde cada nodo tiene dos partes:&lt;/p>
+&lt;ul>
+&lt;li>Dato o información&lt;/li>
+&lt;li>Referencia al siguiente nodo&lt;/li>
+&lt;/ul>
+&lt;p>Los nodos se organizan de forma secuencial, cada uno apuntando al siguiente. El último nodo apunta a nulo para indicar el final.&lt;/p>
+&lt;p>Esta estructura dinámica permite inserción y eliminación eficiente de nodos.&lt;/p>
+&lt;hr>
+&lt;h2 id="tipos-de-listas-enlazadas">Tipos de listas enlazadas&lt;/h2>
+&lt;p>Existen varios tipos:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Simplemente enlazada:&lt;/strong> Cada nodo apunta al siguiente. Son útiles para colas (&lt;em>queues&lt;/em>) y pilas (&lt;em>stacks&lt;/em>).&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="../../../images/content/programming/0400-data-structures-1/diagram-linked-list.jpg" alt="Diagrama de una lista enlazada simple">&lt;/p></description></item><item><title>Pilas</title><link>/es/programacion/estructuras-de-datos/0404-stacks/</link><pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate><guid>/es/programacion/estructuras-de-datos/0404-stacks/</guid><description>&lt;p>La naturaleza &lt;strong>LIFO&lt;/strong> de las pilas se debe a que sólo se puede acceder y manipular el elemento superior. La operación de colocar un elemento sobre la pila se conoce como &lt;em>&amp;ldquo;push&amp;rdquo;&lt;/em>, mientras que sacar un elemento de la pila es un &lt;em>&amp;ldquo;pop&amp;rdquo;&lt;/em>. El funcionamiento LIFO provoca que el último elemento colocado en una pila sea el primero en ser retirado.&lt;/p>
+&lt;p>&lt;img src="../../../images/content/programming/0400-data-structures-1/diagram-stacks.jpg" alt="Estructura de una pila">&lt;/p>
+&lt;hr>
+&lt;h2 id="operaciones-principales">Operaciones principales&lt;/h2>
+&lt;p>Las operaciones primarias que soporta una estructura de pila son:&lt;/p></description></item><item><title>Colas</title><link>/es/programacion/estructuras-de-datos/0405-queues/</link><pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate><guid>/es/programacion/estructuras-de-datos/0405-queues/</guid><description>&lt;p>La naturaleza FIFO (first in, first out) de las colas se debe a que sólo se puede acceder y manipular el elemento inicial. Cuando se agrega un elemento a la cola se conoce como &lt;em>&amp;ldquo;enqueue&amp;rdquo;&lt;/em>, mientras que eliminar un elemento se denomina &lt;em>&amp;ldquo;dequeue&amp;rdquo;&lt;/em>.&lt;/p>
+&lt;p>Esto hace que el primer elemento en ser añadido a la cola también sea el primero en ser retirado, de ahí su comportamiento FIFO.&lt;/p>
+&lt;p>&lt;img src="../../../images/content/programming/0400-data-structures-1/diagram-queues.jpg" alt="Diagrama de una cola">&lt;/p></description></item></channel></rss>
