@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Inheritance on Learn-Software.com</title><link>/tags/inheritance/</link><description>Recent content in Inheritance on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 09 Mar 2025 11:57:01 -0300</lastBuildDate><atom:link href="/tags/inheritance/index.xml" rel="self" type="application/rss+xml"/><item><title>Inheritance</title><link>/programming/oop/class-relations/inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/inheritance/</guid><description>&lt;p>Key characteristics of inheritance:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Inheritance on Learn-Software.com</title><link>/tags/inheritance/</link><description>Recent content in Inheritance on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 09 Mar 2025 14:38:17 -0300</lastBuildDate><atom:link href="/tags/inheritance/index.xml" rel="self" type="application/rss+xml"/><item><title>Inheritance</title><link>/programming/oop/the-four-pillars/inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/inheritance/</guid><description>&lt;p>Key aspects of inheritance include:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Code reusability&lt;/strong>: Inheritance allows us to reuse code from existing classes, reducing redundancy and promoting efficient development.&lt;/li>
+&lt;li>&lt;strong>Hierarchical classification&lt;/strong>: It enables the creation of class hierarchies, representing relationships and commonalities among objects.&lt;/li>
+&lt;li>&lt;strong>Extensibility&lt;/strong>: New functionality can be added to existing classes without modifying them, following the open-closed principle.&lt;/li>
+&lt;li>&lt;strong>Polymorphism&lt;/strong>: Inheritance is a prerequisite for runtime polymorphism (which we&amp;rsquo;ll discuss in detail later).&lt;/li>
+&lt;/ol>
+&lt;h3 id="types-of-inheritance">Types of inheritance&lt;/h3>
+&lt;p>There are several types of inheritance, though not all programming languages support all types. The main types are:&lt;/p></description></item><item><title>Inheritance</title><link>/programming/oop/class-relations/inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/class-relations/inheritance/</guid><description>&lt;p>Key characteristics of inheritance:&lt;/p>
 &lt;ul>
 &lt;li>It promotes code reuse and establishes a hierarchy between classes.&lt;/li>
 &lt;li>The subclass inherits all public and protected members from the superclass.&lt;/li>
@@ -34,12 +42,4 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>animal_sound(dog) &lt;span style="color:#75715e"># Output: Buddy says Woof!&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>animal_sound(cat) &lt;span style="color:#75715e"># Output: Whiskers says Meow!&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, we have a base class &lt;code>Animal&lt;/code> and two derived classes &lt;code>Dog&lt;/code> and &lt;code>Cat&lt;/code>. Both &lt;code>Dog&lt;/code> and &lt;code>Cat&lt;/code> inherit from &lt;code>Animal&lt;/code> and override the &lt;code>speak&lt;/code> method.&lt;/p></description></item><item><title>Inheritance</title><link>/programming/oop/the-four-pillars/inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/inheritance/</guid><description>&lt;p>Key aspects of inheritance include:&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>Code reusability&lt;/strong>: Inheritance allows us to reuse code from existing classes, reducing redundancy and promoting efficient development.&lt;/li>
-&lt;li>&lt;strong>Hierarchical classification&lt;/strong>: It enables the creation of class hierarchies, representing relationships and commonalities among objects.&lt;/li>
-&lt;li>&lt;strong>Extensibility&lt;/strong>: New functionality can be added to existing classes without modifying them, following the open-closed principle.&lt;/li>
-&lt;li>&lt;strong>Polymorphism&lt;/strong>: Inheritance is a prerequisite for runtime polymorphism (which we&amp;rsquo;ll discuss in detail later).&lt;/li>
-&lt;/ol>
-&lt;h3 id="types-of-inheritance">Types of inheritance&lt;/h3>
-&lt;p>There are several types of inheritance, though not all programming languages support all types. The main types are:&lt;/p></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this example, we have a base class &lt;code>Animal&lt;/code> and two derived classes &lt;code>Dog&lt;/code> and &lt;code>Cat&lt;/code>. Both &lt;code>Dog&lt;/code> and &lt;code>Cat&lt;/code> inherit from &lt;code>Animal&lt;/code> and override the &lt;code>speak&lt;/code> method.&lt;/p></description></item></channel></rss>
