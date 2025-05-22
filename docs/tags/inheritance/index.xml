@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Inheritance on Learn-Software.com</title><link>/tags/inheritance/</link><description>Recent content in Inheritance on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 06 Apr 2025 13:36:18 +0100</lastBuildDate><atom:link href="/tags/inheritance/index.xml" rel="self" type="application/rss+xml"/><item><title>Inheritance</title><link>/programming/oop/the-four-pillars/inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/inheritance/</guid><description>&lt;p>Key aspects of inheritance include:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Inheritance on Learn-Software.com</title><link>/tags/inheritance/</link><description>Recent content in Inheritance on Learn-Software.com</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 22 May 2025 08:41:11 +0100</lastBuildDate><atom:link href="/tags/inheritance/index.xml" rel="self" type="application/rss+xml"/><item><title>Inheritance</title><link>/programming/oop/the-four-pillars/inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><guid>/programming/oop/the-four-pillars/inheritance/</guid><description>&lt;p>Key aspects of inheritance include:&lt;/p>
 &lt;ol>
 &lt;li>&lt;strong>Code reusability&lt;/strong>: Inheritance allows us to reuse code from existing classes, reducing redundancy and promoting efficient development.&lt;/li>
 &lt;li>&lt;strong>Hierarchical classification&lt;/strong>: It enables the creation of class hierarchies, representing relationships and commonalities among objects.&lt;/li>
@@ -15,7 +15,7 @@
 &lt;/ul>
 &lt;p>Let&amp;rsquo;s look at an example to illustrate inheritance:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">Animal&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> __init__(self, name):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">__init__&lt;/span>(self, name):
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self&lt;span style="color:#f92672">.&lt;/span>name &lt;span style="color:#f92672">=&lt;/span> name
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">speak&lt;/span>(self):
