@@ -6,6 +6,10 @@
 ## Blog
 - [Kubernetes Services](http://localhost:1313/es/blog/k8s-services/): Luego de desplegar una aplicación en Kubernetes, independientemente del método elegido para ello, si … - Published 2025-08-05
 
+## Computación Cuántica
+
+## DevOps
+
 ## Ingeniería de Software
 
 ## Inteligencia Artificial
@@ -54,5 +58,5 @@ Dato o información … - Published 2023-11-01
 - [Acerca de](http://localhost:1313/es/about/): 
 
 ---
-Generated on 2026-03-10 10:58:35 UTC
+Generated on 2026-03-10 11:19:24 UTC
 Site: http://localhost:1313/

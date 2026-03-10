@@ -15,6 +15,8 @@
 - [Continuous Integration](http://localhost:1313/blog/continuous-integration/): One of the most pivotal challenges in the realm of software development is effectively integrating … - Published 2023-08-19
 - [Reverting changes in Git](http://localhost:1313/blog/git-revert/): Reverting a commit before pushing When we have created a commit locally but have not published it to … - Published 2023-01-18
 
+## DevOps
+
 ## Programming
 
 ### Introduction to Programming
@@ -65,6 +67,8 @@ Data or information Reference to … - Published 2023-11-01
 - [Stacks](http://localhost:1313/programming/data-structures/stacks/): The LIFO nature of stacks is due to the fact that only the top element can be accessed and … - Published 2023-11-02
 - [Queues](http://localhost:1313/programming/data-structures/queues/): The FIFO (first in, first out) nature of queues is because only the initial element can be accessed … - Published 2023-11-03
 
+## Quantum Computing
+
 ## Software Engineering
 - [Introduction to Software Engineering](http://localhost:1313/software-engineering/introduction/): What is Software? Several thought leaders in the world of computing have defined software in various … - Published 2023-08-10
 
@@ -72,5 +76,5 @@ Data or information Reference to … - Published 2023-11-01
 - [About](http://localhost:1313/about/): 
 
 ---
-Generated on 2026-03-10 10:58:32 UTC
+Generated on 2026-03-10 11:19:21 UTC
 Site: http://localhost:1313/
