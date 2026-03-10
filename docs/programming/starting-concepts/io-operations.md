@@ -1,4 +1,5 @@
 # Input and output operations
+
 Input/output operations (I/O) allow a program to communicate and exchange data with the outside world. In this article we will see in detail input operations from the keyboard or a file, and output to the screen or a file.
 
 ## Screen output

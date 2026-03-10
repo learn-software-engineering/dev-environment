@@ -1,4 +1,5 @@
 # Association
+
 Key characteristics of association:
 - It represents a loose coupling between classes.
 - The associated classes can exist independently of each other.

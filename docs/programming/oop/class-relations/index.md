@@ -1,4 +1,5 @@
 # Class relations
+
 In Object-Oriented Programming, classes don't exist in isolation. They interact and relate to each other in various ways to model complex systems and relationships. Understanding these relationships is crucial for designing effective and maintainable object-oriented systems.
 
 The main types of class relationships we'll explore in depth are:

@@ -1,3 +1,4 @@
 # Conceptos Iniciales
+
 {{< sectioncards >}}
 

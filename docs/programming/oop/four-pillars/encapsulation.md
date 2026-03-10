@@ -1,4 +1,5 @@
 # Encapsulation
+
 The importance of encapsulation lies in several key aspects:
 
 1. **Data protection**: By controlling access to object data through methods, we can ensure that the data remains consistent and valid.

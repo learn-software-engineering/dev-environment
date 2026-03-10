@@ -1,4 +1,5 @@
 # Kubernetes Services
+
 Luego de desplegar una aplicación en Kubernetes, independientemente del método elegido para ello, si queremos que sea alcanzable por otras aplicaciones necesitamos crear un servicio. En este artículo vamos a explicar que es un servicio, como se utilizan y a repasar los cuatro tipos de servicios que están disponibles en Kubernetes, ClusterIP, NodePort, LoadBalancer y ExternalName, revisaremos sus detalles y cuando se debe utilizar cada uno.
 
 Al desplegar una aplicación en Kubernetes utilizando un objeto del tipo `Deployment`, los pods pertenecientes a dicho Deployment pueden ser creados y destruidos en cualquier momento en base a su funcionamiento, por ejemplo si en nuestro Deployment pedimos que existan 3 réplicas y por cualquier razón alguna de ellas deja de funcionar, una nueva réplica será creada automáticamente para reemplazar a la que falló.

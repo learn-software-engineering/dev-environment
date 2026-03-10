@@ -1,4 +1,5 @@
 # Clases y Objetos
+
 ## Anatomía de una clase
 
 Una clase actúa como un **plano o molde** para construir objetos similares, definiendo sus características comunes y funcionalidades. Es similar al plano para construir casas de un mismo barrio: todas comparten ciertos atributos clave.

@@ -1,4 +1,5 @@
 # Introduction to Programming
+
 At its core, programming is the act of instructing a machine on how to perform a specific task. It's like teaching your dog to fetch, but in this case, the dog is your computer, and the ball might be, let's say, displaying a photo on your screen.
 
 Now, you might think that programming is just writing lines of code. Programming is actually a broader process that not only includes writing code but also problem-solving, system design, and logical thinking.

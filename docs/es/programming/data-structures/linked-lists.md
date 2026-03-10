@@ -1,4 +1,5 @@
 # Listas Enlazadas
+
 Una lista enlazada se compone de `nodos` donde cada nodo tiene dos partes:
 
 - Dato o información

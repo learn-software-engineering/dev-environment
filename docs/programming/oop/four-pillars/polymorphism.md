@@ -1,4 +1,5 @@
 # Polymorphism
+
 Polymorphism enables writing flexible and reusable code by allowing us to work with objects at a more abstract level, without needing to know their specific types.
 
 There are two main types of polymorphism in object-oriented programming:

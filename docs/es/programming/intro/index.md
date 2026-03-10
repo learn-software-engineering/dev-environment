@@ -1,4 +1,5 @@
 # Introducción a la Programación
+
 La programación, en su esencia, es el acto de instruir a una máquina sobre cómo realizar una tarea específica. Es como si le estuvieras enseñando a tu perro a buscar la pelota, pero en este caso, el perro es tu computadora y la pelota es, por ejemplo, sumar dos valores.
 
 Ahora, es posible que pienses que *programar* es simplemente escribir líneas de código. En realidad, la programación es un proceso más amplio que incluye no solo escribir código, sino también resolver problemas, diseñar sistemas y pensar lógicamente.

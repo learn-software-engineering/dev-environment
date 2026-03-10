@@ -1,4 +1,5 @@
 # Funciones Recursivas
+
 La recursión es un concepto fundamental en programación que permite que una función se llame a sí misma. A primera vista puede parecer contra intuitivo, pero dominar este enfoque abre la puerta a soluciones elegantes para ciertos problemas.
 
 ## Recursión: el arte de llamarse a sí mismo

@@ -1,4 +1,5 @@
 # Aggregation
+
 Key characteristics of aggregation:
 - It's a stronger relationship than a simple association, but weaker than composition.
 - The "part" object can exist independently of the "whole" object.

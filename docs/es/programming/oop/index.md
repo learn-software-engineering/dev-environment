@@ -1,4 +1,5 @@
 # Programación Orientada a Objetos
+
 La Programación Orientada a Objetos (POO) es un paradigma de programación que se ha vuelto indispensable en la actualidad. Este enfoque modela elementos del mundo real como "objetos" que tienen propiedades y comportamientos, lo cual permite crear programas más intuitivos y fáciles de mantener. En este artículo veremos los conceptos básicos de POO y sus ventajas frente a otros paradigmas como la programación procedural. ¡Empecemos!
 
 Este paradigma se basa en dos conceptos fundamentales:

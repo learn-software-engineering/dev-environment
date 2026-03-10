@@ -1,4 +1,5 @@
 # Dependency
+
 Key characteristics of dependency:
 - It represents a "uses" relationship between classes.
 - It's a weaker relationship compared to association, aggregation, or composition.

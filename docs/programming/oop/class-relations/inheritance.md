@@ -1,4 +1,5 @@
 # Inheritance
+
 Key characteristics of inheritance:
 - It promotes code reuse and establishes a hierarchy between classes.
 - The subclass inherits all public and protected members from the superclass.

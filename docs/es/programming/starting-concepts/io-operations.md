@@ -1,4 +1,5 @@
 # Operaciones de Entrada y Salida
+
 Las operaciones de entrada y salida (input/output o I/O) permiten que un programa se comunique e intercambie datos con el mundo exterior. En este artículo veremos en detalle operaciones de entrada desde el teclado o un archivo, y salida hacia la pantalla o un archivo.
 
 ## Entrada y salida estándar

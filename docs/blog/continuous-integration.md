@@ -1,4 +1,5 @@
 # Continuous Integration
+
 One of the most pivotal challenges in the realm of software development is effectively integrating changes [^1]. In a small-scale project steered by a single developer, this challenge might appear to be trivial. However, as the magnitude of the project escalates and more individuals join the development fold, the significance of seamless integration becomes paramount.
 
 Historically, integration was often an afterthought, relegated to the tail end of the software development process [^2]. Postponing it to such a late stage not only amplifies the risk of complex, undetected errors but also heightens the tension as delivery dates loom.

@@ -1,4 +1,5 @@
 # Reverting changes in Git
+
 ## Reverting a commit before pushing
 
 When we have created a commit locally but have not published it to the remote yet, we can use `git reset` to undo the commit and, if we wish, discard the changes.

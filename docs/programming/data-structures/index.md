@@ -1,4 +1,5 @@
 # Data Structures
+
 Data structures are ways of organizing and storing information in a computer program so that it can be accessed and modified efficiently. As programmers, it is essential to understand the different data structures available and know when to apply each one to optimize the performance and utility of our programs.
 
 A data structure is a particular way of organizing data in the computer's memory so that it can be used efficiently. Data structures come in many forms, such as arrays, lists, stacks, queues, graphs, trees, hashes, etc.

@@ -1,4 +1,5 @@
 # Vectors, Scalars and Vector Spaces
+
 In 2017, researchers at Google Brain published [**Attention Is All You Need**](https://arxiv.org/abs/1706.03762), introducing the Transformer architecture that now underlies GPT-4, Gemini, and virtually every state-of-the-art language model. At the heart of that architecture (and of every neural network, recommendation system, and computer vision model) is a deceptively simple object: the **vector**.
 
 When a language model reads the word *"bank"*, it doesn't see a string. It sees a vector in a 4096-dimensional space where *"bank (financial)"* and *"bank (riverbank)"* occupy measurably different regions. When a search engine decides that your query matches a document, it is computing an angle between two vectors. When a neural network learns, it is moving vectors through space in response to a gradient, itself a vector.

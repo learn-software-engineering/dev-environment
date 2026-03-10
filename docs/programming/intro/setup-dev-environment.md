@@ -1,4 +1,5 @@
 # Set Up your Development Environment
+
 Venturing into the world of programming might seem like a Herculean task, especially when faced with the initial decision: Where to begin? This article will guide you through the essential steps to set up your programming environment, ensuring a solid foundation for your coding journey.
 
 ## Choosing a programming language

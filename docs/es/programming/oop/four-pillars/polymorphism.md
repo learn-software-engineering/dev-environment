@@ -1,4 +1,5 @@
 # Polimorfismo
+
 El polimorfismo permite escribir código flexible y reutilizable al permitirnos trabajar con objetos a un nivel más abstracto, sin necesidad de conocer sus tipos específicos.
 
 Existen dos tipos principales de polimorfismo en la programación orientada a objetos:

@@ -1,4 +1,5 @@
 # Introduction to Software Engineering
+
 ## What is Software?
 
 Several thought leaders in the world of computing have defined software in various ways:

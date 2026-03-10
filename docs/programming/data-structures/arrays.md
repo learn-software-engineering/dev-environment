@@ -1,4 +1,5 @@
 # Arrays
+
 An array is a data structure that represents a set of elements, which are accessed through contiguous numeric indices ranging from 0 to the size of the array minus 1. Arrays provide fast, direct access to elements based on their position.
 
 In languages like Python and Ruby, arrays are known as *lists*. In Javascript they are known as *arrays*.

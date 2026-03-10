@@ -1,4 +1,5 @@
 # Mapas (Diccionarios)
+
 Un diccionario, o mapa, consiste en una colección de pares clave-valor. La clave se utiliza para acceder al valor asociado. Las claves deben ser únicas dentro de un diccionario. Los valores pueden repetirse.
 
 {{< figure

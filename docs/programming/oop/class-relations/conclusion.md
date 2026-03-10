@@ -1,4 +1,5 @@
 # Conclusion
+
 ## Comparing and contrasting relations
 
 Now that we've explored the various types of class relations, let's compare and contrast them to better understand when to use each:

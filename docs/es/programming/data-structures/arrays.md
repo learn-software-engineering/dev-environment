@@ -1,4 +1,5 @@
 # Arreglos
+
 Un arreglo es una estructura de datos que representa un conjunto de elementos, los cuales se acceden a través de índices numéricos contiguos que van desde 0 hasta el tamaño del array menos 1. Proveen acceso rápido y directo a los elementos en base a su posición.
 
 En lenguajes como Python y Ruby, los arrays se conocen como *listas* (lists). En Javascript se les conoce como *arreglos* (arrays).

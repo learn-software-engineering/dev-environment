@@ -1,4 +1,5 @@
 # Abstraction
+
 Key aspects of abstraction include:
 
 1. **Simplification**: Abstraction reduces complexity by hiding unnecessary details.

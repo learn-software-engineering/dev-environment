@@ -1,4 +1,5 @@
 # Inheritance
+
 Key aspects of inheritance include:
 
 1. **Code reusability**: Inheritance allows us to reuse code from existing classes, reducing redundancy and promoting efficient development.

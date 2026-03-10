@@ -1,4 +1,5 @@
 # Encapsulamiento
+
 La importancia del encapsulamiento radica en varios aspectos clave:
 
 1. **Protección de datos**: Al controlar el acceso a los datos del objeto a través de métodos, podemos asegurar que los datos se mantengan consistentes y válidos.

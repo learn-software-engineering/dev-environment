@@ -1,4 +1,5 @@
 # Linked Lists
+
 A linked list is composed of `nodes` where each node has two parts:
 
 - Data or information

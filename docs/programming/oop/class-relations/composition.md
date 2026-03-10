@@ -1,4 +1,5 @@
 # Composition
+
 Key characteristics of composition:
 - It represents a strong "has-a" relationship.
 - The "part" object cannot exist independently of the "whole" object.

@@ -1,3 +1,4 @@
 # Mathematical Foundations
+
 {{< sectioncards >}}
 

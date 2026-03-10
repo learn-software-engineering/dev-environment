@@ -1,4 +1,5 @@
 # Abstracción
+
 Los aspectos clave de la abstracción incluyen:
 
 1. **Simplificación**: La abstracción reduce la complejidad ocultando detalles innecesarios.

@@ -1,4 +1,5 @@
 # Classes and objects
+
 ## Anatomy of a class
 
 A class acts as a **blueprint or mould** to construct similar objects, defining their common characteristics and functionalities. It is similar to the blueprint used to construct houses in the same neighbourhood: they all share certain key attributes.

@@ -1,4 +1,5 @@
 # Numeral Systems
+
 Every day, we're surrounded by numbers. From the alarm clock's digits waking us up in the morning to the price of our favourite morning coffee. But, have you ever stopped to ponder the essence of these numbers? In this article, we will dive deep into the captivating world of numbering systems, unravelling how one number can have myriad representations depending on the context.
 
 ## The decimal system: the bedrock of our daily life

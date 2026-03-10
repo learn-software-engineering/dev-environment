@@ -1,4 +1,5 @@
 # Herencia
+
 Los aspectos clave de la herencia incluyen:
 
 1. **Reutilización de código**: La herencia permite reutilizar código de clases existentes, reduciendo la redundancia y promoviendo un desarrollo eficiente.
