@@ -1,1 +1,313 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programación Orientada a Objetos on Learn-Software.com</title><link>http://localhost:1313/programming/oop/</link><description>Recent content in Programación Orientada a Objetos on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>es</language><managingEditor>learn.software.eng@gmail.com (Learn-Software.com)</managingEditor><webMaster>learn.software.eng@gmail.com (Learn-Software.com)</webMaster><copyright>© 2022-2026 Julian Nonino. Todos los derechos reservados.</copyright><atom:link href="http://localhost:1313/programming/oop/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducción</title><link>http://localhost:1313/programming/oop/introduction/</link><pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate><author>learn.software.eng@gmail.com (Learn-Software.com)</author><guid>http://localhost:1313/programming/oop/introduction/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/oop/introduction/featured.es.jpg"/></item><item><title>Clases y Objetos</title><link>http://localhost:1313/programming/oop/classes-objects/</link><pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate><author>learn.software.eng@gmail.com (Learn-Software.com)</author><guid>http://localhost:1313/programming/oop/classes-objects/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/oop/classes-objects/featured.es.jpg"/></item><item><title>Los Cuatro Pilares</title><link>http://localhost:1313/programming/oop/the-four-pillars-introduction/</link><pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate><author>learn.software.eng@gmail.com (Learn-Software.com)</author><guid>http://localhost:1313/programming/oop/the-four-pillars-introduction/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/oop/the-four-pillars-introduction/featured.es.jpg"/></item><item><title>Los Cuatro Pilares: Encapsulamiento</title><link>http://localhost:1313/programming/oop/the-four-pillars-encapsulation/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><author>learn.software.eng@gmail.com (Learn-Software.com)</author><guid>http://localhost:1313/programming/oop/the-four-pillars-encapsulation/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/oop/the-four-pillars-encapsulation/featured.es.jpg"/></item><item><title>Los Cuatro Pilares: Herencia</title><link>http://localhost:1313/programming/oop/the-four-pillars-inheritance/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><author>learn.software.eng@gmail.com (Learn-Software.com)</author><guid>http://localhost:1313/programming/oop/the-four-pillars-inheritance/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/oop/the-four-pillars-inheritance/featured.es.jpg"/></item><item><title>Los Cuatro Pilares: Polimorfismo</title><link>http://localhost:1313/programming/oop/the-four-pillars-polymorphism/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><author>learn.software.eng@gmail.com (Learn-Software.com)</author><guid>http://localhost:1313/programming/oop/the-four-pillars-polymorphism/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/oop/the-four-pillars-polymorphism/featured.es.jpg"/></item><item><title>Los Cuatro Pilares: Abstracción</title><link>http://localhost:1313/programming/oop/the-four-pillars-abstraction/</link><pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate><author>learn.software.eng@gmail.com (Learn-Software.com)</author><guid>http://localhost:1313/programming/oop/the-four-pillars-abstraction/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/oop/the-four-pillars-abstraction/featured.es.jpg"/></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com – Object-Oriented Programming</title><link>http://localhost:1313/programming/oop/</link><description>Recent content in Object-Oriented Programming on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="http://localhost:1313/programming/oop/index.xml" rel="self" type="application/rss+xml"/><item><title>Classes and objects</title><link>http://localhost:1313/programming/oop/classes-objects/</link><pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/programming/oop/classes-objects/</guid><description>
+&lt;img src="http://localhost:1313/programming/oop/classes-objects/featured.en_hu_349339910b03bb64.jpg" width="640" height="426"/>&lt;h2&gt;Anatomy of a class&lt;span class="hx:absolute hx:-mt-20" id="anatomy-of-a-class"&gt;&lt;/span&gt;
+&lt;a href="#anatomy-of-a-class" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A class acts as a &lt;strong&gt;blueprint or mould&lt;/strong&gt; to construct similar objects, defining their common characteristics and functionalities. It is similar to the blueprint used to construct houses in the same neighbourhood: they all share certain key attributes.&lt;/p&gt;
+&lt;p&gt;The typical components of a class are:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attributes (properties)&lt;/strong&gt;: Variables that characterise the object. For example, for a &lt;code&gt;Person&lt;/code&gt; class, attributes like &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;age&lt;/code&gt;, &lt;code&gt;ID&lt;/code&gt;, etc.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Person&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; id &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; name &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; age &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt;: Functions that define behaviours. For example, a &lt;code&gt;Person&lt;/code&gt; can &lt;code&gt;walk()&lt;/code&gt;, &lt;code&gt;talk()&lt;/code&gt;, &lt;code&gt;eat()&lt;/code&gt;, etc. They access the attributes to implement said functionality.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Constructor&lt;/strong&gt;: Special &lt;code&gt;__init__()&lt;/code&gt; method that executes when instantiating the class and allows initialising attributes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Destructor&lt;/strong&gt;: &lt;code&gt;__del__()&lt;/code&gt; method that executes when deleting the instance, freeing up resources. Optional in some languages.&lt;/p&gt;
+&lt;h2&gt;Creating objects&lt;span class="hx:absolute hx:-mt-20" id="creating-objects"&gt;&lt;/span&gt;
+&lt;a href="#creating-objects" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;From the class we generate &lt;strong&gt;objects&lt;/strong&gt;, which are specific &lt;strong&gt;instances&lt;/strong&gt; with their own defined attributes. Let&amp;rsquo;s say the House class is the blueprint, and a specific house on a particular street is the object.&lt;/p&gt;
+&lt;p&gt;In code, we create an object by invoking the class as if it were a method:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Person class&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Person&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, n, a):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;name &lt;span style="color:#f92672"&gt;=&lt;/span&gt; n
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;age &lt;span style="color:#f92672"&gt;=&lt;/span&gt; a
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Specific Person objects&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;john &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Person(&lt;span style="color:#e6db74"&gt;&amp;#34;John&amp;#34;&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;30&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mary &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Person(&lt;span style="color:#e6db74"&gt;&amp;#34;Mary&amp;#34;&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;35&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Each object shares the general structure and behaviour but can store different data.&lt;/p&gt;
+&lt;h3&gt;Using properties and methods&lt;span class="hx:absolute hx:-mt-20" id="using-properties-and-methods"&gt;&lt;/span&gt;
+&lt;a href="#using-properties-and-methods" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;We now have a &lt;code&gt;Person&lt;/code&gt; class and a &lt;code&gt;john&lt;/code&gt; object of type &lt;code&gt;Person&lt;/code&gt;. How do we interact with the object?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Properties&lt;/strong&gt;: It is possible to access the value of an object attribute using the object reference (&lt;code&gt;john&lt;/code&gt;) and the attribute name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;john&lt;span style="color:#f92672"&gt;.&lt;/span&gt;name &lt;span style="color:#75715e"&gt;# &amp;#34;John&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;john&lt;span style="color:#f92672"&gt;.&lt;/span&gt;age &lt;span style="color:#75715e"&gt;# 30&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Methods&lt;/strong&gt;: Are invoked in the same way as accessing attributes but adding parentheses, and inside them, the arguments that are passed if it takes any.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Person class&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Person&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, n, a):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;name &lt;span style="color:#f92672"&gt;=&lt;/span&gt; n
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;age &lt;span style="color:#f92672"&gt;=&lt;/span&gt; a
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;eat&lt;/span&gt;(self, food):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Eating &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;food&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Specific Person object&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;john &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Person(&lt;span style="color:#e6db74"&gt;&amp;#34;John&amp;#34;&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;30&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;john&lt;span style="color:#f92672"&gt;.&lt;/span&gt;eat(&lt;span style="color:#e6db74"&gt;&amp;#34;pizza&amp;#34;&lt;/span&gt;) &lt;span style="color:#75715e"&gt;# Prints &amp;#34;Eating pizza&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The john object now has its own &lt;strong&gt;state&lt;/strong&gt; (properties) and &lt;strong&gt;behaviour&lt;/strong&gt; (methods).&lt;/p&gt;
+&lt;h2&gt;Self vs This&lt;span class="hx:absolute hx:-mt-20" id="self-vs-this"&gt;&lt;/span&gt;
+&lt;a href="#self-vs-this" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;An important detail in methods is how they access the object&amp;rsquo;s attributes and other methods. Here another difference between languages comes into play:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Self&lt;/strong&gt;: In Python, attributes and methods are accessed within the class by prepending &lt;code&gt;self&lt;/code&gt;. This points to the instantiated object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Person&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, name):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;name &lt;span style="color:#f92672"&gt;=&lt;/span&gt; name
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;greet&lt;/span&gt;(self):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Hello! I&amp;#39;m &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;name&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;john &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Person(&lt;span style="color:#e6db74"&gt;&amp;#34;John&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;john&lt;span style="color:#f92672"&gt;.&lt;/span&gt;greet()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Prints &amp;#34;Hello! I&amp;#39;m John&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;This&lt;/strong&gt;: In Java or C#, &lt;code&gt;this&lt;/code&gt; is used instead of self. It fulfils the same functionality of pointing to the object&amp;rsquo;s members.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Person&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;private&lt;/span&gt; String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Person&lt;/span&gt;(String name) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;name&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;greet&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; System.&lt;span style="color:#a6e22e"&gt;out&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;println&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Hello! I&amp;#39;m &amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;this&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;name&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Person john &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; Person(&lt;span style="color:#e6db74"&gt;&amp;#34;John&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;john.&lt;span style="color:#a6e22e"&gt;greet&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;//&lt;/span&gt; Prints &lt;span style="color:#e6db74"&gt;&amp;#34;Hello! I&amp;#39;m John&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
+&lt;a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Classes and objects are the key concepts in OOP, allowing modelling real-world entities and generating modular, generic components of our system to construct more robust and easy to understand programmes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;</description></item><item><title>Class relations</title><link>http://localhost:1313/programming/oop/class-relations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/programming/oop/class-relations/</guid><description>
+&lt;img src="http://localhost:1313/programming/oop/class-relations/featured.en_hu_8404c01cbca24de3.jpg" width="640" height="426"/>&lt;p&gt;In Object-Oriented Programming, classes don&amp;rsquo;t exist in isolation. They interact and relate to each other in various ways to model complex systems and relationships. Understanding these relationships is crucial for designing effective and maintainable object-oriented systems.&lt;/p&gt;
+&lt;p&gt;The main types of class relationships we&amp;rsquo;ll explore in depth are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Association (&lt;strong&gt;&amp;ldquo;uses-a&amp;rdquo;&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Aggregation (weak &lt;strong&gt;&amp;ldquo;has-a&amp;rdquo;&lt;/strong&gt; relationship)&lt;/li&gt;
+&lt;li&gt;Composition (strong &lt;strong&gt;&amp;ldquo;has-a&amp;rdquo;&lt;/strong&gt; relationship)&lt;/li&gt;
+&lt;li&gt;Inheritance (&lt;strong&gt;&amp;ldquo;is-a&amp;rdquo;&lt;/strong&gt; relationship)&lt;/li&gt;
+&lt;li&gt;Realisation (Implementation)&lt;/li&gt;
+&lt;li&gt;Dependency&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these relationships represents a different way that classes can be connected and interact with each other. They vary in terms of the strength of the coupling between classes, the lifecycle dependencies, and the nature of the relationship.&lt;/p&gt;
+&lt;p&gt;Before we dive into each type of relationship, let&amp;rsquo;s visualise them using a UML class diagram:&lt;/p&gt;
+&lt;div role="img" aria-label="Diagram"&gt;
+&lt;pre class="mermaid hx:mt-6"&gt;
+classDiagram
+class ClassA
+class ClassB
+class ClassC
+class ClassD
+class ClassE
+class ClassF
+class InterfaceG
+ClassA --&amp;gt; ClassB : Association
+ClassC o-- ClassD : Aggregation
+ClassE *-- ClassF : Composition
+ClassB --|&amp;gt; ClassA : Inheritance
+ClassE ..|&amp;gt; InterfaceG : Realisation
+ClassA ..&amp;gt; ClassF : Dependency
+end
+&lt;/pre&gt;
+&lt;/div&gt;&lt;p&gt;This diagram provides a high-level overview of the different types of class relationships. In the following sections, we&amp;rsquo;ll explore each of these relationships in detail, providing explanations, examples, and more specific UML diagrams.&lt;/p&gt;
+&lt;h2&gt;Learn more&lt;span class="hx:absolute hx:-mt-20" id="learn-more"&gt;&lt;/span&gt;
+&lt;a href="#learn-more" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;"&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/class-relations/association/"
+&gt;&lt;img
+alt="Association"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/class-relations/association/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Association&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/class-relations/aggregation/"
+&gt;&lt;img
+alt="Aggregation"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/class-relations/aggregation/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Aggregation&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/class-relations/composition/"
+&gt;&lt;img
+alt="Composition"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/class-relations/composition/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Composition&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/class-relations/inheritance/"
+&gt;&lt;img
+alt="Inheritance"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/class-relations/inheritance/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Inheritance&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/class-relations/realisation/"
+&gt;&lt;img
+alt="Realisation (Implementation)"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/class-relations/realisation/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Realisation (Implementation)&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/class-relations/dependency/"
+&gt;&lt;img
+alt="Dependency"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/class-relations/dependency/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Dependency&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/class-relations/conclusion/"
+&gt;&lt;img
+alt="Conclusion"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/class-relations/conclusion/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Conclusion&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</description></item><item><title>The Four Pillars</title><link>http://localhost:1313/programming/oop/four-pillars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/programming/oop/four-pillars/</guid><description>
+&lt;img src="http://localhost:1313/programming/oop/four-pillars/featured.en_hu_3435a56e814a6e5c.jpg" width="640" height="426"/>&lt;p&gt;At the heart of OOP lie four fundamental concepts: Encapsulation, Inheritance, Polymorphism, and Abstraction. These concepts, often referred to as the &amp;ldquo;four pillars&amp;rdquo; of OOP, form the foundation upon which complex software systems are built. In this guide, we will delve deep into each of these concepts, exploring their definitions, implementations, and practical applications. We&amp;rsquo;ll use Python, a language known for its clarity and versatility, to demonstrate these concepts in action. Whether you&amp;rsquo;re a beginner just starting your programming journey or a seasoned professional looking to refresh your knowledge, this article aims to provide valuable insights and a deeper understanding of OOP principles.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Encapsulation&lt;/strong&gt; allows us to bundle data and methods together, hiding internal details and protecting data integrity.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Inheritance&lt;/strong&gt; enables code reuse and the creation of hierarchical relationships between classes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Polymorphism&lt;/strong&gt; provides a way to use objects of different types through a common interface, enhancing flexibility and extensibility.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Abstraction&lt;/strong&gt; allows us to create simplified models of complex systems, focusing on essential features and hiding unnecessary details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As you continue your journey in software development, you&amp;rsquo;ll find that mastering these concepts opens up new ways of thinking about and solving problems. Remember that OOP is not just about syntax or language features, it&amp;rsquo;s a mindset for modeling complex systems and managing complexity in software.&lt;/p&gt;
+&lt;h2&gt;Learn more&lt;span class="hx:absolute hx:-mt-20" id="learn-more"&gt;&lt;/span&gt;
+&lt;a href="#learn-more" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-cards hx:mt-4 hx:gap-4 hx:grid not-prose" style="--hextra-cards-grid-cols: 3;"&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/four-pillars/encapsulation/"
+&gt;&lt;img
+alt="Encapsulation"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/four-pillars/encapsulation/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Encapsulation&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/four-pillars/inheritance/"
+&gt;&lt;img
+alt="Inheritance"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/four-pillars/inheritance/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Inheritance&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/four-pillars/polymorphism/"
+&gt;&lt;img
+alt="Polymorphism"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/four-pillars/polymorphism/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Polymorphism&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a
+class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:hover:shadow-gray-100 hx:dark:hover:shadow-none hx:shadow-gray-100 hx:active:shadow-sm hx:active:shadow-gray-200 hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-gray-100 hx:shadow-sm hx:dark:border-neutral-700 hx:dark:bg-neutral-800 hx:dark:text-gray-50 hx:hover:shadow-lg hx:dark:hover:border-neutral-500 hx:dark:hover:bg-neutral-700"href="../../programming/oop/four-pillars/abstraction/"
+&gt;&lt;img
+alt="Abstraction"
+class="hextra-card-image"
+loading="lazy"
+decoding="async"
+src="../../programming/oop/four-pillars/abstraction/featured.en.jpg"
+/&gt;&lt;div class="hx:mt-auto"&gt;
+&lt;span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 hx:p-4 hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50"&gt;Abstraction&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</description></item></channel></rss>

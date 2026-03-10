@@ -1,0 +1,76 @@
+# Learn-Software.com
+
+> 
+
+
+## Artificial Intelligence
+
+### Mathematical Foundations
+
+#### Linear Algebra
+- [Vectors, Scalars and Vector Spaces](http://localhost:1313/ai/math/algebra/vectors/): In 2017, researchers at Google Brain published Attention Is All You Need , introducing the … - Published 2026-03-06
+
+## Blog
+- [Continuous Delivery](http://localhost:1313/blog/continuous-delivery/): Continuous Delivery (CD) is deeply rooted in the first principle of the Agile Manifesto posted in … - Published 2023-09-02
+- [Continuous Integration](http://localhost:1313/blog/continuous-integration/): One of the most pivotal challenges in the realm of software development is effectively integrating … - Published 2023-08-19
+- [Reverting changes in Git](http://localhost:1313/blog/git-revert/): Reverting a commit before pushing When we have created a commit locally but have not published it to … - Published 2023-01-18
+
+## Programming
+
+### Introduction to Programming
+- [Computers](http://localhost:1313/programming/intro/computers/): In today&rsquo;s digital age, where electronic gadgets seamlessly integrate into our daily lives, … - Published 2023-09-02
+- [Numeral Systems](http://localhost:1313/programming/intro/numeral-systems/): Every day, we&rsquo;re surrounded by numbers. From the alarm clock&rsquo;s digits waking us up in … - Published 2023-09-05
+- [Boolean Logic](http://localhost:1313/programming/intro/boolean-logic/): In life, we often seek certainties. Will it rain tomorrow, true or false? Is a certain action right … - Published 2023-09-09
+- [Set Up your Development Environment](http://localhost:1313/programming/intro/setup-dev-environment/): Venturing into the world of programming might seem like a Herculean task, especially when faced with … - Published 2023-09-10
+
+### Starting Concepts
+- [Variables and Data Types](http://localhost:1313/programming/starting-concepts/variables-data-types/): Understanding how variables and data types work is essential to master any programming language. In … - Published 2023-09-18
+- [Input and output operations](http://localhost:1313/programming/starting-concepts/io-operations/): Input/output operations (I/O) allow a program to communicate and exchange data with the outside … - Published 2023-09-19
+- [Flow Control](http://localhost:1313/programming/starting-concepts/flow-control-structures/): When we embark on the exciting journey of learning to program, we soon discover that programming is … - Published 2023-09-27
+- [Functions](http://localhost:1313/programming/starting-concepts/functions/): In the vast and exciting world of programming, there are concepts that are fundamental pillars for … - Published 2023-09-29
+- [Recursive Functions](http://localhost:1313/programming/starting-concepts/recursive-functions/): Recursion is a fundamental concept in programming that allows a function to call itself. At first it … - Published 2023-09-30
+
+### Object-Oriented Programming
+- [Classes and objects](http://localhost:1313/programming/oop/classes-objects/): Anatomy of a class A class acts as a blueprint or mould to construct similar objects, defining their … - Published 2023-10-02
+
+#### Class relations
+- [Association](http://localhost:1313/programming/oop/class-relations/association/): Key characteristics of association:
+It represents a loose coupling between classes. The associated … - Published 2024-10-12
+- [Aggregation](http://localhost:1313/programming/oop/class-relations/aggregation/): Key characteristics of aggregation:
+It&rsquo;s a stronger relationship than a simple association, … - Published 2024-10-12
+- [Composition](http://localhost:1313/programming/oop/class-relations/composition/): Key characteristics of composition:
+It represents a strong &ldquo;has-a&rdquo; relationship. The … - Published 2024-10-12
+- [Inheritance](http://localhost:1313/programming/oop/class-relations/inheritance/): Key characteristics of inheritance:
+It promotes code reuse and establishes a hierarchy between … - Published 2024-10-12
+- [Realisation (Implementation)](http://localhost:1313/programming/oop/class-relations/realisation/): Key characteristics of realisation:
+It represents a contract that the implementing class must … - Published 2024-10-12
+- [Dependency](http://localhost:1313/programming/oop/class-relations/dependency/): Key characteristics of dependency:
+It represents a &ldquo;uses&rdquo; relationship between classes. … - Published 2024-10-12
+- [Conclusion](http://localhost:1313/programming/oop/class-relations/conclusion/): Comparing and contrasting relations Now that we&rsquo;ve explored the various types of class … - Published 2024-10-12
+
+#### The Four Pillars
+- [Encapsulation](http://localhost:1313/programming/oop/four-pillars/encapsulation/): The importance of encapsulation lies in several key aspects:
+Data protection: By controlling access … - Published 2024-10-12
+- [Inheritance](http://localhost:1313/programming/oop/four-pillars/inheritance/): Key aspects of inheritance include:
+Code reusability: Inheritance allows us to reuse code from … - Published 2024-10-12
+- [Polymorphism](http://localhost:1313/programming/oop/four-pillars/polymorphism/): Polymorphism enables writing flexible and reusable code by allowing us to work with objects at a … - Published 2024-10-12
+- [Abstraction](http://localhost:1313/programming/oop/four-pillars/abstraction/): Key aspects of abstraction include:
+Simplification: Abstraction reduces complexity by hiding … - Published 2024-10-12
+
+### Data Structures
+- [Arrays](http://localhost:1313/programming/data-structures/arrays/): An array is a data structure that represents a set of elements, which are accessed through … - Published 2023-10-30
+- [Maps (Dictionaries)](http://localhost:1313/programming/data-structures/maps/): A dictionary, or map, consists of a collection of key-value pairs. The key is used to access the … - Published 2023-10-30
+- [Linked Lists](http://localhost:1313/programming/data-structures/linked-lists/): A linked list is composed of nodes where each node has two parts:
+Data or information Reference to … - Published 2023-11-01
+- [Stacks](http://localhost:1313/programming/data-structures/stacks/): The LIFO nature of stacks is due to the fact that only the top element can be accessed and … - Published 2023-11-02
+- [Queues](http://localhost:1313/programming/data-structures/queues/): The FIFO (first in, first out) nature of queues is because only the initial element can be accessed … - Published 2023-11-03
+
+## Software Engineering
+- [Introduction to Software Engineering](http://localhost:1313/software-engineering/introduction/): What is Software? Several thought leaders in the world of computing have defined software in various … - Published 2023-08-10
+
+## Root Pages
+- [About](http://localhost:1313/about/): 
+
+---
+Generated on 2026-03-10 00:18:27 UTC
+Site: http://localhost:1313/

@@ -1,0 +1,212 @@
+# Funciones Recursivas
+La recursión es un concepto fundamental en programación que permite que una función se llame a sí misma. A primera vista puede parecer contra intuitivo, pero dominar este enfoque abre la puerta a soluciones elegantes para ciertos problemas.
+
+## Recursión: el arte de llamarse a sí mismo
+
+Imagina una caja de espejos donde cada espejo refleja lo que ve en el siguiente, creando una serie infinita de reflejos. La recursión en programación es algo similar. Es una técnica donde una función se llama a sí misma directa o indirectamente. Esto crea un ciclo en el cual la función resuelve un problema dividiéndolo en instancias más pequeñas del mismo problema, hasta llegar a un caso base sencillo de resolver.
+
+Por ejemplo, imaginemos una función que imprime un contador regresivo:
+
+```python
+def cuenta_regresiva(numero):
+
+    if numero > 0:
+        print(numero)
+        cuenta_regresiva(numero - 1)
+    else:
+        print("¡Despegue!")
+
+cuenta_regresiva(5)
+```
+
+Esta función se llama recursivamente reduciendo el número cada vez hasta llegar a 0, y luego imprime el mensaje de despegue.
+
+La recursión es un enfoque declarativo donde se enfoca en dividir un problema en casos recursivos sin necesidad de controlar explícitamente el bucle usando iteradores o contadores como en la programación imperativa.
+
+## La estructura de una función recursiva
+
+El poder de la recursión radica en su simplicidad. Sin embargo, es esencial entender su estructura para evitar caer en trampas comunes. Una función recursiva típica tiene dos partes principales:
+
+1. **Caso base**: El caso más simple con una solución conocida que no requiere recursión. Es la condición de corte, que detiene la recursión. Sin el caso base, caeríamos en una recursión infinita que eventualmente desborda la pila de llamadas.
+2. **Caso recursivo**: Es donde ocurre la mágica llamada recursiva. En este punto, la función se llama a sí misma con un argumento modificado, generalmente una versión reducida del problema original.
+
+## Ejemplos clásicos
+
+### Factorial
+
+El factorial de un entero positivo \(n\) es el producto de todos los enteros positivos menores o iguales a \(n\). Por ejemplo:
+
+- \(5! = 5 \times 4 \times 3 \times 2 \times 1 = 120\)
+- \(4! = 4 \times 3 \times 2 \times 1 = 24\)
+- \(3! = 3 \times 2 \times 1 = 6\)
+
+Aquí está el código en Python para calcular el factorial usando recursión:
+
+```python
+def factorial(n):
+    if n == 1:
+        return 1              # Caso base
+    return n * factorial(n-1) # Caso recursivo
+```
+
+- **Caso base**: El caso base es la instancia más simple y pequeña del problema que puede responderse directamente. Para el factorial, cuando \(n = 1\), el resultado es 1.
+- **Caso recursivo**: Si \(n\) es mayor que 1, la función se llama a sí misma con \(n-1\), y multiplica el resultado por \(n\).
+
+Digamos que quieres calcular el factorial de 5, así que llamas a `factorial(5)`.
+
+Esto es lo que sucede:
+
+1. Como \(n = 5\) no es 1, la función llama a `factorial(4)`, luego multiplica el resultado por 5.
+2. Ahora, dentro de `factorial(4)`, \(n = 4\), entonces la función llama a `factorial(3)`, luego multiplica el resultado por 4.
+3. Dentro de `factorial(3)`, \(n = 3\), así que llama a `factorial(2)`, luego multiplica el resultado por 3.
+4. Dentro de `factorial(2)`, \(n = 2\), así que llama a `factorial(1)`, luego multiplica el resultado por 2.
+5. Finalmente, `factorial(1)` alcanza el caso base, donde \(n = 1\), así que retorna 1.
+
+Ahora los resultados se desenrollan:
+
+- `factorial(2)` retorna \(2 * 1 = 2\)
+- `factorial(3)` retorna \(3 * 2 = 6\)
+- `factorial(4)` retorna \(4 * 6 = 24\)
+- `factorial(5)` retorna \(5 * 24 = 120\)
+
+El resultado final es \(120\), que es el valor de \(5!\).
+
+Aquí hay una representación visual de la pila de llamadas:
+
+```python
+factorial(5)
+  -> factorial(4)
+    -> factorial(3)
+      -> factorial(2)
+        -> factorial(1)
+          return 1
+        return 2
+      return 6
+    return 24
+  return 120
+```
+
+### Serie de Fibonacci
+
+La serie de Fibonacci es una secuencia de números donde cada número es la suma de los dos anteriores. Comienza con 0 y 1, y cada número posterior es la suma de los dos números anteriores. Los primeros números de la secuencia son: \(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, \ldots\).
+
+Aquí está el código en Python para calcular el *enésimo* número de Fibonacci usando recursión:
+
+```python
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+```
+
+Aquí hay un desglose de cómo funciona la función:
+
+1. **Casos Base**: Si \(n\) es igual o menor que 0, la función devuelve 0. Si \(n\) es igual a 1, se retorna 1, el primer valor de la serie, descartando el 0.
+
+2. **Caso Recursivo**: Si \(n\) es mayor que 1, la función se llama a sí misma dos veces, invocando la suma de los números de Fibonacci \(n-1\) y \(n-2\).
+
+Digamos que quieres calcular el número de Fibonacci en la posición 5, así que llamas a `fibonacci(5)`.
+1. Como \(n = 5\) no es un caso base, la función llama a `fibonacci(4) + fibonacci(3)`.
+2. `fibonacci(4)` llama a `fibonacci(3) + fibonacci(2)`. `fibonacci(3)` llama a `fibonacci(2) + fibonacci(1)`.
+3. `fibonacci(2)` llama a `fibonacci(1) + fibonacci(0)`. `fibonacci(1)` alcanza el caso base y retorna 1.
+4. `fibonacci(0)` alcanza el caso base y retorna 0.
+5. Los resultados comienzan a desenrollarse hacia arriba por toda la cadena de llamadas.
+    - `fibonacci(0)` retorna 0
+    - `fibonacci(1)` retorna 1
+    - `fibonacci(2)` retorna 1 (\(1 + 0\))
+    - `fibonacci(3)` retorna 2 (\(1 + 1\))
+    - `fibonacci(4)` retorna 3 (\(2 + 1\))
+    - `fibonacci(5)` retorna 5 (\(3 + 2\))
+
+
+El resultado es 5, que es el quinto número en la secuencia de Fibonacci.
+
+Aquí hay una representación visual de la pila de llamadas:
+
+```python
+fibonacci(5)
+  -> fibonacci(4)
+    -> fibonacci(3)
+      -> fibonacci(2)
+        -> fibonacci(1) return 1
+        -> fibonacci(0) return 0
+        return 1
+      -> fibonacci(1) return 1
+      return 2
+    -> fibonacci(2)
+      -> fibonacci(1) return 1
+      -> fibonacci(0) return 0
+      return 1
+    return 3
+  -> fibonacci(3)
+    -> fibonacci(2)
+      -> fibonacci(1) return 1
+      -> fibonacci(0) return 0
+      return 1
+    -> fibonacci(1) return 1
+    return 2
+  return 5
+```
+
+## Ventajas y desventajas
+
+La recursión tiene ciertas ventajas:
+
+- Puede resultar en soluciones simples y elegantes para problemas que se dividen fácilmente en problemas menores.
+- Elimina la necesidad de control de bucles explícito.
+- Sigue la estructura matemática de una definición recursiva.
+
+Las desventajas incluyen:
+
+- Puede ser menos eficiente (alto consumo de memoria) que la iteración debido a las llamadas repetidas y creación de marcos de pila.
+- Demasiada recursión puede desbordar la pila de llamadas y causar errores.
+- Puede ser más difícil de depurar y analizar que la iteración.
+
+Por lo tanto, la recursión es una herramienta poderosa que debe usarse con discreción en los casos apropiados.
+
+## Recursión vs Iteración
+
+La recursión y la iteración (usando ciclos) son paralelos y podemos usar cualquiera para resolver muchos problemas. Ambas técnicas tienen el potencial de resolver los mismos problemas, pero su implementación y eficiencia pueden variar. Tomemos el ejemplo del factorial:
+
+**Iterativo**
+
+```python
+def factorial_iterativo(n):
+    resultado = 1
+    for i in range(1, n+1):
+        resultado *= i
+    return resultado
+```
+
+**Recursivo**
+
+```python
+def factorial_recursivo(n):
+    if n == 1:
+       return 1
+    return n * factorial(n-1)
+```
+
+La versión iterativa es más eficiente en términos de espacio, pero la recursiva es más limpia y fácil de entender. La elección entre recursión e iteración a menudo depende del problema específico, las restricciones de memoria y las preferencias del programador.
+
+## Conclusión
+
+La recursión es una técnica clave que permite escribir algoritmos elegante, naturales y eficientes si se utiliza adecuadamente. Entender cómo dividir un problema en casos recursivos es esencial para dominar esta habilidad. La recursión ofrece una alternativa declarativa única para resolver problemas complejos sin necesidad de administrar bucles explícitos. Sin embargo, es crucial recordar siempre definir un caso base adecuado y ser consciente de las limitaciones de la recursión en términos de eficiencia y uso de memoria. Saber combinar recursión e iteración nos da flexibilidad al crear soluciones óptimas.
+
+Como siempre, la clave está en encontrar el equilibrio adecuado y utilizar la herramienta correcta para el trabajo adecuado.
+
+---
+
+{{< callout icon="sparkles" >}}
+¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.
+
+Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.
+
+Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub [learn-software-engineering/examples](https://github.com/learn-software-engineering/examples).
+
+¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!
+{{< /callout >}}
+

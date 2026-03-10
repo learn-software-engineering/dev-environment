@@ -1,0 +1,77 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com – Software Engineering</title><link>http://localhost:1313/tags/software-engineering/</link><description>Recent content in Software Engineering on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to Software Engineering</title><link>http://localhost:1313/software-engineering/introduction/</link><pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/software-engineering/introduction/</guid><description>
+&lt;h2&gt;What is Software?&lt;span class="hx:absolute hx:-mt-20" id="what-is-software"&gt;&lt;/span&gt;
+&lt;a href="#what-is-software" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Several thought leaders in the world of computing have defined software in various ways:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ian Sommerville&lt;/strong&gt;&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;Computer programs and associated documentation.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Roger S. Pressman&lt;/strong&gt;&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;A collection of computer programs, procedures, rules, and associated documentation and data.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Andrew S. Tanenbaum&lt;/strong&gt;&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;A series of instructions that tells a computer what to do.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Grady Booch&lt;/strong&gt;&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;Set of items or objects that form a configuration that includes programs, documents, and data.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Peter Denning&lt;/strong&gt;&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;Map of a machine, detailing its possible states, transitions, and the actions for these transitions.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Analysing these definitions, common themes emerge: software encompasses instructions, data, associated documentation, and serves as a guiding structure for computer operations. So we can conclude:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Software is a meticulously structured collection of programs, data, and documentation that serves as a guiding blueprint, directing a computer&amp;rsquo;s operations and interactions with users and other systems.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Although we can classify software in many different types, each with its specific function, we can define three primary categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;System Software&lt;/strong&gt;: This forms the core of a computer&amp;rsquo;s operation. It includes operating systems like Windows, Linux, and macOS, which manage hardware resources and provide services for application software.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Application Software&lt;/strong&gt;: Tailored for end-users to perform specific tasks, this category ranges from word processors (like Microsoft Word) to graphic design tools (like Adobe Photoshop) and games.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embedded Software&lt;/strong&gt;: Found within hardware devices such as washing machines, traffic lights, or digital watches, embedded software operates specific functions of these devices. Unlike general-purpose software, it&amp;rsquo;s dedicated to specific tasks or functions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;What is Software Engineering?&lt;span class="hx:absolute hx:-mt-20" id="what-is-software-engineering"&gt;&lt;/span&gt;
+&lt;a href="#what-is-software-engineering" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Several prominent figures have also provided their perspectives on Software Engineering:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ian Sommerville&lt;/strong&gt;&lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;A discipline concerned with all aspects of software production.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Roger S. Pressman&lt;/strong&gt;&lt;sup id="fnref1:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;Establishment and use of sound engineering principles to obtain economically software that is reliable and works efficiently on real machines.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Frederick P. Brooks&lt;/strong&gt;&lt;sup id="fnref:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Barry W. Boehm&lt;/strong&gt;&lt;sup id="fnref:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;Aims to produce quality software, software that is delivered on time, within budget, and that satisfies its requirements.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fritz Bauer&lt;/strong&gt;&lt;sup id="fnref:8"&gt;&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref"&gt;8&lt;/a&gt;&lt;/sup&gt;:
+&lt;em&gt;The establishment and use of sound engineering principles to economically obtain software that is reliable and works on real machines.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;From these definitions, we can discern that software engineering integrates principles of engineering, emphasizes systematic methods, seeks reliability and efficiency, and aims for the production of high-quality software that meets its specified requirements. Concluding that&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Software Engineering is the disciplined application of engineering principles and systematic methods to design, develop, and maintain reliable and efficient software that economically meets specified requirements and user needs.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Software Engineering&lt;/em&gt; should not be confused with &lt;em&gt;Computer Science&lt;/em&gt;. While the latter is a discipline that dives deep into the theoretical and mathematical aspects of computing, studying algorithms, computational theory, and more, the first one primarily focuses on designing and building large software systems. It emphasizes practical techniques and methodologies that ensure the production of high-quality, maintainable software.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Why it is important to develop quality software&lt;span class="hx:absolute hx:-mt-20" id="why-it-is-important-to-develop-quality-software"&gt;&lt;/span&gt;
+&lt;a href="#why-it-is-important-to-develop-quality-software" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Today, we&amp;rsquo;re surrounded by a digital ecosystem. Software runs our phones, cars, banks, hospitals, and even our homes. This ubiquity underscores its significance. That means that software flaws can have catastrophic outcomes. From banking systems to healthcare applications, the demand for faultless, efficient software is sky-high.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Software Engineering&lt;/em&gt;, ensures this vast amount of software is reliable, efficient, and meets user needs. As technology advances at breakneck speed, the role of software engineers becomes even more pivotal, making sure innovations are safe and effective.&lt;/p&gt;
+&lt;p&gt;Whether you&amp;rsquo;re using a social media app, making a bank transaction, or checking health diagnostics, remember there&amp;rsquo;s a meticulously engineered software system running behind the scenes, making it all possible.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;References&lt;span class="hx:absolute hx:-mt-20" id="references"&gt;&lt;/span&gt;
+&lt;a href="#references" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Sommerville, I., 2010. Software Engineering. 9th ed. Pearson.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Pressman, R.S., 2010. Software Engineering: A Practitioner&amp;rsquo;s Approach. 7th ed. McGraw-Hill.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Tanenbaum, A.S., 2012. Structured Computer Organization. 6th ed. Pearson.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;Booch, G., 2007. Object-Oriented Analysis and Design with Applications. 3rd ed. Addison-Wesley.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Denning, P.J., 2009. The Profession of IT, Beyond Computational Thinking. Communications of the ACM, 52(6).&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:6"&gt;
+&lt;p&gt;Brooks, F.P., 1995. The Mythical Man-Month: Essays on Software Engineering. Addison-Wesley.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:7"&gt;
+&lt;p&gt;Boehm, B.W., 1988. A Spiral Model of Software Development and Enhancement. Computer, 21(5).&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:8"&gt;
+&lt;p&gt;Bauer, F.L., 1972. Software Engineering. Information Processing, 71.&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item></channel></rss>

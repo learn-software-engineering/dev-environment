@@ -1,1 +1,886 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Learn-Software.com</title><link>http://localhost:1313/blog/</link><description>Recent content in Blog on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>es</language><managingEditor>learn.software.eng@gmail.com (Learn-Software.com)</managingEditor><webMaster>learn.software.eng@gmail.com (Learn-Software.com)</webMaster><copyright>© 2022-2026 Julian Nonino. Todos los derechos reservados.</copyright><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes Services</title><link>http://localhost:1313/blog/k8s-services/</link><pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate><author>learn.software.eng@gmail.com (Learn-Software.com)</author><guid>http://localhost:1313/blog/k8s-services/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/blog/k8s-services/featured.png"/></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com – Blog</title><link>http://localhost:1313/blog/</link><description>Recent content in Blog on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Continuous Delivery</title><link>http://localhost:1313/blog/continuous-delivery/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/blog/continuous-delivery/</guid><description>
+&lt;img src="http://localhost:1313/blog/continuous-delivery/featured.en_hu_bf6791cf47d8d7d3.png" width="640" height="427"/>&lt;p&gt;Continuous Delivery (CD) is deeply rooted in the first principle of the Agile Manifesto posted in 2001&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;According to Martin Fowler&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;, a project is truly embracing Continuous Delivery when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The software can be deployed at any stage of its lifecycle.&lt;/li&gt;
+&lt;li&gt;The team values keeping the software deployment-ready over adding new features.&lt;/li&gt;
+&lt;li&gt;Any software version can be deployed to any environment on-demand.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In many ways, Continuous Delivery is the next step from &lt;a href="http://localhost:1313/blog/continuous-integration/"&gt;Continuous Integration&lt;/a&gt;, seamlessly automating processes all the way to the software&amp;rsquo;s end user.&lt;/p&gt;
+&lt;p&gt;Much like in &lt;a href="http://localhost:1313/blog/continuous-integration/"&gt;Continuous Integration&lt;/a&gt;, the &lt;em&gt;pipeline&lt;/em&gt; stands as the cornerstone of Continuous Delivery. However, it&amp;rsquo;s not just about integrating code, testing it, and generating a deliverable artifact. With CD, this artifact progresses through a series of test phases in environments that increasingly resemble production settings. After passing through the &lt;a href="http://localhost:1313/blog/continuous-integration/"&gt;Continuous Integration&lt;/a&gt; &lt;em&gt;pipeline&lt;/em&gt;, what emerges is a potentially deployable artifact. CD then takes this artifact and puts it through the necessary tests, ensuring it&amp;rsquo;s primed for a live deployment.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;The delivery process&lt;span class="hx:absolute hx:-mt-20" id="the-delivery-process"&gt;&lt;/span&gt;
+&lt;a href="#the-delivery-process" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The following figure illustrates the fundamental steps of a Continuous Delivery (CD) process. It&amp;rsquo;s vital to note that an effective CD process presupposes a well-oiled &lt;a href="http://localhost:1313/blog/continuous-integration/"&gt;Continuous Integration (CI)&lt;/a&gt; system as its foundation.&lt;/p&gt;
+&lt;figure&gt;&lt;img src="../blog/continuous-delivery/images/cd_process.en.png"
+alt="CD process flowchart"&gt;&lt;figcaption&gt;
+&lt;p&gt;CD process flowchart&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The CD process adds two distinct phases to the CI system: &lt;strong&gt;deployment stages&lt;/strong&gt; and &lt;strong&gt;system validation and verification testing&lt;/strong&gt;. A critical premise is that the deployment process is paramount to product delivery. Thus, automating and frequently testing it is essential. Ideally, testing should also be automated to facilitate execution, especially if you aim for &lt;a href="#continuous-deployment"&gt;Continuous Deployment&lt;/a&gt;. However, it&amp;rsquo;s not imperative to automate all tests, especially at the beginning of the CD process implementation.&lt;/p&gt;
+&lt;p&gt;Upon creating a potentially deliverable artifact in the CI &lt;em&gt;pipeline&lt;/em&gt;, the initial step is to &lt;strong&gt;deploy it in a testing or QA environment&lt;/strong&gt;. The primary goal of this environment is to offer a space where software tests, both automatic and manual, can be run. The only possible variations between the QA and actual production environment (the one used by customers) may pertain to its capacity or resource size. This scaled-down capacity, whether in processing, memory, storage, or database size, is typically a cost-saving measure.&lt;/p&gt;
+&lt;p&gt;If system and acceptance tests are successful in the QA environment, the next phase is to &lt;strong&gt;deploy the artifact in a staging environment&lt;/strong&gt;. This environment should be an exact replica of the production setting. Its purpose is to facilitate performance and load testing on the system, effectively putting it under stress to validate its functionality under high loads and assess its processing and response times.&lt;/p&gt;
+&lt;p&gt;When the previous tests are satisfactory, the artifact is ready to be &lt;strong&gt;deployed in a production environment&lt;/strong&gt;. This space is also referred to as the &lt;em&gt;live&lt;/em&gt; environment, where users interact with the system.&lt;/p&gt;
+&lt;p&gt;As evident, the product deployment method is exercised at least twice before the final production deployment, considerably reducing risks associated with potential errors as the final delivery approaches.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Core principles and practices&lt;span class="hx:absolute hx:-mt-20" id="core-principles-and-practices"&gt;&lt;/span&gt;
+&lt;a href="#core-principles-and-practices" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;One of CD&amp;rsquo;s primary objectives is to boost delivery frequency. This naturally means that each release should &lt;strong&gt;minimize its size&lt;/strong&gt;. A smaller delivery not only implies fewer potential errors but also facilitates their identification and resolution&lt;sup id="fnref1:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;. To achieve this, the code must always be in a &lt;em&gt;deploy-ready&lt;/em&gt; state.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rapid automated testing&lt;/strong&gt; is crucial for today&amp;rsquo;s software development&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;. In the context of CD, automated tests are of utmost importance as they must ensure comprehensive system quality without hampering the delivery cycle&amp;rsquo;s speed&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;. Lengthy test runs force the team to await results, leading to wasted time&lt;sup id="fnref1:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;. If these tests aren&amp;rsquo;t parallelized and optimized, developers may start sidelining them&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;. To ensure test optimization, it&amp;rsquo;s recommended to fail tests that exceed a reasonable limit&lt;sup id="fnref:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;software should always be potentially deliverable&lt;/strong&gt;. It&amp;rsquo;s essential for the software&amp;rsquo;s build status to remain &lt;em&gt;&amp;lsquo;green&amp;rsquo;&lt;/em&gt; consistently. This means if a new repository commit breaks the build, this error must be rectified before any new commit is made. Adhering to this practice simplifies error tracing, while deviating may condition developers to overlook a broken or &lt;em&gt;&amp;lsquo;red&amp;rsquo;&lt;/em&gt; build&lt;sup id="fnref1:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;. Broken builds signify product flaws and render it undeliverable.&lt;/p&gt;
+&lt;p&gt;In using CD, the aim is to ensure each commit results in a &lt;em&gt;production-ready&lt;/em&gt; artifact. If this artifact is rebuilt at every process stage, there&amp;rsquo;s no guarantee of their identical nature, and validation and verification test results from one artifact cannot be applied to others. This could lead to deploying untested artifacts&lt;sup id="fnref2:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;. Hence, &lt;strong&gt;artifacts should be produced only once&lt;/strong&gt; and undergo all tests on that single artifact before deploying that very software piece to production.&lt;/p&gt;
+&lt;p&gt;Software should &lt;strong&gt;always be deployed identically across all environments&lt;/strong&gt;. Otherwise, there&amp;rsquo;s no assurance of the deployment process&amp;rsquo;s efficacy. If environment differences exist, they should be managed using configuration files, but the deployment process should remain consistent&lt;sup id="fnref3:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deployment should be achievable with a mere button press&lt;/strong&gt;. The ability to deploy the latest product version anytime with a single button press is a robust indicator of CD implementation&lt;sup id="fnref2:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;. This not only requires the aforementioned steps but also mandates version-controlled software deployment scripts that are regularly checked and validated&lt;sup id="fnref4:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;As mentioned earlier, CD&amp;rsquo;s main objective is to ascertain the product&amp;rsquo;s readiness post each commit&lt;sup id="fnref3:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;. For this, aside from ensuring a swift compilation and testing process, &lt;strong&gt;process outcomes should be visible and shared with the team&lt;/strong&gt;. Display screens showcasing the current status, build times, test coverage, and more, offer a way to maintain constant visibility&lt;sup id="fnref5:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;. Presenting these results not only supports CD but, as some authors suggest, also bolsters team motivation&lt;sup id="fnref1:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Benefits of Continuous Delivery&lt;span class="hx:absolute hx:-mt-20" id="benefits-of-continuous-delivery"&gt;&lt;/span&gt;
+&lt;a href="#benefits-of-continuous-delivery" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;With the rise of Continuous Delivery (CD) practices, businesses are realizing numerous advantages:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Swift value delivery&lt;/strong&gt;: the adoption of CD practices facilitates a faster rollout of features and error rectifications to end users&lt;sup id="fnref:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;. This speed is attributed to the code becoming potentially deployable to users as it traverses through the &lt;a href="http://localhost:1313/blog/continuous-integration/"&gt;Continuous Integration (CI)&lt;/a&gt; pipeline&lt;sup id="fnref2:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Diminished delivery failures&lt;/strong&gt;: frequent releases lead to &lt;strong&gt;fewer delivery risks&lt;/strong&gt; since each release embodies fewer changes. This, in turn, means there&amp;rsquo;s a reduced margin for errors&lt;sup id="fnref4:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;. Even if an error emerges, its origin is easier to trace and correct. Plus, reverting to a previous version in the face of complications becomes straightforward&lt;sup id="fnref:8"&gt;&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref"&gt;8&lt;/a&gt;&lt;/sup&gt;. A delightful by-product of this streamlined process is the diminished stress levels amongst stakeholders&lt;sup id="fnref1:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt; &lt;sup id="fnref1:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;. Furthermore, the consistency and quality in the delivery process cement trust between the development team and clients&lt;sup id="fnref2:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Productivity amplification&lt;/strong&gt;: Chen&amp;rsquo;s study reveals that, in the absence of CD practices, teams spent nearly \(20%\) of their time setting up and maintaining environments&lt;sup id="fnref3:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;. The introduction of CD automates this ordeal, which translates to &lt;strong&gt;heightened productivity&lt;/strong&gt; by phasing out manual, non-value-add tasks&lt;sup id="fnref6:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Prompt feedback&lt;/strong&gt;: a consensus among experts highlights the value of &lt;strong&gt;early feedback&lt;/strong&gt; during the development phase&lt;sup id="fnref5:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;sup id="fnref4:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt; &lt;sup id="fnref3:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;. Regular releases not only fetch this feedback promptly but also ensure that the developed product aligns seamlessly with customer requirements&lt;sup id="fnref6:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;. The agility to swiftly address customer needs, fix reported bugs, and introduce demanded features can significantly elevate customer satisfaction&lt;sup id="fnref4:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Enhanced software quality&lt;/strong&gt;: the rigorous automation of software tests (unit, integration, and system), essential for implementing CD, combined with more frequent software deliveries encapsulating fewer changes, culminates in a &lt;strong&gt;notable boost in software quality&lt;/strong&gt;&lt;sup id="fnref5:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Transparency in progress&lt;/strong&gt;: thanks to frequent releases, clients find it easier to stay abreast of the latest product updates, embracing novel features and bug fixes with open arms.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2&gt;Challenges in adopting Continuous Delivery&lt;span class="hx:absolute hx:-mt-20" id="challenges-in-adopting-continuous-delivery"&gt;&lt;/span&gt;
+&lt;a href="#challenges-in-adopting-continuous-delivery" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The journey to incorporate Continuous Delivery (CD) isn’t without its hurdles. Here&amp;rsquo;s a look at some of the key challenges faced by businesses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Product complexity&lt;/strong&gt;: certain products consist of myriad interconnected modules or possess dependencies with other projects. This can create bottlenecks when automating CD pipelines&lt;sup id="fnref6:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;. Such complexities might frustrate teams, pushing them to retain manual processes or longer integration procedures.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Test suite creation&lt;/strong&gt;: crafting a &lt;strong&gt;comprehensive test suite&lt;/strong&gt; to ensure product quality is labour-intensive. All team members must allocate significant time to pen tests, which might require extra training. Besides, tests can be time-consuming, so the trick lies in devising effective yet swift tests&lt;sup id="fnref7:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Legacy code&lt;/strong&gt;: systems that have been in development for an extended period and weren&amp;rsquo;t designed with automated testing in mind can pose a significant challenge. Transitioning such systems to CD is not only a technical endeavour but also a social and cultural shift&lt;sup id="fnref8:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Environmental discrepancies&lt;/strong&gt;: all environments in the CI pipeline should mirror the production setting (&lt;em&gt;&amp;lsquo;production-like&amp;rsquo;&lt;/em&gt;)&lt;sup id="fnref7:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;. If not, unforeseen errors can arise, demanding valuable time on non-value-add tasks&lt;sup id="fnref9:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;. Ensuring multiple deployment stages in similar environments means that the deployment process is tested repetitively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Client restrictions&lt;/strong&gt;: not every client might desire or require a shortened product delivery cycle&lt;sup id="fnref10:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;. Such client limitations aren&amp;rsquo;t direct obstacles to CD implementation but play a pivotal role when aiming for &lt;a href="#continuous-deployment"&gt;&lt;strong&gt;Continuous Deployment&lt;/strong&gt;&lt;/a&gt;. This could potentially sideline some CD benefits, like swift client feedback or minimal change deliveries. Moreover, the domain itself can act as a bottleneck. Software related to heavily-regulated sectors like healthcare and defence may find CD implementation challenging, if not nearly impossible&lt;sup id="fnref11:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Transparency and reporting&lt;/strong&gt;: a successful CD adoption hinges on collaboration and transparency, introducing challenges tied to &lt;strong&gt;providing effective status reports&lt;/strong&gt; to stakeholders&lt;sup id="fnref:9"&gt;&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref"&gt;9&lt;/a&gt;&lt;/sup&gt;. This encompasses technical hurdles around automated report generation and analytics challenges to pinpoint essential information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Resistance to change&lt;/strong&gt;: any transformative change, like adopting CD, faces the innate human trait of &lt;strong&gt;resistance&lt;/strong&gt;. Convincing the team to adapt to new practices and modify their workflow is a task. On a higher level, management might also be hesitant to experiment with fresh processes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Continuous Deployment&lt;span class="hx:absolute hx:-mt-20" id="continuous-deployment"&gt;&lt;/span&gt;
+&lt;a href="#continuous-deployment" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The notion of &lt;strong&gt;Continuous Deployment&lt;/strong&gt; was popularized by Fitz&lt;sup id="fnref:10"&gt;&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref"&gt;10&lt;/a&gt;&lt;/sup&gt;. The standout distinction between this method and Continuous Delivery (CD) is that, once the product is deemed ready for release, there&amp;rsquo;s no waiting for manual intervention to launch it into production&lt;sup id="fnref:11"&gt;&lt;a href="#fn:11" class="footnote-ref" role="doc-noteref"&gt;11&lt;/a&gt;&lt;/sup&gt; &lt;sup id="fnref8:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;. If CD is properly executed, the step towards Continuous Deployment should demand no extra efforts from the development perspective&lt;sup id="fnref1:8"&gt;&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref"&gt;8&lt;/a&gt;&lt;/sup&gt;. In essence, the core difference lies in decision-making: with CD, releasing the product to production remains a business decision, whereas with Continuous Deployment, the launch is automated.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s worth noting that when we discuss CD, it inherently includes &lt;strong&gt;Continuous Delivery&lt;/strong&gt; but may or may not encompass &lt;strong&gt;Continuous Deployment&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;References&lt;span class="hx:absolute hx:-mt-20" id="references"&gt;&lt;/span&gt;
+&lt;a href="#references" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Beck, Kent, Mike Beedle, Arie van Bennekum, Alistair Cockburn, Ward Cunningham, Martin Fowler, James Grenning, Jim Highsmith, Andrew Hunt, Ron Jeffries, Jon Kern, Brian Marick, Robert C. Martin, Steve Mellor, Ken Schwaber, Jeff Sutherland, and Dave Thomas. &lt;a href="http://agilemanifesto.org/"target="_blank" rel="noopener"&gt;Manifesto for Agile Software Development&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;, 2001.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Fowler, Martin. &lt;a href="https://martinfowler.com/bliki/ContinuousDelivery.html?utm_source=Codeship&amp;amp;utm_medium=CI-Guide"target="_blank" rel="noopener"&gt;Continuous Delivery&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;, 2013.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref2:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref3:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref4:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref5:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref6:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Udd, Raoul. Adopting Continuous Delivery: A Case Study, 2016.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;Leppanen, Marko, Simo Makinen, Max Pagels, Veli-Pekka Eloranta, Juha Itkonen, Mika V. Mantyla, and Tomi Mannisto. &lt;a href="http://ieeexplore.ieee.org/document/7057604/"target="_blank" rel="noopener"&gt;The highways and country roads to continuous deployment&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. IEEE Software, 32(2):64-72, 2015.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref2:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref3:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref4:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref5:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref6:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref7:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref8:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref9:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref10:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref11:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Neely, Steve, and Steve Stolt. &lt;a href="https://doi.org/10.1109/AGILE.2013.17"target="_blank" rel="noopener"&gt;Continuous delivery? Easy! Just change everything (well, maybe it is not that easy)&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. Proceedings - AGILE 2013, pp.121-128, 2013.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:6"&gt;
+&lt;p&gt;Humble, Jez, and David Farley. &lt;a href="https://my.safaribooksonline.com/9780321601919"target="_blank" rel="noopener"&gt;Continuous Delivery: Reliable Software Releases through Build, Test and Deployment Automation&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. Addison-Wesley, 2011.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref2:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref3:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref4:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref5:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref6:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref7:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref8:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:7"&gt;
+&lt;p&gt;Chen, Lianping. &lt;a href="http://ieeexplore.ieee.org/document/7006384/"target="_blank" rel="noopener"&gt;Continuous Delivery: Huge Benefits, but Challenges Too&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. IEEE Software, 32(2):50-54, 2015.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref2:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref3:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref4:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:8"&gt;
+&lt;p&gt;Humble, Jez. &lt;a href="https://continuousdelivery.com/2010/08/continuous-delivery-vs-continuous-deployment/"target="_blank" rel="noopener"&gt;Continuous Delivery vs Continuous Deployment&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;, 2010.&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:8" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:9"&gt;
+&lt;p&gt;Olsson, Helena Holmstrom, Hiva Alahyari, and Jan Bosch. &lt;a href="http://ieeexplore.ieee.org/document/6328180/"target="_blank" rel="noopener"&gt;Climbing the &amp;ldquo;Stairway to Heaven&amp;rdquo; &amp;ndash; A Multiple-Case Study Exploring Barriers in the Transition from Agile Development towards Continuous Deployment of Software&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. 2012 38th Euromicro Conference on Software Engineering and Advanced Applications, pp.392-399, 2012.&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:10"&gt;
+&lt;p&gt;Fitz, Timothy. &lt;a href="http://timothyfitz.com/2009/02/08/continuous-deployment/"target="_blank" rel="noopener"&gt;Continuous Deployment&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;, 2009.&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:11"&gt;
+&lt;p&gt;Pulkkinen, Ville. Continuous Deployment of Software. Proceedings of Cloud-Based Software Engineering, pp.46-52, 2013.&amp;#160;&lt;a href="#fnref:11" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Continuous Integration</title><link>http://localhost:1313/blog/continuous-integration/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/blog/continuous-integration/</guid><description>
+&lt;img src="http://localhost:1313/blog/continuous-integration/featured.en_hu_c4448a4655943ec0.png" width="640" height="427"/>&lt;p&gt;One of the most pivotal challenges in the realm of software development is effectively integrating changes &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;. In a small-scale project steered by a single developer, this challenge might appear to be trivial. However, as the magnitude of the project escalates and more individuals join the development fold, the significance of seamless integration becomes paramount.&lt;/p&gt;
+&lt;p&gt;Historically, integration was often an afterthought, relegated to the tail end of the software development process &lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;. Postponing it to such a late stage not only amplifies the risk of complex, undetected errors but also heightens the tension as delivery dates loom.&lt;/p&gt;
+&lt;p&gt;However, the paradigm shifted around the turn of the millennium. Continuous Integration (CI) was formally introduced in 2000 by Kent Beck as an intrinsic part of the &amp;lsquo;Extreme Programming&amp;rsquo; methodology &lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;. CI emphasizes the frequent and early-stage integration of code. By continuously amalgamating new code into the system, developers can gauge its impact promptly. This approach streamlines error detection, enabling developers to tackle issues as they emerge &lt;sup id="fnref1:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;. The ability to tie an error to a specific code change reduces error complexity and promotes efficient troubleshooting. Today, CI has become an indispensable practice in software development projects &lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Martin Fowler, a luminary in the field, eloquently defined CI as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Continuous Integration is a software development practice where team members integrate their work frequently, typically multiple times a day. Each integration is verified by an automated build system that runs test suites to swiftly detect any integration anomalies. Teams adopting this methodology often witness a significant reduction in integration hiccups, empowering them to produce cohesive software at an accelerated pace&lt;sup id="fnref2:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Building upon Fowler’s definition, Duvall &lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt; underscored several vital facets:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Developers must maintain a conducive local environment for code construction and testing, ensuring their updates do not disrupt the established integration.&lt;/li&gt;
+&lt;li&gt;Team members should commit their code to the Version Control System (VCS) daily.&lt;/li&gt;
+&lt;li&gt;The integration process must be undertaken on a distinct machine, aptly termed the CI server.&lt;/li&gt;
+&lt;li&gt;Only builds that pass all tests can be deemed deliverable.&lt;/li&gt;
+&lt;li&gt;Error resolution is of paramount importance.&lt;/li&gt;
+&lt;li&gt;A central repository displaying build and test results—often a website—is essential. Most CI tools readily offer such platforms.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Furthermore, Patrick Cauldwell &lt;sup id="fnref:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt; advocates for frequent and early integration. The rationale? The more regular the integration, the less overhead for the team down the line. He distilled the primary goals of CI into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensuring a consistently available, tested version of the product with the latest modifications.&lt;/li&gt;
+&lt;li&gt;Keeping the team abreast of any integration issues as early as possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The impetus behind CI is to maintain an error-free, tested product throughout the development life cycle. This avoids the pitfalls of a last-minute integration phase, which is often fraught with errors and consumes both time and resources. More crucially, if project components aren&amp;rsquo;t integrated during their development, there&amp;rsquo;s no guarantee they&amp;rsquo;ll gel cohesively in the final product &lt;sup id="fnref:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Technical implementation of CI revolves around two core components: process automation and a system to showcase results, thereby fuelling the developmental feedback loop &lt;sup id="fnref1:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;In summing up the tenets of CI, Martin Fowler &lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; emphasizes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Retaining code in a singular repository.&lt;/li&gt;
+&lt;li&gt;Streamlining software construction through automation.&lt;/li&gt;
+&lt;li&gt;Implementing automated testing processes.&lt;/li&gt;
+&lt;li&gt;Ensuring new code additions undergo integration and construction on the CI system&amp;rsquo;s machine.&lt;/li&gt;
+&lt;li&gt;Keeping the build process agile and swift.&lt;/li&gt;
+&lt;li&gt;Providing easy access to the product&amp;rsquo;s latest executable version.&lt;/li&gt;
+&lt;li&gt;Ensuring product status transparency for all stakeholders.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Elements of a CI system&lt;span class="hx:absolute hx:-mt-20" id="elements-of-a-ci-system"&gt;&lt;/span&gt;
+&lt;a href="#elements-of-a-ci-system" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A basic Continuous Integration (CI) pipeline initiates when a new code change is pushed to the repository. The CI server, linked to the repository, gets notified of every new change, subsequently downloading the latest version to initiate the integration process, which will be elaborated on in the subsequent section. Once completed, it communicates the system&amp;rsquo;s status to the team members.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In computer science, a &amp;ldquo;pipeline&amp;rdquo; refers to a sequence of processes or tasks linked such that the output of one becomes the input for the next.&lt;/em&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src="../blog/continuous-integration/images/ci_elements.en.png"
+alt="Basic elements of CI"&gt;&lt;figcaption&gt;
+&lt;p&gt;Figure 1: Basic elements of CI&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The system&amp;rsquo;s primary component consists of the &lt;strong&gt;developers&lt;/strong&gt;. After making code modifications, they run tests locally and compile the code to ensure that they haven&amp;rsquo;t introduced new errors.&lt;/p&gt;
+&lt;p&gt;An essential part of every CI system is the &lt;strong&gt;Version Control System (VCS)&lt;/strong&gt;. It oversees the changes made to the code and other significant elements. This system establishes a unified access point for all source code, enabling the CI system to fetch the most recent version for integration. Most software development projects utilize a VCS even if they don&amp;rsquo;t implement CI processes.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;CI Server&lt;/strong&gt; is responsible for initiating a new build (comprising both compilation and tests) every time a change is added to the repository. They offer configurations to simplify the creation of integration pipelines. Additionally, most come with a web interface to display the build status and previous results. Currently, numerous powerful options are available, both free and paid. It&amp;rsquo;s worth noting that the CI server should operate on a dedicated machine and not on team members&amp;rsquo; computers.&lt;/p&gt;
+&lt;p&gt;The CI server must automatically conduct software tests, source code analysis, and compile to produce the deliverable product. Therefore, &lt;strong&gt;build and test execution scripts&lt;/strong&gt; are vital. These scripts outline the necessary steps to be executed. Popular tools for this purpose include Make, Ant, Maven, Gradle, among others.&lt;/p&gt;
+&lt;p&gt;Every CI system should have a &lt;strong&gt;notification mechanism&lt;/strong&gt; to relay results to the team. This mechanism ensures that in the event of an error, the team becomes aware as soon as possible, enabling them to address the issue. While most CI tools offer a web interface to view results, they also support other notification methods like emails, messaging applications, etc.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;The integration process&lt;span class="hx:absolute hx:-mt-20" id="the-integration-process"&gt;&lt;/span&gt;
+&lt;a href="#the-integration-process" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The figure below broadly illustrates the stages of the integration process taking place within the Continuous Integration (CI) system.&lt;/p&gt;
+&lt;figure&gt;&lt;img src="../blog/continuous-integration/images/ci_process.en.png"
+alt="CI process flowchart"&gt;&lt;figcaption&gt;
+&lt;p&gt;Figure 2: CI process flowchart&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Initially, the system must &lt;strong&gt;retrieve the latest source code version&lt;/strong&gt; each time a new change is pushed to the Version Control System (VCS). Two mechanisms facilitate this. The first involves setting up the CI server to periodically check the VCS for updates. The alternative is to establish a &lt;em&gt;commit hook&lt;/em&gt; within the VCS, ensuring that the CI server receives notifications whenever changes are made.&lt;/p&gt;
+&lt;p&gt;After obtaining the code, the CI server can be configured to &lt;strong&gt;scrutinize the source code&lt;/strong&gt; for potential undetected errors, be they syntactic, logical, or patterns that might lead to faults. Various tools aid this process. For instance, Java boasts utilities like FindBugs, CheckStyle, and PMD, while Python has Pylint. JavaScript can be analysed with tools like JSLint or JSHint. An example of a code analysis criterion could be ensuring every developed method has a cyclomatic complexity&lt;sup id="fnref:8"&gt;&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref"&gt;8&lt;/a&gt;&lt;/sup&gt; under 10. By employing automated source code inspection, one can assess code correctness, spot duplicate portions, and expedite the time between error detection and rectification. While automated inspection might not catch every error, the results can approximate those of peer reviews, thereby lightening the team&amp;rsquo;s review load.&lt;/p&gt;
+&lt;p&gt;The subsequent step revolves around &lt;strong&gt;automated test execution&lt;/strong&gt; on the product. This automation is paramount to successfully implementing a CI system. Thus, developers can confidently make alterations, knowing a robust testing framework safeguards against compromising existing functionalities. Some popular tools in this domain include Junit, JBehave, and Selenium, which not only facilitate test drafting but also generate comprehensive reports, often as visualizations or web pages. Several software testing levels exist, such as &lt;em&gt;unit tests&lt;/em&gt;, &lt;em&gt;integration tests&lt;/em&gt;, and &lt;em&gt;system tests&lt;/em&gt;. In the CI pipeline context, the focus rests on automating unit and integration tests, with system tests&amp;rsquo; automation being recommended but not mandatory.&lt;/p&gt;
+&lt;p&gt;Once the tests pass, the CI pipeline advances to &lt;strong&gt;compiling the source code&lt;/strong&gt;. During this phase, the source code morphs into one or multiple files or packages, ready for distribution and user execution. This process&amp;rsquo;s specifics hinge on the employed programming language. For instance, languages like Java necessitate code compilation, resulting in an executable. Conversely, languages like Python might involve stricter code structure checks without generating any binary files.&lt;/p&gt;
+&lt;p&gt;Throughout this integration journey, the team should steadfastly adhere to three fundamental rules:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Locally run tests and compile software before integrating it into the VCS to minimize error introduction chances (avoiding &amp;ldquo;breaking the build&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Avoid pushing new code to the VCS if the CI server flags errors (indicative of a &amp;ldquo;broken build&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Should the CI server report faults, code modifications should exclusively aim at rectifying them.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2&gt;Core principles and practices&lt;span class="hx:absolute hx:-mt-20" id="core-principles-and-practices"&gt;&lt;/span&gt;
+&lt;a href="#core-principles-and-practices" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Martin Fowler&lt;sup id="fnref3:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; identifies a set of foundational elements intrinsic to every Continuous Integration (CI) system. While some of these have been touched upon earlier in this chapter, we will succinctly encapsulate them here for clarity:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Centralized Code Repository&lt;/strong&gt;: Retain all code within a singular, unified repository.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Streamlined Compilation and Build Process&lt;/strong&gt;: Entirely automate the compilation and construction workflows, negating manual intervention.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Full-Spectrum Automated Testing&lt;/strong&gt;: Ensure all software tests are automated, driving efficiency and precision.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Daily Commitment&lt;/strong&gt;: Encourage the team to consistently merge their changes to the repository on a daily basis.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stringent Integration Checks&lt;/strong&gt;: Each alteration made to the Version Control System (VCS) undergoes rigorous integration processes within the CI system.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prompt Error Rectification&lt;/strong&gt;: Should the CI system flag any issues (indicative of a &amp;ldquo;broken build&amp;rdquo;), immediate action is imperative. Either rectify the flaw or reverse the change to ensure the repository&amp;rsquo;s latest version remains operational.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Swift CI Procedures&lt;/strong&gt;: Aim to complete the CI process rapidly—ideally within 15 minutes or less. This approach ensures timely integration and facilitates the expedited delivery of results.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Universal Access to Latest Executables&lt;/strong&gt;: Always provide the team with access to the most recent executable or deliverable package, promoting transparency.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-time Product Status Visibility&lt;/strong&gt;: Grant every team member the ability to monitor the product&amp;rsquo;s status at any given moment, fostering informed decision-making.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2&gt;Benefits&lt;span class="hx:absolute hx:-mt-20" id="benefits"&gt;&lt;/span&gt;
+&lt;a href="#benefits" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The overarching consensus within the software community is that the implementation of a Continuous Integration (CI) process yields an array of substantial advantages. Duvall&lt;sup id="fnref1:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt; outlines these core benefits in his publication.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Risk Mitigation&lt;/strong&gt;: Adopting frequent integration minimizes project risks. It facilitates early detection of issues and offers a continuous snapshot of the product&amp;rsquo;s health. By identifying these issues early in the development cycle, there&amp;rsquo;s a consequent reduction in both the cost of fixes and the risk of releasing a subpar product. Furthermore, automated inspections provide real-time insights into the product&amp;rsquo;s size, code complexity, and other metrics. This automation diminishes the chance of human-induced errors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Minimization of Manual Repetitive Tasks&lt;/strong&gt;: Automation curtails the need for recurring manual tasks such as compilation, inspection, test execution, and report generation. This efficiency not only leads to significant time and cost savings but also allows teams to focus on activities that directly enhance product value. It liberates team members to dedicate more time to addressing new requirements or rectifying existing product issues.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;On-Demand Availability of a Functional Product&lt;/strong&gt;: A hallmark of CI is its ability to deliver a functional software product at any given moment. This is invaluable for stakeholders, offering them a rapid glance into product development progress. By leveraging CI, errors can be swiftly detected and remedied soon after a new change is introduced. This is far more efficient than uncovering them close to the release date when they are more expensive and challenging to amend. Such issues, if left unchecked, can lead to delivery delays, unsatisfied clients, escalated costs, and more. This ties back to the concept of the &amp;ldquo;Broken Window Theory&amp;rdquo;&lt;sup id="fnref:9"&gt;&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref"&gt;9&lt;/a&gt;&lt;/sup&gt;, which, in essence, postulates that a product marred by numerous issues or perceived disorder can demotivate teams from addressing them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Enhanced Project Transparency&lt;/strong&gt;: Implementing CI augments visibility into the project, rendering the development process more transparent. It aids project management with up-to-the-minute information, making it straightforward to gauge product quality, error trends, and more.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Elevated Product Confidence&lt;/strong&gt;: The CI environment bolsters confidence in the product. Team members gain immediate insights into the ramifications of their changes, enabling them to promptly rectify any emergent issues.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2&gt;Challenges&lt;span class="hx:absolute hx:-mt-20" id="challenges"&gt;&lt;/span&gt;
+&lt;a href="#challenges" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;While Duvall&lt;sup id="fnref2:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt; has extolled the virtues of Continuous Integration (CI) in his works, he also highlights potential challenges that might deter development teams from embracing it fully or realizing its benefits.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Bias&lt;/strong&gt;: A widespread misconception is that CI system implementation is exorbitant and would escalate development costs due to its prolonged setup and maintenance. Contrarily, most software development projects already involve phases like inspection, testing, compilation, and integration, even if they don’t explicitly use a CI system. A common refrain is that there&amp;rsquo;s insufficient time or funds for CI system implementation, but the reality is that far more resources are spent performing redundant manual tasks throughout the development cycle. Furthermore, an automated CI system is infinitely more manageable and consistent compared to disparate manual processes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Disruption Fears&lt;/strong&gt;: Projects in advanced development stages often fret that integrating a CI system would overhaul their established workflows, spawning significant delays. It’s pivotal to recognize that CI system implementation can be incremental. Teams can address one integration stage at a time, gradually ramping up the integration frequency as confidence builds.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Overwhelming Failed Integrations&lt;/strong&gt;: When CI practices aren’t diligently applied, there&amp;rsquo;s a risk of encountering an excessive number of failed integrations or &amp;ldquo;broken builds.&amp;rdquo; This could stem from developers bypassing local tests before uploading their changes to the Version Control System (VCS). A surge in failed integrations can erode trust in the CI system, reminiscent of the &amp;ldquo;Broken Window Theory&amp;rdquo;&lt;sup id="fnref1:9"&gt;&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref"&gt;9&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Perceived Additional Costs&lt;/strong&gt;: There&amp;rsquo;s an apprehension among organizations about incurring extra expenses either for procuring CI product licenses or securing hardware to support these systems. However, this expenditure pales in comparison to the latent costs of late-stage integrations, where issues are discovered near the release date, far removed from their inception. On a brighter note, the current landscape is rife with a myriad of free and open-source alternatives, obviating any additional costs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2&gt;References&lt;span class="hx:absolute hx:-mt-20" id="references"&gt;&lt;/span&gt;
+&lt;a href="#references" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="https://www.thoughtworks.com/continuous-integration"target="_blank" rel="noopener"&gt;Continuous integration&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. ThoughtWorks, 2018.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Fowler, Martin. &lt;a href="https://martinfowler.com/articles/continuousIntegration.html"target="_blank" rel="noopener"&gt;Continuous Integration&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. 2006.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref2:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref3:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Beck, Kent. Embrace Change with Extreme Programming. &lt;em&gt;IEEE Computer Magazine&lt;/em&gt;, (c), 70-77. 1999.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;Rodriguez Pilar, Markkula, Jouni, Oivo, Markku, &amp;amp; Turula, Kimmo. &lt;a href="http://dl.acm.org/citation.cfm?doid=2372251.2372275"target="_blank" rel="noopener"&gt;Survey on agile and lean usage in Finnish software industry&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. In &lt;em&gt;Proceedings of the ACM-IEEE international symposium on Empirical software engineering and measurement - ESEM &amp;lsquo;12&lt;/em&gt; (p. 139). ACM Press. DOI: 10.1145/2372251.2372275. 2012.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Duvall, Paul M., Matyas, Steve, &amp;amp; Glover, Andrew. Continuous integration: improving software quality and reducing risk. Pearson Education, Inc., 2007.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref2:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:6"&gt;
+&lt;p&gt;Cauldwell, Patrick. Code Leader: Using people, tools and processes to build successful software. Wiley Publishing, Inc., 2008.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:7"&gt;
+&lt;p&gt;Humble, Jez &amp;amp; Farley, David. Continuous Delivery: Reliable Software Releases through Build, Test and Deployment Automation. Addison-Wesley, 2011.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:8"&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Cyclomatic_complexity"target="_blank" rel="noopener"&gt;Cyclomatic Complexity Explanation&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:9"&gt;
+&lt;p&gt;&lt;a href="https://www.linkedin.com/pulse/broken-window-theory-software-development-leon-lahoud"target="_blank" rel="noopener"&gt;The Broken Window Theory in Software Development&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:9" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Reverting changes in Git</title><link>http://localhost:1313/blog/git-revert/</link><pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/blog/git-revert/</guid><description>
+&lt;img src="http://localhost:1313/blog/git-revert/featured.en_hu_c419dce4498f97a3.png" width="640" height="427"/>&lt;h2&gt;Reverting a commit before pushing&lt;span class="hx:absolute hx:-mt-20" id="reverting-a-commit-before-pushing"&gt;&lt;/span&gt;
+&lt;a href="#reverting-a-commit-before-pushing" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When we have created a commit locally but have not published it to the remote yet, we can use &lt;code&gt;git reset&lt;/code&gt; to undo the commit and, if we wish, discard the changes.
+Although there are several options for &lt;code&gt;git reset&lt;/code&gt; the most used are:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--soft&lt;/code&gt;: Does not touch the index file or the working tree at all (but resets the head to &lt;COMMIT&gt;, just like all modes do). This leaves all your changed files &amp;ldquo;Changes to be committed&amp;rdquo;, as git status would put it.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--hard&lt;/code&gt;: Resets the index and working tree. Any changes to tracked files in the working tree since &lt;COMMIT&gt; are discarded. Any untracked files or directories in the way of writing any tracked files are simply deleted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://git-scm.com/docs/git-reset"target="_blank" rel="noopener"&gt;Git reset documentation&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;
+{: style=&amp;ldquo;text-align: right;&amp;rdquo;}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here there is an example about using &lt;code&gt;git reset&lt;/code&gt;. We start by changing a file and creating a commit with the change.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ cat README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ cat README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git add README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git commit -m &lt;span style="color:#e6db74"&gt;&amp;#34;Add number 2 in README.md&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;main 3734fd5&lt;span style="color:#f92672"&gt;]&lt;/span&gt; Add number &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; in README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; file changed, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; insertion&lt;span style="color:#f92672"&gt;(&lt;/span&gt;+&lt;span style="color:#f92672"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;git status&lt;/code&gt; shows there is one commit pending to be published.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is ahead of &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt; by &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; commit.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;use &lt;span style="color:#e6db74"&gt;&amp;#34;git push&amp;#34;&lt;/span&gt; to publish your local commits&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nothing to commit, working tree clean&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Using &lt;code&gt;git reflog&lt;/code&gt; to see the history.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;3734fd5 &lt;span style="color:#f92672"&gt;(&lt;/span&gt;HEAD -&amp;gt; main&lt;span style="color:#f92672"&gt;)&lt;/span&gt; HEAD@&lt;span style="color:#f92672"&gt;{&lt;/span&gt;0&lt;span style="color:#f92672"&gt;}&lt;/span&gt;: commit: Add number &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; in README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;866bfa8 &lt;span style="color:#f92672"&gt;(&lt;/span&gt;origin/main&lt;span style="color:#f92672"&gt;)&lt;/span&gt; HEAD@&lt;span style="color:#f92672"&gt;{&lt;/span&gt;1&lt;span style="color:#f92672"&gt;}&lt;/span&gt;: revert: Revert &lt;span style="color:#e6db74"&gt;&amp;#34;Merge branch &amp;#39;feature-1&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;e2f6d08 HEAD@&lt;span style="color:#f92672"&gt;{&lt;/span&gt;2&lt;span style="color:#f92672"&gt;}&lt;/span&gt;: merge feature-1: Merge made by the &lt;span style="color:#e6db74"&gt;&amp;#39;ort&amp;#39;&lt;/span&gt; strategy.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;23644da HEAD@&lt;span style="color:#f92672"&gt;{&lt;/span&gt;3&lt;span style="color:#f92672"&gt;}&lt;/span&gt;: checkout: moving from feature-1 to main&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Now we can use &lt;code&gt;git reset --soft &amp;lt;COMMIT_ID&amp;gt;&lt;/code&gt; to undo the commit but keep the changes.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git reset --soft 866bfa8
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is up to date with &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Changes to be committed:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;use &lt;span style="color:#e6db74"&gt;&amp;#34;git restore --staged &amp;lt;file&amp;gt;...&amp;#34;&lt;/span&gt; to unstage&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; modified: README.md&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;git log&lt;/code&gt; after using &lt;code&gt;git reset&lt;/code&gt;&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 866bfa8a952d11240707ebfc87f3266034d42443 &lt;span style="color:#f92672"&gt;(&lt;/span&gt;HEAD -&amp;gt; main, origin/main&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 20:06:40 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Revert &lt;span style="color:#e6db74"&gt;&amp;#34;Merge branch &amp;#39;feature-1&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; This reverts commit e2f6d08d3b38a02a1c026cfb879f3131536757ac, reversing
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; changes made to 23644dab9fc5828ecdd358c6d3acb4196ed23546.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We create a new commit so we can test the &lt;code&gt;git reset --hard&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is up to date with &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Changes to be committed:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;use &lt;span style="color:#e6db74"&gt;&amp;#34;git restore --staged &amp;lt;file&amp;gt;...&amp;#34;&lt;/span&gt; to unstage&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; modified: README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git commit -m &lt;span style="color:#e6db74"&gt;&amp;#34;Add number 2 in README.md - NEW COMMIT&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;main 2e7193d&lt;span style="color:#f92672"&gt;]&lt;/span&gt; Add number &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; in README.md - NEW COMMIT
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; file changed, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; insertion&lt;span style="color:#f92672"&gt;(&lt;/span&gt;+&lt;span style="color:#f92672"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;git log&lt;/code&gt; now shows the new commit.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 2e7193db650b9ba0762fe73525df599a08f8577d &lt;span style="color:#f92672"&gt;(&lt;/span&gt;HEAD -&amp;gt; main&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Thu Jan &lt;span style="color:#ae81ff"&gt;19&lt;/span&gt; 08:32:57 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Add number &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; in README.md - NEW COMMIT
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 866bfa8a952d11240707ebfc87f3266034d42443 &lt;span style="color:#f92672"&gt;(&lt;/span&gt;origin/main&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 20:06:40 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Revert &lt;span style="color:#e6db74"&gt;&amp;#34;Merge branch &amp;#39;feature-1&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; This reverts commit e2f6d08d3b38a02a1c026cfb879f3131536757ac, reversing
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; changes made to 23644dab9fc5828ecdd358c6d3acb4196ed23546.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Now we can use &lt;code&gt;git reset --hard &amp;lt;COMMIT_ID&amp;gt;&lt;/code&gt; to undo the commit and discard all the changes.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git reset --hard 866bfa8
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;HEAD is now at 866bfa8 Revert &lt;span style="color:#e6db74"&gt;&amp;#34;Merge branch &amp;#39;feature-1&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is up to date with &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nothing to commit, working tree clean&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;git log&lt;/code&gt; remains as it nothing had happened.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 866bfa8a952d11240707ebfc87f3266034d42443 &lt;span style="color:#f92672"&gt;(&lt;/span&gt;HEAD -&amp;gt; main, origin/main&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 20:06:40 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Revert &lt;span style="color:#e6db74"&gt;&amp;#34;Merge branch &amp;#39;feature-1&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; This reverts commit e2f6d08d3b38a02a1c026cfb879f3131536757ac, reversing
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; changes made to 23644dab9fc5828ecdd358c6d3acb4196ed23546.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Reverting a commit after it was pushed&lt;span class="hx:absolute hx:-mt-20" id="reverting-a-commit-after-it-was-pushed"&gt;&lt;/span&gt;
+&lt;a href="#reverting-a-commit-after-it-was-pushed" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When we realized that the last commit was a mistake but we already published it, the command to use is &lt;code&gt;git revert &amp;lt;COMMIT_HASH&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First we need to locate the ID of the commit we want to revert, it can be done with &lt;code&gt;git log&lt;/code&gt; or &lt;code&gt;git reflog&lt;/code&gt; commands.&lt;/li&gt;
+&lt;li&gt;Then, run the &lt;code&gt;git revert &amp;lt;COMMIT_HASH&amp;gt;&lt;/code&gt; command using the ID obtained in the previous step. Use the options &lt;code&gt;-e&lt;/code&gt; or &lt;code&gt;--edit&lt;/code&gt; to edit the commit message if we like.&lt;/li&gt;
+&lt;li&gt;Push our changes so the revert is available for everyone in our group.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Reverting multiple commits&lt;span class="hx:absolute hx:-mt-20" id="reverting-multiple-commits"&gt;&lt;/span&gt;
+&lt;a href="#reverting-multiple-commits" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;If we need to revert multiple commits we can revert them one by one using the &lt;code&gt;--no-commit&lt;/code&gt; option in order to create a single revert commit at the end.&lt;/p&gt;
+&lt;p&gt;Imagine the history is like the following and we need to go back to &lt;code&gt;COMMIT-3&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;COMMIT-1 -&amp;gt; COMMIT-2 -&amp;gt; COMMIT-3 -&amp;gt; COMMIT-4 -&amp;gt; COMMIT-5 -&amp;gt; COMMIT-6 -&amp;gt; HEAD&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This sequence of commands will get our files to the version of &lt;code&gt;COMMIT-3&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git revert --no-commit COMMIT-6
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git revert --no-commit COMMIT-5
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git revert --no-commit COMMIT-4
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git commit -m &lt;span style="color:#e6db74"&gt;&amp;#34;Revert to version in COMMIT-3&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git push&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Reverting a merge commit&lt;span class="hx:absolute hx:-mt-20" id="reverting-a-merge-commit"&gt;&lt;/span&gt;
+&lt;a href="#reverting-a-merge-commit" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;-m parent-number, &amp;ndash;mainline parent-number&lt;/p&gt;
+&lt;p&gt;Usually you cannot revert a merge because you do not know which side of the merge should be considered the mainline. This option specifies the parent number (starting from 1) of the mainline and allows revert to reverse the change relative to the specified parent.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://git-scm.com/docs/git-revert"target="_blank" rel="noopener"&gt;Git revert documentation&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;
+{: style=&amp;ldquo;text-align: right;&amp;rdquo;}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;When we need to revert a merge commit &lt;code&gt;git revert&lt;/code&gt; command needs to be run with the &lt;code&gt;-m&lt;/code&gt; or &lt;code&gt;--mainline&lt;/code&gt; option to indicate the &lt;strong&gt;parent number&lt;/strong&gt; because a &lt;code&gt;merge commit&lt;/code&gt; has more than one parent and Git does not know which parent was target branch and which was the branch with the changes that should be reverted.&lt;/p&gt;
+&lt;p&gt;Here there is an example showing how to revert a merge commit.&lt;/p&gt;
+&lt;p&gt;Create the first commit in &lt;code&gt;main&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ cat README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git commit -m &lt;span style="color:#e6db74"&gt;&amp;#34;Add number 1 in README.md - main branch&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;main &lt;span style="color:#f92672"&gt;(&lt;/span&gt;root-commit&lt;span style="color:#f92672"&gt;)&lt;/span&gt; 23644da&lt;span style="color:#f92672"&gt;]&lt;/span&gt; Add number &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; in README.md - main branch
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; file changed, &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt; insertions&lt;span style="color:#f92672"&gt;(&lt;/span&gt;+&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; create mode &lt;span style="color:#ae81ff"&gt;100644&lt;/span&gt; README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git push -u origin main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Enumerating objects: 3, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Counting objects: 100% &lt;span style="color:#f92672"&gt;(&lt;/span&gt;3/3&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Writing objects: 100% &lt;span style="color:#f92672"&gt;(&lt;/span&gt;3/3&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;254&lt;/span&gt; bytes | 254.00 KiB/s, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Total &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;delta 0&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, reused &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;delta 0&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, pack-reused &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;To github.com:jnonino/test-repo.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; * &lt;span style="color:#f92672"&gt;[&lt;/span&gt;new branch&lt;span style="color:#f92672"&gt;]&lt;/span&gt; main -&amp;gt; main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;branch &lt;span style="color:#e6db74"&gt;&amp;#39;main&amp;#39;&lt;/span&gt; set up to track &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The state of the &lt;code&gt;README.md&lt;/code&gt; file in &lt;code&gt;main&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is up to date with &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nothing to commit, working tree clean
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ cat README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Branch &lt;code&gt;feature-1&lt;/code&gt; created and added one commit.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git checkout -b feature-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Switched to a new branch &lt;span style="color:#e6db74"&gt;&amp;#39;feature-1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ cat README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git add README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git commit -m &lt;span style="color:#e6db74"&gt;&amp;#34;Add number 2 in README.md - feature-1 branch&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;feature-1 83ea1a3&lt;span style="color:#f92672"&gt;]&lt;/span&gt; Add number &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; in README.md - feature-1 branch
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; file changed, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; insertion&lt;span style="color:#f92672"&gt;(&lt;/span&gt;+&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git push --set-upstream origin feature-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Enumerating objects: 5, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Counting objects: 100% &lt;span style="color:#f92672"&gt;(&lt;/span&gt;5/5&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Writing objects: 100% &lt;span style="color:#f92672"&gt;(&lt;/span&gt;3/3&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;292&lt;/span&gt; bytes | 292.00 KiB/s, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Total &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;delta 0&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, reused &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;delta 0&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, pack-reused &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;remote:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;remote: Create a pull request &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;feature-1&amp;#39;&lt;/span&gt; on GitHub by visiting:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;remote: https://github.com/jnonino/test-repo/pull/new/feature-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;remote:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;To github.com:jnonino/test-repo.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; * &lt;span style="color:#f92672"&gt;[&lt;/span&gt;new branch&lt;span style="color:#f92672"&gt;]&lt;/span&gt; feature-1 -&amp;gt; feature-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;branch &lt;span style="color:#e6db74"&gt;&amp;#39;feature-1&amp;#39;&lt;/span&gt; set up to track &lt;span style="color:#e6db74"&gt;&amp;#39;origin/feature-1&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The state of &lt;code&gt;README.md&lt;/code&gt; in the &lt;code&gt;feature-1&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch feature-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is up to date with &lt;span style="color:#e6db74"&gt;&amp;#39;origin/feature-1&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nothing to commit, working tree clean
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ cat README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Merge the &lt;code&gt;feature-1&lt;/code&gt; branch into the &lt;code&gt;main&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git checkout main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Switched to branch &lt;span style="color:#e6db74"&gt;&amp;#39;main&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is up to date with &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git merge --no-ff feature-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Merge made by the &lt;span style="color:#e6db74"&gt;&amp;#39;ort&amp;#39;&lt;/span&gt; strategy.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; README.md | &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; +
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; file changed, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; insertion&lt;span style="color:#f92672"&gt;(&lt;/span&gt;+&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git push
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Enumerating objects: 1, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Counting objects: 100% &lt;span style="color:#f92672"&gt;(&lt;/span&gt;1/1&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Writing objects: 100% &lt;span style="color:#f92672"&gt;(&lt;/span&gt;1/1&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;233&lt;/span&gt; bytes | 233.00 KiB/s, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Total &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;delta 0&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, reused &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;delta 0&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, pack-reused &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;To github.com:jnonino/test-repo.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 23644da..e2f6d08 main -&amp;gt; main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Current state of &lt;code&gt;README.md&lt;/code&gt; in &lt;code&gt;main&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is up to date with &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nothing to commit, working tree clean
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ cat README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;git log&lt;/code&gt; after merging &lt;code&gt;feature-1&lt;/code&gt; into &lt;code&gt;main&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit e2f6d08d3b38a02a1c026cfb879f3131536757ac &lt;span style="color:#f92672"&gt;(&lt;/span&gt;HEAD -&amp;gt; main, origin/main&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Merge: 23644da 83ea1a3
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 19:58:19 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Merge branch &lt;span style="color:#e6db74"&gt;&amp;#39;feature-1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 83ea1a347e0e87b19a611997219089b5b9247d1f &lt;span style="color:#f92672"&gt;(&lt;/span&gt;origin/feature-1, feature-1&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 19:53:38 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Add number &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; in README.md - feature-1 branch
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 23644dab9fc5828ecdd358c6d3acb4196ed23546
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 19:48:37 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Add number &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; in README.md - main branch&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;To revert the merge commit, as it was stated above we need to pay attention to the &lt;code&gt;merge&lt;/code&gt; field.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Merge: 23644da 83ea1a3&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Running &lt;code&gt;git revert e2f6d08 -m 1&lt;/code&gt; will reinstate the tree as it was in &lt;code&gt;23644da&lt;/code&gt;, and &lt;code&gt;git revert e2f6d08 -m 2&lt;/code&gt; will set the tree as it was in &lt;code&gt;83ea1a3&lt;/code&gt;.
+In this example we would like to leave the &lt;code&gt;main&lt;/code&gt; branch as it was before the merge commit. For doing that, we need to run &lt;code&gt;git revert e2f6d08 -m 1&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git revert e2f6d08 -m &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;main 866bfa8&lt;span style="color:#f92672"&gt;]&lt;/span&gt; Revert &lt;span style="color:#e6db74"&gt;&amp;#34;Merge branch &amp;#39;feature-1&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; file changed, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; deletion&lt;span style="color:#f92672"&gt;(&lt;/span&gt;-&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is ahead of &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt; by &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; commit.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;use &lt;span style="color:#e6db74"&gt;&amp;#34;git push&amp;#34;&lt;/span&gt; to publish your local commits&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nothing to commit, working tree clean
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git push
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Enumerating objects: 5, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Counting objects: 100% &lt;span style="color:#f92672"&gt;(&lt;/span&gt;5/5&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Writing objects: 100% &lt;span style="color:#f92672"&gt;(&lt;/span&gt;3/3&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;344&lt;/span&gt; bytes | 344.00 KiB/s, &lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Total &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;delta 0&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, reused &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;delta 0&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, pack-reused &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;To github.com:jnonino/test-repo.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; e2f6d08..866bfa8 main -&amp;gt; main&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;git log&lt;/code&gt; after reverting the merge commit.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 866bfa8a952d11240707ebfc87f3266034d42443 &lt;span style="color:#f92672"&gt;(&lt;/span&gt;HEAD -&amp;gt; main, origin/main&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 20:06:40 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Revert &lt;span style="color:#e6db74"&gt;&amp;#34;Merge branch &amp;#39;feature-1&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; This reverts commit e2f6d08d3b38a02a1c026cfb879f3131536757ac, reversing
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; changes made to 23644dab9fc5828ecdd358c6d3acb4196ed23546.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit e2f6d08d3b38a02a1c026cfb879f3131536757ac
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Merge: 23644da 83ea1a3
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 19:58:19 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Merge branch &lt;span style="color:#e6db74"&gt;&amp;#39;feature-1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 83ea1a347e0e87b19a611997219089b5b9247d1f &lt;span style="color:#f92672"&gt;(&lt;/span&gt;origin/feature-1, feature-1&lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 19:53:38 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Add number &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; in README.md - feature-1 branch
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;commit 23644dab9fc5828ecdd358c6d3acb4196ed23546
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Author: Julian Nonino &amp;lt;learn.software.eng+jnonino@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Date: Wed Jan &lt;span style="color:#ae81ff"&gt;18&lt;/span&gt; 19:48:37 &lt;span style="color:#ae81ff"&gt;2023&lt;/span&gt; -0300
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Add number &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; in README.md - main branch&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Current state of &lt;code&gt;README.md&lt;/code&gt; in &lt;code&gt;main&lt;/code&gt; branch.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Your branch is up to date with &lt;span style="color:#e6db74"&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nothing to commit, working tree clean
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bash-3.2$ cat README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Index&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

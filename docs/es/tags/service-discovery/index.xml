@@ -1,0 +1,133 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com – Service Discovery</title><link>http://localhost:1313/es/tags/service-discovery/</link><description>Recent content in Service Discovery on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Tue, 05 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/es/tags/service-discovery/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes Services</title><link>http://localhost:1313/es/blog/k8s-services/</link><pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate><guid>http://localhost:1313/es/blog/k8s-services/</guid><description>
+&lt;img src="http://localhost:1313/es/blog/k8s-services/featured_hu_d1019366c431190d.png" width="640" height="427"/>&lt;p&gt;Luego de desplegar una aplicación en Kubernetes, independientemente del método elegido para ello, si queremos que sea alcanzable por otras aplicaciones necesitamos crear un servicio. En este artículo vamos a explicar que es un servicio, como se utilizan y a repasar los cuatro tipos de servicios que están disponibles en Kubernetes, ClusterIP, NodePort, LoadBalancer y ExternalName, revisaremos sus detalles y cuando se debe utilizar cada uno.&lt;/p&gt;
+&lt;p&gt;Al desplegar una aplicación en Kubernetes utilizando un objeto del tipo &lt;code&gt;Deployment&lt;/code&gt;, los pods pertenecientes a dicho Deployment pueden ser creados y destruidos en cualquier momento en base a su funcionamiento, por ejemplo si en nuestro Deployment pedimos que existan 3 réplicas y por cualquier razón alguna de ellas deja de funcionar, una nueva réplica será creada automáticamente para reemplazar a la que falló.&lt;/p&gt;
+&lt;p&gt;Cada pod tiene su propia dirección IP dentro del cluster. En general, las demás aplicaciones que necesitan interactuar con nuestra aplicación desconocen el nombre de cada una de sus replicas, su estado y su dirección IP para iniciar una comunicación. Kubernetes nos provee el objeto &lt;code&gt;Service&lt;/code&gt; como una forma nativa de &lt;code&gt;Service Discovery&lt;/code&gt; sin que necesitemos hacer cambios en nuestra aplicación o en las que necesitan comunicarse con ella. Entonces, el fin para el cual creamos un servicio es para exponer una aplicación que puede estar constituida por múltiples pods a traves de un único punto de acceso. De esta manera otras aplicación contactaran al &lt;code&gt;Service&lt;/code&gt; y este redirigirá la comunicación a alguno de los pods de nuestra aplicación.&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/k8s_services.png" alt="“Pods detrás de un servicio en Kubernetes”" data-zoomable loading="lazy" /&gt;
+&lt;em&gt;&amp;ldquo;Pods detrás de un servicio en Kubernetes&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Creando un servicio&lt;span class="hx:absolute hx:-mt-20" id="creando-un-servicio"&gt;&lt;/span&gt;
+&lt;a href="#creando-un-servicio" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Un &lt;code&gt;Service&lt;/code&gt; puede crearse mediante una declaración en un archivo &lt;em&gt;.yaml&lt;/em&gt; al igual que otros objetos de Kubernetes. Por ejemplo:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;apiVersion&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;kind&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;servicio-de-prueba&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;type&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;ClusterIP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;selector&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;app_name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;mi-aplicacion&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - &lt;span style="color:#f92672"&gt;protocol&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;TCP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;port&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;targetPort&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;1234&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copiar código"
+aria-label="Copiar código"
+data-copied-label="¡Copiado!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;En dicho ejemplo, estaremos creando un servicio llamado &lt;em&gt;my-service&lt;/em&gt; del tipo &lt;em&gt;ClusterIP&lt;/em&gt; que redirige las comunicaciones que llegan al puerto 8080 hacia el puerto 1234 de cualquier Pod que tenga la etiqueta &lt;em&gt;app-name: my-app&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-amber-200 hx:bg-amber-100 hx:text-amber-900 hx:dark:border-amber-200/30 hx:dark:bg-amber-900/30 hx:dark:text-amber-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;El nombre del servicio debe ser una &lt;a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#rfc-1035-label-names"target="_blank" rel="noopener"&gt;etiqueta válida bajo las reglas de RFC 1035&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Como se ve en el archivo, el campo &lt;em&gt;ports&lt;/em&gt; es del tipo array, lo que significa que pueden mapearse múltiples puertos.&lt;/p&gt;
+&lt;p&gt;Cada definición de un puerto debe contener los siguientes campos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;port&lt;/strong&gt;: es el puerto en el que el servicio estará accesible dentro del cluster. No puede omitirse.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;targetPort&lt;/strong&gt;: es un valor opcional, indica el puerto en el cual el pod estará recibiendo las comunicaciones. Si se omite, se asume que es el mismo valor que el indicado en el campo &lt;em&gt;port&lt;/em&gt;. Puede ser un número o el nombre del puerto si es que en el pod se especificaron nombres. Se recomienda utilizarlo sólo cuando difiere del valor de &lt;em&gt;port&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;protocol&lt;/strong&gt;: establece el protocolo utilizado para las comunicaciones, los valores válidos son: &lt;a href="https://kubernetes.io/docs/reference/networking/service-protocols/#protocol-sctp"target="_blank" rel="noopener"&gt;SCTP&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;, &lt;a href="https://kubernetes.io/docs/reference/networking/service-protocols/#protocol-tcp"target="_blank" rel="noopener"&gt;TCP&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt; y &lt;a href="https://kubernetes.io/docs/reference/networking/service-protocols/#protocol-udp"target="_blank" rel="noopener"&gt;UDP&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;. En caso de no indicarse explícitamente, el valor por defecto es TCP.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: permite darle un nombre al puerto. Es útil para referenciar por DNS o en situaciones donde hay múltiples puertos en un mismo servicio. Es un valor opcional, pero dentro de un mismo servicio, cada puerto debe tener un nombre único.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Tipos de servicios&lt;span class="hx:absolute hx:-mt-20" id="tipos-de-servicios"&gt;&lt;/span&gt;
+&lt;a href="#tipos-de-servicios" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Como se muestra en la sección anterior, el tipo de servicio se especifica mediante el valor &lt;code&gt;spec.type&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;apiVersion&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;kind&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;servicio-de-prueba&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;type&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;&amp;lt;TIPO_DE_SERVICIO&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copiar código"
+aria-label="Copiar código"
+data-copied-label="¡Copiado!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;A continuación veremos cada uno de ellos.&lt;/p&gt;
+&lt;h3&gt;ClusterIP&lt;span class="hx:absolute hx:-mt-20" id="clusterip"&gt;&lt;/span&gt;
+&lt;a href="#clusterip" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Es el tipo de servicio por defecto. Kubernetes asigna una dirección IP al servicio que las demás aplicaciones pueden utilizar para comunicarse. La dirección asignada proviene de un grupo de direcciones reservadas para este fin mediante el valor &lt;code&gt;service-cluster-ip-range&lt;/code&gt; en el servidor de API de Kubernetes.&lt;/p&gt;
+&lt;p&gt;Cuando se crea un servicio del tipo &lt;code&gt;ClusterIP&lt;/code&gt; el servicio no es accesible desde el exterior y los pods detrás de este servicio solo pueden ser contactados por otros pods del mismo cluster. Si se desea exponer el servicio al exterior se debe utilizar un objeto del tipo &lt;code&gt;Ingress&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/cluster_ip.png" alt="“Esquema de un servicio del tipo ClusterIP”" data-zoomable loading="lazy" /&gt;
+&lt;em&gt;&amp;ldquo;Esquema de un servicio del tipo &lt;em&gt;ClusterIP&lt;/em&gt;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;NodePort&lt;span class="hx:absolute hx:-mt-20" id="nodeport"&gt;&lt;/span&gt;
+&lt;a href="#nodeport" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;En este caso, Kubernetes asigna al servicio un puerto del rango definido en la configuración &lt;code&gt;service-node-port-range&lt;/code&gt;, usualmente entre los puertos 30000 y 32767. Luego, cada nodo abre dicho puerto para las comunicaciones hacia el servicio.&lt;/p&gt;
+&lt;p&gt;Este tipo de servicio, permite un rápido acceso desde el exterior sin necesidad de infraestructura adicional, pero no contempla un mecanismo de balance de carga (&lt;em&gt;load balancing&lt;/em&gt;), lo que puede provocar la saturación de alguno de ellos. Por otro lado, en un sistema donde existan múltiples servicios, la gestión de puertos puede volverse demasiado compleja.&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/node_port.png" alt="“Esquema de un servicio del tipo NodePort”" data-zoomable loading="lazy" /&gt;
+&lt;em&gt;&amp;ldquo;Esquema de un servicio del tipo &lt;em&gt;NodePort&lt;/em&gt;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;LoadBalancer&lt;span class="hx:absolute hx:-mt-20" id="loadbalancer"&gt;&lt;/span&gt;
+&lt;a href="#loadbalancer" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;En proveedores de servicios en la nube que soporten &lt;code&gt;load balancers&lt;/code&gt; como &lt;em&gt;Amazon Web Services&lt;/em&gt;, &lt;em&gt;Google Cloud Platform&lt;/em&gt; o &lt;em&gt;Microsoft Azure&lt;/em&gt;, crear un servicio de este tipo dispara la creación de un load balancer externo en la platform de nube utilizada. La creación ocurre de manera asíncrona e información sobre su estado es publicada en el estado del servicio (&lt;em&gt;.status.loadbalancer&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;El proveedor de servicios en la nube decide como se balancea la carga.&lt;/p&gt;
+&lt;p&gt;La gran ventaja de este tipo de servicio es que mediante el uso de servicios en la nube se obtiene un balanceo de carga automático y de alta disponibilidad. La desventaja es que puede generar costos adicionales.&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/load_balancer.png" alt="“Esquema de un servicio del tipo LoadBalancer”" data-zoomable loading="lazy" /&gt;
+&lt;em&gt;&amp;ldquo;Esquema de un servicio del tipo &lt;em&gt;LoadBalancer&lt;/em&gt;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;ExternalName&lt;span class="hx:absolute hx:-mt-20" id="externalname"&gt;&lt;/span&gt;
+&lt;a href="#externalname" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Este tipo de servicio redirecciona el tráfico a un nombre de DNS en lugar de a un conjunto de pods. El DNS al cual se apunta, se indica mediante el campo &lt;code&gt;.spec.externalName&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Por ejemplo, redirige las comunicaciones hacia la dirección &lt;em&gt;learn-software.com&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;apiVersion&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;kind&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;Service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;name&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;mi-servicio&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;type&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;ExternalName&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;externalName&lt;/span&gt;: &lt;span style="color:#ae81ff"&gt;learn-software.com&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copiar código"
+aria-label="Copiar código"
+data-copied-label="¡Copiado!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src="images/external_name.png" alt="“Esquema de un servicio del tipo ExternalName”" data-zoomable loading="lazy" /&gt;
+&lt;em&gt;&amp;ldquo;Esquema de un servicio del tipo &lt;em&gt;ExternalName&lt;/em&gt;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Headless Services&lt;span class="hx:absolute hx:-mt-20" id="headless-services"&gt;&lt;/span&gt;
+&lt;a href="#headless-services" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Existen casos en los que, por ejemplo, es necesario utilizar otros mecanismos de &lt;em&gt;Service Discovery&lt;/em&gt; o en los que necesitemos conocer las direcciones IP de todos aquellos pods que podríamos contactar. Para ello existen los &lt;code&gt;headless services&lt;/code&gt;. Se crean indicando el valor &lt;em&gt;None&lt;/em&gt; en el campo &lt;em&gt;.spec.clusterIP&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Un &lt;code&gt;headless service&lt;/code&gt; no tiene asignada una dirección IP única del cluster. Retorna directamente las direcciones IPs de pods en una respuesta DNS. Esto es útil para descubrimiento de servicios personalizados, bases de datos distribuidas o control detallado del balanceo. La desventaja es que el cliente del servicio debe ser capaz de resolver y gestionar por sí mismo una respuesta DNS conteniendo múltiples direcciones.&lt;/p&gt;
+&lt;p&gt;&lt;img src="images/headless_service.png" alt="“Esquema de un Headless Service”" data-zoomable loading="lazy" /&gt;
+&lt;em&gt;&amp;ldquo;Esquema de un &lt;em&gt;Headless Service&lt;/em&gt;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200"&gt;
+&lt;div class="hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2"&gt;&lt;svg height=1.2em class="hx:inline-block hx:align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
+&lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;Puedes leer más sobre el tema en la &lt;a href="https://kubernetes.io/docs/concepts/services-networking/service/"target="_blank" rel="noopener"&gt;documentación oficial de Kubernetes&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>
