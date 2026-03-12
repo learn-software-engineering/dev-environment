@@ -10,6 +10,8 @@
 
 ## DevOps
 
+## Glosario
+
 ## Ingeniería de Software
 
 ## Inteligencia Artificial
@@ -58,5 +60,5 @@ Dato o información … - Published 2023-11-01
 - [Acerca de](http://localhost:1313/es/about/): 
 
 ---
-Generated on 2026-03-12 14:21:04 UTC
+Generated on 2026-03-12 15:40:51 UTC
 Site: http://localhost:1313/
