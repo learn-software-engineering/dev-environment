@@ -436,7 +436,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h4&gt;Leyendo múltiples valores&lt;span class="hx:absolute hx:-mt-20" id="leyendo-múltiples-valores"&gt;&lt;/span&gt;
-&lt;a href="#leyendo-m%c3%baltiples-valores" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Podemos pedir y leer varios valores en una misma línea separándolos con comas:&lt;/p&gt;
+&lt;a href="#leyendo-m%c3%baltiples-valores" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Podemos pedir y leer varios valores en una misma línea si los separamos con comas:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nombre, edad &lt;span style="color:#f92672"&gt;=&lt;/span&gt; input(&lt;span style="color:#e6db74"&gt;&amp;#34;Ingresa nombre y edad: &amp;#34;&lt;/span&gt;)&lt;span style="color:#f92672"&gt;.&lt;/span&gt;split()&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
 &lt;button

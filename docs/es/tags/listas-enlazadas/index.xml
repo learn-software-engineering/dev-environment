@@ -275,7 +275,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;p&gt;&lt;strong&gt;Ejecución de expresiones matemáticas&lt;/strong&gt;: mediante una pila se puede verificar paréntesis, corchetes, llaves, etc.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Algoritmos y estructuras de datos&lt;/strong&gt;: como en el algoritmo quicksort y en la implementación de buses de datos (datapaths).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Algoritmos y estructuras de datos&lt;/strong&gt;: como en el algoritmo quicksort y en la implementación de buses de datos (data paths).&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;

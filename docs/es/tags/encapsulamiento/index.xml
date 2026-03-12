@@ -111,7 +111,7 @@ data-copied-label="¡Copiado!"
 &lt;h3&gt;Beneficios y mejores prácticas&lt;span class="hx:absolute hx:-mt-20" id="beneficios-y-mejores-prácticas"&gt;&lt;/span&gt;
 &lt;a href="#beneficios-y-mejores-pr%c3%a1cticas" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Los beneficios del encapsulamiento son numerosos:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Mejora de la mantenibilidad&lt;/strong&gt;: Los cambios en la implementación interna no afectan al código externo que utiliza la clase.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mejora de la capacidad de mantenimiento&lt;/strong&gt;: Los cambios en la implementación interna no afectan al código externo que utiliza la clase.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mayor seguridad&lt;/strong&gt;: Los atributos privados no pueden ser modificados accidentalmente desde fuera de la clase.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Flexibilidad en la implementación&lt;/strong&gt;: Puedes cambiar cómo se almacenan o calculan los datos sin cambiar la interfaz pública.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mejor abstracción&lt;/strong&gt;: Los usuarios de la clase no necesitan conocer su funcionamiento interno.&lt;/li&gt;

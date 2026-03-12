@@ -111,7 +111,7 @@ data-copied-label="¡Copiado!"
 &lt;h3&gt;Beneficios y mejores prácticas&lt;span class="hx:absolute hx:-mt-20" id="beneficios-y-mejores-prácticas"&gt;&lt;/span&gt;
 &lt;a href="#beneficios-y-mejores-pr%c3%a1cticas" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Los beneficios del encapsulamiento son numerosos:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Mejora de la mantenibilidad&lt;/strong&gt;: Los cambios en la implementación interna no afectan al código externo que utiliza la clase.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mejora de la capacidad de mantenimiento&lt;/strong&gt;: Los cambios en la implementación interna no afectan al código externo que utiliza la clase.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mayor seguridad&lt;/strong&gt;: Los atributos privados no pueden ser modificados accidentalmente desde fuera de la clase.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Flexibilidad en la implementación&lt;/strong&gt;: Puedes cambiar cómo se almacenan o calculan los datos sin cambiar la interfaz pública.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mejor abstracción&lt;/strong&gt;: Los usuarios de la clase no necesitan conocer su funcionamiento interno.&lt;/li&gt;
@@ -244,7 +244,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Métodos&lt;/strong&gt;: Funciones que definen comportamientos. Por ejemplo, una &lt;code&gt;Persona&lt;/code&gt; puede &lt;code&gt;caminar()&lt;/code&gt;, &lt;code&gt;hablar()&lt;/code&gt;, &lt;code&gt;comer()&lt;/code&gt;, etc. Acceden a los atributos para implementar dicha funcionalidad.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Constructor&lt;/strong&gt;: Método especial &lt;code&gt;__init__()&lt;/code&gt; que se ejecuta al instanciar la clase y permite inicializar los atributos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Constructor&lt;/strong&gt;: Método especial &lt;code&gt;__init__()&lt;/code&gt; que se ejecuta al generar un objeto a partir de la clase y permite inicializar los atributos.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Destructor&lt;/strong&gt;: Método &lt;code&gt;__del__()&lt;/code&gt; que se ejecuta al eliminar la instancia liberando recursos. Opcional en algunos lenguajes.&lt;/p&gt;
 &lt;h2&gt;Creando objetos&lt;span class="hx:absolute hx:-mt-20" id="creando-objetos"&gt;&lt;/span&gt;
 &lt;a href="#creando-objetos" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A partir de la clase generamos &lt;strong&gt;objetos&lt;/strong&gt;, que son &lt;strong&gt;instancias concretas&lt;/strong&gt; con sus propios atributos definidos. Digamos que la clase Casa es el plano, y una casa específica en una calle determinada es el objeto.&lt;/p&gt;
@@ -321,7 +321,7 @@ data-copied-label="¡Copiado!"
 &lt;h2&gt;Self vs This&lt;span class="hx:absolute hx:-mt-20" id="self-vs-this"&gt;&lt;/span&gt;
 &lt;a href="#self-vs-this" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Un detalle importante en los métodos es cómo acceden a los atributos y otros métodos del objeto. Aquí entra otra diferencia entre lenguajes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Self&lt;/strong&gt;: En Python, los atributos y métodos se acceden dentro de la clase anteponiendo &lt;code&gt;self&lt;/code&gt;. Esto apunta al objeto instanciado.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self&lt;/strong&gt;: En Python, los atributos y métodos se acceden dentro de la clase anteponiendo &lt;code&gt;self&lt;/code&gt;. Esto apunta al objeto creado.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Persona&lt;/span&gt;:
@@ -693,7 +693,7 @@ class Acuático {
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Polimorfismo en tiempo de ejecución (Polimorfismo dinámico)&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Se logra a través de la &lt;em&gt;sobrescritura&lt;/em&gt; de métodos.&lt;/li&gt;
+&lt;li&gt;Se logra a través de &lt;em&gt;sobrescribir&lt;/em&gt; de métodos.&lt;/li&gt;
 &lt;li&gt;Se resuelve en tiempo de ejecución.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -738,8 +738,8 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En este ejemplo, &lt;code&gt;sonido_animal()&lt;/code&gt; funciona con cualquier objeto que tenga un método &lt;code&gt;hablar()&lt;/code&gt;, independientemente de su clase.&lt;/p&gt;
-&lt;h3&gt;Sobrescritura de métodos&lt;span class="hx:absolute hx:-mt-20" id="sobrescritura-de-métodos"&gt;&lt;/span&gt;
-&lt;a href="#sobrescritura-de-m%c3%a9todos" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;La sobrescritura de métodos es un aspecto clave del polimorfismo en tiempo de ejecución. Ocurre cuando una clase derivada define un método con el mismo nombre que un método en su clase base.&lt;/p&gt;
+&lt;h3&gt;Sobrescribir métodos&lt;span class="hx:absolute hx:-mt-20" id="sobrescribir-métodos"&gt;&lt;/span&gt;
+&lt;a href="#sobrescribir-m%c3%a9todos" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Sobrescribir métodos es un aspecto clave del polimorfismo en tiempo de ejecución. Ocurre cuando una clase derivada define un método con el mismo nombre que un método en su clase base.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Figura&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;area&lt;/span&gt;(self):
@@ -854,7 +854,7 @@ data-copied-label="¡Copiado!"
 &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Las clases base abstractas no pueden ser instanciadas y obligan a las clases derivadas a implementar ciertos métodos, asegurando una interfaz consistente.&lt;/p&gt;
+&lt;p&gt;Las clases base abstractas no pueden utilizarse para crear objetos y obligan a las clases derivadas a implementar ciertos métodos, asegurando una interfaz consistente.&lt;/p&gt;
 &lt;h3&gt;Aplicaciones en el mundo real&lt;span class="hx:absolute hx:-mt-20" id="aplicaciones-en-el-mundo-real"&gt;&lt;/span&gt;
 &lt;a href="#aplicaciones-en-el-mundo-real" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;El polimorfismo se utiliza ampliamente en aplicaciones del mundo real:&lt;/p&gt;
 &lt;ol&gt;
@@ -989,7 +989,7 @@ data-copied-label="¡Copiado!"
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Figura&lt;/code&gt; es una clase base abstracta que define la interfaz para todas las figuras.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Rectangulo&lt;/code&gt; y &lt;code&gt;Circulo&lt;/code&gt; son clases concretas que implementan la interfaz &lt;code&gt;Figura&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;No podemos instanciar &lt;code&gt;Figura&lt;/code&gt; directamente, pero podemos usarla como un tipo común para todas las figuras.&lt;/li&gt;
+&lt;li&gt;No podemos crear un objecto a partir de la clase &lt;code&gt;Figura&lt;/code&gt; directamente, pero podemos usarla como un tipo común para todas las figuras.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Implementando abstracción en Python&lt;span class="hx:absolute hx:-mt-20" id="implementando-abstracción-en-python"&gt;&lt;/span&gt;
 &lt;a href="#implementando-abstracci%c3%b3n-en-python" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Aunque Python proporciona clases base abstractas para definir interfaces formalmente, también podemos lograr la abstracción mediante convenciones y documentación. Veamos un ejemplo sin utilizar &lt;code&gt;ABC&lt;/code&gt;:&lt;/p&gt;

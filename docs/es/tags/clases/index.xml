@@ -20,7 +20,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Métodos&lt;/strong&gt;: Funciones que definen comportamientos. Por ejemplo, una &lt;code&gt;Persona&lt;/code&gt; puede &lt;code&gt;caminar()&lt;/code&gt;, &lt;code&gt;hablar()&lt;/code&gt;, &lt;code&gt;comer()&lt;/code&gt;, etc. Acceden a los atributos para implementar dicha funcionalidad.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Constructor&lt;/strong&gt;: Método especial &lt;code&gt;__init__()&lt;/code&gt; que se ejecuta al instanciar la clase y permite inicializar los atributos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Constructor&lt;/strong&gt;: Método especial &lt;code&gt;__init__()&lt;/code&gt; que se ejecuta al generar un objeto a partir de la clase y permite inicializar los atributos.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Destructor&lt;/strong&gt;: Método &lt;code&gt;__del__()&lt;/code&gt; que se ejecuta al eliminar la instancia liberando recursos. Opcional en algunos lenguajes.&lt;/p&gt;
 &lt;h2&gt;Creando objetos&lt;span class="hx:absolute hx:-mt-20" id="creando-objetos"&gt;&lt;/span&gt;
 &lt;a href="#creando-objetos" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A partir de la clase generamos &lt;strong&gt;objetos&lt;/strong&gt;, que son &lt;strong&gt;instancias concretas&lt;/strong&gt; con sus propios atributos definidos. Digamos que la clase Casa es el plano, y una casa específica en una calle determinada es el objeto.&lt;/p&gt;
@@ -97,7 +97,7 @@ data-copied-label="¡Copiado!"
 &lt;h2&gt;Self vs This&lt;span class="hx:absolute hx:-mt-20" id="self-vs-this"&gt;&lt;/span&gt;
 &lt;a href="#self-vs-this" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Un detalle importante en los métodos es cómo acceden a los atributos y otros métodos del objeto. Aquí entra otra diferencia entre lenguajes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Self&lt;/strong&gt;: En Python, los atributos y métodos se acceden dentro de la clase anteponiendo &lt;code&gt;self&lt;/code&gt;. Esto apunta al objeto instanciado.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self&lt;/strong&gt;: En Python, los atributos y métodos se acceden dentro de la clase anteponiendo &lt;code&gt;self&lt;/code&gt;. Esto apunta al objeto creado.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Persona&lt;/span&gt;:
