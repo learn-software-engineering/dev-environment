@@ -65,11 +65,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;In the code above, there are three clear paths: one for when age is 13 or less, one for when age is between 13 and 18, and another for when age is 18 or is above 18.&lt;/p&gt;
-&lt;p&gt;Another way to solve this problem is through the &lt;code&gt;switch-case&lt;/code&gt; structure, which, although Python does not natively incorporate, other languages like &lt;a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29"target="_blank" rel="noopener"&gt;Java&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
-&lt;/svg&gt;&lt;/a&gt; or &lt;a href="https://en.wikipedia.org/wiki/C%2B%2B"target="_blank" rel="noopener"&gt;C++&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
-&lt;/svg&gt;&lt;/a&gt; do, and it is an important tool to be familiar with. This structure allows programmers to handle multiple conditions in a more organized way than a series of &lt;code&gt;if-elif-else&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Another way to solve this problem is through the &lt;code&gt;switch-case&lt;/code&gt; structure, which, although Python does not natively incorporate, other languages like &lt;a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29"target="_blank" rel="noopener"&gt;Java&lt;/a&gt; or &lt;a href="https://en.wikipedia.org/wiki/C%2B%2B"target="_blank" rel="noopener"&gt;C++&lt;/a&gt; do, and it is an important tool to be familiar with. This structure allows programmers to handle multiple conditions in a more organized way than a series of &lt;code&gt;if-elif-else&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;In Java, for example:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; day &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 3;
@@ -128,11 +124,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h3&gt;do-while&lt;span class="hx:absolute hx:-mt-20" id="do-while"&gt;&lt;/span&gt;
-&lt;a href="#do-while" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Similar to &lt;code&gt;while&lt;/code&gt; but guarantees at least one execution since the code block is executed first, before evaluating the condition. Python does not implement this structure, but other languages like &lt;a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29"target="_blank" rel="noopener"&gt;Java&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
-&lt;/svg&gt;&lt;/a&gt; y &lt;a href="https://en.wikipedia.org/wiki/C%2B%2B"target="_blank" rel="noopener"&gt;C++&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
-&lt;/svg&gt;&lt;/a&gt; do.&lt;/p&gt;
+&lt;a href="#do-while" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Similar to &lt;code&gt;while&lt;/code&gt; but guarantees at least one execution since the code block is executed first, before evaluating the condition. Python does not implement this structure, but other languages like &lt;a href="https://en.wikipedia.org/wiki/Java_%28programming_language%29"target="_blank" rel="noopener"&gt;Java&lt;/a&gt; y &lt;a href="https://en.wikipedia.org/wiki/C%2B%2B"target="_blank" rel="noopener"&gt;C++&lt;/a&gt; do.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 1;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
@@ -395,17 +387,13 @@ result --&amp;gt; final
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
-&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Boolean Logic</title><link>http://localhost:1313/programming/intro/boolean-logic/</link><pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/programming/intro/boolean-logic/</guid><description>
 &lt;img src="http://localhost:1313/programming/intro/boolean-logic/featured.en_hu_d5432788a8c74c7c.jpg" width="640" height="428"/>&lt;p&gt;In life, we often seek certainties. Will it rain tomorrow, true or false? Is a certain action right or wrong? This dichotomy, this division between two opposing states, lies at the very core of a fundamental branch of mathematics and computer science: Boolean logic.&lt;/p&gt;
-&lt;p&gt;Named in honour of &lt;a href="https://en.wikipedia.org/wiki/George_Boole"target="_blank" rel="noopener"&gt;George Boole&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
-&lt;/svg&gt;&lt;/a&gt;, a 19th-century English mathematician, Boolean logic is a mathematical system that deals with operations resulting in one of two possible outcomes: true or false, typically represented as 1 and 0, respectively. In his groundbreaking work, &amp;ldquo;An Investigation of the Laws of Thought,&amp;rdquo; Boole laid the foundations for this logic, introducing an algebraic system that could be employed to depict logical structures.&lt;/p&gt;
+&lt;p&gt;Named in honour of &lt;a href="https://en.wikipedia.org/wiki/George_Boole"target="_blank" rel="noopener"&gt;George Boole&lt;/a&gt;, a 19th-century English mathematician, Boolean logic is a mathematical system that deals with operations resulting in one of two possible outcomes: true or false, typically represented as 1 and 0, respectively. In his groundbreaking work, &amp;ldquo;An Investigation of the Laws of Thought,&amp;rdquo; Boole laid the foundations for this logic, introducing an algebraic system that could be employed to depict logical structures.&lt;/p&gt;
 &lt;h2&gt;Boolean operations&lt;span class="hx:absolute hx:-mt-20" id="boolean-operations"&gt;&lt;/span&gt;
 &lt;a href="#boolean-operations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Within Boolean logic, several fundamental operations allow for the manipulation and combination of these binary expressions:&lt;/p&gt;
 &lt;ol&gt;
@@ -506,9 +494,7 @@ result --&amp;gt; final
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
-&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

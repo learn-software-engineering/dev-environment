@@ -8,7 +8,7 @@
 ### Mathematical Foundations
 
 #### Linear Algebra
-- [Vectors, Scalars and Vector Spaces](http://localhost:1313/ai/math/algebra/vectors/): In 2017, researchers at Google Brain published Attention Is All You Need , introducing the … - Published 2026-03-06
+- [Vectors, Scalars and Vector Spaces](http://localhost:1313/ai/math/algebra/vectors/): In 2017, researchers at Google Brain published Attention Is All You Need, introducing the … - Published 2026-03-06
 
 ## Blog
 - [Continuous Delivery](http://localhost:1313/blog/continuous-delivery/): Continuous Delivery (CD) is deeply rooted in the first principle of the Agile Manifesto posted in … - Published 2023-09-02
@@ -78,5 +78,5 @@ Data or information Reference to … - Published 2023-11-01
 - [About](http://localhost:1313/about/): 
 
 ---
-Generated on 2026-03-14 22:58:57 UTC
+Generated on 2026-03-17 00:12:03 UTC
 Site: http://localhost:1313/

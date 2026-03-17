@@ -19,7 +19,7 @@
 ### Fundamentos Matemáticos
 
 #### Álgebra Lineal
-- [Vectores, Escalares y Espacios Vectoriales](http://localhost:1313/es/ai/math/algebra/vectors/): En 2017, investigadores de Google Brain publicaron Attention Is All You Need , el artículo que … - Published 2026-03-06
+- [Vectores, Escalares y Espacios Vectoriales](http://localhost:1313/es/ai/math/algebra/vectors/): En 2017, investigadores de Google Brain publicaron Attention Is All You Need, el artículo que … - Published 2026-03-06
 
 ## Programación
 
@@ -60,5 +60,5 @@ Dato o información … - Published 2023-11-01
 - [Acerca de](http://localhost:1313/es/about/): 
 
 ---
-Generated on 2026-03-14 22:59:01 UTC
+Generated on 2026-03-17 00:12:07 UTC
 Site: http://localhost:1313/
