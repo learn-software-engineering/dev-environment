@@ -448,8 +448,8 @@ var __esbuild_esm_mermaid_nm;
   var init_assignWithDepth = __esm({
     "src/assignWithDepth.ts"() {
       "use strict";
-      assignWithDepth = /* @__PURE__ */ __name((dst, src, { depth = 2, clobber = false } = {}) => {
-        const config3 = { depth, clobber };
+      assignWithDepth = /* @__PURE__ */ __name((dst, src, { depth = 2 } = {}) => {
+        const config3 = { depth };
         if (Array.isArray(src) && !Array.isArray(dst)) {
           src.forEach((s2) => assignWithDepth(dst, s2, config3));
           return dst;
@@ -461,22 +461,45 @@ var __esbuild_esm_mermaid_nm;
           });
           return dst;
         }
-        if (dst === void 0 || depth <= 0) {
+        if (dst === void 0 || dst === null || depth <= 0) {
           if (dst !== void 0 && dst !== null && typeof dst === "object" && typeof src === "object") {
             return Object.assign(dst, src);
           } else {
             return src;
           }
         }
-        if (src !== void 0 && typeof dst === "object" && typeof src === "object") {
-          Object.keys(src).forEach((key) => {
-            if (typeof src[key] === "object" && src[key] !== null && (dst[key] === void 0 || typeof dst[key] === "object")) {
-              if (dst[key] === void 0) {
-                dst[key] = Array.isArray(src[key]) ? [] : {};
+        if (src !== void 0 && src !== null && typeof dst === "object" && typeof src === "object") {
+          const dstWithKeys = dst;
+          Object.entries(src).forEach(([key, srcValue]) => {
+            if (typeof srcValue === "object") {
+              if (srcValue === null) {
+                return;
               }
-              dst[key] = assignWithDepth(dst[key], src[key], { depth: depth - 1, clobber });
-            } else if (clobber || typeof dst[key] !== "object" && typeof src[key] !== "object") {
-              dst[key] = src[key];
+              if (!Object.hasOwn(dst, key)) {
+                Object.defineProperty(dst, key, {
+                  value: void 0,
+                  writable: true,
+                  enumerable: true,
+                  configurable: true
+                });
+              }
+              if (dstWithKeys[key] === void 0) {
+                dstWithKeys[key] = Array.isArray(srcValue) ? [] : {};
+              }
+              if (typeof dstWithKeys[key] === "object") {
+                dstWithKeys[key] = assignWithDepth(dstWithKeys[key], srcValue, { depth: depth - 1 });
+              }
+            } else if (typeof dstWithKeys[key] !== "object") {
+              if (Object.hasOwn(dst, key)) {
+                dstWithKeys[key] = srcValue;
+              } else {
+                Object.defineProperty(dst, key, {
+                  value: srcValue,
+                  writable: true,
+                  enumerable: true,
+                  configurable: true
+                });
+              }
             }
           });
         }
@@ -6786,8 +6809,7 @@ var __esbuild_esm_mermaid_nm;
         return assignWithDepth_default({}, siteConfig);
       }, "getSiteConfig");
       setConfig = /* @__PURE__ */ __name((conf5) => {
-        checkConfig(conf5);
-        assignWithDepth_default(currentConfig, conf5);
+        updateCurrentConfig(currentConfig, [conf5]);
         return getConfig();
       }, "setConfig");
       getConfig = /* @__PURE__ */ __name(() => {
@@ -23812,7 +23834,7 @@ var __esbuild_esm_mermaid_nm;
         } else {
           log.warn(`No theme found for ${type3}`);
         }
-        return ` & {
+        return `& {
     font-family: ${options2.fontFamily};
     font-size: ${options2.fontSize};
     fill: ${options2.textColor}
@@ -145687,7 +145709,7 @@ ${content}`;
     "src/diagrams/info/infoDb.ts"() {
       "use strict";
       DEFAULT_INFO_DB = {
-        version: "11.16.0" + (true ? "" : "-tiny")
+        version: "11.16.1" + (true ? "" : "-tiny")
       };
       getVersion = /* @__PURE__ */ __name(() => DEFAULT_INFO_DB.version, "getVersion");
       db2 = {
@@ -149380,12 +149402,12 @@ ${content}`;
     if (isLinearAxisData(xyChartData.xAxis)) {
       const min10 = xyChartData.xAxis.min;
       const max10 = xyChartData.xAxis.max;
-      const step3 = (max10 - min10) / (data6.length - 1);
-      const categories = [];
-      for (let i2 = min10; i2 <= max10; i2 += step3) {
-        categories.push(`${i2}`);
+      if (data6.length === 1) {
+        retData = [[`${min10}`, data6[0]]];
+      } else {
+        const step3 = (max10 - min10) / (data6.length - 1);
+        retData = data6.map((datum2, index) => [`${min10 + index * step3}`, datum2]);
       }
-      retData = categories.map((c3, i2) => [c3, data6[i2]]);
     }
     return retData;
   }
@@ -167858,7 +167880,7 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
   });
 
   // src/diagrams/radar/db.ts
-  var defaultOptions, defaultRadarData, data4, DEFAULT_RADAR_CONFIG, getConfig5, getAxes, getCurves, getOptions2, setAxes, setCurves, computeCurveEntries, setOptions7, clear17, db5;
+  var defaultOptions, MAX_TICKS, defaultRadarData, data4, DEFAULT_RADAR_CONFIG, getConfig5, getAxes, getCurves, getOptions2, setAxes, setCurves, computeCurveEntries, setOptions7, clear17, db5;
   var init_db2 = __esm({
     "src/diagrams/radar/db.ts"() {
       "use strict";
@@ -167866,6 +167888,7 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
       init_defaultConfig();
       init_utils2();
       init_commonDb();
+      init_logger();
       defaultOptions = {
         showLegend: true,
         ticks: 5,
@@ -167873,6 +167896,7 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
         min: 0,
         graticule: "circle"
       };
+      MAX_TICKS = 32;
       defaultRadarData = {
         axes: [],
         curves: [],
@@ -167938,6 +167962,12 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
           min: optionMap.min?.value ?? defaultOptions.min,
           graticule: optionMap.graticule?.value ?? defaultOptions.graticule
         };
+        if (data4.options.ticks > MAX_TICKS) {
+          log.warn(
+            `Radar diagram ticks (${data4.options.ticks}) exceeds maximum allowed (${MAX_TICKS}). Using ${MAX_TICKS} instead.`
+          );
+          data4.options.ticks = MAX_TICKS;
+        }
       }, "setOptions");
       clear17 = /* @__PURE__ */ __name(() => {
         clear();
@@ -172790,7 +172820,7 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
   });
 
   // src/diagrams/architecture/architectureTypes.ts
-  var ArchitectureDirectionName, ArchitectureDirectionArrow, ArchitectureDirectionArrowShift, getOppositeArchitectureDirection, isArchitectureDirection, isArchitectureDirectionX, isArchitectureDirectionY, isArchitectureDirectionXY, isArchitecturePairXY, isValidArchitectureDirectionPair, getArchitectureDirectionPair, shiftPositionByArchitectureDirectionPair, getArchitectureDirectionXYFactors, getArchitectureDirectionAlignment, isArchitectureService, isArchitectureJunction, edgeData, nodeData;
+  var ArchitectureDirectionName, ArchitectureDirectionArrow, ArchitectureDirectionArrowShift, getOppositeArchitectureDirection, isArchitectureDirection, isArchitectureDirectionX, isArchitectureDirectionY, isArchitectureDirectionXY, isArchitecturePairXY, isValidArchitectureDirectionPair, getArchitectureDirectionPair, shiftPositionByArchitectureDirectionPair, getArchitectureDirectionXYFactors, getArchitectureDirectionAlignment, isArchitectureService, isArchitectureJunction, architectureGroupAlignmentKey, edgeData, nodeData;
   var init_architectureTypes = __esm({
     "src/diagrams/architecture/architectureTypes.ts"() {
       "use strict";
@@ -172894,6 +172924,10 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
         const temp = x5;
         return temp.type === "junction";
       }, "isArchitectureJunction");
+      architectureGroupAlignmentKey = /* @__PURE__ */ __name((groupA, groupB) => {
+        const [lowerGroupId, upperGroupId] = [groupA, groupB].sort();
+        return `${JSON.stringify(lowerGroupId)}-${JSON.stringify(upperGroupId)}`;
+      }, "architectureGroupAlignmentKey");
       edgeData = /* @__PURE__ */ __name((edge) => {
         return edge.data();
       }, "edgeData");
@@ -172916,12 +172950,12 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
       DEFAULT_ARCHITECTURE_CONFIG = defaultConfig_default.architecture;
       ArchitectureDB = class {
         constructor() {
-          this.nodes = {};
-          this.groups = {};
+          this.nodes = /* @__PURE__ */ new Map();
+          this.groups = /* @__PURE__ */ new Map();
           this.edges = [];
           this.layoutHints = [];
-          this.registeredIds = {};
-          this.elements = {};
+          this.registeredIds = /* @__PURE__ */ new Map();
+          this.elements = /* @__PURE__ */ new Map();
           this.diagramId = "";
           this.setAccTitle = setAccTitle;
           this.getAccTitle = getAccTitle;
@@ -172941,13 +172975,13 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
           return this.diagramId;
         }
         clear() {
-          this.nodes = {};
-          this.groups = {};
+          this.nodes = /* @__PURE__ */ new Map();
+          this.groups = /* @__PURE__ */ new Map();
           this.edges = [];
           this.layoutHints = [];
-          this.registeredIds = {};
+          this.registeredIds = /* @__PURE__ */ new Map();
           this.dataStructures = void 0;
-          this.elements = {};
+          this.elements = /* @__PURE__ */ new Map();
           this.diagramId = "";
           clear();
         }
@@ -172958,26 +172992,26 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
           title: title2,
           iconText
         }) {
-          if (this.registeredIds[id41] !== void 0) {
+          if (this.registeredIds.has(id41)) {
             throw new Error(
-              `The service id [${id41}] is already in use by another ${this.registeredIds[id41]}`
+              `The service id [${id41}] is already in use by another ${this.registeredIds.get(id41)}`
             );
           }
           if (parent4 !== void 0) {
             if (id41 === parent4) {
               throw new Error(`The service [${id41}] cannot be placed within itself`);
             }
-            if (this.registeredIds[parent4] === void 0) {
+            if (!this.registeredIds.has(parent4)) {
               throw new Error(
                 `The service [${id41}]'s parent does not exist. Please make sure the parent is created before this service`
               );
             }
-            if (this.registeredIds[parent4] === "node") {
+            if (this.registeredIds.get(parent4) === "node") {
               throw new Error(`The service [${id41}]'s parent is not a group`);
             }
           }
-          this.registeredIds[id41] = "node";
-          this.nodes[id41] = {
+          this.registeredIds.set(id41, "node");
+          this.nodes.set(id41, {
             id: id41,
             type: "service",
             icon: icon2,
@@ -172985,76 +173019,76 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
             title: title2,
             edges: [],
             in: parent4
-          };
+          });
         }
         getServices() {
-          return Object.values(this.nodes).filter(isArchitectureService);
+          return [...this.nodes.values()].filter(isArchitectureService);
         }
         addJunction({ id: id41, in: parent4 }) {
-          if (this.registeredIds[id41] !== void 0) {
+          if (this.registeredIds.has(id41)) {
             throw new Error(
-              `The junction id [${id41}] is already in use by another ${this.registeredIds[id41]}`
+              `The junction id [${id41}] is already in use by another ${this.registeredIds.get(id41)}`
             );
           }
           if (parent4 !== void 0) {
             if (id41 === parent4) {
               throw new Error(`The junction [${id41}] cannot be placed within itself`);
             }
-            if (this.registeredIds[parent4] === void 0) {
+            if (!this.registeredIds.has(parent4)) {
               throw new Error(
                 `The junction [${id41}]'s parent does not exist. Please make sure the parent is created before this junction`
               );
             }
-            if (this.registeredIds[parent4] === "node") {
+            if (this.registeredIds.get(parent4) === "node") {
               throw new Error(`The junction [${id41}]'s parent is not a group`);
             }
           }
-          this.registeredIds[id41] = "node";
-          this.nodes[id41] = {
+          this.registeredIds.set(id41, "node");
+          this.nodes.set(id41, {
             id: id41,
             type: "junction",
             edges: [],
             in: parent4
-          };
+          });
         }
         getJunctions() {
-          return Object.values(this.nodes).filter(isArchitectureJunction);
+          return [...this.nodes.values()].filter(isArchitectureJunction);
         }
         getNodes() {
-          return Object.values(this.nodes);
+          return [...this.nodes.values()];
         }
         getNode(id41) {
-          return this.nodes[id41] ?? null;
+          return this.nodes.get(id41) ?? null;
         }
         addGroup({ id: id41, icon: icon2, in: parent4, title: title2 }) {
-          if (this.registeredIds?.[id41] !== void 0) {
+          if (this.registeredIds.has(id41)) {
             throw new Error(
-              `The group id [${id41}] is already in use by another ${this.registeredIds[id41]}`
+              `The group id [${id41}] is already in use by another ${this.registeredIds.get(id41)}`
             );
           }
           if (parent4 !== void 0) {
             if (id41 === parent4) {
               throw new Error(`The group [${id41}] cannot be placed within itself`);
             }
-            if (this.registeredIds?.[parent4] === void 0) {
+            if (!this.registeredIds.has(parent4)) {
               throw new Error(
                 `The group [${id41}]'s parent does not exist. Please make sure the parent is created before this group`
               );
             }
-            if (this.registeredIds?.[parent4] === "node") {
+            if (this.registeredIds.get(parent4) === "node") {
               throw new Error(`The group [${id41}]'s parent is not a group`);
             }
           }
-          this.registeredIds[id41] = "group";
-          this.groups[id41] = {
+          this.registeredIds.set(id41, "group");
+          this.groups.set(id41, {
             id: id41,
             icon: icon2,
             title: title2,
             in: parent4
-          };
+          });
         }
         getGroups() {
-          return Object.values(this.groups);
+          return [...this.groups.values()];
         }
         addEdge({
           lhsId,
@@ -173077,18 +173111,18 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
               `Invalid direction given for right hand side of edge ${lhsId}--${rhsId}. Expected (L,R,T,B) got ${String(rhsDir)}`
             );
           }
-          if (this.nodes[lhsId] === void 0 && this.groups[lhsId] === void 0) {
+          if (!this.nodes.has(lhsId) && !this.groups.has(lhsId)) {
             throw new Error(
               `The left-hand id [${lhsId}] does not yet exist. Please create the service/group before declaring an edge to it.`
             );
           }
-          if (this.nodes[rhsId] === void 0 && this.groups[rhsId] === void 0) {
+          if (!this.nodes.has(rhsId) && !this.groups.has(rhsId)) {
             throw new Error(
               `The right-hand id [${rhsId}] does not yet exist. Please create the service/group before declaring an edge to it.`
             );
           }
-          const lhsGroupId = this.nodes[lhsId].in;
-          const rhsGroupId = this.nodes[rhsId].in;
+          const lhsGroupId = this.nodes.get(lhsId).in;
+          const rhsGroupId = this.nodes.get(rhsId).in;
           if (lhsGroup && lhsGroupId && rhsGroupId && lhsGroupId == rhsGroupId) {
             throw new Error(
               `The left-hand id [${lhsId}] is modified to traverse the group boundary, but the edge does not pass through two groups.`
@@ -173111,9 +173145,11 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
             title: title2
           };
           this.edges.push(edge);
-          if (this.nodes[lhsId] && this.nodes[rhsId]) {
-            this.nodes[lhsId].edges.push(this.edges[this.edges.length - 1]);
-            this.nodes[rhsId].edges.push(this.edges[this.edges.length - 1]);
+          const lhsNode = this.nodes.get(lhsId);
+          const rhsNode = this.nodes.get(rhsId);
+          if (lhsNode && rhsNode) {
+            lhsNode.edges.push(this.edges[this.edges.length - 1]);
+            rhsNode.edges.push(this.edges[this.edges.length - 1]);
           }
         }
         getEdges() {
@@ -173127,7 +173163,7 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
           }
           const seen = /* @__PURE__ */ new Set();
           hint.members.forEach((id41) => {
-            if (this.registeredIds[id41] !== "node") {
+            if (this.registeredIds.get(id41) !== "node") {
               throw new Error(
                 `align ${hint.direction} references [${id41}], which is not a service or junction`
               );
@@ -173149,57 +173185,59 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
          */
         getDataStructures() {
           if (this.dataStructures === void 0) {
-            const groupAlignments = {};
-            const adjList = Object.entries(this.nodes).reduce((prevOuter, [id41, service]) => {
-              prevOuter[id41] = service.edges.reduce((prevInner, edge) => {
+            const groupAlignments = /* @__PURE__ */ new Map();
+            const adjList = /* @__PURE__ */ new Map();
+            for (const [id41, service] of this.nodes.entries()) {
+              const directionMap = /* @__PURE__ */ new Map();
+              for (const edge of service.edges) {
                 const lhsGroupId = this.getNode(edge.lhsId)?.in;
                 const rhsGroupId = this.getNode(edge.rhsId)?.in;
                 if (lhsGroupId && rhsGroupId && lhsGroupId !== rhsGroupId) {
                   const alignment = getArchitectureDirectionAlignment(edge.lhsDir, edge.rhsDir);
                   if (alignment !== "bend") {
-                    groupAlignments[lhsGroupId] ??= {};
-                    groupAlignments[lhsGroupId][rhsGroupId] = alignment;
-                    groupAlignments[rhsGroupId] ??= {};
-                    groupAlignments[rhsGroupId][lhsGroupId] = alignment;
+                    groupAlignments.set(architectureGroupAlignmentKey(lhsGroupId, rhsGroupId), alignment);
                   }
                 }
                 if (edge.lhsId === id41) {
                   const pair = getArchitectureDirectionPair(edge.lhsDir, edge.rhsDir);
                   if (pair) {
-                    prevInner[pair] = edge.rhsId;
+                    directionMap.set(pair, edge.rhsId);
                   }
                 } else {
                   const pair = getArchitectureDirectionPair(edge.rhsDir, edge.lhsDir);
                   if (pair) {
-                    prevInner[pair] = edge.lhsId;
+                    directionMap.set(pair, edge.lhsId);
                   }
                 }
-                return prevInner;
-              }, {});
-              return prevOuter;
-            }, {});
-            const firstId = Object.keys(adjList)[0];
-            const visited = { [firstId]: 1 };
-            const notVisited = Object.keys(adjList).reduce(
-              (prev2, id41) => id41 === firstId ? prev2 : { ...prev2, [id41]: 1 },
-              {}
-            );
+              }
+              adjList.set(id41, directionMap);
+            }
+            const visited = /* @__PURE__ */ new Set();
+            const notVisited = new Set(adjList.keys());
             const BFS = /* @__PURE__ */ __name((startingId) => {
-              const spatialMap = { [startingId]: [0, 0] };
+              const spatialMap = /* @__PURE__ */ new Map([[startingId, [0, 0]]]);
               const queue = [startingId];
               while (queue.length > 0) {
                 const id41 = queue.shift();
                 if (id41) {
-                  visited[id41] = 1;
-                  delete notVisited[id41];
-                  const adj = adjList[id41];
-                  const [posX, posY] = spatialMap[id41];
-                  Object.entries(adj).forEach(([dir2, rhsId]) => {
-                    if (!visited[rhsId]) {
-                      spatialMap[rhsId] = shiftPositionByArchitectureDirectionPair(
-                        [posX, posY],
-                        dir2
-                      );
+                  visited.add(id41);
+                  notVisited.delete(id41);
+                  const adj = adjList.get(id41);
+                  if (!adj) {
+                    throw new Error(
+                      `BFS error: adjacency list for id ${id41} not found. Please report this as a bug.`
+                    );
+                  }
+                  const pos = spatialMap.get(id41);
+                  if (!pos) {
+                    throw new Error(
+                      `BFS error: position for id ${id41} not found in spatial map. Please report this as a bug.`
+                    );
+                  }
+                  const [posX, posY] = pos;
+                  adj.forEach((rhsId, dir2) => {
+                    if (!visited.has(rhsId)) {
+                      spatialMap.set(rhsId, shiftPositionByArchitectureDirectionPair([posX, posY], dir2));
                       queue.push(rhsId);
                     }
                   });
@@ -173207,9 +173245,10 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
               }
               return spatialMap;
             }, "BFS");
-            const spatialMaps = [BFS(firstId)];
-            while (Object.keys(notVisited).length > 0) {
-              spatialMaps.push(BFS(Object.keys(notVisited)[0]));
+            const spatialMaps = [];
+            while (notVisited.size > 0) {
+              const firstId = notVisited.values().next().value;
+              spatialMaps.push(BFS(firstId));
             }
             this.dataStructures = {
               adjList,
@@ -173220,10 +173259,10 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
           return this.dataStructures;
         }
         setElementForId(id41, element3) {
-          this.elements[id41] = element3;
+          this.elements.set(id41, element3);
         }
         getElementById(id41) {
-          return this.elements[id41];
+          return this.elements.get(id41);
         }
         getConfig() {
           return cleanAndMerge({
@@ -181454,56 +181493,62 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
     });
   }
   function getAlignments(db12, spatialMaps, groupAlignments, layoutHints = []) {
-    const flattenAlignments = /* @__PURE__ */ __name((alignmentObj, alignmentDir) => {
-      return Object.entries(alignmentObj).reduce(
-        (prev2, [dir2, alignments2]) => {
-          let cnt4 = 0;
-          const arr = Object.entries(alignments2);
-          if (arr.length === 1) {
-            prev2[dir2] = arr[0][1];
-            return prev2;
-          }
-          for (let i2 = 0; i2 < arr.length - 1; i2++) {
-            for (let j3 = i2 + 1; j3 < arr.length; j3++) {
-              const [aGroupId, aNodeIds] = arr[i2];
-              const [bGroupId, bNodeIds] = arr[j3];
-              const alignment = groupAlignments[aGroupId]?.[bGroupId];
-              if (alignment === alignmentDir) {
-                prev2[dir2] ??= [];
-                prev2[dir2] = [...prev2[dir2], ...aNodeIds, ...bNodeIds];
-              } else if (aGroupId === "default" || bGroupId === "default") {
-                prev2[dir2] ??= [];
-                prev2[dir2] = [...prev2[dir2], ...aNodeIds, ...bNodeIds];
-              } else {
-                const keyA = `${dir2}-${cnt4++}`;
-                prev2[keyA] = aNodeIds;
-                const keyB = `${dir2}-${cnt4++}`;
-                prev2[keyB] = bNodeIds;
-              }
+    const flattenAlignments = /* @__PURE__ */ __name((alignmentMap, alignmentDir) => {
+      const flattened = /* @__PURE__ */ new Map();
+      for (const [numericDir, alignments2] of alignmentMap.entries()) {
+        const dir2 = `${numericDir}`;
+        let cnt4 = 0;
+        const arr = [...alignments2.entries()];
+        if (arr.length === 1) {
+          flattened.set(dir2, arr[0][1]);
+          continue;
+        }
+        for (let i2 = 0; i2 < arr.length - 1; i2++) {
+          for (let j3 = i2 + 1; j3 < arr.length; j3++) {
+            const [aGroupId, aNodeIds] = arr[i2];
+            const [bGroupId, bNodeIds] = arr[j3];
+            const alignment = groupAlignments.get(architectureGroupAlignmentKey(aGroupId, bGroupId));
+            if (alignment === alignmentDir) {
+              flattened.set(dir2, [...flattened.get(dir2) ?? [], ...aNodeIds, ...bNodeIds]);
+            } else if (aGroupId === "default" || bGroupId === "default") {
+              flattened.set(dir2, [...flattened.get(dir2) ?? [], ...aNodeIds, ...bNodeIds]);
+            } else {
+              const keyA = `${dir2}-${cnt4++}`;
+              flattened.set(keyA, aNodeIds);
+              const keyB = `${dir2}-${cnt4++}`;
+              flattened.set(keyB, bNodeIds);
             }
           }
-          return prev2;
-        },
-        {}
-      );
+        }
+      }
+      return flattened;
     }, "flattenAlignments");
     const alignments = spatialMaps.map((spatialMap) => {
-      const horizontalAlignments = {};
-      const verticalAlignments = {};
-      Object.entries(spatialMap).forEach(([id41, [x5, y6]]) => {
+      const horizontalAlignments = /* @__PURE__ */ new Map();
+      const verticalAlignments = /* @__PURE__ */ new Map();
+      spatialMap.forEach(([x5, y6], id41) => {
         const nodeGroup = db12.getNode(id41)?.in ?? "default";
-        horizontalAlignments[y6] ??= {};
-        horizontalAlignments[y6][nodeGroup] ??= [];
-        horizontalAlignments[y6][nodeGroup].push(id41);
-        verticalAlignments[x5] ??= {};
-        verticalAlignments[x5][nodeGroup] ??= [];
-        verticalAlignments[x5][nodeGroup].push(id41);
+        const horizontalAlignment = horizontalAlignments.get(y6) ?? /* @__PURE__ */ new Map();
+        if (!horizontalAlignments.has(y6)) {
+          horizontalAlignments.set(y6, horizontalAlignment);
+        }
+        const verticalAlignment2 = verticalAlignments.get(x5) ?? /* @__PURE__ */ new Map();
+        if (!verticalAlignments.has(x5)) {
+          verticalAlignments.set(x5, verticalAlignment2);
+        }
+        for (const alignment of [horizontalAlignment, verticalAlignment2]) {
+          const nodeList = alignment.get(nodeGroup) ?? [];
+          if (!alignment.has(nodeGroup)) {
+            alignment.set(nodeGroup, nodeList);
+          }
+          nodeList.push(id41);
+        }
       });
       return {
-        horiz: Object.values(flattenAlignments(horizontalAlignments, "horizontal")).filter(
+        horiz: [...flattenAlignments(horizontalAlignments, "horizontal").values()].filter(
           (arr) => arr.length > 1
         ),
-        vert: Object.values(flattenAlignments(verticalAlignments, "vertical")).filter(
+        vert: [...flattenAlignments(verticalAlignments, "vertical").values()].filter(
           (arr) => arr.length > 1
         )
       };
@@ -181559,8 +181604,8 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
     const posToStr = /* @__PURE__ */ __name((pos) => `${pos[0]},${pos[1]}`, "posToStr");
     const strToPos = /* @__PURE__ */ __name((pos) => pos.split(",").map((p3) => parseInt(p3)), "strToPos");
     spatialMaps.forEach((spatialMap) => {
-      const invSpatialMap = Object.fromEntries(
-        Object.entries(spatialMap).map(([id41, pos]) => [posToStr(pos), id41])
+      const invSpatialMap = new Map(
+        [...spatialMap.entries()].map(([key, value2]) => [posToStr(value2), key])
       );
       const queue = [posToStr([0, 0])];
       const visited = {};
@@ -181574,12 +181619,12 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
         const curr = queue.shift();
         if (curr) {
           visited[curr] = 1;
-          const currId = invSpatialMap[curr];
+          const currId = invSpatialMap.get(curr);
           if (currId) {
             const currPos = strToPos(curr);
             Object.entries(directions).forEach(([dir2, shift2]) => {
               const newPos = posToStr([currPos[0] + shift2[0], currPos[1] + shift2[1]]);
-              const newId2 = invSpatialMap[newPos];
+              const newId2 = invSpatialMap.get(newPos);
               if (newId2 && !visited[newPos]) {
                 queue.push(newPos);
                 if (declaredPairs.has(`${currId}|${newId2}`)) {
@@ -191413,7 +191458,26 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
               return;
             }
             element3.props = element3.props.map((prop) => {
-              if (!prop.startsWith(namespace)) {
+              if (prop === namespace && Array.isArray(element3.children) && element3.children.every((child) => {
+                if (child.type !== "decl") {
+                  return false;
+                }
+                const allowedProps = /* @__PURE__ */ new Set([
+                  "font-family",
+                  "font-size",
+                  "fill"
+                ]);
+                return allowedProps.has(child.props);
+              })) {
+                return prop;
+              }
+              const alreadyNamespaced = (
+                // If the prop already starts with the namespace followed by a space or >, then it's already namespaced.
+                (prop.startsWith(`${namespace} `) || prop.startsWith(`${namespace}>`)) && // Column combinators are not yet widely supported, it's not yet compressed to `${namespace}||`,
+                // so we need to add an extra check for that
+                !prop.startsWith(`${namespace} ||`)
+              );
+              if (!alreadyNamespaced) {
                 return `${namespace} ${prop}`;
               }
               return prop;
@@ -191563,12 +191627,12 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
     style1.innerHTML = rules2;
     svg2.insertBefore(style1, firstChild);
     try {
-      await diag.renderer.draw(text4, id41, "11.16.0", diag);
+      await diag.renderer.draw(text4, id41, "11.16.1", diag);
     } catch (e3) {
       if (config3.suppressErrorRendering) {
         removeTempElements();
       } else {
-        errorRenderer_default.draw(text4, id41, "11.16.0");
+        errorRenderer_default.draw(text4, id41, "11.16.1");
       }
       throw e3;
     }
@@ -191637,6 +191701,10 @@ ${prefix}${Math.round(value2 * 100) / 100}${suffix}`;
     getDiagramFromText,
     initialize,
     getConfig,
+    /**
+     * @deprecated This function does nothing. It will be overwritten by the next
+     *             call to {@link render} or {@link parse}.
+     */
     setConfig,
     getSiteConfig,
     updateSiteConfig,
