@@ -6,9 +6,9 @@
 &lt;li&gt;&lt;strong&gt;Flexibilidad&lt;/strong&gt;: La implementación interna puede ser modificada sin afectar otras partes del código que utilizan el objeto.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Reducción de complejidad&lt;/strong&gt;: Al ocultar los detalles del funcionamiento interno, el encapsulamiento reduce la complejidad del sistema desde una perspectiva externa.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Implementación en Python&lt;span class="hx:absolute hx:-mt-20" id="implementación-en-python"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="implementación-en-python"&gt;Implementación en Python&lt;span class="hx:absolute hx:-mt-20" id="implementación-en-python"&gt;&lt;/span&gt;
 &lt;a href="#implementaci%c3%b3n-en-python" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python ofrece varios mecanismos para implementar el encapsulamiento. Exploremos estos con ejemplos:&lt;/p&gt;
-&lt;h4&gt;1. Uso de atributos privados&lt;span class="hx:absolute hx:-mt-20" id="1-uso-de-atributos-privados"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="1-uso-de-atributos-privados"&gt;1. Uso de atributos privados&lt;span class="hx:absolute hx:-mt-20" id="1-uso-de-atributos-privados"&gt;&lt;/span&gt;
 &lt;a href="#1-uso-de-atributos-privados" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;En Python, podemos crear atributos privados prefijando el nombre del atributo con doble guion bajo (&lt;code&gt;__&lt;/code&gt;). Esto activa el &amp;ldquo;name mangling&amp;rdquo;, que hace que el atributo sea más difícil de acceder desde fuera de la clase.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;CuentaBancaria&lt;/span&gt;:
@@ -58,7 +58,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;Proporcionamos métodos públicos (&lt;code&gt;depositar&lt;/code&gt;, &lt;code&gt;retirar&lt;/code&gt;, &lt;code&gt;obtener_saldo&lt;/code&gt;) para interactuar con estos atributos privados.&lt;/li&gt;
 &lt;li&gt;El acceso directo a &lt;code&gt;__saldo&lt;/code&gt; desde fuera de la clase generará una excepción &lt;code&gt;AttributeError&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;2. Uso de propiedades&lt;span class="hx:absolute hx:-mt-20" id="2-uso-de-propiedades"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="2-uso-de-propiedades"&gt;2. Uso de propiedades&lt;span class="hx:absolute hx:-mt-20" id="2-uso-de-propiedades"&gt;&lt;/span&gt;
 &lt;a href="#2-uso-de-propiedades" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;El decorador &lt;code&gt;@property&lt;/code&gt; de Python nos permite definir métodos que pueden ser accedidos como atributos, proporcionando una forma más pythonica de implementar getters y setters.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Circulo&lt;/span&gt;:
@@ -108,7 +108,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;La propiedad &lt;code&gt;radio&lt;/code&gt; proporciona acceso de lectura y escritura a &lt;code&gt;_radio&lt;/code&gt; con validación.&lt;/li&gt;
 &lt;li&gt;La propiedad &lt;code&gt;area&lt;/code&gt; es de solo lectura y se calcula al vuelo.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Beneficios y mejores prácticas&lt;span class="hx:absolute hx:-mt-20" id="beneficios-y-mejores-prácticas"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="beneficios-y-mejores-prácticas"&gt;Beneficios y mejores prácticas&lt;span class="hx:absolute hx:-mt-20" id="beneficios-y-mejores-prácticas"&gt;&lt;/span&gt;
 &lt;a href="#beneficios-y-mejores-pr%c3%a1cticas" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Los beneficios del encapsulamiento son numerosos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Mejora de la capacidad de mantenimiento&lt;/strong&gt;: Los cambios en la implementación interna no afectan al código externo que utiliza la clase.&lt;/li&gt;
@@ -216,7 +216,7 @@ data-copied-label="¡Copiado!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -228,7 +228,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;strong&gt;Extensibilidad&lt;/strong&gt;: Se puede agregar nueva funcionalidad a las clases existentes sin modificarlas, siguiendo el principio abierto-cerrado.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Polimorfismo&lt;/strong&gt;: La herencia es un prerrequisito para el polimorfismo en tiempo de ejecución (que discutiremos en detalle más adelante).&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Tipos de herencia&lt;span class="hx:absolute hx:-mt-20" id="tipos-de-herencia"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="tipos-de-herencia"&gt;Tipos de herencia&lt;span class="hx:absolute hx:-mt-20" id="tipos-de-herencia"&gt;&lt;/span&gt;
 &lt;a href="#tipos-de-herencia" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Existen varios tipos de herencia, aunque no todos los lenguajes de programación admiten todos los tipos. Los principales tipos son:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Herencia simple&lt;/strong&gt;: Una clase derivada hereda de una sola clase base.&lt;/li&gt;
@@ -238,7 +238,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;strong&gt;Herencia híbrida&lt;/strong&gt;: Una combinación de dos o más tipos de herencia.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Python admite todos estos tipos de herencia. Exploremos cada uno con ejemplos.&lt;/p&gt;
-&lt;h4&gt;Herencia simple&lt;span class="hx:absolute hx:-mt-20" id="herencia-simple"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="herencia-simple"&gt;Herencia simple&lt;span class="hx:absolute hx:-mt-20" id="herencia-simple"&gt;&lt;/span&gt;
 &lt;a href="#herencia-simple" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;La herencia simple es la forma más básica de herencia, donde una clase hereda de una sola clase base.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Animal&lt;/span&gt;:
@@ -278,7 +278,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;code&gt;Perro&lt;/code&gt; sobrescribe el método &lt;code&gt;hacer_sonido&lt;/code&gt; con su propia implementación.&lt;/li&gt;
 &lt;li&gt;Usamos &lt;code&gt;super().__init__()&lt;/code&gt; para llamar al inicializador de la clase base.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;Herencia múltiple&lt;span class="hx:absolute hx:-mt-20" id="herencia-múltiple"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="herencia-múltiple"&gt;Herencia múltiple&lt;span class="hx:absolute hx:-mt-20" id="herencia-múltiple"&gt;&lt;/span&gt;
 &lt;a href="#herencia-m%c3%baltiple" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;La herencia múltiple permite que una clase herede de múltiples clases base. Algunos lenguajes no permiten este tipo de herencia.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Volador&lt;/span&gt;:
@@ -315,7 +315,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Aquí, &lt;code&gt;Pato&lt;/code&gt; hereda de &lt;code&gt;Animal&lt;/code&gt;, &lt;code&gt;Volador&lt;/code&gt; y &lt;code&gt;Nadador&lt;/code&gt;, combinando atributos y métodos de las tres clases.&lt;/p&gt;
-&lt;h4&gt;Herencia multinivel&lt;span class="hx:absolute hx:-mt-20" id="herencia-multinivel"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="herencia-multinivel"&gt;Herencia multinivel&lt;span class="hx:absolute hx:-mt-20" id="herencia-multinivel"&gt;&lt;/span&gt;
 &lt;a href="#herencia-multinivel" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;En la herencia multinivel, una clase derivada hereda de otra clase derivada.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Mamifero&lt;/span&gt;(Animal):
@@ -352,7 +352,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En este ejemplo, &lt;code&gt;Gato&lt;/code&gt; hereda de &lt;code&gt;Mamifero&lt;/code&gt;, que a su vez hereda de &lt;code&gt;Animal&lt;/code&gt;, formando una cadena de herencia multinivel.&lt;/p&gt;
-&lt;h4&gt;Herencia jerárquica&lt;span class="hx:absolute hx:-mt-20" id="herencia-jerárquica"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="herencia-jerárquica"&gt;Herencia jerárquica&lt;span class="hx:absolute hx:-mt-20" id="herencia-jerárquica"&gt;&lt;/span&gt;
 &lt;a href="#herencia-jer%c3%a1rquica" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;La herencia jerárquica implica múltiples clases derivadas heredando de una sola clase base.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Ave&lt;/span&gt;(Animal):
@@ -394,7 +394,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Aquí, tanto &lt;code&gt;Loro&lt;/code&gt; como &lt;code&gt;Pinguino&lt;/code&gt; heredan de &lt;code&gt;Ave&lt;/code&gt;, lo que demuestra la herencia jerárquica.&lt;/p&gt;
-&lt;h4&gt;Herencia híbrida&lt;span class="hx:absolute hx:-mt-20" id="herencia-híbrida"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="herencia-híbrida"&gt;Herencia híbrida&lt;span class="hx:absolute hx:-mt-20" id="herencia-híbrida"&gt;&lt;/span&gt;
 &lt;a href="#herencia-h%c3%adbrida" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;La herencia híbrida es una combinación de múltiples tipos de herencia. Veamos un ejemplo más complejo para ilustrar esto:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Terrestre&lt;/span&gt;:
@@ -444,7 +444,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;code&gt;Anfibio&lt;/code&gt; hereda de &lt;code&gt;Animal&lt;/code&gt;, &lt;code&gt;Terrestre&lt;/code&gt;, y &lt;code&gt;Acuatico&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Esto crea una combinación de herencia multinivel y múltiple&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Consideraciones&lt;span class="hx:absolute hx:-mt-20" id="consideraciones"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="consideraciones"&gt;Consideraciones&lt;span class="hx:absolute hx:-mt-20" id="consideraciones"&gt;&lt;/span&gt;
 &lt;a href="#consideraciones" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;La herencia ofrece varias ventajas. Sin embargo, también hay consideraciones importantes:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Complejidad&lt;/strong&gt;: Las jerarquías de herencia profundas pueden volverse difíciles de entender y mantener.&lt;/li&gt;
@@ -501,7 +501,7 @@ class Acuático {
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -526,7 +526,7 @@ class Acuático {
 &lt;/ol&gt;
 &lt;p&gt;Python admite principalmente el polimorfismo en tiempo de ejecución, ya que es un lenguaje de tipado dinámico. Sin embargo, podemos demostrar conceptos similares al polimorfismo en tiempo de compilación también.&lt;/p&gt;
 &lt;p&gt;Exploremos diferentes aspectos del polimorfismo en Python:&lt;/p&gt;
-&lt;h3&gt;Duck typing&lt;span class="hx:absolute hx:-mt-20" id="duck-typing"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="duck-typing"&gt;Duck typing&lt;span class="hx:absolute hx:-mt-20" id="duck-typing"&gt;&lt;/span&gt;
 &lt;a href="#duck-typing" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python utiliza el duck typing, que es una forma de polimorfismo. La idea es: &amp;ldquo;Si camina como un pato y grazna como un pato, entonces debe ser un pato&amp;rdquo;. En otras palabras, Python se preocupa más por los métodos que tiene un objeto que por el tipo del objeto en sí.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Pato&lt;/span&gt;:
@@ -564,7 +564,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En este ejemplo, &lt;code&gt;sonido_animal()&lt;/code&gt; funciona con cualquier objeto que tenga un método &lt;code&gt;hablar()&lt;/code&gt;, independientemente de su clase.&lt;/p&gt;
-&lt;h3&gt;Sobrescribir métodos&lt;span class="hx:absolute hx:-mt-20" id="sobrescribir-métodos"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="sobrescribir-métodos"&gt;Sobrescribir métodos&lt;span class="hx:absolute hx:-mt-20" id="sobrescribir-métodos"&gt;&lt;/span&gt;
 &lt;a href="#sobrescribir-m%c3%a9todos" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Sobrescribir métodos es un aspecto clave del polimorfismo en tiempo de ejecución. Ocurre cuando una clase derivada define un método con el mismo nombre que un método en su clase base.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Figura&lt;/span&gt;:
@@ -607,7 +607,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Aquí, &lt;code&gt;Rectangulo&lt;/code&gt; y &lt;code&gt;Circulo&lt;/code&gt; sobrescriben el método &lt;code&gt;area()&lt;/code&gt; de la clase &lt;code&gt;Figura&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Sobrecarga de operadores&lt;span class="hx:absolute hx:-mt-20" id="sobrecarga-de-operadores"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="sobrecarga-de-operadores"&gt;Sobrecarga de operadores&lt;span class="hx:absolute hx:-mt-20" id="sobrecarga-de-operadores"&gt;&lt;/span&gt;
 &lt;a href="#sobrecarga-de-operadores" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python permite la sobrecarga de operadores, que es una forma de polimorfismo en tiempo de compilación. Permite que el mismo operador tenga diferentes significados según los operandos.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Vector&lt;/span&gt;:
@@ -639,7 +639,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Aquí, hemos sobrecargado el operador &lt;code&gt;+&lt;/code&gt; para nuestra clase &lt;code&gt;Vector&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Clases base abstractas&lt;span class="hx:absolute hx:-mt-20" id="clases-base-abstractas"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="clases-base-abstractas"&gt;Clases base abstractas&lt;span class="hx:absolute hx:-mt-20" id="clases-base-abstractas"&gt;&lt;/span&gt;
 &lt;a href="#clases-base-abstractas" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;El módulo &lt;code&gt;abc&lt;/code&gt; de Python proporciona infraestructura para definir clases base abstractas, que son una forma poderosa de definir interfaces en Python.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; abc &lt;span style="color:#f92672"&gt;import&lt;/span&gt; ABC, abstractmethod
@@ -681,7 +681,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Las clases base abstractas no pueden utilizarse para crear objetos y obligan a las clases derivadas a implementar ciertos métodos, asegurando una interfaz consistente.&lt;/p&gt;
-&lt;h3&gt;Aplicaciones en el mundo real&lt;span class="hx:absolute hx:-mt-20" id="aplicaciones-en-el-mundo-real"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="aplicaciones-en-el-mundo-real"&gt;Aplicaciones en el mundo real&lt;span class="hx:absolute hx:-mt-20" id="aplicaciones-en-el-mundo-real"&gt;&lt;/span&gt;
 &lt;a href="#aplicaciones-en-el-mundo-real" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;El polimorfismo se utiliza ampliamente en aplicaciones del mundo real:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Frameworks de GUI&lt;/strong&gt;: Diferentes widgets (botones, cajas de texto) pueden responder a eventos comunes (clic, hover) de sus propias maneras.&lt;/li&gt;
@@ -741,7 +741,7 @@ data-copied-label="¡Copiado!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -753,7 +753,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;strong&gt;Separación de preocupaciones&lt;/strong&gt;: Permite separar la interfaz de una clase de su implementación.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Modularidad&lt;/strong&gt;: La abstracción promueve el diseño modular al definir límites claros entre componentes.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Clases abstractas e interfaces&lt;span class="hx:absolute hx:-mt-20" id="clases-abstractas-e-interfaces"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="clases-abstractas-e-interfaces"&gt;Clases abstractas e interfaces&lt;span class="hx:absolute hx:-mt-20" id="clases-abstractas-e-interfaces"&gt;&lt;/span&gt;
 &lt;a href="#clases-abstractas-e-interfaces" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;En muchos lenguajes orientados a objetos, la abstracción se implementa a través de clases abstractas e interfaces. Aunque Python no tiene un concepto integrado de interfaz, podemos lograr una funcionalidad similar usando clases base abstractas. El módulo &lt;code&gt;abc&lt;/code&gt; de Python proporciona infraestructura para definir clases base abstractas:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; abc &lt;span style="color:#f92672"&gt;import&lt;/span&gt; ABC, abstractmethod
@@ -815,7 +815,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;code&gt;Rectangulo&lt;/code&gt; y &lt;code&gt;Circulo&lt;/code&gt; son clases concretas que implementan la interfaz &lt;code&gt;Figura&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;No podemos crear un objecto a partir de la clase &lt;code&gt;Figura&lt;/code&gt; directamente, pero podemos usarla como un tipo común para todas las figuras.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Implementando abstracción en Python&lt;span class="hx:absolute hx:-mt-20" id="implementando-abstracción-en-python"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="implementando-abstracción-en-python"&gt;Implementando abstracción en Python&lt;span class="hx:absolute hx:-mt-20" id="implementando-abstracción-en-python"&gt;&lt;/span&gt;
 &lt;a href="#implementando-abstracci%c3%b3n-en-python" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Aunque Python proporciona clases base abstractas para definir interfaces formalmente, también podemos lograr la abstracción mediante convenciones y documentación. Veamos un ejemplo sin utilizar &lt;code&gt;ABC&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;BaseDeDatos&lt;/span&gt;:
@@ -872,7 +872,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;code&gt;BaseDeDatosMySQL&lt;/code&gt; y &lt;code&gt;BaseDeDatosPostgreSQL&lt;/code&gt; son implementaciones concretas.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;realizar_operacion_en_bd&lt;/code&gt; trabaja con cualquier objeto que cumpla con la interfaz de &lt;code&gt;BaseDeDatos&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Principios de diseño y patrones&lt;span class="hx:absolute hx:-mt-20" id="principios-de-diseño-y-patrones"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="principios-de-diseño-y-patrones"&gt;Principios de diseño y patrones&lt;span class="hx:absolute hx:-mt-20" id="principios-de-diseño-y-patrones"&gt;&lt;/span&gt;
 &lt;a href="#principios-de-dise%c3%b1o-y-patrones" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;La abstracción es un componente clave de varios principios y patrones de diseño importantes:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -953,7 +953,7 @@ data-copied-label="¡Copiado!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

@@ -6,9 +6,9 @@
 &lt;li&gt;&lt;strong&gt;Flexibility&lt;/strong&gt;: The internal implementation can be changed without affecting other parts of the code that use the object.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Reduced complexity&lt;/strong&gt;: By hiding the details of internal workings, encapsulation reduces the complexity of the overall system from an external perspective.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Implementation in Python&lt;span class="hx:absolute hx:-mt-20" id="implementation-in-python"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="implementation-in-python"&gt;Implementation in Python&lt;span class="hx:absolute hx:-mt-20" id="implementation-in-python"&gt;&lt;/span&gt;
 &lt;a href="#implementation-in-python" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python provides several mechanisms to implement encapsulation. Let&amp;rsquo;s explore these with examples:&lt;/p&gt;
-&lt;h4&gt;1. Using private attributes&lt;span class="hx:absolute hx:-mt-20" id="1-using-private-attributes"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="1-using-private-attributes"&gt;1. Using private attributes&lt;span class="hx:absolute hx:-mt-20" id="1-using-private-attributes"&gt;&lt;/span&gt;
 &lt;a href="#1-using-private-attributes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;In Python, we can create private attributes by prefixing the attribute name with double underscores (&lt;code&gt;__&lt;/code&gt;). This triggers name mangling, which makes the attribute harder to access from outside the class.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;BankAccount&lt;/span&gt;:
@@ -58,7 +58,7 @@ data-copied-label="Copied!"
 &lt;li&gt;We provide public methods (&lt;code&gt;deposit&lt;/code&gt;, &lt;code&gt;withdraw&lt;/code&gt;, &lt;code&gt;get_balance&lt;/code&gt;) to interact with these private attributes.&lt;/li&gt;
 &lt;li&gt;Direct access to &lt;code&gt;__balance&lt;/code&gt; from outside the class will raise an &lt;code&gt;AttributeError&lt;/code&gt; exception.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;2. Using properties&lt;span class="hx:absolute hx:-mt-20" id="2-using-properties"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="2-using-properties"&gt;2. Using properties&lt;span class="hx:absolute hx:-mt-20" id="2-using-properties"&gt;&lt;/span&gt;
 &lt;a href="#2-using-properties" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Python&amp;rsquo;s &lt;code&gt;@property&lt;/code&gt; decorator allows us to define methods that can be accessed like attributes, providing a more Pythonic way of implementing getters and setters.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Circle&lt;/span&gt;:
@@ -108,7 +108,7 @@ data-copied-label="Copied!"
 &lt;li&gt;The &lt;code&gt;radius&lt;/code&gt; property provides get and set access to &lt;code&gt;_radius&lt;/code&gt; with validation.&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;area&lt;/code&gt; property is read-only and calculated on-the-fly.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Benefits and best practices&lt;span class="hx:absolute hx:-mt-20" id="benefits-and-best-practices"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="benefits-and-best-practices"&gt;Benefits and best practices&lt;span class="hx:absolute hx:-mt-20" id="benefits-and-best-practices"&gt;&lt;/span&gt;
 &lt;a href="#benefits-and-best-practices" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The benefits of encapsulation are numerous:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Improved maintainability&lt;/strong&gt;: Changes to the internal implementation don&amp;rsquo;t affect external code that uses the class.&lt;/li&gt;
@@ -216,7 +216,7 @@ data-copied-label="Copied!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

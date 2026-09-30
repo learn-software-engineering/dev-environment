@@ -6,7 +6,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Los nodos se organizan de forma secuencial, cada uno apuntando al siguiente. El último nodo apunta a nulo para indicar el final.&lt;/p&gt;
 &lt;p&gt;Esta estructura dinámica permite inserción y eliminación eficiente de nodos.&lt;/p&gt;
-&lt;h2&gt;Tipos de listas enlazadas&lt;span class="hx:absolute hx:-mt-20" id="tipos-de-listas-enlazadas"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="tipos-de-listas-enlazadas"&gt;Tipos de listas enlazadas&lt;span class="hx:absolute hx:-mt-20" id="tipos-de-listas-enlazadas"&gt;&lt;/span&gt;
 &lt;a href="#tipos-de-listas-enlazadas" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Existen varios tipos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Simplemente enlazada:&lt;/strong&gt; Cada nodo apunta al siguiente. Son útiles para colas (&lt;em&gt;queues&lt;/em&gt;) y pilas (&lt;em&gt;stacks&lt;/em&gt;).&lt;/li&gt;
@@ -32,7 +32,7 @@ alt="Diagrama de una lista circular"&gt;&lt;figcaption&gt;
 &lt;p&gt;Diagrama de una lista circular&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2&gt;Operaciones comunes&lt;span class="hx:absolute hx:-mt-20" id="operaciones-comunes"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="operaciones-comunes"&gt;Operaciones comunes&lt;span class="hx:absolute hx:-mt-20" id="operaciones-comunes"&gt;&lt;/span&gt;
 &lt;a href="#operaciones-comunes" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Insertar:&lt;/strong&gt; Agregar nodos al inicio, final o medio de la lista.&lt;/p&gt;
@@ -47,7 +47,7 @@ alt="Diagrama de una lista circular"&gt;&lt;figcaption&gt;
 &lt;p&gt;&lt;strong&gt;Recorrer:&lt;/strong&gt; Iterar los nodos accediendo por las referencias.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Implementación&lt;span class="hx:absolute hx:-mt-20" id="implementación"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="implementación"&gt;Implementación&lt;span class="hx:absolute hx:-mt-20" id="implementación"&gt;&lt;/span&gt;
 &lt;a href="#implementaci%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las listas enlazadas se pueden implementar de la siguiente manera:&lt;/p&gt;
 &lt;p&gt;Usa la clase &lt;code&gt;ListNode&lt;/code&gt; para representar nodos:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
@@ -105,7 +105,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;p&gt;Con esta clase &lt;code&gt;LinkedList&lt;/code&gt; podemos crear una lista, agregar nodos, imprimirla, buscar elementos, etc.&lt;/p&gt;
 &lt;p&gt;Se podrían agregar otros métodos como insertar al final, eliminar por valor, obtener por índice, etc. Pero esto da una idea de cómo encapsular la funcionalidad de la lista enlazada en una clase. Como práctica, podés intentar agregar estos métodos por tu cuenta, ¡no dudes en dejar tus comentarios y contactarte si necesitas ayuda!&lt;/p&gt;
-&lt;h2&gt;Ventajas y desventajas&lt;span class="hx:absolute hx:-mt-20" id="ventajas-y-desventajas"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="ventajas-y-desventajas"&gt;Ventajas y desventajas&lt;span class="hx:absolute hx:-mt-20" id="ventajas-y-desventajas"&gt;&lt;/span&gt;
 &lt;a href="#ventajas-y-desventajas" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Ventajas:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Insertar y eliminar nodos es eficiente.&lt;/li&gt;
@@ -117,14 +117,14 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;Mayor uso de memoria por tener que almacenar referencias.&lt;/li&gt;
 &lt;li&gt;El acceso a elementos por índice es más costoso al ser secuencial.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Ejemplos de uso&lt;span class="hx:absolute hx:-mt-20" id="ejemplos-de-uso"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="ejemplos-de-uso"&gt;Ejemplos de uso&lt;span class="hx:absolute hx:-mt-20" id="ejemplos-de-uso"&gt;&lt;/span&gt;
 &lt;a href="#ejemplos-de-uso" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Implementar estructuras como pilas (&lt;em&gt;stacks&lt;/em&gt;) y colas (&lt;em&gt;queues&lt;/em&gt;).&lt;/li&gt;
 &lt;li&gt;En listas doblemente enlazadas, recorrer la lista en el sentido ambos sentidos.&lt;/li&gt;
 &lt;li&gt;Blockchains como la de Bitcoin.&lt;/li&gt;
 &lt;li&gt;Reproducir elementos en orden como playlists de música.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusión"&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
 &lt;a href="#conclusi%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las listas enlazadas son una estructura de datos versátil para almacenar secuencias dinámicas de elementos. Tener un buen manejo de estas listas, sus operaciones y usos es indispensable para cualquier programador.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -132,7 +132,7 @@ data-copied-label="¡Copiado!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -143,7 +143,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;p&gt;Diagrama de una pila&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2&gt;Operaciones principales&lt;span class="hx:absolute hx:-mt-20" id="operaciones-principales"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="operaciones-principales"&gt;Operaciones principales&lt;span class="hx:absolute hx:-mt-20" id="operaciones-principales"&gt;&lt;/span&gt;
 &lt;a href="#operaciones-principales" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las operaciones primarias que soporta una estructura de pila son:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Push:&lt;/strong&gt; agrega un elemento encima de la pila.&lt;/li&gt;
@@ -152,7 +152,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;li&gt;&lt;strong&gt;isEmpty:&lt;/strong&gt; consulta si la pila se encuentra vacía.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;La mayoría de los lenguajes como Python y Java proveen implementaciones de pilas en sus librerías estándar.&lt;/p&gt;
-&lt;h2&gt;Implementación&lt;span class="hx:absolute hx:-mt-20" id="implementación"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="implementación"&gt;Implementación&lt;span class="hx:absolute hx:-mt-20" id="implementación"&gt;&lt;/span&gt;
 &lt;a href="#implementaci%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Una pila puede implementarse utilizando una lista enlazada de manera que cada node apunte al nodo anterior.&lt;/p&gt;
 &lt;!-- &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Node&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, value):
@@ -260,7 +260,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;&amp;#34;Check if stack is empty&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Is stack empty? &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;stack&lt;span style="color:#f92672"&gt;.&lt;/span&gt;is_empty()&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
-&lt;h2&gt;Ejemplos de uso&lt;span class="hx:absolute hx:-mt-20" id="ejemplos-de-uso"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="ejemplos-de-uso"&gt;Ejemplos de uso&lt;span class="hx:absolute hx:-mt-20" id="ejemplos-de-uso"&gt;&lt;/span&gt;
 &lt;a href="#ejemplos-de-uso" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las pilas tienen muchos usos en programación:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -276,7 +276,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;p&gt;&lt;strong&gt;Algoritmos y estructuras de datos&lt;/strong&gt;: como en el algoritmo quicksort y en la implementación de buses de datos (data paths).&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusión"&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
 &lt;a href="#conclusi%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las pilas son estructuras de datos versátiles gracias a su principio de funcionamiento LIFO. Tener un buen dominio de pilas, sus usos y aplicaciones es esencial en la ciencia de la computación.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -284,7 +284,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -296,7 +296,7 @@ alt="Diagrama de una cola"&gt;&lt;figcaption&gt;
 &lt;p&gt;Diagrama de una cola&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2&gt;Operaciones principales&lt;span class="hx:absolute hx:-mt-20" id="operaciones-principales"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="operaciones-principales"&gt;Operaciones principales&lt;span class="hx:absolute hx:-mt-20" id="operaciones-principales"&gt;&lt;/span&gt;
 &lt;a href="#operaciones-principales" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las operaciones básicas de una cola son:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Enqueue:&lt;/strong&gt; Agrega un elemento al final de la cola.&lt;/li&gt;
@@ -304,7 +304,7 @@ alt="Diagrama de una cola"&gt;&lt;figcaption&gt;
 &lt;li&gt;&lt;strong&gt;Peek:&lt;/strong&gt; Obtiene el elemento al frente sin sacarlo.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;isEmpty:&lt;/strong&gt; Consulta si la cola está vacía.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Implementación&lt;span class="hx:absolute hx:-mt-20" id="implementación"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="implementación"&gt;Implementación&lt;span class="hx:absolute hx:-mt-20" id="implementación"&gt;&lt;/span&gt;
 &lt;a href="#implementaci%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Al igual que las pilas, las colas se pueden implementar usando listas enlazadas.
 Se agrega al final y se saca del frente manteniendo referencias a ambos extremos.&lt;/p&gt;
 &lt;!-- &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Node&lt;/span&gt;:
@@ -417,7 +417,7 @@ Se agrega al final y se saca del frente manteniendo referencias a ambos extremos
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;&amp;#34;Check if queue is empty&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Is queue empty? &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;queue&lt;span style="color:#f92672"&gt;.&lt;/span&gt;is_empty()&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
-&lt;h2&gt;Ejemplos de uso&lt;span class="hx:absolute hx:-mt-20" id="ejemplos-de-uso"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="ejemplos-de-uso"&gt;Ejemplos de uso&lt;span class="hx:absolute hx:-mt-20" id="ejemplos-de-uso"&gt;&lt;/span&gt;
 &lt;a href="#ejemplos-de-uso" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Algunos usos comunes de colas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Colas de impresión donde primero en entrar, primero en imprimir.&lt;/li&gt;
@@ -426,7 +426,7 @@ Se agrega al final y se saca del frente manteniendo referencias a ambos extremos
 &lt;li&gt;Canales de mensajes como los de RabbitMQ o Kafka.&lt;/li&gt;
 &lt;li&gt;Buffers circulares en audio para streaming.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusión"&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
 &lt;a href="#conclusi%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las colas son estructuras versátiles gracias a su principio FIFO. Tener un buen manejo de colas, implementación y aplicaciones reforzará tus habilidades como programador.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -434,7 +434,7 @@ Se agrega al final y se saca del frente manteniendo referencias a ambos extremos
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

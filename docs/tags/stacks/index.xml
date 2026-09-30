@@ -5,7 +5,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;p&gt;Diagram of a stack&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2&gt;Main operations&lt;span class="hx:absolute hx:-mt-20" id="main-operations"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="main-operations"&gt;Main operations&lt;span class="hx:absolute hx:-mt-20" id="main-operations"&gt;&lt;/span&gt;
 &lt;a href="#main-operations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The primary operations supported by a stack structure are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Push:&lt;/strong&gt; adds an element to the top of the stack.&lt;/li&gt;
@@ -14,7 +14,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;li&gt;&lt;strong&gt;isEmpty:&lt;/strong&gt; checks if the stack is empty.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Most languages like Python and Java provide stack implementations in their standard libraries.&lt;/p&gt;
-&lt;h2&gt;Implementation&lt;span class="hx:absolute hx:-mt-20" id="implementation"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="implementation"&gt;Implementation&lt;span class="hx:absolute hx:-mt-20" id="implementation"&gt;&lt;/span&gt;
 &lt;a href="#implementation" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A stack can be implemented using a linked list so that each node points to the previous node.&lt;/p&gt;
 &lt;!-- &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Node&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, value):
@@ -122,7 +122,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;&amp;#34;Check if stack is empty&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Is stack empty? &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;stack&lt;span style="color:#f92672"&gt;.&lt;/span&gt;is_empty()&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
-&lt;h2&gt;Usage examples&lt;span class="hx:absolute hx:-mt-20" id="usage-examples"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="usage-examples"&gt;Usage examples&lt;span class="hx:absolute hx:-mt-20" id="usage-examples"&gt;&lt;/span&gt;
 &lt;a href="#usage-examples" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Stacks have many uses in programming:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -138,7 +138,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;p&gt;&lt;strong&gt;Algorithms and data structures&lt;/strong&gt;: like in the quicksort algorithm and in data path implementations.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusion"&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
 &lt;a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Stacks are versatile data structures thanks to their LIFO operation principle. Having a good command of stacks, their uses and applications is essential in computer science.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -146,7 +146,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

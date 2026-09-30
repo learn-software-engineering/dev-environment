@@ -19,7 +19,7 @@
 &lt;/ol&gt;
 &lt;p&gt;Python primarily supports runtime polymorphism, as it is a dynamically typed language. However, we can demonstrate concepts similar to compile-time polymorphism as well.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s explore different aspects of polymorphism in Python:&lt;/p&gt;
-&lt;h3&gt;Duck typing&lt;span class="hx:absolute hx:-mt-20" id="duck-typing"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="duck-typing"&gt;Duck typing&lt;span class="hx:absolute hx:-mt-20" id="duck-typing"&gt;&lt;/span&gt;
 &lt;a href="#duck-typing" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python uses duck typing, which is a form of polymorphism. The idea is: &amp;ldquo;If it walks like a duck and quacks like a duck, then it must be a duck.&amp;rdquo; In other words, Python cares more about the methods an object has than the type of the object itself.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Duck&lt;/span&gt;:
@@ -57,7 +57,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;In this example, &lt;code&gt;animal_sound()&lt;/code&gt; works with any object that has a &lt;code&gt;speak()&lt;/code&gt; method, regardless of its class.&lt;/p&gt;
-&lt;h3&gt;Method overriding&lt;span class="hx:absolute hx:-mt-20" id="method-overriding"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="method-overriding"&gt;Method overriding&lt;span class="hx:absolute hx:-mt-20" id="method-overriding"&gt;&lt;/span&gt;
 &lt;a href="#method-overriding" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Method overriding is a key aspect of runtime polymorphism. It occurs when a derived class defines a method with the same name as a method in its base class.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Shape&lt;/span&gt;:
@@ -100,7 +100,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Here, &lt;code&gt;Rectangle&lt;/code&gt; and &lt;code&gt;Circle&lt;/code&gt; both override the &lt;code&gt;area()&lt;/code&gt; method of the &lt;code&gt;Shape&lt;/code&gt; class.&lt;/p&gt;
-&lt;h3&gt;Operator overloading&lt;span class="hx:absolute hx:-mt-20" id="operator-overloading"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="operator-overloading"&gt;Operator overloading&lt;span class="hx:absolute hx:-mt-20" id="operator-overloading"&gt;&lt;/span&gt;
 &lt;a href="#operator-overloading" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python allows operator overloading, which is a form of compile-time polymorphism. It allows the same operator to have different meanings depending on the operands.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Vector&lt;/span&gt;:
@@ -132,7 +132,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Here, we&amp;rsquo;ve overloaded the &lt;code&gt;+&lt;/code&gt; operator for our &lt;code&gt;Vector&lt;/code&gt; class.&lt;/p&gt;
-&lt;h3&gt;Abstract base classes&lt;span class="hx:absolute hx:-mt-20" id="abstract-base-classes"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="abstract-base-classes"&gt;Abstract base classes&lt;span class="hx:absolute hx:-mt-20" id="abstract-base-classes"&gt;&lt;/span&gt;
 &lt;a href="#abstract-base-classes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python&amp;rsquo;s &lt;code&gt;abc&lt;/code&gt; module provides infrastructure for defining abstract base classes, which are a powerful way to define interfaces in Python.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; abc &lt;span style="color:#f92672"&gt;import&lt;/span&gt; ABC, abstractmethod
@@ -174,7 +174,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Abstract base classes cannot be instantiated and force derived classes to implement certain methods, ensuring a consistent interface.&lt;/p&gt;
-&lt;h3&gt;Real-world Applications &lt;a name="polymorphism-applications"&gt;&lt;/a&gt;&lt;span class="hx:absolute hx:-mt-20" id="real-world-applications"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="real-world-applications"&gt;Real-world Applications &lt;a name="polymorphism-applications"&gt;&lt;/a&gt;&lt;span class="hx:absolute hx:-mt-20" id="real-world-applications"&gt;&lt;/span&gt;
 &lt;a href="#real-world-applications" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Polymorphism is widely used in real-world applications:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;GUI frameworks&lt;/strong&gt;: Different widgets (buttons, text boxes) can respond to common events (click, hover) in their own ways.&lt;/li&gt;
@@ -234,7 +234,7 @@ data-copied-label="Copied!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

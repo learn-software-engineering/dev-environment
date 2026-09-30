@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com – Tipos De Datos</title><link>http://localhost:1313/es/tags/tipos-de-datos/</link><description>Recent content in Tipos De Datos on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 18 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/es/tags/tipos-de-datos/index.xml" rel="self" type="application/rss+xml"/><item><title>Variables y Tipos de Datos</title><link>http://localhost:1313/es/programming/starting-concepts/variables-data-types/</link><pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/es/programming/starting-concepts/variables-data-types/</guid><description>
 &lt;img src="http://localhost:1313/es/programming/starting-concepts/variables-data-types/featured.es_hu_1a961691f3a159ba.jpg" width="640" height="428"/>&lt;p&gt;Entender cómo funcionan las variables y los tipos de datos es fundamental para dominar cualquier lenguaje de programación. En este artículo repasaremos los conceptos básicos sobre variables, operadores, tipos de datos y conversiones de tipo utilizando el lenguaje Python. Cubriremos tanto la teoría como ejemplos prácticos para que puedas aplicar estos conceptos en tus propios programas.&lt;/p&gt;
-&lt;h2&gt;Variables&lt;span class="hx:absolute hx:-mt-20" id="variables"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="variables"&gt;Variables&lt;span class="hx:absolute hx:-mt-20" id="variables"&gt;&lt;/span&gt;
 &lt;a href="#variables" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Una variable es un contenedor para almacenar datos en la memoria de la computadora. Podemos pensar en ella como una caja con una etiqueta. La etiqueta es el nombre de la variable y dentro de la caja se almacena su valor.&lt;/p&gt;
 &lt;p&gt;Para declarar una variable en Python solo escribimos el nombre y le asignamos un valor:&lt;/p&gt;
 &lt;p&gt;Los nombres de variables deben comenzar con letras o guión bajo, y sólo pueden contener letras, números y guiones bajos. Se recomienda usar nombres significativos que representen el propósito de la variable.&lt;/p&gt;
@@ -34,10 +34,10 @@ data-copied-label="¡Copiado!"
 &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;Alcance y tiempo de vida&lt;span class="hx:absolute hx:-mt-20" id="alcance-y-tiempo-de-vida"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="alcance-y-tiempo-de-vida"&gt;Alcance y tiempo de vida&lt;span class="hx:absolute hx:-mt-20" id="alcance-y-tiempo-de-vida"&gt;&lt;/span&gt;
 &lt;a href="#alcance-y-tiempo-de-vida" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;El &lt;strong&gt;alcance&lt;/strong&gt; de una variable se refiere a las partes del código donde está disponible. Las variables declaradas fuera de funciones son globales y están disponibles en todo el archivo. Las variables dentro de una función son locales y solo visibles dentro de ella.&lt;/p&gt;
 &lt;p&gt;El &lt;strong&gt;tiempo de vida&lt;/strong&gt; es el período durante el cual existe la variable en memoria. Las variables locales existen mientras se ejecuta la función, luego son destruidas. Las globales existen mientras el programa está en ejecución.&lt;/p&gt;
-&lt;h3&gt;Asignación&lt;span class="hx:absolute hx:-mt-20" id="asignación"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="asignación"&gt;Asignación&lt;span class="hx:absolute hx:-mt-20" id="asignación"&gt;&lt;/span&gt;
 &lt;a href="#asignaci%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;La asignación con el operador &lt;code&gt;=&lt;/code&gt; permite cambiar o inicializar el valor de una variable:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;numero &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;
@@ -68,7 +68,7 @@ data-copied-label="¡Copiado!"
 &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Tipos de datos&lt;span class="hx:absolute hx:-mt-20" id="tipos-de-datos"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="tipos-de-datos"&gt;Tipos de datos&lt;span class="hx:absolute hx:-mt-20" id="tipos-de-datos"&gt;&lt;/span&gt;
 &lt;a href="#tipos-de-datos" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Los tipos de datos definen el tipo de valor que puede almacenar una variable. Python tiene varios tipos incorporados, incluyendo:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Numéricos&lt;/strong&gt;: Para almacenar valores numéricos como enteros, flotantes, complejos:
@@ -169,7 +169,7 @@ data-copied-label="¡Copiado!"
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Es importante elegir el tipo de dato que mejor represente la información que queremos almacenar.&lt;/p&gt;
-&lt;h2&gt;Operadores&lt;span class="hx:absolute hx:-mt-20" id="operadores"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="operadores"&gt;Operadores&lt;span class="hx:absolute hx:-mt-20" id="operadores"&gt;&lt;/span&gt;
 &lt;a href="#operadores" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Los operadores nos permiten realizar operaciones con valores y variables en Python. Algunos operadores comunes son:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -216,7 +216,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Cada tipo de operador trabaja con tipos de datos específicos. Debemos usarlos de forma consistente según el tipo de datos de nuestras variables.&lt;/p&gt;
-&lt;h2&gt;Conversiones de tipo&lt;span class="hx:absolute hx:-mt-20" id="conversiones-de-tipo"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conversiones-de-tipo"&gt;Conversiones de tipo&lt;span class="hx:absolute hx:-mt-20" id="conversiones-de-tipo"&gt;&lt;/span&gt;
 &lt;a href="#conversiones-de-tipo" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A veces necesitamos convertir un tipo de dato a otro para realizar ciertas operaciones. En Python podemos convertir de forma explícita o implícita:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Explícita&lt;/strong&gt;: Usando funciones como &lt;code&gt;int()&lt;/code&gt;, &lt;code&gt;float()&lt;/code&gt;, &lt;code&gt;str()&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
@@ -276,7 +276,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusión"&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
 &lt;a href="#conclusi%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;En este artículo revisamos conceptos clave como variables, operadores, tipos de datos y conversiones en Python. Aplicar bien estos conceptos te permitirá manipular datos de forma eficiente en tus programas. Recomiendo practicar con ejemplos propios para ganar experiencia en usar estas características. ¡Éxitos en tu aprendizaje de Python!&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -284,7 +284,7 @@ data-copied-label="¡Copiado!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

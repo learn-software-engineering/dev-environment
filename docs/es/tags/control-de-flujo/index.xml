@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com – Control De Flujo</title><link>http://localhost:1313/es/tags/control-de-flujo/</link><description>Recent content in Control De Flujo on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Wed, 27 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/es/tags/control-de-flujo/index.xml" rel="self" type="application/rss+xml"/><item><title>Control de Flujo</title><link>http://localhost:1313/es/programming/starting-concepts/flow-control-structures/</link><pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/es/programming/starting-concepts/flow-control-structures/</guid><description>
 &lt;img src="http://localhost:1313/es/programming/starting-concepts/flow-control-structures/featured.es_hu_2050ddb33ae2e9b6.jpg" width="640" height="428"/>&lt;p&gt;Cuando nos embarcamos en la emocionante travesía de aprender a programar, no tardamos en descubrir que la programación no es solo acerca de escribir código, sino también sobre cómo controlar el flujo de ese código. Podemos compararlo con el flujo de decisiones que tomamos en nuestra vida diaria. Por ejemplo, si hace frío afuera, nos ponemos un abrigo antes de salir. Si no tenemos tareas pendientes, vamos al cine. Nuestras acciones dependen de estas evaluaciones y decisiones. El control de flujo es, en esencia, la manera en que decidimos qué parte del código se ejecuta, cuándo se ejecuta y cuántas veces lo hace. Para ello, contamos con una variedad de estructuras que nos permiten tomar decisiones, repetir acciones y dividir nuestro código en bloques lógicos.&lt;/p&gt;
-&lt;h2&gt;Condiciones&lt;span class="hx:absolute hx:-mt-20" id="condiciones"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="condiciones"&gt;Condiciones&lt;span class="hx:absolute hx:-mt-20" id="condiciones"&gt;&lt;/span&gt;
 &lt;a href="#condiciones" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;La vida está llena de decisiones:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Si llueve, llevaré un paraguas. De lo contrario, usaré anteojos de sol.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Estas decisiones también están presentes en el mundo de la programación. Las condiciones son como preguntas que la computadora se hace. Nos permiten tomar decisiones y ejecutar código específico dependiendo de una condición. Pueden ser simples como &lt;code&gt;&amp;quot;¿Está lloviendo?&amp;quot;&lt;/code&gt; o complejas como &lt;code&gt;&amp;quot;¿Es fin de semana y tengo menos de $100 en mi cuenta bancaria?&amp;quot;&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;if&lt;span class="hx:absolute hx:-mt-20" id="if"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="if"&gt;if&lt;span class="hx:absolute hx:-mt-20" id="if"&gt;&lt;/span&gt;
 &lt;a href="#if" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;La estructura &lt;code&gt;if&lt;/code&gt; nos permite evaluar condiciones y tomar decisiones basadas en el resultado de esa evaluación.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;edad &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;15&lt;/span&gt;
@@ -23,7 +23,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;El código anterior permite ejecutar una porción de código (&lt;code&gt;print(&amp;quot;Eres mayor de edad&amp;quot;)&lt;/code&gt;) sólo si la edad de una persona (variable &lt;code&gt;edad&lt;/code&gt;) es mayor o igual a 18 años.&lt;/p&gt;
-&lt;h3&gt;if-else&lt;span class="hx:absolute hx:-mt-20" id="if-else"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="if-else"&gt;if-else&lt;span class="hx:absolute hx:-mt-20" id="if-else"&gt;&lt;/span&gt;
 &lt;a href="#if-else" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Cuando se desea ejecutar un código alternativo si la condición es falsa, utilizamos la estructura &lt;code&gt;if-else&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;edad &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;21&lt;/span&gt;
@@ -43,7 +43,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En este caso, se determina si la persona es mayor de edad, o menor de edad, el mensaje mostrado es diferente.&lt;/p&gt;
-&lt;h3&gt;if-elif-else&lt;span class="hx:absolute hx:-mt-20" id="if-elif-else"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="if-elif-else"&gt;if-elif-else&lt;span class="hx:absolute hx:-mt-20" id="if-elif-else"&gt;&lt;/span&gt;
 &lt;a href="#if-elif-else" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Cuando las condiciones son múltiples y no es suficientes con dos caminos, se utiliza la estructura &lt;code&gt;if-elif-else&lt;/code&gt; para evaluarlas forma encadenada.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;edad &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;
@@ -65,7 +65,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En el código anterior se observan tres caminos claros, uno para cuando la edad es tiene 13 años o menos, otro para cuando la edad esta entre 13 y 18 años y otro para cuando tiene 18 o más.&lt;/p&gt;
-&lt;p&gt;Otra manera de resolver este problema es mediante la estructura &lt;code&gt;switch-case&lt;/code&gt;, que, aunque Python no incorpora de manera nativa, como si lo hacen otros lenguajes como &lt;a href="https://es.wikipedia.org/wiki/Java_%28lenguaje_de_programaci%C3%B3n%29"target="_blank" rel="noopener"&gt;Java&lt;/a&gt; o &lt;a href="https://es.wikipedia.org/wiki/C%2B%2B"target="_blank" rel="noopener"&gt;C++&lt;/a&gt;, es una herramienta importante para conocer. Esta estructura permite a los programadores manejar múltiples condiciones de manera más organizada que una serie de &lt;code&gt;if-elif-else&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Otra manera de resolver este problema es mediante la estructura &lt;code&gt;switch-case&lt;/code&gt;, que, aunque Python no incorpora de manera nativa, como si lo hacen otros lenguajes como &lt;a href="https://es.wikipedia.org/wiki/Java_%28lenguaje_de_programaci%C3%B3n%29" target="_blank" rel="noopener"&gt;Java&lt;/a&gt; o &lt;a href="https://es.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener"&gt;C++&lt;/a&gt;, es una herramienta importante para conocer. Esta estructura permite a los programadores manejar múltiples condiciones de manera más organizada que una serie de &lt;code&gt;if-elif-else&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;En Java, por ejemplo:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; dia &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 3;
@@ -95,9 +95,9 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En el ejemplo anterior, dependiendo del valor de &lt;code&gt;dia&lt;/code&gt;, se imprimirá el nombre del día correspondiente.&lt;/p&gt;
-&lt;h2&gt;Bucles&lt;span class="hx:absolute hx:-mt-20" id="bucles"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="bucles"&gt;Bucles&lt;span class="hx:absolute hx:-mt-20" id="bucles"&gt;&lt;/span&gt;
 &lt;a href="#bucles" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A veces, en programación, necesitamos repetir una acción varias veces. En lugar de escribir el mismo código varias veces, podemos usar bucles. Estos, permiten repetir la ejecución de un bloque de código mientras se cumpla una condición.&lt;/p&gt;
-&lt;h3&gt;while&lt;span class="hx:absolute hx:-mt-20" id="while"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="while"&gt;while&lt;span class="hx:absolute hx:-mt-20" id="while"&gt;&lt;/span&gt;
 &lt;a href="#while" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;El bucle &lt;code&gt;while&lt;/code&gt; es útil cuando queremos repetir una acción &lt;em&gt;mientras&lt;/em&gt; (&lt;code&gt;while&lt;/code&gt;) se cumpla una condición.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Imprime del 1 al 5&lt;/span&gt;
@@ -123,8 +123,8 @@ data-copied-label="¡Copiado!"
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;Es muy importante prestar atención a la condición del bucle, en algún momento debe volverse &lt;code&gt;falsa&lt;/code&gt; o debe existir alguna otra condición de corte. De otra manera, el bucle puede ejecutarse una y otra vez indefinidamente consumiendo muchos recursos y provocando fallos en el programa/sistema.&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;do-while&lt;span class="hx:absolute hx:-mt-20" id="do-while"&gt;&lt;/span&gt;
-&lt;a href="#do-while" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Similar a &lt;code&gt;while&lt;/code&gt; pero garantiza al menos una ejecución dado que primero se ejecuta el bloque de código y luego se evalúa la condición. Python no implementa esta estructura, pero otros lenguajes como &lt;a href="https://es.wikipedia.org/wiki/Java_%28lenguaje_de_programaci%C3%B3n%29"target="_blank" rel="noopener"&gt;Java&lt;/a&gt; y &lt;a href="https://es.wikipedia.org/wiki/C%2B%2B"target="_blank" rel="noopener"&gt;C++&lt;/a&gt; sí lo hacen.&lt;/p&gt;
+&lt;h3 data-hextra-search-id="do-while"&gt;do-while&lt;span class="hx:absolute hx:-mt-20" id="do-while"&gt;&lt;/span&gt;
+&lt;a href="#do-while" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Similar a &lt;code&gt;while&lt;/code&gt; pero garantiza al menos una ejecución dado que primero se ejecuta el bloque de código y luego se evalúa la condición. Python no implementa esta estructura, pero otros lenguajes como &lt;a href="https://es.wikipedia.org/wiki/Java_%28lenguaje_de_programaci%C3%B3n%29" target="_blank" rel="noopener"&gt;Java&lt;/a&gt; y &lt;a href="https://es.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener"&gt;C++&lt;/a&gt; sí lo hacen.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 1;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
@@ -160,7 +160,7 @@ data-copied-label="¡Copiado!"
 &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;for&lt;span class="hx:absolute hx:-mt-20" id="for"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="for"&gt;for&lt;span class="hx:absolute hx:-mt-20" id="for"&gt;&lt;/span&gt;
 &lt;a href="#for" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;El bucle &lt;code&gt;for&lt;/code&gt; es útil cuando sabemos cuántas veces queremos repetir una acción.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i &lt;span style="color:#f92672"&gt;in&lt;/span&gt; range(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;):
@@ -198,7 +198,7 @@ data-copied-label="¡Copiado!"
 &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;Las sentencias &lt;code&gt;break&lt;/code&gt; y &lt;code&gt;continue&lt;/code&gt;&lt;span class="hx:absolute hx:-mt-20" id="las-sentencias-break-y-continue"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="las-sentencias-break-y-continue"&gt;Las sentencias &lt;code&gt;break&lt;/code&gt; y &lt;code&gt;continue&lt;/code&gt;&lt;span class="hx:absolute hx:-mt-20" id="las-sentencias-break-y-continue"&gt;&lt;/span&gt;
 &lt;a href="#las-sentencias-break-y-continue" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Podemos usar &lt;code&gt;break&lt;/code&gt; para terminar el bucle y &lt;code&gt;continue&lt;/code&gt; para saltar a la siguiente iteración.&lt;/p&gt;
 &lt;p&gt;El &lt;code&gt;break&lt;/code&gt; se usa para terminar completamente el bucle cuando se cumple una condición, en el ejemplo siguiente, cuando &lt;code&gt;i&lt;/code&gt; llega a 5.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
@@ -252,7 +252,7 @@ data-copied-label="¡Copiado!"
 &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Anidamiento&lt;span class="hx:absolute hx:-mt-20" id="anidamiento"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="anidamiento"&gt;Anidamiento&lt;span class="hx:absolute hx:-mt-20" id="anidamiento"&gt;&lt;/span&gt;
 &lt;a href="#anidamiento" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las estructuras de control de flujo pueden anidarse dentro de otras. Por ejemplo, podemos tener bucles dentro de bucles o condiciones dentro de bucles.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; i &lt;span style="color:#f92672"&gt;in&lt;/span&gt; range(&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;):
@@ -271,9 +271,9 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Este código imprimirá combinaciones de &lt;code&gt;i&lt;/code&gt; y &lt;code&gt;j&lt;/code&gt; sólo cuando &lt;code&gt;i&lt;/code&gt; sea divisible por 2 y &lt;code&gt;j&lt;/code&gt; sea divisible por 3, demostrando cómo los bucles se anidan y se ejecutan.&lt;/p&gt;
-&lt;h2&gt;Patrones de uso comunes&lt;span class="hx:absolute hx:-mt-20" id="patrones-de-uso-comunes"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="patrones-de-uso-comunes"&gt;Patrones de uso comunes&lt;span class="hx:absolute hx:-mt-20" id="patrones-de-uso-comunes"&gt;&lt;/span&gt;
 &lt;a href="#patrones-de-uso-comunes" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Existen patrones específicos para resolver necesidades habituales con control de flujo.&lt;/p&gt;
-&lt;h3&gt;Búsqueda&lt;span class="hx:absolute hx:-mt-20" id="búsqueda"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="búsqueda"&gt;Búsqueda&lt;span class="hx:absolute hx:-mt-20" id="búsqueda"&gt;&lt;/span&gt;
 &lt;a href="#b%c3%basqueda" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Buscar un valor en una colección:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;frutas &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [&lt;span style="color:#e6db74"&gt;&amp;#34;manzana&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;naranja&amp;#34;&lt;/span&gt;]
@@ -299,7 +299,7 @@ data-copied-label="¡Copiado!"
 &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;Acumulación&lt;span class="hx:absolute hx:-mt-20" id="acumulación"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="acumulación"&gt;Acumulación&lt;span class="hx:absolute hx:-mt-20" id="acumulación"&gt;&lt;/span&gt;
 &lt;a href="#acumulaci%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Acumular valores incrementales en un bucle.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;total &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
@@ -319,7 +319,7 @@ data-copied-label="¡Copiado!"
 &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;Diagramas de flujo&lt;span class="hx:absolute hx:-mt-20" id="diagramas-de-flujo"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="diagramas-de-flujo"&gt;Diagramas de flujo&lt;span class="hx:absolute hx:-mt-20" id="diagramas-de-flujo"&gt;&lt;/span&gt;
 &lt;a href="#diagramas-de-flujo" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Los programadores, sin importar si son principiantes o expertos, a menudo se encuentran enfrentando desafíos que requieren una planificación detallada antes de sumergirse en el código. Aquí es donde los diagramas de flujo entran en juego como una herramienta esencial. Estos diagramas son representaciones gráficas de los procesos y la lógica detrás de un programa o sistema. En esta sección, desentrañaremos el mundo de los diagramas de flujo y cómo pueden beneficiar a programadores de todos los niveles.&lt;/p&gt;
 &lt;p&gt;Un diagrama de flujo es una representación gráfica de un proceso. Utiliza símbolos específicos para representar diferentes tipos de instrucciones o acciones. Su objetivo principal es simplificar la comprensión de un proceso, mostrando paso a paso cómo fluye la información o las decisiones.&lt;/p&gt;
 &lt;p&gt;Los diagramas de flujo son una herramienta poderosa que no solo beneficia a los principiantes, sino también a los programadores experimentados. Ofrecen una visión clara y estructurada de un proceso o programa, facilitando la planificación, el diseño y la comunicación entre los miembros del equipo.&lt;/p&gt;
@@ -342,7 +342,7 @@ process --&amp;gt; decision;
 decision --&amp;gt; |No| process
 decision --&amp;gt; |Si| final
 &lt;/pre&gt;
-&lt;/div&gt;&lt;h3&gt;Ejemplos&lt;span class="hx:absolute hx:-mt-20" id="ejemplos"&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;h3 data-hextra-search-id="ejemplos"&gt;Ejemplos&lt;span class="hx:absolute hx:-mt-20" id="ejemplos"&gt;&lt;/span&gt;
 &lt;a href="#ejemplos" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Vamos a diseñar un diagrama de flujo para un programa que pida un número y nos diga si es par o impar.&lt;/p&gt;
 &lt;div role="img" aria-label="Diagrama"&gt;
 &lt;pre class="mermaid hx:mt-6"&gt;
@@ -379,7 +379,7 @@ bucle_codigo --&amp;gt; bucle_condicion
 bucle_condicion --&amp;gt; |No| resultado
 resultado --&amp;gt; final
 &lt;/pre&gt;
-&lt;/div&gt;&lt;h2&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;h2 data-hextra-search-id="conclusión"&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
 &lt;a href="#conclusi%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;El control de flujo es el corazón de la programación. Sin él, los programas serían secuencias lineales de acciones sin la capacidad de tomar decisiones o repetir tareas. Al dominar estas estructuras, no solo mejoras tu capacidad para escribir código, sino también tu capacidad para pensar lógicamente y resolver problemas complejos.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -387,7 +387,7 @@ resultado --&amp;gt; final
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

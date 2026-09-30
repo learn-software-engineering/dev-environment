@@ -1,5 +1,5 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learn-Software.com – Software Engineering</title><link>http://localhost:1313/tags/software-engineering/</link><description>Recent content in Software Engineering on Learn-Software.com</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to Software Engineering</title><link>http://localhost:1313/software-engineering/introduction/</link><pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/software-engineering/introduction/</guid><description>
-&lt;h2&gt;What is Software?&lt;span class="hx:absolute hx:-mt-20" id="what-is-software"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="what-is-software"&gt;What is Software?&lt;span class="hx:absolute hx:-mt-20" id="what-is-software"&gt;&lt;/span&gt;
 &lt;a href="#what-is-software" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Several thought leaders in the world of computing have defined software in various ways:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ian Sommerville&lt;/strong&gt;&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;:
 &lt;em&gt;Computer programs and associated documentation.&lt;/em&gt;&lt;/p&gt;
@@ -22,7 +22,7 @@
 &lt;li&gt;&lt;strong&gt;Embedded Software&lt;/strong&gt;: Found within hardware devices such as washing machines, traffic lights, or digital watches, embedded software operates specific functions of these devices. Unlike general-purpose software, it&amp;rsquo;s dedicated to specific tasks or functions.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;What is Software Engineering?&lt;span class="hx:absolute hx:-mt-20" id="what-is-software-engineering"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="what-is-software-engineering"&gt;What is Software Engineering?&lt;span class="hx:absolute hx:-mt-20" id="what-is-software-engineering"&gt;&lt;/span&gt;
 &lt;a href="#what-is-software-engineering" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Several prominent figures have also provided their perspectives on Software Engineering:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ian Sommerville&lt;/strong&gt;&lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;:
 &lt;em&gt;A discipline concerned with all aspects of software production.&lt;/em&gt;&lt;/p&gt;
@@ -40,12 +40,12 @@
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;Software Engineering&lt;/em&gt; should not be confused with &lt;em&gt;Computer Science&lt;/em&gt;. While the latter is a discipline that dives deep into the theoretical and mathematical aspects of computing, studying algorithms, computational theory, and more, the first one primarily focuses on designing and building large software systems. It emphasizes practical techniques and methodologies that ensure the production of high-quality, maintainable software.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Why it is important to develop quality software&lt;span class="hx:absolute hx:-mt-20" id="why-it-is-important-to-develop-quality-software"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="why-it-is-important-to-develop-quality-software"&gt;Why it is important to develop quality software&lt;span class="hx:absolute hx:-mt-20" id="why-it-is-important-to-develop-quality-software"&gt;&lt;/span&gt;
 &lt;a href="#why-it-is-important-to-develop-quality-software" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Today, we&amp;rsquo;re surrounded by a digital ecosystem. Software runs our phones, cars, banks, hospitals, and even our homes. This ubiquity underscores its significance. That means that software flaws can have catastrophic outcomes. From banking systems to healthcare applications, the demand for faultless, efficient software is sky-high.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Software Engineering&lt;/em&gt;, ensures this vast amount of software is reliable, efficient, and meets user needs. As technology advances at breakneck speed, the role of software engineers becomes even more pivotal, making sure innovations are safe and effective.&lt;/p&gt;
 &lt;p&gt;Whether you&amp;rsquo;re using a social media app, making a bank transaction, or checking health diagnostics, remember there&amp;rsquo;s a meticulously engineered software system running behind the scenes, making it all possible.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;References&lt;span class="hx:absolute hx:-mt-20" id="references"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="references"&gt;References&lt;span class="hx:absolute hx:-mt-20" id="references"&gt;&lt;/span&gt;
 &lt;a href="#references" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
 &lt;ol&gt;

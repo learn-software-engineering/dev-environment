@@ -19,7 +19,7 @@
 &lt;/ol&gt;
 &lt;p&gt;Python admite principalmente el polimorfismo en tiempo de ejecución, ya que es un lenguaje de tipado dinámico. Sin embargo, podemos demostrar conceptos similares al polimorfismo en tiempo de compilación también.&lt;/p&gt;
 &lt;p&gt;Exploremos diferentes aspectos del polimorfismo en Python:&lt;/p&gt;
-&lt;h3&gt;Duck typing&lt;span class="hx:absolute hx:-mt-20" id="duck-typing"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="duck-typing"&gt;Duck typing&lt;span class="hx:absolute hx:-mt-20" id="duck-typing"&gt;&lt;/span&gt;
 &lt;a href="#duck-typing" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python utiliza el duck typing, que es una forma de polimorfismo. La idea es: &amp;ldquo;Si camina como un pato y grazna como un pato, entonces debe ser un pato&amp;rdquo;. En otras palabras, Python se preocupa más por los métodos que tiene un objeto que por el tipo del objeto en sí.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Pato&lt;/span&gt;:
@@ -57,7 +57,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;En este ejemplo, &lt;code&gt;sonido_animal()&lt;/code&gt; funciona con cualquier objeto que tenga un método &lt;code&gt;hablar()&lt;/code&gt;, independientemente de su clase.&lt;/p&gt;
-&lt;h3&gt;Sobrescribir métodos&lt;span class="hx:absolute hx:-mt-20" id="sobrescribir-métodos"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="sobrescribir-métodos"&gt;Sobrescribir métodos&lt;span class="hx:absolute hx:-mt-20" id="sobrescribir-métodos"&gt;&lt;/span&gt;
 &lt;a href="#sobrescribir-m%c3%a9todos" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Sobrescribir métodos es un aspecto clave del polimorfismo en tiempo de ejecución. Ocurre cuando una clase derivada define un método con el mismo nombre que un método en su clase base.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Figura&lt;/span&gt;:
@@ -100,7 +100,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Aquí, &lt;code&gt;Rectangulo&lt;/code&gt; y &lt;code&gt;Circulo&lt;/code&gt; sobrescriben el método &lt;code&gt;area()&lt;/code&gt; de la clase &lt;code&gt;Figura&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Sobrecarga de operadores&lt;span class="hx:absolute hx:-mt-20" id="sobrecarga-de-operadores"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="sobrecarga-de-operadores"&gt;Sobrecarga de operadores&lt;span class="hx:absolute hx:-mt-20" id="sobrecarga-de-operadores"&gt;&lt;/span&gt;
 &lt;a href="#sobrecarga-de-operadores" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Python permite la sobrecarga de operadores, que es una forma de polimorfismo en tiempo de compilación. Permite que el mismo operador tenga diferentes significados según los operandos.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Vector&lt;/span&gt;:
@@ -132,7 +132,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Aquí, hemos sobrecargado el operador &lt;code&gt;+&lt;/code&gt; para nuestra clase &lt;code&gt;Vector&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Clases base abstractas&lt;span class="hx:absolute hx:-mt-20" id="clases-base-abstractas"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="clases-base-abstractas"&gt;Clases base abstractas&lt;span class="hx:absolute hx:-mt-20" id="clases-base-abstractas"&gt;&lt;/span&gt;
 &lt;a href="#clases-base-abstractas" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;El módulo &lt;code&gt;abc&lt;/code&gt; de Python proporciona infraestructura para definir clases base abstractas, que son una forma poderosa de definir interfaces en Python.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; abc &lt;span style="color:#f92672"&gt;import&lt;/span&gt; ABC, abstractmethod
@@ -174,7 +174,7 @@ data-copied-label="¡Copiado!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Las clases base abstractas no pueden utilizarse para crear objetos y obligan a las clases derivadas a implementar ciertos métodos, asegurando una interfaz consistente.&lt;/p&gt;
-&lt;h3&gt;Aplicaciones en el mundo real&lt;span class="hx:absolute hx:-mt-20" id="aplicaciones-en-el-mundo-real"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="aplicaciones-en-el-mundo-real"&gt;Aplicaciones en el mundo real&lt;span class="hx:absolute hx:-mt-20" id="aplicaciones-en-el-mundo-real"&gt;&lt;/span&gt;
 &lt;a href="#aplicaciones-en-el-mundo-real" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;El polimorfismo se utiliza ampliamente en aplicaciones del mundo real:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Frameworks de GUI&lt;/strong&gt;: Diferentes widgets (botones, cajas de texto) pueden responder a eventos comunes (clic, hover) de sus propias maneras.&lt;/li&gt;
@@ -234,7 +234,7 @@ data-copied-label="¡Copiado!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

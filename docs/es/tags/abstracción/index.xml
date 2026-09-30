@@ -6,7 +6,7 @@
 &lt;li&gt;&lt;strong&gt;Separación de preocupaciones&lt;/strong&gt;: Permite separar la interfaz de una clase de su implementación.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Modularidad&lt;/strong&gt;: La abstracción promueve el diseño modular al definir límites claros entre componentes.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Clases abstractas e interfaces&lt;span class="hx:absolute hx:-mt-20" id="clases-abstractas-e-interfaces"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="clases-abstractas-e-interfaces"&gt;Clases abstractas e interfaces&lt;span class="hx:absolute hx:-mt-20" id="clases-abstractas-e-interfaces"&gt;&lt;/span&gt;
 &lt;a href="#clases-abstractas-e-interfaces" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;En muchos lenguajes orientados a objetos, la abstracción se implementa a través de clases abstractas e interfaces. Aunque Python no tiene un concepto integrado de interfaz, podemos lograr una funcionalidad similar usando clases base abstractas. El módulo &lt;code&gt;abc&lt;/code&gt; de Python proporciona infraestructura para definir clases base abstractas:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;from&lt;/span&gt; abc &lt;span style="color:#f92672"&gt;import&lt;/span&gt; ABC, abstractmethod
@@ -68,7 +68,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;code&gt;Rectangulo&lt;/code&gt; y &lt;code&gt;Circulo&lt;/code&gt; son clases concretas que implementan la interfaz &lt;code&gt;Figura&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;No podemos crear un objecto a partir de la clase &lt;code&gt;Figura&lt;/code&gt; directamente, pero podemos usarla como un tipo común para todas las figuras.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Implementando abstracción en Python&lt;span class="hx:absolute hx:-mt-20" id="implementando-abstracción-en-python"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="implementando-abstracción-en-python"&gt;Implementando abstracción en Python&lt;span class="hx:absolute hx:-mt-20" id="implementando-abstracción-en-python"&gt;&lt;/span&gt;
 &lt;a href="#implementando-abstracci%c3%b3n-en-python" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Aunque Python proporciona clases base abstractas para definir interfaces formalmente, también podemos lograr la abstracción mediante convenciones y documentación. Veamos un ejemplo sin utilizar &lt;code&gt;ABC&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;BaseDeDatos&lt;/span&gt;:
@@ -125,7 +125,7 @@ data-copied-label="¡Copiado!"
 &lt;li&gt;&lt;code&gt;BaseDeDatosMySQL&lt;/code&gt; y &lt;code&gt;BaseDeDatosPostgreSQL&lt;/code&gt; son implementaciones concretas.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;realizar_operacion_en_bd&lt;/code&gt; trabaja con cualquier objeto que cumpla con la interfaz de &lt;code&gt;BaseDeDatos&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Principios de diseño y patrones&lt;span class="hx:absolute hx:-mt-20" id="principios-de-diseño-y-patrones"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="principios-de-diseño-y-patrones"&gt;Principios de diseño y patrones&lt;span class="hx:absolute hx:-mt-20" id="principios-de-diseño-y-patrones"&gt;&lt;/span&gt;
 &lt;a href="#principios-de-dise%c3%b1o-y-patrones" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;La abstracción es un componente clave de varios principios y patrones de diseño importantes:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -206,7 +206,7 @@ data-copied-label="¡Copiado!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

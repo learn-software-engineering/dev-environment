@@ -6,7 +6,7 @@
 &lt;li&gt;&lt;strong&gt;Extensibility&lt;/strong&gt;: New functionality can be added to existing classes without modifying them, following the open-closed principle.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Polymorphism&lt;/strong&gt;: Inheritance is a prerequisite for runtime polymorphism (which we&amp;rsquo;ll discuss in detail later).&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Types of inheritance&lt;span class="hx:absolute hx:-mt-20" id="types-of-inheritance"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="types-of-inheritance"&gt;Types of inheritance&lt;span class="hx:absolute hx:-mt-20" id="types-of-inheritance"&gt;&lt;/span&gt;
 &lt;a href="#types-of-inheritance" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;There are several types of inheritance, though not all programming languages support all types. The main types are:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Single inheritance&lt;/strong&gt;: A derived class inherits from a single base class.&lt;/li&gt;
@@ -16,7 +16,7 @@
 &lt;li&gt;&lt;strong&gt;Hybrid inheritance&lt;/strong&gt;: A combination of two or more types of inheritance.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Python supports all these types of inheritance. Let&amp;rsquo;s explore each with examples.&lt;/p&gt;
-&lt;h4&gt;Single inheritance&lt;span class="hx:absolute hx:-mt-20" id="single-inheritance"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="single-inheritance"&gt;Single inheritance&lt;span class="hx:absolute hx:-mt-20" id="single-inheritance"&gt;&lt;/span&gt;
 &lt;a href="#single-inheritance" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Single inheritance is the simplest form of inheritance, where a class inherits from one base class.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Animal&lt;/span&gt;:
@@ -56,7 +56,7 @@ data-copied-label="Copied!"
 &lt;li&gt;&lt;code&gt;Dog&lt;/code&gt; overrides the &lt;code&gt;make_sound&lt;/code&gt; method with its own implementation.&lt;/li&gt;
 &lt;li&gt;We use &lt;code&gt;super().__init__()&lt;/code&gt; to call the initialiser of the base class.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;Multiple inheritance&lt;span class="hx:absolute hx:-mt-20" id="multiple-inheritance"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="multiple-inheritance"&gt;Multiple inheritance&lt;span class="hx:absolute hx:-mt-20" id="multiple-inheritance"&gt;&lt;/span&gt;
 &lt;a href="#multiple-inheritance" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Multiple inheritance allows a class to inherit from multiple base classes.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Flyer&lt;/span&gt;:
@@ -93,7 +93,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Here, &lt;code&gt;Duck&lt;/code&gt; inherits from &lt;code&gt;Animal&lt;/code&gt;, &lt;code&gt;Flyer&lt;/code&gt;, and &lt;code&gt;Swimmer&lt;/code&gt;, combining attributes and methods from all three.&lt;/p&gt;
-&lt;h4&gt;Multilevel inheritance&lt;span class="hx:absolute hx:-mt-20" id="multilevel-inheritance"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="multilevel-inheritance"&gt;Multilevel inheritance&lt;span class="hx:absolute hx:-mt-20" id="multilevel-inheritance"&gt;&lt;/span&gt;
 &lt;a href="#multilevel-inheritance" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;In multilevel inheritance, a derived class inherits from another derived class.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Mammal&lt;/span&gt;(Animal):
@@ -130,7 +130,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;In this example, &lt;code&gt;Cat&lt;/code&gt; inherits from &lt;code&gt;Mammal&lt;/code&gt;, which in turn inherits from &lt;code&gt;Animal&lt;/code&gt;, forming a multilevel inheritance chain.&lt;/p&gt;
-&lt;h4&gt;Hierarchical inheritance&lt;span class="hx:absolute hx:-mt-20" id="hierarchical-inheritance"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="hierarchical-inheritance"&gt;Hierarchical inheritance&lt;span class="hx:absolute hx:-mt-20" id="hierarchical-inheritance"&gt;&lt;/span&gt;
 &lt;a href="#hierarchical-inheritance" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Hierarchical inheritance involves multiple derived classes inheriting from a single base class.&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Bird&lt;/span&gt;(Animal):
@@ -172,7 +172,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Here, both &lt;code&gt;Parrot&lt;/code&gt; and &lt;code&gt;Penguin&lt;/code&gt; inherit from &lt;code&gt;Bird&lt;/code&gt;, which demonstrates hierarchical inheritance.&lt;/p&gt;
-&lt;h4&gt;Hybrid inheritance&lt;span class="hx:absolute hx:-mt-20" id="hybrid-inheritance"&gt;&lt;/span&gt;
+&lt;h4 data-hextra-search-id="hybrid-inheritance"&gt;Hybrid inheritance&lt;span class="hx:absolute hx:-mt-20" id="hybrid-inheritance"&gt;&lt;/span&gt;
 &lt;a href="#hybrid-inheritance" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Hybrid inheritance is a combination of multiple inheritance types. Let&amp;rsquo;s create a more complex example to illustrate this:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
 &lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Terrestrial&lt;/span&gt;:
@@ -222,7 +222,7 @@ data-copied-label="Copied!"
 &lt;li&gt;&lt;code&gt;Amphibian&lt;/code&gt; inherits from &lt;code&gt;Animal&lt;/code&gt;, &lt;code&gt;Terrestrial&lt;/code&gt;, and &lt;code&gt;Aquatic&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;This creates a combination of multilevel and multiple inheritance&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Considerations&lt;span class="hx:absolute hx:-mt-20" id="considerations"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="considerations"&gt;Considerations&lt;span class="hx:absolute hx:-mt-20" id="considerations"&gt;&lt;/span&gt;
 &lt;a href="#considerations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Inheritance offers several advantages. However, there are also important considerations:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Complexity&lt;/strong&gt;: Deep inheritance hierarchies can become difficult to understand and maintain.&lt;/li&gt;
@@ -280,7 +280,7 @@ end
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -360,7 +360,7 @@ end
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

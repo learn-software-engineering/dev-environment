@@ -12,7 +12,7 @@
 &lt;li&gt;Bidirectional Association&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Let&amp;rsquo;s explore each of these in more detail.&lt;/p&gt;
-&lt;h3&gt;Unidirectional association&lt;span class="hx:absolute hx:-mt-20" id="unidirectional-association"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="unidirectional-association"&gt;Unidirectional association&lt;span class="hx:absolute hx:-mt-20" id="unidirectional-association"&gt;&lt;/span&gt;
 &lt;a href="#unidirectional-association" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In a unidirectional association, one class knows about and can interact with another class, but not vice versa. This is a one-way relationship.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s an example in Python:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
@@ -61,7 +61,7 @@ Order --&amp;gt; Customer : places
 end
 &lt;/pre&gt;
 &lt;/div&gt;&lt;p&gt;The arrow in the diagram points from &lt;code&gt;Order&lt;/code&gt; to &lt;code&gt;Customer&lt;/code&gt;, indicating that &lt;code&gt;Order&lt;/code&gt; knows about &lt;code&gt;Customer&lt;/code&gt;, but not the other way around.&lt;/p&gt;
-&lt;h3&gt;Bidirectional association&lt;span class="hx:absolute hx:-mt-20" id="bidirectional-association"&gt;&lt;/span&gt;
+&lt;h3 data-hextra-search-id="bidirectional-association"&gt;Bidirectional association&lt;span class="hx:absolute hx:-mt-20" id="bidirectional-association"&gt;&lt;/span&gt;
 &lt;a href="#bidirectional-association" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In a bidirectional association, both classes are aware of each other and can interact with each other. This is a two-way relationship.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s an example in Python:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
@@ -140,7 +140,7 @@ end
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

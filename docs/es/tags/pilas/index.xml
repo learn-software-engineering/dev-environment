@@ -5,7 +5,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;p&gt;Diagrama de una pila&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2&gt;Operaciones principales&lt;span class="hx:absolute hx:-mt-20" id="operaciones-principales"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="operaciones-principales"&gt;Operaciones principales&lt;span class="hx:absolute hx:-mt-20" id="operaciones-principales"&gt;&lt;/span&gt;
 &lt;a href="#operaciones-principales" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las operaciones primarias que soporta una estructura de pila son:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Push:&lt;/strong&gt; agrega un elemento encima de la pila.&lt;/li&gt;
@@ -14,7 +14,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;li&gt;&lt;strong&gt;isEmpty:&lt;/strong&gt; consulta si la pila se encuentra vacía.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;La mayoría de los lenguajes como Python y Java proveen implementaciones de pilas en sus librerías estándar.&lt;/p&gt;
-&lt;h2&gt;Implementación&lt;span class="hx:absolute hx:-mt-20" id="implementación"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="implementación"&gt;Implementación&lt;span class="hx:absolute hx:-mt-20" id="implementación"&gt;&lt;/span&gt;
 &lt;a href="#implementaci%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Una pila puede implementarse utilizando una lista enlazada de manera que cada node apunte al nodo anterior.&lt;/p&gt;
 &lt;!-- &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Node&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, value):
@@ -122,7 +122,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;&amp;#34;Check if stack is empty&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Is stack empty? &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;stack&lt;span style="color:#f92672"&gt;.&lt;/span&gt;is_empty()&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
-&lt;h2&gt;Ejemplos de uso&lt;span class="hx:absolute hx:-mt-20" id="ejemplos-de-uso"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="ejemplos-de-uso"&gt;Ejemplos de uso&lt;span class="hx:absolute hx:-mt-20" id="ejemplos-de-uso"&gt;&lt;/span&gt;
 &lt;a href="#ejemplos-de-uso" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las pilas tienen muchos usos en programación:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -138,7 +138,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;p&gt;&lt;strong&gt;Algoritmos y estructuras de datos&lt;/strong&gt;: como en el algoritmo quicksort y en la implementación de buses de datos (data paths).&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusión"&gt;Conclusión&lt;span class="hx:absolute hx:-mt-20" id="conclusión"&gt;&lt;/span&gt;
 &lt;a href="#conclusi%c3%b3n" class="subheading-anchor" aria-label="Enlace permanente a esta sección"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Las pilas son estructuras de datos versátiles gracias a su principio de funcionamiento LIFO. Tener un buen dominio de pilas, sus usos y aplicaciones es esencial en la ciencia de la computación.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -146,7 +146,7 @@ alt="Diagrama de una pila"&gt;&lt;figcaption&gt;
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;¡Gracias por llegar hasta acá! Espero que este recorrido por el universo de la programación haya sido tan apasionante para vos como lo fue para mí escribirlo.&lt;/p&gt;
 &lt;p&gt;Nos encantaría escuchar lo que pensás, así que no te quedes callado/a, dejá tus comentarios, sugerencias y todas esas ideas copadas que seguro se te ocurrieron.&lt;/p&gt;
-&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Y para ir más allá de estas líneas, date una vuelta por los ejemplos prácticos que preparamos para vos. Vas a encontrar todo el código y los proyectos en nuestro repositorio de GitHub &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;¡Gracias por ser parte de esta comunidad de aprendizaje. Seguí programando y explorando nuevos territorios en este fascinante mundo de la computación!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

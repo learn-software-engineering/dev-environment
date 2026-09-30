@@ -6,7 +6,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Nodes are organized sequentially, each pointing to the next. The last node points to null to indicate the end.&lt;/p&gt;
 &lt;p&gt;This dynamic structure allows efficient insertion and deletion of nodes.&lt;/p&gt;
-&lt;h2&gt;Types of linked lists&lt;span class="hx:absolute hx:-mt-20" id="types-of-linked-lists"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="types-of-linked-lists"&gt;Types of linked lists&lt;span class="hx:absolute hx:-mt-20" id="types-of-linked-lists"&gt;&lt;/span&gt;
 &lt;a href="#types-of-linked-lists" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are several types:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Singly linked:&lt;/strong&gt; Each node points to the next one. Useful for queues and stacks.&lt;/li&gt;
@@ -32,7 +32,7 @@ alt="Diagram of a circular linked list"&gt;&lt;figcaption&gt;
 &lt;p&gt;Diagram of a circular linked list&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2&gt;Common operations&lt;span class="hx:absolute hx:-mt-20" id="common-operations"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="common-operations"&gt;Common operations&lt;span class="hx:absolute hx:-mt-20" id="common-operations"&gt;&lt;/span&gt;
 &lt;a href="#common-operations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Insert:&lt;/strong&gt; Add nodes to the beginning, end or middle of the list.&lt;/p&gt;
@@ -47,7 +47,7 @@ alt="Diagram of a circular linked list"&gt;&lt;figcaption&gt;
 &lt;p&gt;&lt;strong&gt;Traverse:&lt;/strong&gt; Iterate through nodes by following the references.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Implementation&lt;span class="hx:absolute hx:-mt-20" id="implementation"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="implementation"&gt;Implementation&lt;span class="hx:absolute hx:-mt-20" id="implementation"&gt;&lt;/span&gt;
 &lt;a href="#implementation" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Linked lists can be implemented as follows:&lt;/p&gt;
 &lt;p&gt;Use the &lt;code&gt;ListNode&lt;/code&gt; class to represent nodes:&lt;/p&gt;
 &lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
@@ -105,7 +105,7 @@ data-copied-label="Copied!"
 &lt;/div&gt;
 &lt;p&gt;With this &lt;code&gt;LinkedList&lt;/code&gt; class we can create a list, add nodes, print it, search elements, etc.&lt;/p&gt;
 &lt;p&gt;We could add other methods like insert at end, delete by value, get by index, etc. But this gives an idea of how to encapsulate the linked list functionality in a class. As practice, feel free to try adding these methods on your own. Don&amp;rsquo;t hesitate to leave your comments and contact me if you need help!&lt;/p&gt;
-&lt;h2&gt;Advantages and disadvantages&lt;span class="hx:absolute hx:-mt-20" id="advantages-and-disadvantages"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="advantages-and-disadvantages"&gt;Advantages and disadvantages&lt;span class="hx:absolute hx:-mt-20" id="advantages-and-disadvantages"&gt;&lt;/span&gt;
 &lt;a href="#advantages-and-disadvantages" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Inserting and deleting nodes is efficient.&lt;/li&gt;
@@ -117,14 +117,14 @@ data-copied-label="Copied!"
 &lt;li&gt;More memory usage from having to store references.&lt;/li&gt;
 &lt;li&gt;Accessing elements by index is slower since it is sequential.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Usage examples&lt;span class="hx:absolute hx:-mt-20" id="usage-examples"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="usage-examples"&gt;Usage examples&lt;span class="hx:absolute hx:-mt-20" id="usage-examples"&gt;&lt;/span&gt;
 &lt;a href="#usage-examples" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Implementing structures like stacks and queues.&lt;/li&gt;
 &lt;li&gt;In doubly linked lists, traverse the list in both directions.&lt;/li&gt;
 &lt;li&gt;Blockchains like Bitcoin&amp;rsquo;s.&lt;/li&gt;
 &lt;li&gt;Playing elements in order like music playlists.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusion"&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
 &lt;a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Linked lists are a versatile data structure for storing dynamic sequences of elements. Having a good handle on these lists, their operations, and uses is essential for any programmer.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -132,7 +132,7 @@ data-copied-label="Copied!"
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -143,7 +143,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;p&gt;Diagram of a stack&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2&gt;Main operations&lt;span class="hx:absolute hx:-mt-20" id="main-operations"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="main-operations"&gt;Main operations&lt;span class="hx:absolute hx:-mt-20" id="main-operations"&gt;&lt;/span&gt;
 &lt;a href="#main-operations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The primary operations supported by a stack structure are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Push:&lt;/strong&gt; adds an element to the top of the stack.&lt;/li&gt;
@@ -152,7 +152,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;li&gt;&lt;strong&gt;isEmpty:&lt;/strong&gt; checks if the stack is empty.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Most languages like Python and Java provide stack implementations in their standard libraries.&lt;/p&gt;
-&lt;h2&gt;Implementation&lt;span class="hx:absolute hx:-mt-20" id="implementation"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="implementation"&gt;Implementation&lt;span class="hx:absolute hx:-mt-20" id="implementation"&gt;&lt;/span&gt;
 &lt;a href="#implementation" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A stack can be implemented using a linked list so that each node points to the previous node.&lt;/p&gt;
 &lt;!-- &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Node&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, value):
@@ -260,7 +260,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;&amp;#34;Check if stack is empty&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Is stack empty? &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;stack&lt;span style="color:#f92672"&gt;.&lt;/span&gt;is_empty()&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
-&lt;h2&gt;Usage examples&lt;span class="hx:absolute hx:-mt-20" id="usage-examples"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="usage-examples"&gt;Usage examples&lt;span class="hx:absolute hx:-mt-20" id="usage-examples"&gt;&lt;/span&gt;
 &lt;a href="#usage-examples" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Stacks have many uses in programming:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -276,7 +276,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;p&gt;&lt;strong&gt;Algorithms and data structures&lt;/strong&gt;: like in the quicksort algorithm and in data path implementations.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusion"&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
 &lt;a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Stacks are versatile data structures thanks to their LIFO operation principle. Having a good command of stacks, their uses and applications is essential in computer science.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -284,7 +284,7 @@ alt="Diagram of a stack"&gt;&lt;figcaption&gt;
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -296,7 +296,7 @@ alt="Diagram of a queue"&gt;&lt;figcaption&gt;
 &lt;p&gt;Diagram of a queue&lt;/p&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h2&gt;Main operations&lt;span class="hx:absolute hx:-mt-20" id="main-operations"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="main-operations"&gt;Main operations&lt;span class="hx:absolute hx:-mt-20" id="main-operations"&gt;&lt;/span&gt;
 &lt;a href="#main-operations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The basic queue operations are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Enqueue:&lt;/strong&gt; Adds an element to the end of the queue.&lt;/li&gt;
@@ -304,7 +304,7 @@ alt="Diagram of a queue"&gt;&lt;figcaption&gt;
 &lt;li&gt;&lt;strong&gt;Peek:&lt;/strong&gt; Gets the front element without removing it.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;isEmpty:&lt;/strong&gt; Checks if the queue is empty.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Implementation&lt;span class="hx:absolute hx:-mt-20" id="implementation"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="implementation"&gt;Implementation&lt;span class="hx:absolute hx:-mt-20" id="implementation"&gt;&lt;/span&gt;
 &lt;a href="#implementation" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Like stacks, queues can be implemented using linked lists.
 Elements are added at the end and removed from the front by keeping references to both ends.&lt;/p&gt;
 &lt;!-- &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Node&lt;/span&gt;:
@@ -417,7 +417,7 @@ Elements are added at the end and removed from the front by keeping references t
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;&amp;#34;Check if queue is empty&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(&lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Is queue empty? &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;queue&lt;span style="color:#f92672"&gt;.&lt;/span&gt;is_empty()&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
-&lt;h2&gt;Usage examples&lt;span class="hx:absolute hx:-mt-20" id="usage-examples"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="usage-examples"&gt;Usage examples&lt;span class="hx:absolute hx:-mt-20" id="usage-examples"&gt;&lt;/span&gt;
 &lt;a href="#usage-examples" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some common uses of queues:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Print queues where first in, first printed.&lt;/li&gt;
@@ -426,7 +426,7 @@ Elements are added at the end and removed from the front by keeping references t
 &lt;li&gt;Message queues like RabbitMQ or Kafka.&lt;/li&gt;
 &lt;li&gt;Circular buffers in audio for streaming.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
+&lt;h2 data-hextra-search-id="conclusion"&gt;Conclusion&lt;span class="hx:absolute hx:-mt-20" id="conclusion"&gt;&lt;/span&gt;
 &lt;a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Queues are versatile structures thanks to their FIFO principle. Having a good handle on queues, implementation, and applications will reinforce your skills as a programmer.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200"&gt;
@@ -434,7 +434,7 @@ Elements are added at the end and removed from the front by keeping references t
 &lt;div class="hx:w-full hx:min-w-0 hx:leading-7"&gt;
 &lt;div class="hx:mt-6 hx:leading-7 hx:first:mt-0"&gt;&lt;p&gt;Cheers for making it this far! I hope this journey through the programming universe has been as fascinating for you as it was for me to write down.&lt;/p&gt;
 &lt;p&gt;We&amp;rsquo;re keen to hear your thoughts, so don&amp;rsquo;t be shy, drop your comments, suggestions, and those bright ideas you&amp;rsquo;re bound to have.&lt;/p&gt;
-&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples"target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, to delve deeper than these lines, take a stroll through the practical examples we&amp;rsquo;ve cooked up for you. You&amp;rsquo;ll find all the code and projects in our GitHub repository &lt;a href="https://github.com/learn-software-engineering/examples" target="_blank" rel="noopener"&gt;learn-software-engineering/examples&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks for being part of this learning community. Keep coding and exploring new territories in this captivating world of software!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
